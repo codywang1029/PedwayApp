@@ -1,7 +1,8 @@
 # pedway
 A repo for UIUC's CS428
 
-###How to deploy the pedwayApp
+
+### How to deploy the pedwayApp
 
 - Install Android SDK [here](https://developer.android.com/studio/)
 - Install WebStorm [here](https://www.jetbrains.com/webstorm/), or your favorite JavaScript IDE/editor
