@@ -6,6 +6,7 @@
   "scripts": {
     "start": "nodemon server.js",
     "start-prod": "node server.js",
+    "mongodb-dev": "docker run --name pedmongo --restart=always -d -p 27017:27017 mongo mongod --auth",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
