@@ -23,7 +23,7 @@ mongo
 
 # create the first admin user
 use admin
-db.createUser({user:"foouser",pwd:"foopwd",roles:[{role:"root",db:"admin"}]})
+db.createUser({user:"foouser",pwd:"foopwd",roles:[{role:"root",db:"admin"},{role:"root",db:"pedway"}]})
 
 # exit the mongo shell
 exit
@@ -32,8 +32,8 @@ exit
 
 # now you can connect with the admin user (from any mongo client >=3 )
 #  remember to use --authenticationDatabase "admin"
-mongo -u "foouser" -p "foopwd" localhost --authenticationDatabase "admin"
-db.createUser({user:"foouser",pwd:"foopwd",roles:[{role:"root",db:"pedway"}]})
+mongo -u "foouser" -p "foopwd" localhost --authenticationDatabase "pedway"
+# Now you are connected to the mongodb image
 ```
 ### How to actually run the server
 There are two different ways to run the server
