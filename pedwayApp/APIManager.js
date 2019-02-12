@@ -5,6 +5,7 @@
  * @type {{}}
  */
 
+
 export default class APIManager  {
 
     static instance = null;
@@ -13,6 +14,7 @@ export default class APIManager  {
     static getInstance() {
         if (APIManager.instance == null) {
             APIManager.instance = new APIManager();
+
         }
             return this.instance;
     }
