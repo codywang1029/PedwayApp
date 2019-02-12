@@ -10,7 +10,7 @@ var express = require('express'),
 // 		https://www.codementor.io/olatundegaruba/nodejs-restful-apis-in-10-minutes-q0sgsfhbd
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://foouser:foopwd@localhost/pedway',  {useNewUrlParser: true}); 
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://foouser:foopwd@localhost/pedway',  {useNewUrlParser: true}); 
 
 
 app.use(bodyParser.urlencoded({ extended: true }));

@@ -38,6 +38,6 @@ mongo -u "foouser" -p "foopwd" localhost --authenticationDatabase "pedway"
 ### How to actually run the server
 There are two different ways to run the server
 ```bash
-npm start # Runs the dev environment
-npm run start-prod
+npm start # Runs the prod environment
+npm run start-dev # Runs the dev enviornment, recommended for dev
 ```
