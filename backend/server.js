@@ -14,7 +14,7 @@ mongoose.Promise = global.Promise;
 if (process.env.MONGODB_URI === undefined) {
 	mongoose.connect('mongodb://foouser:foopwd@localhost/pedway',  {useNewUrlParser: true}); 
 } else {
-	mongoose.connect('mongodb://pedcosmosdb:'+process.env.MONGODB_URI+'@pedcosmosdb.documents.azure.com:10250/mean?ssl=true',  {useNewUrlParser: true});
+	mongoose.connect('mongodb://pedcosmosdb:'+process.env.MONGODB_URI+'==@pedcosmosdb.documents.azure.com:10250/pedway?ssl=true',  {useNewUrlParser: true});
 }
 
 
