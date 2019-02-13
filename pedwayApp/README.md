@@ -12,10 +12,10 @@ $ npm install -g react-native-cli
 $ react-native run-android
 ```
 
-#Trouble Shooting
+# Trouble Shooting
 
 
-####Error No.1:
+#### Error No.1:
 ```
 Command failed: ./gradlew installDebug
 ```
@@ -36,7 +36,7 @@ $ rm -rf node_modules
 $ npm install
 ```
 
-####Error No.2:
+#### Error No.2:
 ```
 Exception in thread "main" java.lang.NoClassDefFoundError: javax/xml/bind/annotation/XmlSchema
 ```
@@ -62,7 +62,7 @@ Pick Java 8 and export JAVA_HOME:
 $ export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_181`
 ```
 
-####Error No.3:
+#### Error No.3:
 ```
 SDK location not found. Define location with sdk.dir in the local.properties file or with an ANDROID_HOME environment variable.
 ```
@@ -95,7 +95,7 @@ In local.properties insert:
 sdk.dir = /Users/<USERNAME>/Library/Android/sdk
 ```
 
-####Error No.4:
+#### Error No.4:
 ```
 Failed to install the following Android SDK packages as some licences have not been accepted.
 ```
@@ -105,7 +105,7 @@ $ cd /Users/<USERNAME>/Library/Android/sdk/tools/bin/
 $ ./sdkmanager --licenses
 ```
 
-####Error No.5:
+#### Error No.5:
 ```
 /bin/sh: 1: adb: not found
 ```
@@ -119,7 +119,7 @@ if it still does not work, add the line to your .bash_profile:
 export PATH="/Users/<USERNAME>/Library/Android/sdk/platform-tools":$PATH
 ```
 
-####Error No.6:
+#### Error No.6:
 ```
 A problem occurred evaluating root project 'ReactNativeTest'.
 ```
@@ -134,7 +134,7 @@ dependencies {
     }
 ```
 
-####Error No.7:
+#### Error No.7:
 ```
 Cannot add task 'wrapper' as a task with that name already exists
 ```
