@@ -22,8 +22,6 @@ Command failed: ./gradlew installDebug
 **Solution:** Downgrade react native and reinstall node. Run the following:
 ```
 $ npm install react-native@0.57.3
-$ rm -rf node_modules
-$ npm install
 ```
 If you don't reinstall Node you will encounter the following error:
 ```
