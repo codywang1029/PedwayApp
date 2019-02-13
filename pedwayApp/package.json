@@ -12,15 +12,13 @@
     "appcenter-crashes": "1.12.0",
     "isomorphic-fetch": "^2.2.1",
     "react": "16.6.3",
-    "react-native": "0.58.4"
+    "react-native": "^0.57.3"
   },
   "devDependencies": {
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "24.1.0",
-
     "jest": "24.1.0",
     "jest-junit": "^6.2.1",
-
     "metro-react-native-babel-preset": "0.51.1",
     "react-test-renderer": "16.6.3"
   },
