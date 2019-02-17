@@ -63,3 +63,8 @@ exports.delete_a_status = function(req, res) {
 	});
 };
 
+// Helper function for testing purposes
+exports.delete_all = function(callback) {
+	//console.warn("This function should only be called for testing purposes")
+	Status.remove({}, callback);
+}
