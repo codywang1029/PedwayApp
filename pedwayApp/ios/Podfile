@@ -13,6 +13,8 @@ target 'ReactNativeTest' do
   
 
   platform :ios, '9.0'
+  pod 'react-native-maps', :path => '../node_modules/react-native-maps'
+
   target 'ReactNativeTestTests' do
     inherit! :search_paths
     # Pods for testing
