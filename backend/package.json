@@ -24,6 +24,7 @@
   "homepage": "https://github.com/cwlowder/pedway#readme",
   "dependencies": {
     "express": "^4.16.4",
+    "file-system": "^2.2.2",
     "mongoose": "^5.4.11"
   },
   "devDependencies": {
@@ -37,7 +38,7 @@
     "supertest": "^3.4.2"
   },
   "eslintConfig": {
-    "extends": ["google"],
+    "extends": "google",
     "rules": {
       "linebreak-style": "off"
     },
