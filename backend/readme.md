@@ -13,7 +13,7 @@ This is what I did:
 ```bash
 # Create a mongodb image
 docker pull mongo
-docker run --name pedmongo --restart=always -d -p 27017:27017 mongo mongod --auth
+docker run --name pedmongo --restart=always -d -p 27017:27017 mongo mongod
 
 # connect through local mongo client
 mongo
