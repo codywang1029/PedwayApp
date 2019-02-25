@@ -16,7 +16,7 @@ module.exports = function(opts={useNewUrlParser: true}) {
   if (process.env.APP_DEPLOYMENT_MODE === undefined) {
     mongoose.connect('mongodb://localhost/pedway', opts);
   } else if (process.env.APP_DEPLOYMENT_MODE === 'production'){
-    // prodcution password ends in two equal signs which breaks in azure
+    // production password ends in two equal signs which breaks in azure
     mongoose.connect('mongodb://'+uname+':'+password+'==@'+host, opts);
   } else {
     // allows the connection to some custom server
