@@ -9,6 +9,7 @@
  */
 
 import React, {Component} from 'react';
+import { Button } from 'react-native';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import APIManager from './APIManager';
 import MapView from "react-native-maps";
@@ -28,11 +29,19 @@ export default () => (
           region={{
               latitude: 40.113918,
               longitude:  -88.224916,
-              latitudeDelta: 0.1,
-              longitudeDelta: 0.1,
+                latitudeDelta: 0.1,
+                longitudeDelta: 0.1,
           }}
           style={{ ...StyleSheet.absoluteFillObject}}
       />
+
+      <Button
+          title="Enter Underground"
+          color="#4c525b"
+          onPress={()=>{}}
+      />
+
     </View>
+
 );
 
