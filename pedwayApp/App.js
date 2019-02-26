@@ -21,15 +21,13 @@ import APIManager from './APIManager';
 import MapView, {MAP_TYPES, UrlTile} from "react-native-maps";
 import SideMenu from 'react-native-side-menu';
 import {createAppContainer, createStackNavigator, StackActions, NavigationActions} from 'react-navigation';
-import Realm from 'realm';
-
-
 
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
     header: null
   };
+
   constructor() {
     console.log("INIT Pedway App");
     super();
@@ -47,6 +45,8 @@ class HomeScreen extends React.Component {
       this.setState({entrance1StatusText: 'Entrance 1: ' + inputObj[1]['status']});
       this.setState({macysStatusText: 'Macy\'s section: ' + inputObj[2]['status']});
 
+    }).catch((e) => {
+      console.log(e);
     });
   }
 
@@ -77,26 +77,25 @@ class HomeScreen extends React.Component {
             <UrlTile urlTemplate={this.state.apiServerURL}/>
           </MapView>
           <TouchableOpacity
-              style={[styles.hamburgerButton, styles.floating, styles.roundButton]}
-              onPress={() => {
-                console.log("Menu Button Clicked!");
-                this.setState({
-                  sideMenuIsOpen: !this.state.sideMenuIsOpen,
-                });
-              }}>
+            style={[styles.hamburgerButton, styles.floating, styles.roundButton]}
+            onPress={() => {
+              this.setState({
+                sideMenuIsOpen: !this.state.sideMenuIsOpen,
+              });
+            }}>
             <View style={{flexGrow: 1, justifyContent: 'center', alignItems: 'center'}}>
               <Icon
-                  name="bars"
-                  size={35}
-                  color="#555"
+                name="bars"
+                size={35}
+                color="#555"
               />
             </View>
           </TouchableOpacity>
           <TouchableOpacity
             style={[styles.floating, styles.searchBox]}
-            >
+          >
             <View style={{flexGrow: 1, justifyContent: 'center', alignItems: 'flex-start'}}>
-                <Text style={{fontSize: 18}}>Enter your destination...</Text>
+              <Text style={{fontSize: 18}}>Enter your destination...</Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity
@@ -127,6 +126,7 @@ class UndergroundScreen extends React.Component {
   static navigationOptions = {
     header: null
   };
+
   render() {
     return (
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
@@ -155,8 +155,6 @@ class UndergroundScreen extends React.Component {
 }
 
 
-
-
 const AppNavigator = createStackNavigator({
   Home: {
     screen: HomeScreen,
@@ -176,12 +174,12 @@ const AppNavigator = createStackNavigator({
 
 
 const styles = StyleSheet.create({
-  searchBox:{
+  searchBox: {
     position: 'absolute',
     top: 25,
     left: 80,
-    height:50,
-    width:300,
+    height: 50,
+    width: 300,
     backgroundColor: '#FFFFFF',
     color: '#CCCCCC',
     textAlignVertical: 'center',
@@ -196,7 +194,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     borderRadius: 60,
   },
-  floating:{
+  floating: {
     shadowOffset: {width: 30, height: 30,},
     shadowColor: 'rgba(0, 0, 0, 0.6)',
     shadowOpacity: 0.8,
@@ -204,9 +202,9 @@ const styles = StyleSheet.create({
     shadowRadius: 15,
     alignItems: 'center',
     textAlignVertical: 'center',
-    opacity:0.95,
+    opacity: 0.95,
   },
-  undergroundButton:{
+  undergroundButton: {
     position: 'absolute',
     bottom: 30,
     right: 30,
@@ -227,6 +225,6 @@ const AppContainer = createAppContainer(AppNavigator);
 
 export default class App extends React.Component {
   render() {
-    return <AppContainer />;
+    return <AppContainer/>;
   }
 }

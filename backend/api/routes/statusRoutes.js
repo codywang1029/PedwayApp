@@ -1,17 +1,16 @@
 'use strict';
 module.exports = function(app) {
-	var status = require('../controllers/statusController');
+  const status = require('../controllers/statusController');
 
-	// todoList Routes
-	app.route('/api/status')
-		.get(status.list_status)
-		.post(status.create_a_status)
-		.head(status.create_general_status);
+  // todoList Routes
+  app.route('/api/status')
+      .get(status.listStatus)
+      .post(status.createAStatus)
+      .head(status.createGeneralStatus);
 
 
-	app.route('/api/status/:sectionId')
-		.get(status.read_a_status)
-		.post(status.update_a_status)
-		.delete(status.delete_a_status);
+  app.route('/api/status/:sectionId')
+      .get(status.readAStatus)
+      .post(status.updateAStatus)
+      .delete(status.deleteAStatus);
 };
-
