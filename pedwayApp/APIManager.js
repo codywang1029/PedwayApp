@@ -22,6 +22,11 @@ export default class APIManager {
     return this.instance;
   }
 
+  static destroyInstance() {
+    this.instance = null;
+    this.realm = null;
+  }
+
   getCurrentPedwayStatus() {
     return fetch(apiServerURL, {method: 'GET'}).then(response => response.json()).catch((e) => {
       console.log(e);
