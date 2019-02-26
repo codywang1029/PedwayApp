@@ -19,11 +19,10 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import APIManager from './APIManager';
 import MapView from "react-native-maps";
 import SideMenu from 'react-native-side-menu';
+import { createAppContainer, createStackNavigator, StackActions, NavigationActions } from 'react-navigation';
 
 
-type Props = {};
-export default class App extends Component<Props> {
-
+class HomeScreen extends React.Component {
   constructor() {
     console.log("INIT Pedway App");
     super();
@@ -84,7 +83,12 @@ export default class App extends Component<Props> {
           <TouchableOpacity
               style={styles.undergroundButton}
               onPress={() => {
-                console.log("Going to underground");
+                this.props.navigation.dispatch(StackActions.reset({
+                  index: 0,
+                  actions: [
+                    NavigationActions.navigate({ routeName: 'Underground' })
+                  ],
+                }))
               }}>
             <View style={{flexGrow: 1, justifyContent:'center', alignItems: 'center'}}>
               <Icon
@@ -93,13 +97,35 @@ export default class App extends Component<Props> {
                   color="#555"
               />
             </View>
-            
           </TouchableOpacity>
         </View>
       </SideMenu>
     );
   }
 }
+
+class UndergroundScreen extends React.Component {
+  render() {
+    return (
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+          <Text>Underground Screen</Text>
+        </View>
+    );
+  }
+}
+
+
+const AppNavigator = createStackNavigator({
+  Home: {
+    screen: HomeScreen,
+  },
+  Underground: {
+    screen: UndergroundScreen,
+  },
+}, {
+  initialRouteName: 'Home',
+});
+
 
 const styles = StyleSheet.create({
   hamburgerButton: {
@@ -131,3 +157,4 @@ const styles = StyleSheet.create({
   }
 });
 
+export default createAppContainer(AppNavigator);
