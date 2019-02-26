@@ -23,7 +23,9 @@ export default class APIManager {
   }
 
   getCurrentPedwayStatus() {
-    return fetch(apiServerURL, {method: 'GET'}).then(response => response.json());
+    return fetch(apiServerURL, {method: 'GET'}).then(response => response.json()).catch((e)=> {
+      console.log(e);
+    });
   }
 
 

@@ -47,6 +47,8 @@ class HomeScreen extends React.Component {
       this.setState({entrance1StatusText: 'Entrance 1: ' + inputObj[1]['status']});
       this.setState({macysStatusText: 'Macy\'s section: ' + inputObj[2]['status']});
 
+    }).catch((e)=>{
+      console.log(e);
     });
   }
 
