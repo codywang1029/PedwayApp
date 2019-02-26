@@ -17,10 +17,13 @@
   "devDependencies": {
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "24.1.0",
-
+    "eslint": "^5.14.1",
+    "eslint-config-google": "^0.12.0",
+    "file-system": "^2.2.2",
+    "gulp": "^4.0.0",
+    "gulp-eslint": "^5.0.0",
     "jest": "24.1.0",
     "jest-junit": "^6.2.1",
-
     "metro-react-native-babel-preset": "0.51.1",
     "react-test-renderer": "16.6.3"
   },
@@ -30,5 +33,14 @@
       "default",
       "jest-junit"
     ]
+  },
+  "eslintConfig": {
+    "extends": "google",
+    "rules": {
+      "linebreak-style": "off"
+    },
+    "env": {
+      "es6": true
+    }
   }
 }
