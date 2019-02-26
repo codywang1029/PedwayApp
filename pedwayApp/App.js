@@ -20,7 +20,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import APIManager from './APIManager';
 import MapView, {MAP_TYPES, UrlTile} from "react-native-maps";
 import SideMenu from 'react-native-side-menu';
-import {createAppContainer, createStackNavigator} from 'react-navigation';
+import {createAppContainer, createStackNavigator, StackActions, NavigationActions} from 'react-navigation';
 import Realm from 'realm';
 
 
