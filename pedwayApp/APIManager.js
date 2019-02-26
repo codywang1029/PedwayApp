@@ -41,7 +41,7 @@ export default class APIManager {
   }
 
   readFromDataBase(inputSchemaName) {
-    if (this.realm === null) {
+    if (this.realm === undefined || this.realm === null) {
       return [];
     }
     return this.realm.objects(inputSchemaName)
