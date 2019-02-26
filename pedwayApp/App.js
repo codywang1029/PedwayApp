@@ -18,7 +18,7 @@ import {Button} from 'react-native';
 import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import APIManager from './APIManager';
-import MapView, {MAP_TYPES, PROVIDER_DEFAULT, UrlTile} from "react-native-maps";
+import MapView, {MAP_TYPES, UrlTile} from "react-native-maps";
 import SideMenu from 'react-native-side-menu';
 import {createAppContainer, createStackNavigator} from 'react-navigation';
 import Realm from 'realm';
