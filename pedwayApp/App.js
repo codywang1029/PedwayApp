@@ -131,6 +131,24 @@ class UndergroundScreen extends React.Component {
     return (
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <Text>Underground Screen</Text>
+        <TouchableOpacity
+            style={[styles.undergroundButton, styles.floating, styles.roundButton]}
+            onPress={() => {
+              this.props.navigation.dispatch(StackActions.reset({
+                index: 0,
+                actions: [
+                  NavigationActions.navigate({routeName: 'Home'})
+                ],
+              }))
+            }}>
+          <View style={{flexGrow: 1, justifyContent: 'center', alignItems: 'center'}}>
+            <Icon
+                name="level-up"
+                size={40}
+                color="#555"
+            />
+          </View>
+        </TouchableOpacity>
       </View>
     );
   }
