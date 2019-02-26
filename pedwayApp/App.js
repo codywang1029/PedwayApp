@@ -81,6 +81,20 @@ export default class App extends Component<Props> {
               color="#555"
             />
           </TouchableOpacity>
+          <TouchableOpacity
+              style={styles.undergroundButton}
+              onPress={() => {
+                console.log("Going to underground");
+              }}>
+            <View style={{flexGrow: 1, justifyContent:'center', alignItems: 'center'}}>
+              <Icon
+                  name="level-down"
+                  size={40}
+                  color="#555"
+              />
+            </View>
+            
+          </TouchableOpacity>
         </View>
       </SideMenu>
     );
@@ -93,6 +107,23 @@ const styles = StyleSheet.create({
     top: 20,
     left: 20,
     zIndex: 1,
+  },
+  undergroundButton: {
+    zIndex: 1,
+    position: 'absolute',
+    bottom: 30,
+    right: 30,
+    width: 60,
+    height: 60,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 60,
+    shadowOffset:{  width: 30,  height: 30,  },
+    shadowColor: 'rgba(0, 0, 0, 0.6)',
+    shadowOpacity: 0.8,
+    elevation: 6,
+    shadowRadius: 15 ,
+    alignItems: 'center',
+    textAlignVertical: 'center',
   },
   mainMap: {
     ...StyleSheet.absoluteFillObject,
