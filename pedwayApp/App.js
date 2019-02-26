@@ -24,7 +24,12 @@ import {createAppContainer, createStackNavigator, StackActions, NavigationAction
 import Realm from 'realm';
 
 
+
+
 class HomeScreen extends React.Component {
+  static navigationOptions = {
+    header: null
+  };
   constructor() {
     console.log("INIT Pedway App");
     super();
@@ -48,6 +53,7 @@ class HomeScreen extends React.Component {
   render() {
 
     return (
+
       <SideMenu
         menu={<SideMenu navigator={navigator}/>}
         disableGestures={this.state.sideMenuDisableGesture}
@@ -71,21 +77,30 @@ class HomeScreen extends React.Component {
             <UrlTile urlTemplate={this.state.apiServerURL}/>
           </MapView>
           <TouchableOpacity
-            style={styles.hamburgerButton}
-            onPress={() => {
-              console.log("Menu Button Clicked!");
-              this.setState({
-                sideMenuIsOpen: !this.state.sideMenuIsOpen,
-              });
-            }}>
-            <Icon
-              name="bars"
-              size={35}
-              color="#555"
-            />
+              style={[styles.hamburgerButton, styles.floating, styles.roundButton]}
+              onPress={() => {
+                console.log("Menu Button Clicked!");
+                this.setState({
+                  sideMenuIsOpen: !this.state.sideMenuIsOpen,
+                });
+              }}>
+            <View style={{flexGrow: 1, justifyContent: 'center', alignItems: 'center'}}>
+              <Icon
+                  name="bars"
+                  size={35}
+                  color="#555"
+              />
+            </View>
           </TouchableOpacity>
           <TouchableOpacity
-            style={styles.undergroundButton}
+            style={[styles.floating, styles.searchBox]}
+            >
+            <View style={{flexGrow: 1, justifyContent: 'center', alignItems: 'flex-start'}}>
+                <Text style={{fontSize: 18}}>Enter your destination...</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.undergroundButton, styles.floating, styles.roundButton]}
             onPress={() => {
               this.props.navigation.dispatch(StackActions.reset({
                 index: 0,
@@ -109,6 +124,9 @@ class HomeScreen extends React.Component {
 }
 
 class UndergroundScreen extends React.Component {
+  static navigationOptions = {
+    header: null
+  };
   render() {
     return (
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
@@ -117,6 +135,8 @@ class UndergroundScreen extends React.Component {
     );
   }
 }
+
+
 
 
 const AppNavigator = createStackNavigator({
@@ -128,25 +148,37 @@ const AppNavigator = createStackNavigator({
   },
 }, {
   initialRouteName: 'Home',
+  defaultNavigationOptions: {
+    headerStyle: {
+      backgroundColor: '#777',
+    },
+    headerTintColor: '#fff',
+  },
 });
 
 
 const styles = StyleSheet.create({
-  hamburgerButton: {
+  searchBox:{
     position: 'absolute',
-    top: 20,
-    left: 20,
-    zIndex: 1,
+    top: 25,
+    left: 80,
+    height:50,
+    width:300,
+    backgroundColor: '#FFFFFF',
+    color: '#CCCCCC',
+    textAlignVertical: 'center',
+    paddingLeft: 5,
+    marginLeft: 20,
+    borderRadius: 10,
   },
-  undergroundButton: {
+  roundButton: {
     zIndex: 1,
-    position: 'absolute',
-    bottom: 30,
-    right: 30,
     width: 60,
     height: 60,
     backgroundColor: '#FFFFFF',
     borderRadius: 60,
+  },
+  floating:{
     shadowOffset: {width: 30, height: 30,},
     shadowColor: 'rgba(0, 0, 0, 0.6)',
     shadowOpacity: 0.8,
@@ -154,6 +186,17 @@ const styles = StyleSheet.create({
     shadowRadius: 15,
     alignItems: 'center',
     textAlignVertical: 'center',
+    opacity:0.95,
+  },
+  undergroundButton:{
+    position: 'absolute',
+    bottom: 30,
+    right: 30,
+  },
+  hamburgerButton: {
+    position: 'absolute',
+    top: 20,
+    left: 20,
   },
   mainMap: {
     ...StyleSheet.absoluteFillObject,
@@ -161,4 +204,11 @@ const styles = StyleSheet.create({
   }
 });
 
-export default createAppContainer(AppNavigator);
+
+const AppContainer = createAppContainer(AppNavigator);
+
+export default class App extends React.Component {
+  render() {
+    return <AppContainer />;
+  }
+}
