@@ -75,6 +75,13 @@ class HomeScreen extends React.Component {
               longitudeDelta: 0.1,
             }}>
             <UrlTile urlTemplate={this.state.apiServerURL}/>
+            <MapView.Marker
+                coordinate={{
+                  latitude: 40.114399,
+                  longitude: -88.223961}}
+                  title={"title"}
+                  description={"description"}
+            />
           </MapView>
           <TouchableOpacity
             style={[styles.hamburgerButton, styles.floating, styles.roundButton]}
