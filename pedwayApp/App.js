@@ -21,7 +21,7 @@ import APIManager from './APIManager';
 import MapView, {MAP_TYPES, UrlTile} from "react-native-maps";
 import SideMenu from 'react-native-side-menu';
 import {createAppContainer, createStackNavigator, StackActions, NavigationActions} from 'react-navigation';
-import Realm from 'realm';
+
 
 
 class HomeScreen extends React.Component {
@@ -73,7 +73,6 @@ class HomeScreen extends React.Component {
           <TouchableOpacity
             style={styles.hamburgerButton}
             onPress={() => {
-              console.log("Menu Button Clicked!");
               this.setState({
                 sideMenuIsOpen: !this.state.sideMenuIsOpen,
               });
