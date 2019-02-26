@@ -6,6 +6,7 @@
  * https://stackoverflow.com/questions/30448547/how-to-model-a-button-with-icons-in-react-native
  * https://github.com/oblador/react-native-vector-icons
  * https://github.com/react-native-community/react-native-maps/blob/master/docs/installation.md
+ * https://www.igismap.com/switching-between-google-maps-and-openstreetmap-in-react-native/
  *
  * @format
  * @flow
@@ -17,9 +18,10 @@ import {Button} from 'react-native';
 import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import APIManager from './APIManager';
-import MapView from "react-native-maps";
+import MapView, {MAP_TYPES, PROVIDER_DEFAULT, UrlTile} from "react-native-maps";
 import SideMenu from 'react-native-side-menu';
-import { createAppContainer, createStackNavigator, StackActions, NavigationActions } from 'react-navigation';
+import {createAppContainer, createStackNavigator} from 'react-navigation';
+import Realm from 'realm';
 
 
 class HomeScreen extends React.Component {
@@ -32,7 +34,7 @@ class HomeScreen extends React.Component {
       macysStatusText: '',
       sideMenuIsOpen: false,
       sideMenuDisableGesture: true,
-
+      apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
     };
     console.log('Try Requesting API');
     APIManager.getInstance().getCurrentPedwayStatus().then(inputObj => {
@@ -57,14 +59,16 @@ class HomeScreen extends React.Component {
       >
         <View style={{flex: 1}}>
           <MapView
+            mapType={MAP_TYPES.NONE}
+            style={styles.mainMap}
+            provider={null}
             region={{
               latitude: 40.113918,
               longitude: -88.224916,
               latitudeDelta: 0.1,
               longitudeDelta: 0.1,
-            }}
-            style={styles.mainMap}>
-
+            }}>
+            <UrlTile urlTemplate={this.state.apiServerURL}/>
           </MapView>
           <TouchableOpacity
             style={styles.hamburgerButton}
@@ -81,20 +85,20 @@ class HomeScreen extends React.Component {
             />
           </TouchableOpacity>
           <TouchableOpacity
-              style={styles.undergroundButton}
-              onPress={() => {
-                this.props.navigation.dispatch(StackActions.reset({
-                  index: 0,
-                  actions: [
-                    NavigationActions.navigate({ routeName: 'Underground' })
-                  ],
-                }))
-              }}>
-            <View style={{flexGrow: 1, justifyContent:'center', alignItems: 'center'}}>
+            style={styles.undergroundButton}
+            onPress={() => {
+              this.props.navigation.dispatch(StackActions.reset({
+                index: 0,
+                actions: [
+                  NavigationActions.navigate({routeName: 'Underground'})
+                ],
+              }))
+            }}>
+            <View style={{flexGrow: 1, justifyContent: 'center', alignItems: 'center'}}>
               <Icon
-                  name="level-down"
-                  size={40}
-                  color="#555"
+                name="level-down"
+                size={40}
+                color="#555"
               />
             </View>
           </TouchableOpacity>
@@ -107,9 +111,9 @@ class HomeScreen extends React.Component {
 class UndergroundScreen extends React.Component {
   render() {
     return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-          <Text>Underground Screen</Text>
-        </View>
+      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+        <Text>Underground Screen</Text>
+      </View>
     );
   }
 }
@@ -143,11 +147,11 @@ const styles = StyleSheet.create({
     height: 60,
     backgroundColor: '#FFFFFF',
     borderRadius: 60,
-    shadowOffset:{  width: 30,  height: 30,  },
+    shadowOffset: {width: 30, height: 30,},
     shadowColor: 'rgba(0, 0, 0, 0.6)',
     shadowOpacity: 0.8,
     elevation: 6,
-    shadowRadius: 15 ,
+    shadowRadius: 15,
     alignItems: 'center',
     textAlignVertical: 'center',
   },
