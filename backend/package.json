@@ -27,10 +27,23 @@
     "mongoose": "^5.4.11"
   },
   "devDependencies": {
+    "eslint": "^5.14.1",
+    "eslint-config-google": "^0.12.0",
+    "file-system": "^2.2.2",
     "gulp": "^4.0.0",
+    "gulp-eslint": "^5.0.0",
     "jest": "^24.1.0",
     "nodemon": "^1.18.10",
     "superagent": "^4.1.0",
     "supertest": "^3.4.2"
+  },
+  "eslintConfig": {
+    "extends": "google",
+    "rules": {
+      "linebreak-style": "off"
+    },
+    "env": {
+      "es6": true
+    }
   }
 }
