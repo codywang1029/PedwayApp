@@ -36,6 +36,9 @@
   },
   "jest": {
     "preset": "react-native",
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-navigation|react-navigation-redux-helpers|react-native-gesture-handler)"
+    ],
     "reporters": [
       "default",
       "jest-junit"
