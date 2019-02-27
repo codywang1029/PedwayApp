@@ -46,8 +46,9 @@
   },
   "eslintConfig": {
     "extends": "google",
-    "sourceType": "module",
-    "rules": {
+    "parserOptions": {
+      "sourceType": "module"
+    },    "rules": {
       "linebreak-style": "off"
     },
     "env": {
