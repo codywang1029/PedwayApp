@@ -1,17 +1,16 @@
-import 'react-native';
-import React from 'react';
 import APIManager from '../APIManager';
 // Test case for this part is under construction
 
-test('Dummy test case for testing purpose', () => {
-  // APIManager.getInstance().saveToDataBase({name: 'testObject', properties: {text: 'string'}},
-  //   {text: 'abcd'});
-  console.log('testCase Started');
-  // let getEmptyList = APIManager.getInstance().readFromDataBase(0);
-  // expect(getEmptyList.length).toBe(0);
-  // APIManager.destroyInstance();
-  console.log('testCase Ended');
+beforeAll(()=> {
+  jest.mock('realm', () => {
+    return require('../../mocks/Realm').default;
+  });
+})
 
+test('Dummy test case for testing purpose', () => {
+  expect(1+1).toBe(2);
 });
 
+// we have to let Jest exit by adding a mock for Realm
+afterAll(()=> setTimeout(() => process.exit(), 1000));
 
