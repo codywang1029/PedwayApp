@@ -1,18 +1,18 @@
 const express = require('express');
-require('./api/models/statusModel'); // created model loading here
+// Load mongoose models into mongoose
+require('../api/models')();
 const bodyParser = require('body-parser');
 const app = express();
 
-const dbdisconnect = require('./connectDatabase')();
+const dbdisconnect = require('./databaseConnector')();
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-const routes = require('./api/routes/statusRoutes'); // importing routes
-routes(app); // register the route
+require('../api/routes')(app); // register routes
 
-// Serves static files
-app.use(express.static('frontend'));
+// Serves static files from frontend directory
+app.use(express.static('./frontend'));
 
 // 404 function
 app.use(function(req, res) {
