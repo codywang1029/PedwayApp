@@ -7,6 +7,7 @@
  * https://github.com/oblador/react-native-vector-icons
  * https://github.com/react-native-community/react-native-maps/blob/master/docs/installation.md
  * https://www.igismap.com/switching-between-google-maps-and-openstreetmap-in-react-native/
+ * https://stackoverflow.com/questions/39395404/react-native-import-the-whole-file-split-js-code-into-several-files
  *
  * @format
  * @flow
@@ -14,22 +15,22 @@
  */
 
 import React, {Component} from 'react';
+import MapView, {MAP_TYPES, UrlTile} from 'react-native-maps';
 import {Button} from 'react-native';
 import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import APIManager from './APIManager';
-import MapView, {MAP_TYPES, UrlTile} from "react-native-maps";
 import SideMenu from 'react-native-side-menu';
-import {createAppContainer, createStackNavigator, StackActions, NavigationActions} from 'react-navigation';
 
 
+/**
+ * HomeScreen that gets rendered first when everything is loaded
+ * Consists of a Sidemenu, a MainView, and a hamburger button that toggles
+ * Sidemenu/MainView
+ */
 class HomeScreen extends React.Component {
-  static navigationOptions = {
-    header: null
-  };
 
   constructor() {
-    console.log("INIT Pedway App");
+    console.log('INIT Pedway App');
     super();
     this.state = {
       mainStatusText: 'Requesting from backend...',
@@ -39,21 +40,10 @@ class HomeScreen extends React.Component {
       sideMenuDisableGesture: true,
       apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
     };
-    console.log('Try Requesting API');
-    APIManager.getInstance().getCurrentPedwayStatus().then(inputObj => {
-      this.setState({mainStatusText: 'Current state of the pedway: ' + inputObj[0]['status']});
-      this.setState({entrance1StatusText: 'Entrance 1: ' + inputObj[1]['status']});
-      this.setState({macysStatusText: 'Macy\'s section: ' + inputObj[2]['status']});
-
-    }).catch((e) => {
-      console.log(e);
-    });
   }
 
   render() {
-
     return (
-
       <SideMenu
         menu={<SideMenu navigator={navigator}/>}
         disableGestures={this.state.sideMenuDisableGesture}
@@ -63,96 +53,65 @@ class HomeScreen extends React.Component {
           this.setState({sideMenuDisableGesture: !openStatus});
         }}
       >
-        <View style={{flex: 1}}>
-          <MapView
-            mapType={MAP_TYPES.NONE}
-            style={styles.mainMap}
-            provider={null}
-            region={{
-              latitude: 40.113918,
-              longitude: -88.224916,
-              latitudeDelta: 0.1,
-              longitudeDelta: 0.1,
-            }}>
-            <UrlTile urlTemplate={this.state.apiServerURL}/>
-            <MapView.Marker
-                coordinate={{
-                  latitude: 40.114399,
-                  longitude: -88.223961}}
-                  title={"title"}
-                  description={"description"}
+        <TouchableOpacity
+          style={[styles.hamburgerButton, styles.floating, styles.roundButton]}
+          onPress={() => {
+            this.setState({
+              sideMenuIsOpen: !this.state.sideMenuIsOpen,
+            });
+          }}>
+          <View style={{
+            flexGrow: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+            <Icon
+              name="bars"
+              size={35}
+              color="#555"
             />
-          </MapView>
-          <TouchableOpacity
-            style={[styles.hamburgerButton, styles.floating, styles.roundButton]}
-            onPress={() => {
-              this.setState({
-                sideMenuIsOpen: !this.state.sideMenuIsOpen,
-              });
-            }}>
-            <View style={{flexGrow: 1, justifyContent: 'center', alignItems: 'center'}}>
-              <Icon
-                name="bars"
-                size={35}
-                color="#555"
-              />
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={[styles.floating, styles.searchBox]}
-          >
-            <View style={{flexGrow: 1, justifyContent: 'center', alignItems: 'flex-start'}}>
-              <Text style={{fontSize: 18}}>Enter your destination...</Text>
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={[styles.undergroundButton, styles.floating, styles.roundButton]}
-            onPress={() => {
-              this.props.navigation.dispatch(StackActions.reset({
-                index: 0,
-                actions: [
-                  NavigationActions.navigate({routeName: 'Underground'})
-                ],
-              }))
-            }}>
-            <View style={{flexGrow: 1, justifyContent: 'center', alignItems: 'center'}}>
-              <Icon
-                name="level-down"
-                size={40}
-                color="#555"
-              />
-            </View>
-          </TouchableOpacity>
-        </View>
+          </View>
+        </TouchableOpacity>
+        <MainView/>
       </SideMenu>
     );
   }
 }
 
-class UndergroundScreen extends React.Component {
-  static navigationOptions = {
-    header: null
-  };
-
+/**
+ * MainViews that display groundMap and several Navigation buttons
+ * The first button is to trigger the search field
+ * The second button is the entry point for the underground map
+ */
+class MainView extends React.Component {
   render() {
     return (
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text>Underground Screen</Text>
+      <View style={{flex: 1}}>
+        <GroundMapView/>
         <TouchableOpacity
-            style={[styles.undergroundButton, styles.floating, styles.roundButton]}
-            onPress={() => {
-              this.props.navigation.dispatch(StackActions.reset({
-                index: 0,
-                actions: [
-                  NavigationActions.navigate({routeName: 'Home'})
-                ],
-              }))
-            }}>
-          <View style={{flexGrow: 1, justifyContent: 'center', alignItems: 'center'}}>
+          style={[styles.floating, styles.searchBox]}
+        >
+          <View style={{
+            flexGrow: 1,
+            justifyContent: 'center',
+            alignItems: 'flex-start',
+          }}>
+            <Text style={{fontSize: 18}}>Enter your destination...</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[styles.undergroundButton, styles.floating, styles.roundButton]}
+          onPress={() => {
+          }}>
+          <View style={{
+            flexGrow: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
             <Icon
-                name="level-up"
-                size={40}
-                color="#555"
+              name="level-down"
+              size={40}
+              color="#555"
             />
           </View>
         </TouchableOpacity>
@@ -162,22 +121,75 @@ class UndergroundScreen extends React.Component {
 }
 
 
-const AppNavigator = createStackNavigator({
-  Home: {
-    screen: HomeScreen,
-  },
-  Underground: {
-    screen: UndergroundScreen,
-  },
-}, {
-  initialRouteName: 'Home',
-  defaultNavigationOptions: {
-    headerStyle: {
-      backgroundColor: '#777',
-    },
-    headerTintColor: '#fff',
-  },
-});
+/**
+ * Renders a MapView that display the ground level map
+ * we are setting provider to null and UrlTile to OpenStreetMap's API
+ * to use OSM
+ */
+class GroundMapView extends React.Component {
+
+  constructor() {
+    super();
+    this.state = {
+      apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
+    };
+  }
+
+  render() {
+    return (
+      <MapView
+        style={styles.mainMap}
+        mapType={MAP_TYPES.NONE}
+        provider={null}
+        region={{
+          latitude: 40.113918,
+          longitude: -88.224916,
+          latitudeDelta: 0.1,
+          longitudeDelta: 0.1,
+        }}>
+        <UrlTile urlTemplate={this.state.apiServerURL}/>
+        <MapView.Marker
+          coordinate={{
+            latitude: 40.114399,
+            longitude: -88.223961,
+          }}
+          title={'title'}
+          description={'description'}
+        />
+      </MapView>
+    );
+  }
+}
+
+/**
+ * WIP, should return a Component that only renders the pedway
+ */
+class UndergroundScreen extends React.Component {
+
+  render() {
+    return (
+      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+        <Text>Underground Screen</Text>
+        <TouchableOpacity
+          style={[styles.undergroundButton, styles.floating, styles.roundButton]}
+          onPress={() => {
+          }}>
+          <View style={{
+            flexGrow: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+            <Icon
+              name="level-up"
+              size={40}
+              color="#555"
+            />
+          </View>
+        </TouchableOpacity>
+      </View>
+    );
+  }
+}
 
 
 const styles = StyleSheet.create({
@@ -202,7 +214,7 @@ const styles = StyleSheet.create({
     borderRadius: 60,
   },
   floating: {
-    shadowOffset: {width: 30, height: 30,},
+    shadowOffset: {width: 30, height: 30},
     shadowColor: 'rgba(0, 0, 0, 0.6)',
     shadowOpacity: 0.8,
     elevation: 6,
@@ -224,14 +236,11 @@ const styles = StyleSheet.create({
   mainMap: {
     ...StyleSheet.absoluteFillObject,
     zIndex: -1,
-  }
+  },
 });
-
-
-const AppContainer = createAppContainer(AppNavigator);
 
 export default class App extends React.Component {
   render() {
-    return <AppContainer/>;
+    return <HomeScreen/>;
   }
 }
