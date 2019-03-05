@@ -20,7 +20,7 @@ import {Button} from 'react-native';
 import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import SideMenu from 'react-native-side-menu';
-
+import StyleJson from './mapStyleDark.json';
 
 /**
  * HomeScreen that gets rendered first when everything is loaded
@@ -128,8 +128,10 @@ class MainView extends React.Component {
  */
 class GroundMapView extends React.Component {
 
+
   constructor() {
     super();
+
     this.state = {
       apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
     };
@@ -139,15 +141,13 @@ class GroundMapView extends React.Component {
     return (
       <MapView
         style={styles.mainMap}
-        mapType={MAP_TYPES.NONE}
-        provider={null}
+        customMapStyle={StyleJson}
         region={{
           latitude: 40.113918,
           longitude: -88.224916,
           latitudeDelta: 0.1,
           longitudeDelta: 0.1,
         }}>
-        <UrlTile urlTemplate={this.state.apiServerURL}/>
         <MapView.Marker
           coordinate={{
             latitude: 40.114399,
@@ -244,3 +244,5 @@ export default class App extends React.Component {
     return <HomeScreen/>;
   }
 }
+
+
