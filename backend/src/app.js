@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require('express');
 // Load mongoose models into mongoose
 require('../api/models')();
