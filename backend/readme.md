@@ -26,6 +26,9 @@ Create a `.env` file in the root of the backend directory.
 This file will be ignored by git, and should contain any configuration environmental variables.
 The following variables are currently supported:
 ```
+# Server port
+PORT=
+
 # Mongo database password
 MONGODB_URI=
 
