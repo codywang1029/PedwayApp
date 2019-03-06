@@ -20,6 +20,25 @@ mongo
 
 # Now you are connected to the mongodb image
 ```
+
+### Environment Variable Configuration
+Create a `.env` file in the root of the backend directory.
+This file will be ignored by git, and should contain any configuration environmental variables.
+The following variables are currently supported:
+```
+# Mongo database password
+MONGODB_URI=
+
+# Mongo database username
+MONGODB_UNAME=
+
+# Mongo database hostpath
+MONGODB_HOST=
+
+# Openroutingservice.org API key
+ORS_API_KEY=... 
+```
+
 ### How to actually run the server
 There are two different ways to run the server
 ```bash
