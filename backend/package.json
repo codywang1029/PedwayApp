@@ -44,10 +44,12 @@
   "eslintConfig": {
     "extends": "google",
     "rules": {
-      "linebreak-style": "off"
+      "linebreak-style": "off",
+      "max-len": ["error", {"ignoreStrings": true}]
     },
     "env": {
       "es6": true
+
     }
   }
 }

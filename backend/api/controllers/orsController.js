@@ -1,6 +1,6 @@
 'use strict';
 
-const ORS_BASE_URL = "https://api.openrouteservice.org";
+const ORS_BASE_URL = 'https://api.openrouteservice.org';
 const ORS_DIRECTION_URL = 'directions';
 
 const request = require('request');
