@@ -5,6 +5,12 @@ const ORS_DIRECTION_URL = 'directions';
 
 const request = require('request');
 
+/**
+ * Handles the directions endpoint, and forwards the request to ORS
+ *
+ * @param {Object} req the request object
+ * @param {Object} res the response object
+ */
 exports.directions = function(req, res) {
   request
       .get({
