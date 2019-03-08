@@ -1,21 +1,41 @@
 /**
  * @format
  * @lint-ignore-every XPLATJSCOPYRIGHT1
- * we have to use isomorphic-fetch for our test cases so there is no fetch included in jest
+ * Since for this iteration our user interface is static,
+ * We are only asserting if the UI is rendered correctly
  */
 
 import 'react-native';
 import React from 'react';
-import App from '../App';
-import fetch from 'isomorphic-fetch';
+import testRenderer from 'react-test-renderer';
+import App from '../App.js';
+import HomeScreen from '../App.js'
+import MainView from '../App.js'
+import GroundMapView from '../App.js'
+import UndergroundScreen from '../App.js'
 
 
-// Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
-it('renders correctly', () => {
-  renderer.create(<App />);
+test('Check if our main app renders correctly', () => {
+  const treeRendered = testRenderer.create(<App />).toJSON();
+  expect(treeRendered).toMatchSnapshot();
 });
 
-test('Dummy test case for testing purpose', () => {
-  expect(1+1).toBe(2);
+test('Check if our HomeScreen renders correctly', () => {
+  const treeRendered = testRenderer.create(<HomeScreen />).toJSON();
+  expect(treeRendered).toMatchSnapshot();
+});
+
+test('Check if our MainView renders correctly', () => {
+  const treeRendered = testRenderer.create(<MainView />).toJSON();
+  expect(treeRendered).toMatchSnapshot();
+});
+
+test('Check if our GroundMapView renders correctly', () => {
+  const treeRendered = testRenderer.create(<GroundMapView />).toJSON();
+  expect(treeRendered).toMatchSnapshot();
+});
+
+test('Check if our UndergroundScreen renders correctly', () => {
+  const treeRendered = testRenderer.create(<UndergroundScreen />).toJSON();
+  expect(treeRendered).toMatchSnapshot();
 });

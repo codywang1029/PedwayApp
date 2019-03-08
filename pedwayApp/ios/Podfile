@@ -13,6 +13,12 @@ target 'ReactNativeTest' do
   
 
   platform :ios, '9.0'
+  pod 'react-native-maps', :path => '../node_modules/react-native-maps'
+
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'ReactNativeTestTests' do
     inherit! :search_paths
     # Pods for testing
