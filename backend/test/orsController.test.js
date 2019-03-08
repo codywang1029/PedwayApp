@@ -40,4 +40,32 @@ describe('Conditional test using the ors endpoint', () => {
               done();
             });
       });
+
+  testIfORSAPIKeyAvailable(
+      'poi information should be returned from the POST method on the poi endpoint',
+      (done) => {
+        request(app)
+            // Send a POST POI request for the block in Chicago that contains
+            // the oldest part of the pedway
+            .post('/api/ors/pois')
+            .send({
+              'request': 'pois',
+              'geometry': {
+                'bbox': [[-87.629378, 41.879475], [-87.627779, 41.878261]],
+                'geojson':
+                    {'type': 'Point', 'coordinates': [-87.628541, 41.878876]},
+                'buffer': 250,
+              },
+            })
+            .then((response) => {
+              expect(response.statusCode).toBe(200);
+              expect(typeof response.body).toBe('object');
+              expect(Array.isArray(response.body['features'])).toBe(true);
+              expect(response.body['features'].some(
+                  (f) => f['properties']['osm_tags']['name'] ===
+                             'Dirksen Federal Building and US Courthouse'))
+                  .toBe(true);
+              done();
+            });
+      });
 });

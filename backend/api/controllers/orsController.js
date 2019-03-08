@@ -3,6 +3,7 @@
 const ORS_BASE_URL = 'https://api.openrouteservice.org';
 const ORS_DIRECTION_URL = 'directions';
 const ORS_MAPSURFER_URL = 'mapsurfer/';
+const ORS_POIS_URL = 'pois';
 
 const request = require('request');
 
@@ -38,6 +39,26 @@ exports.mapsurfer = function(req, res) {
         qs: Object.assign({}, req.query, {
           'api_key': process.env.ORS_API_KEY,
         }),
+      })
+      .pipe(res);
+};
+
+/**
+ * Handles the poi endpoint, and forwards the request to ORS
+ *
+ * @param {Object} req the request object
+ * @param {Object} res the response object
+ */
+exports.pois = function(req, res) {
+  request
+      .post({
+        baseUrl: ORS_BASE_URL,
+        url: ORS_POIS_URL,
+        body: req.body,
+        json: true,
+        qs: {
+          'api_key': process.env.ORS_API_KEY,
+        },
       })
       .pipe(res);
 };
