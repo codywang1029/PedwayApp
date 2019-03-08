@@ -12,22 +12,49 @@ export default class GroundMapView extends React.Component {
   constructor() {
     super();
     this.state = {
-      apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
+        apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
+        latitude: -88.224916,
+        longitude: 40.113918,
+        error: null
     };
   }
+    componentDidMount() {
+
+          navigator.geolocation.getCurrentPosition(
+              (position) => {
+                  console.log(position.coords);
+                  this.setState({
+                      latitude: position.coords.latitude,
+                      longitude: position.coords.longitude,
+                      error: null,
+                  });
+              },
+              (error) => this.setState({ error: error.message }),
+              { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 },
+          );
+     
+    }
 
   render() {
+      const latitude = this.state.latitude;
+      const longitude = this.state.longitude;
+      console.log(latitude);
     return (
       <MapView
         style={styles.mainMap}
         mapType={MAP_TYPES.NONE}
         provider={null}
-        region={this.props.region}>
+        region={{
+            latitude: latitude,
+            longitude: longitude,
+            latitudeDelta: 0.1,
+            longitudeDelta: 0.1,
+        }}>
         <UrlTile urlTemplate={this.state.apiServerURL}/>
         <MapView.Marker
           coordinate={{
-            latitude: 40.114399,
-            longitude: -88.223961,
+            latitude: latitude,
+            longitude: longitude,
           }}
           pinColor={"#1198ff"}
           title={'You'}

@@ -74,12 +74,7 @@ class MainView extends React.Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <GroundMapView region={{
-          latitude: 40.113918,
-          longitude: -88.224916,
-          latitudeDelta: 0.1,
-          longitudeDelta: 0.1,
-        }}/>
+        <GroundMapView />
         <SearchBar/>
         <RoundButton style={[positions.undergroundButton]} icon={"level-down"} func={() => {
           // this.props.navigation.dispatch(StackActions.reset({
