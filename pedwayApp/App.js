@@ -44,6 +44,9 @@ class HomeScreen extends React.Component {
   }
 
   render() {
+
+      const toggleSideBar = () => {this.setState({sideMenuIsOpen: !this.state.sideMenuIsOpen,});}
+
     return (
      <SideMenu
         menu={<SideMenu navigator={navigator}/>}
@@ -54,11 +57,7 @@ class HomeScreen extends React.Component {
           this.setState({sideMenuDisableGesture: !openStatus});
         }}
       >
-       <RoundButton style={[positions.hamburgerButton]} icon={"bars"} func={() => {
-         this.setState({
-           sideMenuIsOpen: !this.state.sideMenuIsOpen,
-         });
-       }}/>
+       <RoundButton style={[positions.hamburgerButton]} icon={"bars"} func={toggleSideBar}/>
 
         <MainView/>
       </SideMenu>

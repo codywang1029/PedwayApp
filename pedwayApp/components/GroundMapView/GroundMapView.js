@@ -29,8 +29,8 @@ export default class GroundMapView extends React.Component {
             latitude: 40.114399,
             longitude: -88.223961,
           }}
-          title={'title'}
-          description={'description'}
+          pinColor={"#1198ff"}
+          title={'You'}
         />
       </MapView>
     );
