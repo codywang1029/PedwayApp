@@ -6,6 +6,8 @@ export default class PedwaySection {
   /**
    * constructor for this class
    * @param {PedwayCoordinate} inputCoordinate
+   * @param {string} status
+   * @param {boolean} elevator
    */
   constructor(inputCoordinate, status, elevator=false) {
     this.coordinate = inputCoordinate;
@@ -19,6 +21,22 @@ export default class PedwaySection {
    */
   getCoordinate() {
     return this.coordinate;
+  }
+
+  /**
+   * get the status
+   * @return {string}
+   */
+  getStatus() {
+    return this.status;
+  }
+
+  /**
+   * get if we have elevator in this entrance
+   * @return {boolean}
+   */
+  getElevatorAvailability() {
+    return this.elevator;
   }
 
   /**
