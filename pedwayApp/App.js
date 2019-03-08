@@ -15,12 +15,19 @@
  */
 
 import React, {Component} from 'react';
-import MapView, {MAP_TYPES, UrlTile} from 'react-native-maps';
+import MapView, {
+  MAP_TYPES,
+  UrlTile,
+  Polyline,
+  Polygon,
+} from 'react-native-maps';
 import {Button} from 'react-native';
 import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import SideMenu from 'react-native-side-menu';
 import StyleJson from './mapStyleDark.json';
+import PedwaySection from './modal/PedwaySection.js';
+import PedwayCoordinate from './modal/PedwayCoordinate.js';
 
 /**
  * HomeScreen that gets rendered first when everything is loaded
@@ -156,7 +163,40 @@ class GroundMapView extends React.Component {
           title={'title'}
           description={'description'}
         />
+        <RenderPedway/>
       </MapView>
+    );
+  }
+}
+
+/**
+ * The current pedway sections are hard coded place holders
+ * In the future we are gonna to get those values from the API
+ * */
+class RenderPedway extends Component {
+
+  constructor(props) {
+    super(props);
+    let section1 = new PedwaySection([new PedwayCoordinate(40.143, -88.231),
+      new PedwayCoordinate(40.0953, -88.255462), new PedwayCoordinate(40.068305, -88.205)]);
+    let section2 = new PedwaySection([new PedwayCoordinate(40.116300, -88.2737),
+      new PedwayCoordinate(40.116329, -88.224462)]);
+    this.state = {
+      pedwaySections: [section1, section2],
+    };
+  }
+
+  render() {
+    return (
+      this.state.pedwaySections.map((path, idx) => {
+        return (
+          <MapView.Polyline
+            key={idx}
+            coordinates={path.getJSONList()}
+            strokeColor='#42b0f4'
+            strokeWidth={3}
+          />);
+      })
     );
   }
 }

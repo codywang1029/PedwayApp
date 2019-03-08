@@ -45,6 +45,14 @@ jest.mock('react-native-maps', () => {
   RetMockMapView.Marker = RetMockMarker;
 
 
+  class RetMockPolyline extends React.Component {
+    render() {
+      return React.createElement('Polyline', this.props, this.props.children);
+    }
+  }
+
+  RetMockMapView.Polyline = RetMockPolyline;
+
   class RetMockMapType extends React.Component {
     render() {
       return React.createElement('MAP_TYPES', this.props, this.props.children);

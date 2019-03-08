@@ -195,7 +195,254 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
       }
     >
       <MapView
-        provider={null}
+        customMapStyle={
+          Array [
+            Object {
+              "elementType": "geometry",
+              "stylers": Array [
+                Object {
+                  "color": "#212121",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.icon",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "stylers": Array [
+                Object {
+                  "color": "#757575",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.stroke",
+              "stylers": Array [
+                Object {
+                  "color": "#212121",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "administrative",
+              "stylers": Array [
+                Object {
+                  "color": "#757575",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "administrative.country",
+              "stylers": Array [
+                Object {
+                  "color": "#9e9e9e",
+                },
+              ],
+            },
+            Object {
+              "featureType": "administrative.land_parcel",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "administrative.locality",
+              "stylers": Array [
+                Object {
+                  "color": "#bdbdbd",
+                },
+              ],
+            },
+            Object {
+              "featureType": "administrative.neighborhood",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text",
+              "featureType": "poi",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "poi",
+              "stylers": Array [
+                Object {
+                  "color": "#757575",
+                },
+              ],
+            },
+            Object {
+              "featureType": "poi.business",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "poi.park",
+              "stylers": Array [
+                Object {
+                  "color": "#181818",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "poi.park",
+              "stylers": Array [
+                Object {
+                  "color": "#616161",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.stroke",
+              "featureType": "poi.park",
+              "stylers": Array [
+                Object {
+                  "color": "#1b1b1b",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry.fill",
+              "featureType": "road",
+              "stylers": Array [
+                Object {
+                  "color": "#2c2c2c",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels",
+              "featureType": "road",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.icon",
+              "featureType": "road",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "road",
+              "stylers": Array [
+                Object {
+                  "color": "#8a8a8a",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "road.arterial",
+              "stylers": Array [
+                Object {
+                  "color": "#373737",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "road.highway",
+              "stylers": Array [
+                Object {
+                  "color": "#3c3c3c",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "road.highway.controlled_access",
+              "stylers": Array [
+                Object {
+                  "color": "#4e4e4e",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "road.local",
+              "stylers": Array [
+                Object {
+                  "color": "#616161",
+                },
+              ],
+            },
+            Object {
+              "featureType": "transit",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "transit",
+              "stylers": Array [
+                Object {
+                  "color": "#757575",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "water",
+              "stylers": Array [
+                Object {
+                  "color": "#000000",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text",
+              "featureType": "water",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "water",
+              "stylers": Array [
+                Object {
+                  "color": "#3d3d3d",
+                },
+              ],
+            },
+          ]
+        }
         region={
           Object {
             "latitude": 40.113918,
@@ -215,9 +462,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
           }
         }
       >
-        <UrlTile
-          urlTemplate="http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png"
-        />
         <Marker
           coordinate={
             Object {
@@ -227,6 +471,42 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
           }
           description="description"
           title="title"
+        />
+        <Polyline
+          coordinates={
+            Array [
+              Object {
+                "latitude": 40.1163,
+                "longitude": -88.263778,
+              },
+              Object {
+                "latitude": 40.1163,
+                "longitude": -88.224462,
+              },
+            ]
+          }
+          strokeColor="#42b0f4"
+          strokeWidth={3}
+        />
+        <Polyline
+          coordinates={
+            Array [
+              Object {
+                "latitude": 40.1433,
+                "longitude": -88.231778,
+              },
+              Object {
+                "latitude": 40.0953,
+                "longitude": -88.255462,
+              },
+              Object {
+                "latitude": 40.068305,
+                "longitude": -88.205,
+              },
+            ]
+          }
+          strokeColor="#42b0f4"
+          strokeWidth={3}
         />
       </MapView>
       <View
@@ -548,7 +828,254 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
       }
     >
       <MapView
-        provider={null}
+        customMapStyle={
+          Array [
+            Object {
+              "elementType": "geometry",
+              "stylers": Array [
+                Object {
+                  "color": "#212121",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.icon",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "stylers": Array [
+                Object {
+                  "color": "#757575",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.stroke",
+              "stylers": Array [
+                Object {
+                  "color": "#212121",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "administrative",
+              "stylers": Array [
+                Object {
+                  "color": "#757575",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "administrative.country",
+              "stylers": Array [
+                Object {
+                  "color": "#9e9e9e",
+                },
+              ],
+            },
+            Object {
+              "featureType": "administrative.land_parcel",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "administrative.locality",
+              "stylers": Array [
+                Object {
+                  "color": "#bdbdbd",
+                },
+              ],
+            },
+            Object {
+              "featureType": "administrative.neighborhood",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text",
+              "featureType": "poi",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "poi",
+              "stylers": Array [
+                Object {
+                  "color": "#757575",
+                },
+              ],
+            },
+            Object {
+              "featureType": "poi.business",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "poi.park",
+              "stylers": Array [
+                Object {
+                  "color": "#181818",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "poi.park",
+              "stylers": Array [
+                Object {
+                  "color": "#616161",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.stroke",
+              "featureType": "poi.park",
+              "stylers": Array [
+                Object {
+                  "color": "#1b1b1b",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry.fill",
+              "featureType": "road",
+              "stylers": Array [
+                Object {
+                  "color": "#2c2c2c",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels",
+              "featureType": "road",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.icon",
+              "featureType": "road",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "road",
+              "stylers": Array [
+                Object {
+                  "color": "#8a8a8a",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "road.arterial",
+              "stylers": Array [
+                Object {
+                  "color": "#373737",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "road.highway",
+              "stylers": Array [
+                Object {
+                  "color": "#3c3c3c",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "road.highway.controlled_access",
+              "stylers": Array [
+                Object {
+                  "color": "#4e4e4e",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "road.local",
+              "stylers": Array [
+                Object {
+                  "color": "#616161",
+                },
+              ],
+            },
+            Object {
+              "featureType": "transit",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "transit",
+              "stylers": Array [
+                Object {
+                  "color": "#757575",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "water",
+              "stylers": Array [
+                Object {
+                  "color": "#000000",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text",
+              "featureType": "water",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "water",
+              "stylers": Array [
+                Object {
+                  "color": "#3d3d3d",
+                },
+              ],
+            },
+          ]
+        }
         region={
           Object {
             "latitude": 40.113918,
@@ -568,9 +1095,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
           }
         }
       >
-        <UrlTile
-          urlTemplate="http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png"
-        />
         <Marker
           coordinate={
             Object {
@@ -580,6 +1104,42 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
           }
           description="description"
           title="title"
+        />
+        <Polyline
+          coordinates={
+            Array [
+              Object {
+                "latitude": 40.1163,
+                "longitude": -88.263778,
+              },
+              Object {
+                "latitude": 40.1163,
+                "longitude": -88.224462,
+              },
+            ]
+          }
+          strokeColor="#42b0f4"
+          strokeWidth={3}
+        />
+        <Polyline
+          coordinates={
+            Array [
+              Object {
+                "latitude": 40.1433,
+                "longitude": -88.231778,
+              },
+              Object {
+                "latitude": 40.0953,
+                "longitude": -88.255462,
+              },
+              Object {
+                "latitude": 40.068305,
+                "longitude": -88.205,
+              },
+            ]
+          }
+          strokeColor="#42b0f4"
+          strokeWidth={3}
         />
       </MapView>
       <View
@@ -901,7 +1461,254 @@ exports[`Check if our MainView renders correctly 1`] = `
       }
     >
       <MapView
-        provider={null}
+        customMapStyle={
+          Array [
+            Object {
+              "elementType": "geometry",
+              "stylers": Array [
+                Object {
+                  "color": "#212121",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.icon",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "stylers": Array [
+                Object {
+                  "color": "#757575",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.stroke",
+              "stylers": Array [
+                Object {
+                  "color": "#212121",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "administrative",
+              "stylers": Array [
+                Object {
+                  "color": "#757575",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "administrative.country",
+              "stylers": Array [
+                Object {
+                  "color": "#9e9e9e",
+                },
+              ],
+            },
+            Object {
+              "featureType": "administrative.land_parcel",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "administrative.locality",
+              "stylers": Array [
+                Object {
+                  "color": "#bdbdbd",
+                },
+              ],
+            },
+            Object {
+              "featureType": "administrative.neighborhood",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text",
+              "featureType": "poi",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "poi",
+              "stylers": Array [
+                Object {
+                  "color": "#757575",
+                },
+              ],
+            },
+            Object {
+              "featureType": "poi.business",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "poi.park",
+              "stylers": Array [
+                Object {
+                  "color": "#181818",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "poi.park",
+              "stylers": Array [
+                Object {
+                  "color": "#616161",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.stroke",
+              "featureType": "poi.park",
+              "stylers": Array [
+                Object {
+                  "color": "#1b1b1b",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry.fill",
+              "featureType": "road",
+              "stylers": Array [
+                Object {
+                  "color": "#2c2c2c",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels",
+              "featureType": "road",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.icon",
+              "featureType": "road",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "road",
+              "stylers": Array [
+                Object {
+                  "color": "#8a8a8a",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "road.arterial",
+              "stylers": Array [
+                Object {
+                  "color": "#373737",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "road.highway",
+              "stylers": Array [
+                Object {
+                  "color": "#3c3c3c",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "road.highway.controlled_access",
+              "stylers": Array [
+                Object {
+                  "color": "#4e4e4e",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "road.local",
+              "stylers": Array [
+                Object {
+                  "color": "#616161",
+                },
+              ],
+            },
+            Object {
+              "featureType": "transit",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "transit",
+              "stylers": Array [
+                Object {
+                  "color": "#757575",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "water",
+              "stylers": Array [
+                Object {
+                  "color": "#000000",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text",
+              "featureType": "water",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "water",
+              "stylers": Array [
+                Object {
+                  "color": "#3d3d3d",
+                },
+              ],
+            },
+          ]
+        }
         region={
           Object {
             "latitude": 40.113918,
@@ -921,9 +1728,6 @@ exports[`Check if our MainView renders correctly 1`] = `
           }
         }
       >
-        <UrlTile
-          urlTemplate="http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png"
-        />
         <Marker
           coordinate={
             Object {
@@ -933,6 +1737,42 @@ exports[`Check if our MainView renders correctly 1`] = `
           }
           description="description"
           title="title"
+        />
+        <Polyline
+          coordinates={
+            Array [
+              Object {
+                "latitude": 40.1163,
+                "longitude": -88.263778,
+              },
+              Object {
+                "latitude": 40.1163,
+                "longitude": -88.224462,
+              },
+            ]
+          }
+          strokeColor="#42b0f4"
+          strokeWidth={3}
+        />
+        <Polyline
+          coordinates={
+            Array [
+              Object {
+                "latitude": 40.1433,
+                "longitude": -88.231778,
+              },
+              Object {
+                "latitude": 40.0953,
+                "longitude": -88.255462,
+              },
+              Object {
+                "latitude": 40.068305,
+                "longitude": -88.205,
+              },
+            ]
+          }
+          strokeColor="#42b0f4"
+          strokeWidth={3}
         />
       </MapView>
       <View
@@ -1254,7 +2094,254 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
       }
     >
       <MapView
-        provider={null}
+        customMapStyle={
+          Array [
+            Object {
+              "elementType": "geometry",
+              "stylers": Array [
+                Object {
+                  "color": "#212121",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.icon",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "stylers": Array [
+                Object {
+                  "color": "#757575",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.stroke",
+              "stylers": Array [
+                Object {
+                  "color": "#212121",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "administrative",
+              "stylers": Array [
+                Object {
+                  "color": "#757575",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "administrative.country",
+              "stylers": Array [
+                Object {
+                  "color": "#9e9e9e",
+                },
+              ],
+            },
+            Object {
+              "featureType": "administrative.land_parcel",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "administrative.locality",
+              "stylers": Array [
+                Object {
+                  "color": "#bdbdbd",
+                },
+              ],
+            },
+            Object {
+              "featureType": "administrative.neighborhood",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text",
+              "featureType": "poi",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "poi",
+              "stylers": Array [
+                Object {
+                  "color": "#757575",
+                },
+              ],
+            },
+            Object {
+              "featureType": "poi.business",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "poi.park",
+              "stylers": Array [
+                Object {
+                  "color": "#181818",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "poi.park",
+              "stylers": Array [
+                Object {
+                  "color": "#616161",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.stroke",
+              "featureType": "poi.park",
+              "stylers": Array [
+                Object {
+                  "color": "#1b1b1b",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry.fill",
+              "featureType": "road",
+              "stylers": Array [
+                Object {
+                  "color": "#2c2c2c",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels",
+              "featureType": "road",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.icon",
+              "featureType": "road",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "road",
+              "stylers": Array [
+                Object {
+                  "color": "#8a8a8a",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "road.arterial",
+              "stylers": Array [
+                Object {
+                  "color": "#373737",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "road.highway",
+              "stylers": Array [
+                Object {
+                  "color": "#3c3c3c",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "road.highway.controlled_access",
+              "stylers": Array [
+                Object {
+                  "color": "#4e4e4e",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "road.local",
+              "stylers": Array [
+                Object {
+                  "color": "#616161",
+                },
+              ],
+            },
+            Object {
+              "featureType": "transit",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "transit",
+              "stylers": Array [
+                Object {
+                  "color": "#757575",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "water",
+              "stylers": Array [
+                Object {
+                  "color": "#000000",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text",
+              "featureType": "water",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "water",
+              "stylers": Array [
+                Object {
+                  "color": "#3d3d3d",
+                },
+              ],
+            },
+          ]
+        }
         region={
           Object {
             "latitude": 40.113918,
@@ -1274,9 +2361,6 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
           }
         }
       >
-        <UrlTile
-          urlTemplate="http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png"
-        />
         <Marker
           coordinate={
             Object {
@@ -1286,6 +2370,42 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
           }
           description="description"
           title="title"
+        />
+        <Polyline
+          coordinates={
+            Array [
+              Object {
+                "latitude": 40.1163,
+                "longitude": -88.263778,
+              },
+              Object {
+                "latitude": 40.1163,
+                "longitude": -88.224462,
+              },
+            ]
+          }
+          strokeColor="#42b0f4"
+          strokeWidth={3}
+        />
+        <Polyline
+          coordinates={
+            Array [
+              Object {
+                "latitude": 40.1433,
+                "longitude": -88.231778,
+              },
+              Object {
+                "latitude": 40.0953,
+                "longitude": -88.255462,
+              },
+              Object {
+                "latitude": 40.068305,
+                "longitude": -88.205,
+              },
+            ]
+          }
+          strokeColor="#42b0f4"
+          strokeWidth={3}
         />
       </MapView>
       <View
@@ -1607,7 +2727,254 @@ exports[`Check if our main app renders correctly 1`] = `
       }
     >
       <MapView
-        provider={null}
+        customMapStyle={
+          Array [
+            Object {
+              "elementType": "geometry",
+              "stylers": Array [
+                Object {
+                  "color": "#212121",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.icon",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "stylers": Array [
+                Object {
+                  "color": "#757575",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.stroke",
+              "stylers": Array [
+                Object {
+                  "color": "#212121",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "administrative",
+              "stylers": Array [
+                Object {
+                  "color": "#757575",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "administrative.country",
+              "stylers": Array [
+                Object {
+                  "color": "#9e9e9e",
+                },
+              ],
+            },
+            Object {
+              "featureType": "administrative.land_parcel",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "administrative.locality",
+              "stylers": Array [
+                Object {
+                  "color": "#bdbdbd",
+                },
+              ],
+            },
+            Object {
+              "featureType": "administrative.neighborhood",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text",
+              "featureType": "poi",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "poi",
+              "stylers": Array [
+                Object {
+                  "color": "#757575",
+                },
+              ],
+            },
+            Object {
+              "featureType": "poi.business",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "poi.park",
+              "stylers": Array [
+                Object {
+                  "color": "#181818",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "poi.park",
+              "stylers": Array [
+                Object {
+                  "color": "#616161",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.stroke",
+              "featureType": "poi.park",
+              "stylers": Array [
+                Object {
+                  "color": "#1b1b1b",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry.fill",
+              "featureType": "road",
+              "stylers": Array [
+                Object {
+                  "color": "#2c2c2c",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels",
+              "featureType": "road",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.icon",
+              "featureType": "road",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "road",
+              "stylers": Array [
+                Object {
+                  "color": "#8a8a8a",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "road.arterial",
+              "stylers": Array [
+                Object {
+                  "color": "#373737",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "road.highway",
+              "stylers": Array [
+                Object {
+                  "color": "#3c3c3c",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "road.highway.controlled_access",
+              "stylers": Array [
+                Object {
+                  "color": "#4e4e4e",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "road.local",
+              "stylers": Array [
+                Object {
+                  "color": "#616161",
+                },
+              ],
+            },
+            Object {
+              "featureType": "transit",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "transit",
+              "stylers": Array [
+                Object {
+                  "color": "#757575",
+                },
+              ],
+            },
+            Object {
+              "elementType": "geometry",
+              "featureType": "water",
+              "stylers": Array [
+                Object {
+                  "color": "#000000",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text",
+              "featureType": "water",
+              "stylers": Array [
+                Object {
+                  "visibility": "off",
+                },
+              ],
+            },
+            Object {
+              "elementType": "labels.text.fill",
+              "featureType": "water",
+              "stylers": Array [
+                Object {
+                  "color": "#3d3d3d",
+                },
+              ],
+            },
+          ]
+        }
         region={
           Object {
             "latitude": 40.113918,
@@ -1627,9 +2994,6 @@ exports[`Check if our main app renders correctly 1`] = `
           }
         }
       >
-        <UrlTile
-          urlTemplate="http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png"
-        />
         <Marker
           coordinate={
             Object {
@@ -1639,6 +3003,42 @@ exports[`Check if our main app renders correctly 1`] = `
           }
           description="description"
           title="title"
+        />
+        <Polyline
+          coordinates={
+            Array [
+              Object {
+                "latitude": 40.1163,
+                "longitude": -88.263778,
+              },
+              Object {
+                "latitude": 40.1163,
+                "longitude": -88.224462,
+              },
+            ]
+          }
+          strokeColor="#42b0f4"
+          strokeWidth={3}
+        />
+        <Polyline
+          coordinates={
+            Array [
+              Object {
+                "latitude": 40.1433,
+                "longitude": -88.231778,
+              },
+              Object {
+                "latitude": 40.0953,
+                "longitude": -88.255462,
+              },
+              Object {
+                "latitude": 40.068305,
+                "longitude": -88.205,
+              },
+            ]
+          }
+          strokeColor="#42b0f4"
+          strokeWidth={3}
         />
       </MapView>
       <View
