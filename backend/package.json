@@ -36,6 +36,7 @@
     "gulp": "^4.0.0",
     "gulp-eslint": "^5.0.0",
     "jest": "^24.1.0",
+    "jest-image-snapshot": "^2.8.1",
     "jest-junit": "^6.3.0",
     "nodemon": "^1.18.10",
     "superagent": "^4.1.0",
