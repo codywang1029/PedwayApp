@@ -8,3 +8,6 @@ style-junit.xml
 
 #environment file
 .env
+
+#jest-image-snapshot
+__diff_output__
