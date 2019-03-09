@@ -6,6 +6,11 @@ const ORS_MAPSURFER_URL = 'mapsurfer/';
 
 const request = require('request');
 
+if (process.env.ORS_API_KEY === undefined) {
+  console.warn(
+      'The openrouteservice.org API key is undefined, so any API requests made to ORS will fail.');
+}
+
 /**
  * Handles the directions endpoint, and forwards the request to ORS
  *
