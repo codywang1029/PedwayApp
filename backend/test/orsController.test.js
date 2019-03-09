@@ -1,4 +1,3 @@
-require('dotenv').config();
 const request = require('supertest');
 const {app, disconnect} = require('../src/app');
 const {toMatchImageSnapshot} = require('jest-image-snapshot');
