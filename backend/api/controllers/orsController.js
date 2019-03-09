@@ -7,6 +7,11 @@ const ORS_MAPSURFER_URL = 'mapsurfer/${zoom}/${x}/${y}.png';
 const request = require('request');
 const fillTemplate = require('es6-dynamic-template');
 
+if (process.env.ORS_API_KEY === undefined) {
+  console.warn(
+      'The openrouteservice.org API key is undefined, so any API requests made to ORS will fail.');
+}
+
 /**
  * Handles the directions endpoint, and forwards the request to ORS
  *
