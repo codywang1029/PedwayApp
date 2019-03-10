@@ -30,7 +30,7 @@ describe('Conditional test using the ors endpoint', () => {
       (done) => {
         request(app)
             // Get a Mapsurfer tile for Millennium Park
-            .get('/api/ors/mapsurfer/15/8407/12178.png')
+            .get('/api/ors/mapsurfer/15/8408/12178.png')
             .then((response) => {
               expect(response.statusCode).toBe(200);
               expect(response.body).toMatchImageSnapshot({

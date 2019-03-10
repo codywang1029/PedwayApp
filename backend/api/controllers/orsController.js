@@ -2,10 +2,11 @@
 
 const ORS_BASE_URL = 'https://api.openrouteservice.org';
 const ORS_DIRECTION_URL = 'directions';
-const ORS_MAPSURFER_URL = 'mapsurfer/';
+const ORS_MAPSURFER_URL = 'mapsurfer/${zoom}/${x}/${y}.png';
 const ORS_POIS_URL = 'pois';
 
 const request = require('request');
+const fillTemplate = require('es6-dynamic-template');
 
 if (process.env.ORS_API_KEY === undefined) {
   console.warn(
@@ -40,7 +41,7 @@ exports.mapsurfer = function(req, res) {
   request
       .get({
         baseUrl: ORS_BASE_URL,
-        url: ORS_MAPSURFER_URL + req.params[0],
+        url: fillTemplate(ORS_MAPSURFER_URL, req.params),
         qs: Object.assign({}, req.query, {
           'api_key': process.env.ORS_API_KEY,
         }),
