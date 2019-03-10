@@ -30,7 +30,6 @@ import SearchBar from './components/SearchBar/SearchBar';
 class HomeScreen extends React.Component {
 
   constructor() {
-    console.log('INIT Pedway App');
     super();
     this.state = {
       mainStatusText: 'Requesting from backend...',

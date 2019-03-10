@@ -2,7 +2,7 @@
  * modal to save a coordinates and status representing pedway entrance
  * the whole pedway is represented with a list of PedwaySections
  */
-export default class PedwaySection {
+export default class PedwayEntrance {
   /**
    * constructor for this class
    * @param {PedwayCoordinate} inputCoordinate

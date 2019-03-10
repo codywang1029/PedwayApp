@@ -1,5 +1,5 @@
-import PedwaySection from '../modal/PedwaySection';
-import PedwayCoordinate from '../modal/PedwayCoordinate';
+import PedwaySection from '../model/PedwaySection';
+import PedwayCoordinate from '../model/PedwayCoordinate';
 
 test('Check Section Constructor', () => {
   const testCoord = new PedwayCoordinate(-70.20232, 42.353523);
@@ -13,7 +13,7 @@ test('Check Coordinates Getter', () => {
   const testCoord2 = new PedwayCoordinate(-42.20232, 42.353523);
 
   const testSection = new PedwaySection([testCoord1, testCoord2]);
-  expect(testSection.getCoordinates() == [testCoord1, testCoord2]);
+  expect(testSection.getCoordinates()).toEqual( [testCoord1, testCoord2]);
 });
 
 
@@ -22,9 +22,9 @@ test('Check Coordinates Setter', () => {
   const testCoord2 = new PedwayCoordinate(-42.20232, 42.353523);
 
   const testSection = new PedwaySection([testCoord1, testCoord2]);
-  expect(testSection.getCoordinates() == [testCoord1, testCoord2]);
+  expect(testSection.getCoordinates()).toEqual([testCoord1, testCoord2]);
   testSection.setCoordinates([testCoord2, testCoord1]);
-  expect(testSection.getCoordinates() == [testCoord2, testCoord1]);
+  expect(testSection.getCoordinates()).toEqual([testCoord2, testCoord1]);
 });
 
 
@@ -33,7 +33,7 @@ test('Check get JSON', () => {
   const testCoord2 = new PedwayCoordinate(-42.20232, 42.353523);
 
   const testSection = new PedwaySection([testCoord1, testCoord2]);
-  expect(testSection.getJSONList() == [
+  expect(testSection.getJSONList()).toEqual([
     {latitude: -70.20232, longitude: 43.353523},
     {latitude: -42.20232, longitude: 42.353523},
   ]);

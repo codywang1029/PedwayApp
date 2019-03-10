@@ -1,5 +1,5 @@
-import PedwayEntrance from '../modal/PedwayEntrance';
-import PedwayCoordinate from '../modal/PedwayCoordinate';
+import PedwayEntrance from '../model/PedwayEntrance';
+import PedwayCoordinate from '../model/PedwayCoordinate';
 
 test('Check Entrance Constructor', () => {
   const testCoord = new PedwayCoordinate(-70.20232, 42.353523);
@@ -18,13 +18,13 @@ test('Check Coordinate Getter', () => {
 test('Check Status Getter', () => {
   const testCoord = new PedwayCoordinate(-70.20232, 42.353523);
   const testEntrance = new PedwayEntrance(testCoord, 'open', false);
-  expect('open' == testEntrance.getStatus());
+  expect(testEntrance.getStatus()).toBe('open');
 });
 
 test('Check Elevator Getter', () => {
   const testCoord = new PedwayCoordinate(-70.20232, 42.353523);
   const testEntrance = new PedwayEntrance(testCoord, 'open', false);
-  expect(false == testEntrance.getElevatorAvailability());
+  expect(testEntrance.getElevatorAvailability()).toBe(false);
 });
 
 test('Check Coordinate Setter', () => {
@@ -41,31 +41,29 @@ test('Check Coordinate Setter', () => {
 test('Check Status Setter', () => {
   const testCoord = new PedwayCoordinate(-70.20232, 42.353523);
   const testEntrance = new PedwayEntrance(testCoord, 'open', false);
-  expect('open' == testEntrance.getStatus());
+  expect(testEntrance.getStatus()).toBe('open');
   testEntrance.setStatus('closed');
-  expect('closed' == testEntrance.getStatus());
+  expect(testEntrance.getStatus()).toBe('closed');
 });
 
 test('Check Coordinate Setter', () => {
   const testVar = new PedwayCoordinate(42, 42);
-  expect(testVar.getLatitdue() == 42);
-  expect(testVar.getLongitude() == 42);
   testVar.setCoordinates(-70.20232, 42.353523);
-  expect(testVar.getLatitdue() == -70.20232);
-  expect(testVar.getLongitude() == 42.353523);
+  expect(testVar.getLatitude()).toBe(-70.20232);
+  expect(testVar.getLongitude()).toBe(42.353523);
 });
 
 test('Check Elevator Setter', () => {
   const testCoord = new PedwayCoordinate(-70.20232, 42.353523);
   const testEntrance = new PedwayEntrance(testCoord, 'open', false);
   testEntrance.setElevator(true);
-  expect(true == testEntrance.getElevatorAvailability());
+  expect(testEntrance.getElevatorAvailability()).toBe(true);
 });
 
 test('Check get JSON', () => {
   const testVar = new PedwayCoordinate(42, 42);
   const testEntrance = new PedwayEntrance(testVar, 'open', false);
-  expect(testEntrance.getJSON() == {
+  expect(testEntrance.getJSON()).toEqual({
     coordinate: {latitude: 42, longitude: 42},
     status: 'open',
     elevator: false,

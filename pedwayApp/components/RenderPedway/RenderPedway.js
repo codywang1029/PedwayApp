@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import PedwaySection from '../../modal/PedwaySection';
-import PedwayCoordinate from '../../modal/PedwayCoordinate';
+import PedwaySection from '../../model/PedwaySection';
+import PedwayCoordinate from '../../model/PedwayCoordinate';
 import MapView, {
   Polyline,
 } from 'react-native-maps';

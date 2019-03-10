@@ -17,7 +17,7 @@ export default class PedwayCoordinate {
    * get the latitude for this coordinate
    * @return {float}
    */
-  getLatitdue() {
+  getLatitude() {
     return this.latitude;
   }
 
@@ -34,7 +34,7 @@ export default class PedwayCoordinate {
    * @return {JSON}
    */
   getJSON() {
-    return {latitude: this.getLatitdue(), longitude: this.getLongitude()};
+    return {latitude: this.getLatitude(), longitude: this.getLongitude()};
   }
 
   /**

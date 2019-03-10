@@ -7,7 +7,7 @@ export default class PedwaySection {
    * constructor for this class
    * @param {Array} inputCoordinates
    */
-  constructor(inputCoordinates=[]) {
+  constructor(inputCoordinates = []) {
     this.coordinates = inputCoordinates;
   }
 
@@ -26,11 +26,12 @@ export default class PedwaySection {
   getJSONList() {
     let retVal = [];
     retVal = [];
-    for (let i=0; i < this.coordinates.length; i++) {
-      retVal.push(this.coordinates[i].getJSON());
-    }
+    this.coordinates.forEach((item) => {
+      retVal.push(item.getJSON());
+    });
     return retVal;
   }
+
   /**
    * set the section to
    * @param {Array} inputCoordinates

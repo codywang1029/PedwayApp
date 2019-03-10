@@ -25,7 +25,6 @@ export default class GroundMapView extends React.Component {
   componentDidMount() {
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        console.log(position.coords);
         this.setState({
           latitude: position.coords.latitude,
           longitude: position.coords.longitude,
@@ -40,7 +39,6 @@ export default class GroundMapView extends React.Component {
   render() {
     const latitude = this.state.latitude;
     const longitude = this.state.longitude;
-    console.log(latitude);
     return (
       <MapView
         style={styles.mainMap}
