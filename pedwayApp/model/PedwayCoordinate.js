@@ -1,5 +1,5 @@
 /**
- * modal that defines coordinates in the pedway
+ * model that defines coordinates in the pedway
  * we are only save latitude and longitude for now
  */
 export default class PedwayCoordinate {

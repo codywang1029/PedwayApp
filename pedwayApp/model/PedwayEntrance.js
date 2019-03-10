@@ -1,5 +1,5 @@
 /**
- * modal to save a coordinates and status representing pedway entrance
+ * model to save a coordinates and status representing pedway entrance
  * the whole pedway is represented with a list of PedwaySections
  */
 export default class PedwayEntrance {

@@ -1,5 +1,5 @@
 /**
- * modal to save a list of coordinates representing a section of the pedway
+ * model to save a list of coordinates representing a section of the pedway
  * the whole pedway is represented with a list of PedwaySections
  */
 export default class PedwaySection {
