@@ -15,7 +15,7 @@ beforeAll(async () => {
 });
 
 beforeEach(async () => {
-  mongoServer.dropDatabase();
+  EntranceSchema.remove({});
 });
 
 afterAll(async () => {
