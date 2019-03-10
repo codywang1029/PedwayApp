@@ -1,0 +1,6547 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2019-03-08T23:05:02Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230620416",
+        "bicycle": "no",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "-1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -87.6314955,
+              41.8849212
+            ],
+            [
+              -87.6314078,
+              41.8849813
+            ],
+            [
+              -87.6313488,
+              41.8850597
+            ],
+            [
+              -87.631324,
+              41.8851864
+            ],
+            [
+              -87.6313618,
+              41.8852919
+            ],
+            [
+              -87.6314478,
+              41.8853793
+            ],
+            [
+              -87.6314832,
+              41.8853976
+            ],
+            [
+              -87.6315427,
+              41.8854284
+            ],
+            [
+              -87.6315861,
+              41.8854393
+            ],
+            [
+              -87.6316429,
+              41.8854536
+            ],
+            [
+              -87.6317225,
+              41.885459
+            ],
+            [
+              -87.6318385,
+              41.8854452
+            ],
+            [
+              -87.6319046,
+              41.8854304
+            ],
+            [
+              -87.6319966,
+              41.8853736
+            ],
+            [
+              -87.6320487,
+              41.8853267
+            ],
+            [
+              -87.6320978,
+              41.8852483
+            ],
+            [
+              -87.632113,
+              41.8851429
+            ],
+            [
+              -87.6320694,
+              41.8850285
+            ],
+            [
+              -87.6319785,
+              41.8849425
+            ],
+            [
+              -87.6318915,
+              41.8848997
+            ],
+            [
+              -87.6317,
+              41.8848719
+            ],
+            [
+              -87.6315798,
+              41.8848887
+            ],
+            [
+              -87.6314955,
+              41.8849212
+            ]
+          ]
+        ]
+      },
+      "id": "way/230620416"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230621277",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -87.6311749,
+              41.8860564
+            ],
+            [
+              -87.6318056,
+              41.8860512
+            ],
+            [
+              -87.6319267,
+              41.8860502
+            ],
+            [
+              -87.6319235,
+              41.8859755
+            ],
+            [
+              -87.6318041,
+              41.885977
+            ],
+            [
+              -87.6311737,
+              41.8859839
+            ],
+            [
+              -87.6311749,
+              41.8860564
+            ]
+          ]
+        ]
+      },
+      "id": "way/230621277"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/363363483",
+        "addr:city": "Dartmouth",
+        "addr:housenumber": "40",
+        "addr:province": "Nova Scotia",
+        "addr:street": "Alderney Drive",
+        "building": "bridge",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -63.5691752,
+              44.6646997
+            ],
+            [
+              -63.5692439,
+              44.6647396
+            ],
+            [
+              -63.5692545,
+              44.664746
+            ],
+            [
+              -63.5695393,
+              44.664498
+            ],
+            [
+              -63.5696581,
+              44.6644042
+            ],
+            [
+              -63.5697204,
+              44.6644026
+            ],
+            [
+              -63.5697257,
+              44.664379
+            ],
+            [
+              -63.5697414,
+              44.6643617
+            ],
+            [
+              -63.5697177,
+              44.6643476
+            ],
+            [
+              -63.5696275,
+              44.6642905
+            ],
+            [
+              -63.5695578,
+              44.6643424
+            ],
+            [
+              -63.5694547,
+              44.664447
+            ],
+            [
+              -63.5691664,
+              44.6646933
+            ],
+            [
+              -63.5691752,
+              44.6646997
+            ]
+          ]
+        ]
+      },
+      "id": "way/363363483"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/133489359",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6265404,
+            41.8843199
+          ],
+          [
+            -87.626503,
+            41.8833266
+          ],
+          [
+            -87.6264962,
+            41.8831073
+          ],
+          [
+            -87.6264925,
+            41.8830204
+          ]
+        ]
+      },
+      "id": "way/133489359"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/133489366",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "source": "http://www.cityofchicago.org/city/en/depts/cdot/provdrs/ped/svcs/pedway.html",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6299205,
+            41.8823551
+          ],
+          [
+            -87.629927,
+            41.8825376
+          ]
+        ]
+      },
+      "id": "way/133489366"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/133489382",
+        "highway": "footway",
+        "layer": "1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6235577,
+            41.8881075
+          ],
+          [
+            -87.6235587,
+            41.8880839
+          ]
+        ]
+      },
+      "id": "way/133489382"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/133489388",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6226542,
+            41.8876578
+          ],
+          [
+            -87.6226533,
+            41.8876135
+          ],
+          [
+            -87.6226422,
+            41.8870615
+          ],
+          [
+            -87.6226408,
+            41.8869426
+          ]
+        ]
+      },
+      "id": "way/133489388"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/133492567",
+        "bridge": "yes",
+        "highway": "footway",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6311264,
+            41.885963
+          ],
+          [
+            -87.6308302,
+            41.8859675
+          ]
+        ]
+      },
+      "id": "way/133492567"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/133492568",
+        "bridge": "yes",
+        "highway": "footway",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6296937,
+            41.8859137
+          ],
+          [
+            -87.629351,
+            41.885912
+          ]
+        ]
+      },
+      "id": "way/133492568"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/133492574",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6308302,
+            41.8859675
+          ],
+          [
+            -87.6307494,
+            41.8859669
+          ],
+          [
+            -87.6307477,
+            41.8860445
+          ],
+          [
+            -87.6306326,
+            41.886171
+          ],
+          [
+            -87.6306729,
+            41.8862637
+          ]
+        ]
+      },
+      "id": "way/133492574"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230575182",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.623878,
+            41.8769766
+          ],
+          [
+            -87.6238351,
+            41.8769769
+          ]
+        ]
+      },
+      "id": "way/230575182"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230612994",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "source": "http://www.cityofchicago.org/city/en/depts/cdot/provdrs/ped/svcs/pedway.html",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6295163,
+            41.8813354
+          ],
+          [
+            -87.6294761,
+            41.8813352
+          ],
+          [
+            -87.6292849,
+            41.8813344
+          ]
+        ]
+      },
+      "id": "way/230612994"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230613001",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "source": "http://www.cityofchicago.org/city/en/depts/cdot/provdrs/ped/svcs/pedway.html",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6292869,
+            41.881395
+          ],
+          [
+            -87.6292849,
+            41.8813344
+          ],
+          [
+            -87.6292832,
+            41.8812805
+          ]
+        ]
+      },
+      "id": "way/230613001"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230613006",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "source": "http://www.cityofchicago.org/city/en/depts/cdot/provdrs/ped/svcs/pedway.html",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6305691,
+            41.8810908
+          ],
+          [
+            -87.6305697,
+            41.8812084
+          ],
+          [
+            -87.6305705,
+            41.8813815
+          ]
+        ]
+      },
+      "id": "way/230613006"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230617887",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6298564,
+            41.8838495
+          ],
+          [
+            -87.6298476,
+            41.8833663
+          ]
+        ]
+      },
+      "id": "way/230617887"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230617889",
+        "bicycle": "no",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "building_passage",
+        "vehicle": "no"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6311708,
+            41.8838462
+          ],
+          [
+            -87.6310922,
+            41.8838464
+          ],
+          [
+            -87.6307867,
+            41.8838472
+          ],
+          [
+            -87.6298564,
+            41.8838495
+          ],
+          [
+            -87.6297976,
+            41.8838497
+          ],
+          [
+            -87.6296004,
+            41.8838501
+          ],
+          [
+            -87.6293523,
+            41.8838508
+          ],
+          [
+            -87.6289736,
+            41.8838448
+          ]
+        ]
+      },
+      "id": "way/230617889"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230619917",
+        "bicycle": "no",
+        "highway": "steps",
+        "name": "Pedway",
+        "vehicle": "no"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6317744,
+            41.8838323
+          ],
+          [
+            -87.6317796,
+            41.8838865
+          ]
+        ]
+      },
+      "id": "way/230619917"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230619918",
+        "bicycle": "no",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes",
+        "vehicle": "no"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6317744,
+            41.8838323
+          ],
+          [
+            -87.6320131,
+            41.8838299
+          ],
+          [
+            -87.6320107,
+            41.8837224
+          ],
+          [
+            -87.6320077,
+            41.8836705
+          ],
+          [
+            -87.6317627,
+            41.8836718
+          ],
+          [
+            -87.6317614,
+            41.8836187
+          ],
+          [
+            -87.6322178,
+            41.8836132
+          ],
+          [
+            -87.6326252,
+            41.8836083
+          ],
+          [
+            -87.6326772,
+            41.8836077
+          ],
+          [
+            -87.6326782,
+            41.8835826
+          ]
+        ]
+      },
+      "id": "way/230619918"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230619922",
+        "bicycle": "no",
+        "highway": "steps",
+        "name": "Pedway",
+        "tunnel": "yes",
+        "vehicle": "no"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6316046,
+            41.8843307
+          ],
+          [
+            -87.631604,
+            41.8842898
+          ]
+        ]
+      },
+      "id": "way/230619922"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230620673",
+        "bicycle": "no",
+        "highway": "steps",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6317332,
+            41.8842889
+          ],
+          [
+            -87.6317343,
+            41.8843402
+          ]
+        ]
+      },
+      "id": "way/230620673"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230620674",
+        "bicycle": "no",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes",
+        "vehicle": "no"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.631604,
+            41.8842898
+          ],
+          [
+            -87.6317332,
+            41.8842889
+          ]
+        ]
+      },
+      "id": "way/230620674"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230620675",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6305378,
+            41.8846929
+          ],
+          [
+            -87.6307076,
+            41.8846933
+          ],
+          [
+            -87.6307076,
+            41.8847693
+          ],
+          [
+            -87.6307076,
+            41.8848332
+          ]
+        ]
+      },
+      "id": "way/230620675"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230621346",
+        "bridge": "yes",
+        "highway": "footway",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6306729,
+            41.8862637
+          ],
+          [
+            -87.6306746,
+            41.8863129
+          ]
+        ]
+      },
+      "id": "way/230621346"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230621347",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6306746,
+            41.8863129
+          ],
+          [
+            -87.6306761,
+            41.8863897
+          ]
+        ]
+      },
+      "id": "way/230621347"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230621348",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6306326,
+            41.886171
+          ],
+          [
+            -87.6305176,
+            41.8860505
+          ],
+          [
+            -87.6302569,
+            41.8860523
+          ]
+        ]
+      },
+      "id": "way/230621348"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230621647",
+        "highway": "footway",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6295325,
+            41.886394
+          ],
+          [
+            -87.6293223,
+            41.8863955
+          ]
+        ]
+      },
+      "id": "way/230621647"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230627850",
+        "highway": "footway",
+        "layer": "-1",
+        "lit": "yes",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6247066,
+            41.8843736
+          ],
+          [
+            -87.6246798,
+            41.8843732
+          ],
+          [
+            -87.6246232,
+            41.8843731
+          ],
+          [
+            -87.6242429,
+            41.8843728
+          ]
+        ]
+      },
+      "id": "way/230627850"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230636642",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6220766,
+            41.8859654
+          ],
+          [
+            -87.6219259,
+            41.8859663
+          ],
+          [
+            -87.6215244,
+            41.8859699
+          ],
+          [
+            -87.6213615,
+            41.8859684
+          ]
+        ]
+      },
+      "id": "way/230636642"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230636829",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6215113,
+            41.8854647
+          ],
+          [
+            -87.621512,
+            41.8855495
+          ]
+        ]
+      },
+      "id": "way/230636829"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230638326",
+        "highway": "footway",
+        "layer": "1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6192841,
+            41.8872018
+          ],
+          [
+            -87.619678,
+            41.8871974
+          ],
+          [
+            -87.6200495,
+            41.8871894
+          ],
+          [
+            -87.6201,
+            41.8871889
+          ]
+        ]
+      },
+      "id": "way/230638326"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230643553",
+        "highway": "footway",
+        "layer": "2",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.623552,
+            41.8876549
+          ],
+          [
+            -87.6234496,
+            41.8876558
+          ]
+        ]
+      },
+      "id": "way/230643553"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230759809",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "noexit": "yes",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6294187,
+            41.8788086
+          ],
+          [
+            -87.6291931,
+            41.8788086
+          ],
+          [
+            -87.6278204,
+            41.8788177
+          ],
+          [
+            -87.6275722,
+            41.87882
+          ]
+        ]
+      },
+      "id": "way/230759809"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/230926997",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6311737,
+            41.8859839
+          ],
+          [
+            -87.631173,
+            41.8859629
+          ],
+          [
+            -87.6311264,
+            41.885963
+          ]
+        ]
+      },
+      "id": "way/230926997"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/231040312",
+        "highway": "footway",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6326656,
+            41.876382
+          ],
+          [
+            -87.6326191,
+            41.8763826
+          ],
+          [
+            -87.6325669,
+            41.8763833
+          ],
+          [
+            -87.6322443,
+            41.8763867
+          ],
+          [
+            -87.6319777,
+            41.8763912
+          ],
+          [
+            -87.6318076,
+            41.8763932
+          ],
+          [
+            -87.6317447,
+            41.876394
+          ]
+        ]
+      },
+      "id": "way/231040312"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/231040698",
+        "bridge": "yes",
+        "highway": "footway",
+        "layer": "1",
+        "name": "Pedway",
+        "source": "http://www.cityofchicago.org/city/en/depts/cdot/provdrs/ped/svcs/pedway.html"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6325032,
+            41.87599
+          ],
+          [
+            -87.6324983,
+            41.8758348
+          ],
+          [
+            -87.6324832,
+            41.8753479
+          ],
+          [
+            -87.6324825,
+            41.8753251
+          ],
+          [
+            -87.6324798,
+            41.8752397
+          ],
+          [
+            -87.6318629,
+            41.8752457
+          ],
+          [
+            -87.6318914,
+            41.8759949
+          ]
+        ]
+      },
+      "id": "way/231040698"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/231040699",
+        "highway": "footway",
+        "layer": "1",
+        "name": "Pedway",
+        "source": "http://www.cityofchicago.org/city/en/depts/cdot/provdrs/ped/svcs/pedway.html"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6323377,
+            41.8759447
+          ],
+          [
+            -87.632335,
+            41.8758328
+          ],
+          [
+            -87.6324983,
+            41.8758348
+          ]
+        ]
+      },
+      "id": "way/231040699"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/231045629",
+        "highway": "footway",
+        "indoor": "yes",
+        "level": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6394836,
+            41.8821541
+          ],
+          [
+            -87.6387431,
+            41.8821589
+          ]
+        ]
+      },
+      "id": "way/231045629"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/231045736",
+        "highway": "footway",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6398754,
+            41.8821493
+          ],
+          [
+            -87.6403776,
+            41.8821467
+          ],
+          [
+            -87.6406021,
+            41.8821436
+          ],
+          [
+            -87.640982,
+            41.8821382
+          ]
+        ]
+      },
+      "id": "way/231045736"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/231046937",
+        "highway": "footway",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6341584,
+            41.8887065
+          ],
+          [
+            -87.6343052,
+            41.8887066
+          ],
+          [
+            -87.6343031,
+            41.8883726
+          ],
+          [
+            -87.6353525,
+            41.8883672
+          ],
+          [
+            -87.6364478,
+            41.8883616
+          ]
+        ]
+      },
+      "id": "way/231046937"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/231103866",
+        "highway": "footway",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6378628,
+            41.8880688
+          ],
+          [
+            -87.6378763,
+            41.8884151
+          ],
+          [
+            -87.6378773,
+            41.8884421
+          ],
+          [
+            -87.6378798,
+            41.888505
+          ],
+          [
+            -87.6378155,
+            41.888505
+          ],
+          [
+            -87.6378219,
+            41.8888113
+          ],
+          [
+            -87.6370858,
+            41.8888128
+          ]
+        ]
+      },
+      "id": "way/231103866"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/231382209",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.624627,
+            41.8841653
+          ],
+          [
+            -87.624626,
+            41.8841107
+          ],
+          [
+            -87.6246252,
+            41.8840655
+          ]
+        ]
+      },
+      "id": "way/231382209"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/231382223",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6245537,
+            41.8841106
+          ],
+          [
+            -87.6245535,
+            41.8840904
+          ]
+        ]
+      },
+      "id": "way/231382223"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/231382494",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6248016,
+            41.88462
+          ],
+          [
+            -87.624737,
+            41.8845707
+          ],
+          [
+            -87.6247163,
+            41.884587
+          ],
+          [
+            -87.6246821,
+            41.8845617
+          ],
+          [
+            -87.6246798,
+            41.8843732
+          ],
+          [
+            -87.6246772,
+            41.8841716
+          ],
+          [
+            -87.6246765,
+            41.8841108
+          ]
+        ]
+      },
+      "id": "way/231382494"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/231383460",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6246246,
+            41.8843321
+          ],
+          [
+            -87.6246232,
+            41.8843731
+          ]
+        ]
+      },
+      "id": "way/231383460"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/231384031",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6239021,
+            41.8841689
+          ],
+          [
+            -87.6237964,
+            41.8841683
+          ],
+          [
+            -87.6233237,
+            41.8841777
+          ]
+        ]
+      },
+      "id": "way/231384031"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/231458610",
+        "highway": "footway",
+        "layer": "1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6218641,
+            41.8851112
+          ],
+          [
+            -87.6219253,
+            41.885111
+          ],
+          [
+            -87.622017,
+            41.8851108
+          ],
+          [
+            -87.6220974,
+            41.8851107
+          ]
+        ]
+      },
+      "id": "way/231458610"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/231707762",
+        "highway": "steps",
+        "indoor": "yes",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6236472,
+            41.88484
+          ],
+          [
+            -87.6235694,
+            41.8848404
+          ]
+        ]
+      },
+      "id": "way/231707762"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/231707764",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.623787,
+            41.8847948
+          ],
+          [
+            -87.6237887,
+            41.8848383
+          ]
+        ]
+      },
+      "id": "way/231707764"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/231707775",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6229032,
+            41.8848388
+          ],
+          [
+            -87.6229057,
+            41.8851241
+          ],
+          [
+            -87.6229108,
+            41.8854021
+          ]
+        ]
+      },
+      "id": "way/231707775"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/231708489",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6235547,
+            41.8848404
+          ],
+          [
+            -87.6231736,
+            41.8848414
+          ],
+          [
+            -87.6229032,
+            41.8848388
+          ]
+        ]
+      },
+      "id": "way/231708489"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234039670",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "source": "http://www.cityofchicago.org/city/en/depts/cdot/provdrs/ped/svcs/pedway.html"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6303427,
+            41.8814245
+          ],
+          [
+            -87.6303199,
+            41.8814247
+          ]
+        ]
+      },
+      "id": "way/234039670"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234040026",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6295164,
+            41.881275
+          ],
+          [
+            -87.6295163,
+            41.8813354
+          ],
+          [
+            -87.6295187,
+            41.8813948
+          ],
+          [
+            -87.6296021,
+            41.8813934
+          ]
+        ]
+      },
+      "id": "way/234040026"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234040837",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "source": "http://www.cityofchicago.org/city/en/depts/cdot/provdrs/ped/svcs/pedway.html"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6299149,
+            41.8814324
+          ],
+          [
+            -87.6298921,
+            41.8814326
+          ]
+        ]
+      },
+      "id": "way/234040837"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234041563",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6298476,
+            41.8833663
+          ],
+          [
+            -87.629795,
+            41.883367
+          ]
+        ]
+      },
+      "id": "way/234041563"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234043151",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6276319,
+            41.8843126
+          ],
+          [
+            -87.6265404,
+            41.8843199
+          ],
+          [
+            -87.626475,
+            41.884321
+          ]
+        ]
+      },
+      "id": "way/234043151"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234044556",
+        "bicycle": "no",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes",
+        "vehicle": "no"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6280557,
+            41.883854
+          ],
+          [
+            -87.6280263,
+            41.8838541
+          ],
+          [
+            -87.6278825,
+            41.8838548
+          ],
+          [
+            -87.6277253,
+            41.8838549
+          ],
+          [
+            -87.6276585,
+            41.883855
+          ],
+          [
+            -87.6276193,
+            41.8838544
+          ]
+        ]
+      },
+      "id": "way/234044556"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234044557",
+        "bicycle": "no",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "vehicle": "no"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6289736,
+            41.8838448
+          ],
+          [
+            -87.6284437,
+            41.8838496
+          ],
+          [
+            -87.6280557,
+            41.883854
+          ]
+        ]
+      },
+      "id": "way/234044557"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234050121",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "source": "http://www.cityofchicago.org/city/en/depts/cdot/provdrs/ped/svcs/pedway.html"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6296021,
+            41.8813934
+          ],
+          [
+            -87.6297223,
+            41.8813922
+          ],
+          [
+            -87.6299136,
+            41.8813903
+          ],
+          [
+            -87.6299149,
+            41.8814324
+          ],
+          [
+            -87.6301247,
+            41.881429
+          ],
+          [
+            -87.6303199,
+            41.8814247
+          ],
+          [
+            -87.6303178,
+            41.8813837
+          ],
+          [
+            -87.6305705,
+            41.8813815
+          ]
+        ]
+      },
+      "id": "way/234050121"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234050877",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6244709,
+            41.8770142
+          ],
+          [
+            -87.6244176,
+            41.8770146
+          ],
+          [
+            -87.6238357,
+            41.8770211
+          ],
+          [
+            -87.6232379,
+            41.8770401
+          ]
+        ]
+      },
+      "id": "way/234050877"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234058052",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6244735,
+            41.8841104
+          ],
+          [
+            -87.624521,
+            41.8841105
+          ],
+          [
+            -87.6245537,
+            41.8841106
+          ],
+          [
+            -87.624626,
+            41.8841107
+          ],
+          [
+            -87.6246765,
+            41.8841108
+          ]
+        ]
+      },
+      "id": "way/234058052"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234058055",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6244727,
+            41.8842394
+          ],
+          [
+            -87.6244735,
+            41.8841318
+          ],
+          [
+            -87.6244735,
+            41.8841104
+          ]
+        ]
+      },
+      "id": "way/234058055"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234058056",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6244727,
+            41.8842394
+          ],
+          [
+            -87.6239021,
+            41.8842364
+          ]
+        ]
+      },
+      "id": "way/234058056"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234058132",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6245106,
+            41.882704
+          ],
+          [
+            -87.6245083,
+            41.8811955
+          ]
+        ]
+      },
+      "id": "way/234058132"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234058133",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6245441,
+            41.8827203
+          ],
+          [
+            -87.624544,
+            41.8827044
+          ]
+        ]
+      },
+      "id": "way/234058133"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234058134",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6245083,
+            41.8811955
+          ],
+          [
+            -87.6245151,
+            41.8811955
+          ]
+        ]
+      },
+      "id": "way/234058134"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234058135",
+        "highway": "footway",
+        "layer": "-2",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6245532,
+            41.8840355
+          ],
+          [
+            -87.6245532,
+            41.8840305
+          ]
+        ]
+      },
+      "id": "way/234058135"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234058137",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6245902,
+            41.882705
+          ],
+          [
+            -87.624544,
+            41.8827044
+          ],
+          [
+            -87.6245182,
+            41.8827041
+          ]
+        ]
+      },
+      "id": "way/234058137"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234058138",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6245894,
+            41.8827247
+          ],
+          [
+            -87.6245902,
+            41.882705
+          ]
+        ]
+      },
+      "id": "way/234058138"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234058140",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6245378,
+            41.8811955
+          ],
+          [
+            -87.6245379,
+            41.8811733
+          ]
+        ]
+      },
+      "id": "way/234058140"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234059815",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6244596,
+            41.8787705
+          ],
+          [
+            -87.6244588,
+            41.8787067
+          ],
+          [
+            -87.6244202,
+            41.8770782
+          ]
+        ]
+      },
+      "id": "way/234059815"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234062643",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6244588,
+            41.8787067
+          ],
+          [
+            -87.6243083,
+            41.8787078
+          ]
+        ]
+      },
+      "id": "way/234062643"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234067453",
+        "highway": "steps",
+        "indoor": "yes",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6237875,
+            41.8847079
+          ],
+          [
+            -87.623787,
+            41.8847948
+          ]
+        ]
+      },
+      "id": "way/234067453"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234469983",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6239021,
+            41.8842364
+          ],
+          [
+            -87.6239021,
+            41.8841689
+          ]
+        ]
+      },
+      "id": "way/234469983"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234486064",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.623797,
+            41.884254
+          ],
+          [
+            -87.6237969,
+            41.8842442
+          ],
+          [
+            -87.6237964,
+            41.8841683
+          ]
+        ]
+      },
+      "id": "way/234486064"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234486066",
+        "layer": "-1",
+        "name": "Pedway",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6232655,
+            41.8842327
+          ],
+          [
+            -87.6231724,
+            41.8841781
+          ]
+        ]
+      },
+      "id": "way/234486066"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234512521",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6238166,
+            41.8848386
+          ],
+          [
+            -87.6237887,
+            41.8848383
+          ],
+          [
+            -87.6236472,
+            41.88484
+          ]
+        ]
+      },
+      "id": "way/234512521"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234795527",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6244202,
+            41.8770782
+          ],
+          [
+            -87.6244176,
+            41.8770146
+          ]
+        ]
+      },
+      "id": "way/234795527"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234797042",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6245151,
+            41.8811955
+          ],
+          [
+            -87.6245378,
+            41.8811955
+          ]
+        ]
+      },
+      "id": "way/234797042"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234797043",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6245182,
+            41.8827041
+          ],
+          [
+            -87.6245106,
+            41.882704
+          ]
+        ]
+      },
+      "id": "way/234797043"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234797044",
+        "highway": "footway",
+        "layer": "-2",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6245449,
+            41.8828138
+          ],
+          [
+            -87.6245446,
+            41.8827994
+          ]
+        ]
+      },
+      "id": "way/234797044"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234797045",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "-2",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6245532,
+            41.8840305
+          ],
+          [
+            -87.6245449,
+            41.8828138
+          ]
+        ]
+      },
+      "id": "way/234797045"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234799316",
+        "foot": "permissive",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6298476,
+            41.8833663
+          ],
+          [
+            -87.6298433,
+            41.8830651
+          ],
+          [
+            -87.6301537,
+            41.8830627
+          ],
+          [
+            -87.6301515,
+            41.8828308
+          ],
+          [
+            -87.6300469,
+            41.8828316
+          ],
+          [
+            -87.6298229,
+            41.8828332
+          ],
+          [
+            -87.6298231,
+            41.8827269
+          ],
+          [
+            -87.6298235,
+            41.88254
+          ]
+        ]
+      },
+      "id": "way/234799316"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234840738",
+        "highway": "footway",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6218917,
+            41.8844015
+          ],
+          [
+            -87.6218876,
+            41.8841758
+          ]
+        ]
+      },
+      "id": "way/234840738"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234844987",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "2",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.620373,
+            41.8849641
+          ],
+          [
+            -87.6203663,
+            41.8847272
+          ],
+          [
+            -87.6202827,
+            41.8846694
+          ],
+          [
+            -87.6201318,
+            41.8846712
+          ],
+          [
+            -87.6195504,
+            41.8846779
+          ],
+          [
+            -87.6193948,
+            41.8846793
+          ],
+          [
+            -87.6193954,
+            41.8846583
+          ]
+        ]
+      },
+      "id": "way/234844987"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/234844989",
+        "highway": "footway",
+        "layer": "-2",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6193954,
+            41.8846583
+          ],
+          [
+            -87.6193952,
+            41.8846217
+          ],
+          [
+            -87.6188183,
+            41.8846156
+          ],
+          [
+            -87.6188103,
+            41.8842002
+          ]
+        ]
+      },
+      "id": "way/234844989"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235077875",
+        "bicycle": "no",
+        "layer": "-1",
+        "name": "Pedway",
+        "public_transport": "platform",
+        "vehicle": "no"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6233237,
+            41.8841777
+          ],
+          [
+            -87.6231724,
+            41.8841781
+          ],
+          [
+            -87.6226846,
+            41.8841793
+          ]
+        ]
+      },
+      "id": "way/235077875"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235523896",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6243083,
+            41.8787078
+          ],
+          [
+            -87.6243072,
+            41.8784347
+          ]
+        ]
+      },
+      "id": "way/235523896"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235523897",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6239591,
+            41.8784329
+          ],
+          [
+            -87.6239597,
+            41.8784375
+          ]
+        ]
+      },
+      "id": "way/235523897"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235523898",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6243072,
+            41.8784347
+          ],
+          [
+            -87.6240316,
+            41.8784367
+          ],
+          [
+            -87.6239597,
+            41.8784375
+          ]
+        ]
+      },
+      "id": "way/235523898"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235523899",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6238357,
+            41.8770211
+          ],
+          [
+            -87.6233216,
+            41.8770092
+          ],
+          [
+            -87.6232587,
+            41.8770101
+          ]
+        ]
+      },
+      "id": "way/235523899"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235552402",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "2",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6195857,
+            41.8848282
+          ],
+          [
+            -87.6193917,
+            41.8848282
+          ],
+          [
+            -87.6193948,
+            41.8846793
+          ]
+        ]
+      },
+      "id": "way/235552402"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235556064",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.630338,
+            41.8812086
+          ],
+          [
+            -87.6305697,
+            41.8812084
+          ]
+        ]
+      },
+      "id": "way/235556064"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235556065",
+        "fixme": "Pedway entrance?",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6298797,
+            41.8810286
+          ],
+          [
+            -87.6298819,
+            41.8812608
+          ],
+          [
+            -87.6297216,
+            41.8812608
+          ],
+          [
+            -87.6297223,
+            41.8813922
+          ]
+        ]
+      },
+      "id": "way/235556065"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235586064",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6264719,
+            41.8841797
+          ],
+          [
+            -87.6263683,
+            41.8841792
+          ],
+          [
+            -87.6256887,
+            41.8841762
+          ],
+          [
+            -87.6254955,
+            41.8841753
+          ],
+          [
+            -87.6253223,
+            41.8841745
+          ]
+        ]
+      },
+      "id": "way/235586064"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235749612",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6218723,
+            41.8854601
+          ],
+          [
+            -87.6219255,
+            41.8854597
+          ]
+        ]
+      },
+      "id": "way/235749612"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235749615",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6219252,
+            41.885034
+          ],
+          [
+            -87.621859,
+            41.8850343
+          ]
+        ]
+      },
+      "id": "way/235749615"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235749620",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6218641,
+            41.8851112
+          ],
+          [
+            -87.6215025,
+            41.885112
+          ],
+          [
+            -87.6211999,
+            41.8851127
+          ]
+        ]
+      },
+      "id": "way/235749620"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235749622",
+        "highway": "steps",
+        "indoor": "yes",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6224073,
+            41.8851309
+          ],
+          [
+            -87.6224729,
+            41.8851308
+          ]
+        ]
+      },
+      "id": "way/235749622"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235769322",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6215013,
+            41.8850138
+          ],
+          [
+            -87.6215025,
+            41.885112
+          ]
+        ]
+      },
+      "id": "way/235769322"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235914435",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6224729,
+            41.8851308
+          ],
+          [
+            -87.6229057,
+            41.8851241
+          ]
+        ]
+      },
+      "id": "way/235914435"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235914437",
+        "bicycle": "no",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes",
+        "vehicle": "no"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6219264,
+            41.8857888
+          ],
+          [
+            -87.6220278,
+            41.8857914
+          ]
+        ]
+      },
+      "id": "way/235914437"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235914448",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6212055,
+            41.8854666
+          ],
+          [
+            -87.6215113,
+            41.8854647
+          ],
+          [
+            -87.6218723,
+            41.8854601
+          ]
+        ]
+      },
+      "id": "way/235914448"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235914553",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6208562,
+            41.8863142
+          ],
+          [
+            -87.6206978,
+            41.8863164
+          ],
+          [
+            -87.6206236,
+            41.8863175
+          ],
+          [
+            -87.6204441,
+            41.88632
+          ]
+        ]
+      },
+      "id": "way/235914553"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235914554",
+        "highway": "footway",
+        "name": "Pedway",
+        "tunnel": "building_passage"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6204441,
+            41.88632
+          ],
+          [
+            -87.6203943,
+            41.8863207
+          ],
+          [
+            -87.6204005,
+            41.8865915
+          ],
+          [
+            -87.6200437,
+            41.8865935
+          ],
+          [
+            -87.619237,
+            41.8865979
+          ]
+        ]
+      },
+      "id": "way/235914554"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235915392",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6224773,
+            41.887023
+          ],
+          [
+            -87.6224785,
+            41.8870622
+          ]
+        ]
+      },
+      "id": "way/235915392"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235915393",
+        "highway": "footway",
+        "layer": "2",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6230544,
+            41.8870587
+          ],
+          [
+            -87.6230663,
+            41.887656
+          ]
+        ]
+      },
+      "id": "way/235915393"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235915394",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6200495,
+            41.8871894
+          ],
+          [
+            -87.6200488,
+            41.8871167
+          ],
+          [
+            -87.6200437,
+            41.8865935
+          ]
+        ]
+      },
+      "id": "way/235915394"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235915398",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6238213,
+            41.8869896
+          ],
+          [
+            -87.6238243,
+            41.8870535
+          ]
+        ]
+      },
+      "id": "way/235915398"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235915596",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6252794,
+            41.8841743
+          ],
+          [
+            -87.6252636,
+            41.8841742
+          ],
+          [
+            -87.6249805,
+            41.884173
+          ],
+          [
+            -87.6247064,
+            41.8841717
+          ],
+          [
+            -87.6246772,
+            41.8841716
+          ]
+        ]
+      },
+      "id": "way/235915596"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235915809",
+        "highway": "footway",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6220974,
+            41.8851107
+          ],
+          [
+            -87.6224073,
+            41.8851309
+          ]
+        ]
+      },
+      "id": "way/235915809"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235916927",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6210967,
+            41.8860531
+          ],
+          [
+            -87.6210726,
+            41.8860387
+          ]
+        ]
+      },
+      "id": "way/235916927"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235918262",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6201,
+            41.8871889
+          ],
+          [
+            -87.6201419,
+            41.8871885
+          ],
+          [
+            -87.6202019,
+            41.8871879
+          ],
+          [
+            -87.6204095,
+            41.8871878
+          ],
+          [
+            -87.6204101,
+            41.8872246
+          ],
+          [
+            -87.6204205,
+            41.8875608
+          ],
+          [
+            -87.6203414,
+            41.8875605
+          ],
+          [
+            -87.6203414,
+            41.887539
+          ],
+          [
+            -87.6201427,
+            41.887539
+          ]
+        ]
+      },
+      "id": "way/235918262"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235918264",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6201419,
+            41.8871885
+          ],
+          [
+            -87.6201427,
+            41.887539
+          ],
+          [
+            -87.6201427,
+            41.8875607
+          ],
+          [
+            -87.6201429,
+            41.887584
+          ],
+          [
+            -87.6203414,
+            41.887585
+          ],
+          [
+            -87.6203414,
+            41.8875605
+          ]
+        ]
+      },
+      "id": "way/235918264"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235918412",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6205925,
+            41.8872243
+          ],
+          [
+            -87.6205933,
+            41.8872455
+          ]
+        ]
+      },
+      "id": "way/235918412"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235920929",
+        "highway": "footway",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.621512,
+            41.8855495
+          ],
+          [
+            -87.621516,
+            41.8856836
+          ],
+          [
+            -87.6215244,
+            41.8859699
+          ]
+        ]
+      },
+      "id": "way/235920929"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235920930",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6219259,
+            41.8859663
+          ],
+          [
+            -87.6219261,
+            41.8858746
+          ]
+        ]
+      },
+      "id": "way/235920930"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235921186",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6229108,
+            41.8854021
+          ],
+          [
+            -87.6229453,
+            41.8854002
+          ]
+        ]
+      },
+      "id": "way/235921186"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235921321",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6213615,
+            41.8859684
+          ],
+          [
+            -87.6211626,
+            41.8859683
+          ],
+          [
+            -87.6210726,
+            41.8860387
+          ],
+          [
+            -87.6209911,
+            41.8861025
+          ],
+          [
+            -87.6209901,
+            41.8861685
+          ],
+          [
+            -87.6209893,
+            41.8862042
+          ],
+          [
+            -87.620928,
+            41.8862055
+          ],
+          [
+            -87.6209294,
+            41.8862714
+          ]
+        ]
+      },
+      "id": "way/235921321"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235921324",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6209901,
+            41.8861685
+          ],
+          [
+            -87.6210348,
+            41.8861333
+          ]
+        ]
+      },
+      "id": "way/235921324"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235921326",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6209294,
+            41.8862714
+          ],
+          [
+            -87.6209286,
+            41.8863132
+          ],
+          [
+            -87.6208562,
+            41.8863142
+          ]
+        ]
+      },
+      "id": "way/235921326"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/235993193",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "-1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6232587,
+            41.8770101
+          ],
+          [
+            -87.6232381,
+            41.8770104
+          ],
+          [
+            -87.6230833,
+            41.8770105
+          ]
+        ]
+      },
+      "id": "way/235993193"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/236660856",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6220432,
+            41.8861344
+          ],
+          [
+            -87.6220778,
+            41.8861344
+          ]
+        ]
+      },
+      "id": "way/236660856"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/236661473",
+        "highway": "footway",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6209853,
+            41.8871541
+          ],
+          [
+            -87.6209861,
+            41.8872236
+          ]
+        ]
+      },
+      "id": "way/236661473"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/236661638",
+        "highway": "footway",
+        "layer": "2",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6215325,
+            41.8877331
+          ],
+          [
+            -87.6213906,
+            41.8876395
+          ]
+        ]
+      },
+      "id": "way/236661638"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/236661639",
+        "highway": "footway",
+        "layer": "2",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6213906,
+            41.8876395
+          ],
+          [
+            -87.6213899,
+            41.8876114
+          ],
+          [
+            -87.6213848,
+            41.8873713
+          ],
+          [
+            -87.6213815,
+            41.8872204
+          ],
+          [
+            -87.6213754,
+            41.8870408
+          ]
+        ]
+      },
+      "id": "way/236661639"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/236661640",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6213754,
+            41.8870408
+          ],
+          [
+            -87.6217211,
+            41.8870363
+          ],
+          [
+            -87.6221245,
+            41.8870332
+          ]
+        ]
+      },
+      "id": "way/236661640"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/236661642",
+        "highway": "footway",
+        "layer": "2",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6213815,
+            41.8872204
+          ],
+          [
+            -87.6211064,
+            41.8872234
+          ],
+          [
+            -87.6209861,
+            41.8872236
+          ],
+          [
+            -87.6205925,
+            41.8872243
+          ],
+          [
+            -87.6204101,
+            41.8872246
+          ]
+        ]
+      },
+      "id": "way/236661642"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/236662599",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6213563,
+            41.8876134
+          ],
+          [
+            -87.6213899,
+            41.8876114
+          ]
+        ]
+      },
+      "id": "way/236662599"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/236664421",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6214264,
+            41.8863942
+          ],
+          [
+            -87.6216275,
+            41.8863928
+          ],
+          [
+            -87.6218585,
+            41.8863912
+          ],
+          [
+            -87.6218831,
+            41.8863705
+          ],
+          [
+            -87.6220783,
+            41.8862064
+          ],
+          [
+            -87.6220778,
+            41.8861344
+          ],
+          [
+            -87.6220766,
+            41.8859654
+          ]
+        ]
+      },
+      "id": "way/236664421"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/236665808",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6219347,
+            41.8864438
+          ],
+          [
+            -87.6219333,
+            41.8864037
+          ],
+          [
+            -87.6218831,
+            41.8863705
+          ]
+        ]
+      },
+      "id": "way/236665808"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/236665809",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6215568,
+            41.8864427
+          ],
+          [
+            -87.6215551,
+            41.8864167
+          ],
+          [
+            -87.6216275,
+            41.8864157
+          ],
+          [
+            -87.6216275,
+            41.8863928
+          ]
+        ]
+      },
+      "id": "way/236665809"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/237612315",
+        "highway": "steps",
+        "indoor": "yes",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6238243,
+            41.8870535
+          ],
+          [
+            -87.623609,
+            41.8870554
+          ]
+        ]
+      },
+      "id": "way/237612315"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/237612316",
+        "highway": "footway",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6239915,
+            41.8868157
+          ],
+          [
+            -87.6239901,
+            41.8866307
+          ],
+          [
+            -87.6236493,
+            41.8866351
+          ]
+        ]
+      },
+      "id": "way/237612316"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/237612317",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6236493,
+            41.8866351
+          ],
+          [
+            -87.6235876,
+            41.8866361
+          ]
+        ]
+      },
+      "id": "way/237612317"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/237612318",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "2",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6235876,
+            41.8865742
+          ],
+          [
+            -87.6235301,
+            41.8865752
+          ]
+        ]
+      },
+      "id": "way/237612318"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/237612319",
+        "highway": "steps",
+        "indoor": "yes",
+        "layer": "2",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6235876,
+            41.8866361
+          ],
+          [
+            -87.6235876,
+            41.8865742
+          ]
+        ]
+      },
+      "id": "way/237612319"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/237612613",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6235587,
+            41.8880839
+          ],
+          [
+            -87.623552,
+            41.8876549
+          ],
+          [
+            -87.6235388,
+            41.8870558
+          ],
+          [
+            -87.6235301,
+            41.8865752
+          ],
+          [
+            -87.6235256,
+            41.8862157
+          ]
+        ]
+      },
+      "id": "way/237612613"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/237612775",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6221245,
+            41.8870332
+          ],
+          [
+            -87.622123,
+            41.8870643
+          ]
+        ]
+      },
+      "id": "way/237612775"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/237612776",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.622123,
+            41.8870643
+          ],
+          [
+            -87.6224785,
+            41.8870622
+          ],
+          [
+            -87.6226422,
+            41.8870615
+          ],
+          [
+            -87.6230544,
+            41.8870587
+          ],
+          [
+            -87.6235388,
+            41.8870558
+          ],
+          [
+            -87.623609,
+            41.8870554
+          ]
+        ]
+      },
+      "id": "way/237612776"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/237612925",
+        "highway": "steps",
+        "layer": "2",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6234496,
+            41.8876558
+          ],
+          [
+            -87.6233985,
+            41.8876557
+          ]
+        ]
+      },
+      "id": "way/237612925"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/237612926",
+        "highway": "footway",
+        "layer": "2",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6233985,
+            41.8876557
+          ],
+          [
+            -87.6231307,
+            41.8876558
+          ]
+        ]
+      },
+      "id": "way/237612926"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/237612927",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6230663,
+            41.887656
+          ],
+          [
+            -87.6227226,
+            41.8876575
+          ]
+        ]
+      },
+      "id": "way/237612927"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/237612928",
+        "highway": "steps",
+        "layer": "2",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6231307,
+            41.8876558
+          ],
+          [
+            -87.6230663,
+            41.887656
+          ]
+        ]
+      },
+      "id": "way/237612928"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/237613269",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6220808,
+            41.8877268
+          ],
+          [
+            -87.6215325,
+            41.8877331
+          ]
+        ]
+      },
+      "id": "way/237613269"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/237613271",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6220812,
+            41.88764
+          ],
+          [
+            -87.622081,
+            41.8876642
+          ],
+          [
+            -87.6220808,
+            41.8877268
+          ]
+        ]
+      },
+      "id": "way/237613271"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/237613279",
+        "highway": "steps",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6227226,
+            41.8876575
+          ],
+          [
+            -87.6226823,
+            41.8876577
+          ]
+        ]
+      },
+      "id": "way/237613279"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/237613280",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6226823,
+            41.8876577
+          ],
+          [
+            -87.6226542,
+            41.8876578
+          ],
+          [
+            -87.622081,
+            41.8876642
+          ]
+        ]
+      },
+      "id": "way/237613280"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/238524779",
+        "highway": "footway",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6282904,
+            41.8866681
+          ],
+          [
+            -87.6282874,
+            41.8859281
+          ]
+        ]
+      },
+      "id": "way/238524779"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/238573424",
+        "bicycle": "no",
+        "highway": "footway",
+        "indoor": "yes",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.631395,
+            41.8848961
+          ],
+          [
+            -87.631341,
+            41.8848508
+          ]
+        ]
+      },
+      "id": "way/238573424"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/238573425",
+        "bicycle": "no",
+        "highway": "steps",
+        "indoor": "yes",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6314078,
+            41.8849813
+          ],
+          [
+            -87.6313511,
+            41.8849308
+          ]
+        ]
+      },
+      "id": "way/238573425"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/238573426",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6312641,
+            41.8848735
+          ],
+          [
+            -87.631115,
+            41.8847735
+          ],
+          [
+            -87.6307076,
+            41.8847693
+          ]
+        ]
+      },
+      "id": "way/238573426"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/238573431",
+        "bicycle": "no",
+        "highway": "steps",
+        "indoor": "yes",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6314349,
+            41.8848671
+          ],
+          [
+            -87.6314955,
+            41.8849212
+          ]
+        ]
+      },
+      "id": "way/238573431"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/238679655",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6314832,
+            41.8853976
+          ],
+          [
+            -87.6314879,
+            41.8858848
+          ]
+        ]
+      },
+      "id": "way/238679655"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/238682818",
+        "bicycle": "no",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes",
+        "vehicle": "no"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6317343,
+            41.8843402
+          ],
+          [
+            -87.6317794,
+            41.8843335
+          ]
+        ]
+      },
+      "id": "way/238682818"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/238682820",
+        "bicycle": "no",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes",
+        "vehicle": "no"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6317343,
+            41.8843402
+          ],
+          [
+            -87.6317339,
+            41.8843987
+          ],
+          [
+            -87.631691,
+            41.8845361
+          ],
+          [
+            -87.6317,
+            41.8848719
+          ]
+        ]
+      },
+      "id": "way/238682820"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/238683260",
+        "highway": "steps",
+        "indoor": "yes",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6306084,
+            41.8863207
+          ],
+          [
+            -87.6306095,
+            41.8863702
+          ]
+        ]
+      },
+      "id": "way/238683260"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/238683263",
+        "highway": "steps",
+        "indoor": "yes",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6305803,
+            41.8863916
+          ],
+          [
+            -87.6305789,
+            41.8863207
+          ]
+        ]
+      },
+      "id": "way/238683263"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/238683264",
+        "highway": "footway",
+        "indoor": "yes",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6305789,
+            41.8863207
+          ],
+          [
+            -87.6306084,
+            41.8863207
+          ]
+        ]
+      },
+      "id": "way/238683264"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/238683381",
+        "highway": "footway",
+        "layer": "1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6302569,
+            41.8860523
+          ],
+          [
+            -87.6300292,
+            41.8858861
+          ],
+          [
+            -87.6297145,
+            41.8858859
+          ],
+          [
+            -87.6297137,
+            41.8859095
+          ],
+          [
+            -87.6296937,
+            41.8859137
+          ]
+        ]
+      },
+      "id": "way/238683381"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/238683382",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6306761,
+            41.8863897
+          ],
+          [
+            -87.6305803,
+            41.8863916
+          ]
+        ]
+      },
+      "id": "way/238683382"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/238683383",
+        "highway": "footway",
+        "indoor": "yes",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6306095,
+            41.8863702
+          ],
+          [
+            -87.6306517,
+            41.886372
+          ],
+          [
+            -87.6306501,
+            41.8864185
+          ],
+          [
+            -87.6307053,
+            41.8864172
+          ],
+          [
+            -87.6307063,
+            41.8864554
+          ],
+          [
+            -87.6307667,
+            41.8864545
+          ],
+          [
+            -87.6307667,
+            41.8865014
+          ],
+          [
+            -87.6307667,
+            41.8866083
+          ],
+          [
+            -87.630705,
+            41.8866682
+          ],
+          [
+            -87.6306363,
+            41.8866682
+          ],
+          [
+            -87.6306371,
+            41.8867157
+          ]
+        ]
+      },
+      "id": "way/238683383"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/238683656",
+        "highway": "footway",
+        "indoor": "yes",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.629274,
+            41.8858755
+          ],
+          [
+            -87.6292748,
+            41.8859332
+          ],
+          [
+            -87.6293521,
+            41.8859325
+          ]
+        ]
+      },
+      "id": "way/238683656"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/238683657",
+        "highway": "footway",
+        "indoor": "yes",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6292748,
+            41.8859332
+          ],
+          [
+            -87.6292636,
+            41.8859437
+          ],
+          [
+            -87.6292529,
+            41.8859537
+          ],
+          [
+            -87.6291074,
+            41.8859526
+          ],
+          [
+            -87.6284361,
+            41.8859541
+          ],
+          [
+            -87.6283759,
+            41.8859288
+          ],
+          [
+            -87.6282874,
+            41.8859281
+          ],
+          [
+            -87.6282401,
+            41.8859277
+          ],
+          [
+            -87.6281675,
+            41.8858832
+          ]
+        ]
+      },
+      "id": "way/238683657"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/238683659",
+        "highway": "steps",
+        "indoor": "yes",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6293121,
+            41.8859714
+          ],
+          [
+            -87.6292636,
+            41.8859437
+          ]
+        ]
+      },
+      "id": "way/238683659"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/238683661",
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.629351,
+            41.885912
+          ],
+          [
+            -87.6293116,
+            41.8859114
+          ],
+          [
+            -87.6293121,
+            41.8859714
+          ]
+        ]
+      },
+      "id": "way/238683661"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/238684445",
+        "highway": "footway",
+        "indoor": "yes",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6293223,
+            41.8863955
+          ],
+          [
+            -87.6292203,
+            41.8863973
+          ]
+        ]
+      },
+      "id": "way/238684445"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/238684446",
+        "highway": "footway",
+        "indoor": "yes",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6290591,
+            41.8866922
+          ],
+          [
+            -87.6290593,
+            41.8866626
+          ],
+          [
+            -87.6292259,
+            41.886613
+          ],
+          [
+            -87.6292203,
+            41.8863973
+          ],
+          [
+            -87.6292158,
+            41.8862444
+          ],
+          [
+            -87.629109,
+            41.8861855
+          ],
+          [
+            -87.6291084,
+            41.88612
+          ]
+        ]
+      },
+      "id": "way/238684446"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/238684477",
+        "highway": "footway",
+        "indoor": "yes",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6291075,
+            41.8860229
+          ],
+          [
+            -87.6291074,
+            41.8859526
+          ]
+        ]
+      },
+      "id": "way/238684477"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/238684478",
+        "highway": "steps",
+        "indoor": "yes",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6291084,
+            41.88612
+          ],
+          [
+            -87.6291075,
+            41.8860229
+          ]
+        ]
+      },
+      "id": "way/238684478"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/282636500",
+        "bicycle": "no",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "vehicle": "no"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6226846,
+            41.8841793
+          ],
+          [
+            -87.6223802,
+            41.88418
+          ],
+          [
+            -87.6223135,
+            41.8841802
+          ]
+        ]
+      },
+      "id": "way/282636500"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/284480707",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6219261,
+            41.8858746
+          ],
+          [
+            -87.6219264,
+            41.8858013
+          ]
+        ]
+      },
+      "id": "way/284480707"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/284480710",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6219264,
+            41.8858013
+          ],
+          [
+            -87.6219264,
+            41.8857888
+          ],
+          [
+            -87.6219257,
+            41.8856895
+          ],
+          [
+            -87.6219255,
+            41.8854597
+          ],
+          [
+            -87.6219253,
+            41.8851373
+          ],
+          [
+            -87.6219253,
+            41.885111
+          ],
+          [
+            -87.6219253,
+            41.8850848
+          ],
+          [
+            -87.6219252,
+            41.885034
+          ],
+          [
+            -87.6219251,
+            41.8848643
+          ],
+          [
+            -87.621925,
+            41.8847345
+          ]
+        ]
+      },
+      "id": "way/284480710"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/284549323",
+        "highway": "footway",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6403776,
+            41.8821467
+          ],
+          [
+            -87.6403852,
+            41.8823241
+          ],
+          [
+            -87.6403951,
+            41.8826233
+          ],
+          [
+            -87.6403963,
+            41.8826687
+          ]
+        ]
+      },
+      "id": "way/284549323"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/284561567",
+        "highway": "footway",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6370858,
+            41.8888128
+          ],
+          [
+            -87.6369486,
+            41.8888132
+          ]
+        ]
+      },
+      "id": "way/284561567"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/284561568",
+        "highway": "footway",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6378763,
+            41.8884151
+          ],
+          [
+            -87.6379703,
+            41.8884141
+          ],
+          [
+            -87.6379701,
+            41.8884286
+          ]
+        ]
+      },
+      "id": "way/284561568"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/284561569",
+        "highway": "footway",
+        "layer": "1",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6379701,
+            41.8884286
+          ],
+          [
+            -87.6379301,
+            41.8884289
+          ],
+          [
+            -87.6370888,
+            41.8884358
+          ],
+          [
+            -87.6370042,
+            41.8883299
+          ],
+          [
+            -87.6369002,
+            41.8883325
+          ]
+        ]
+      },
+      "id": "way/284561569"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/284561856",
+        "highway": "footway",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.636795,
+            41.8889277
+          ],
+          [
+            -87.6361522,
+            41.8884421
+          ],
+          [
+            -87.6353524,
+            41.8884511
+          ],
+          [
+            -87.6352577,
+            41.8884522
+          ],
+          [
+            -87.6350861,
+            41.8884539
+          ],
+          [
+            -87.6344297,
+            41.8884602
+          ],
+          [
+            -87.6342572,
+            41.8884619
+          ],
+          [
+            -87.6341473,
+            41.8884629
+          ]
+        ]
+      },
+      "id": "way/284561856"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/284561857",
+        "highway": "footway",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6369566,
+            41.8890179
+          ],
+          [
+            -87.636795,
+            41.8889277
+          ]
+        ]
+      },
+      "id": "way/284561857"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/284561858",
+        "highway": "footway",
+        "name": "Pedway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6341473,
+            41.8884629
+          ],
+          [
+            -87.6339936,
+            41.888464
+          ]
+        ]
+      },
+      "id": "way/284561858"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/519888254",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.6276319,
+            41.8843126
+          ],
+          [
+            -87.6276193,
+            41.8838544
+          ]
+        ]
+      },
+      "id": "way/519888254"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/519888257",
+        "highway": "footway",
+        "layer": "-1",
+        "name": "Pedway",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -87.626475,
+            41.884321
+          ],
+          [
+            -87.6264719,
+            41.8841797
+          ]
+        ]
+      },
+      "id": "way/519888257"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1469254509",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6306729,
+          41.8862637
+        ]
+      },
+      "id": "node/1469254509"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1469254512",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6308302,
+          41.8859675
+        ]
+      },
+      "id": "node/1469254512"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1469254519",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6306746,
+          41.8863129
+        ]
+      },
+      "id": "node/1469254519"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1469254522",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6311264,
+          41.885963
+        ]
+      },
+      "id": "node/1469254522"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1583441295",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6281675,
+          41.8858832
+        ]
+      },
+      "id": "node/1583441295"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1609576464",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.626503,
+          41.8833266
+        ]
+      },
+      "id": "node/1609576464"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1609576471",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6264962,
+          41.8831073
+        ]
+      },
+      "id": "node/1609576471"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1622274865",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6364478,
+          41.8883616
+        ]
+      },
+      "id": "node/1622274865"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1622275050",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6369002,
+          41.8883325
+        ]
+      },
+      "id": "node/1622275050"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2207533688",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.631341,
+          41.8848508
+        ]
+      },
+      "id": "node/2207533688"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2391052807",
+        "entrance": "yes",
+        "layer": "-1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6310922,
+          41.8838464
+        ]
+      },
+      "id": "node/2391052807"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2391057832",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6326252,
+          41.8836083
+        ]
+      },
+      "id": "node/2391057832"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2391057836",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6322178,
+          41.8836132
+        ]
+      },
+      "id": "node/2391057836"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2391067700",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6293223,
+          41.8863955
+        ]
+      },
+      "id": "node/2391067700"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2391067960",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6290591,
+          41.8866922
+        ]
+      },
+      "id": "node/2391067960"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2391067963",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6306371,
+          41.8867157
+        ]
+      },
+      "id": "node/2391067963"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2391114653",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6280557,
+          41.883854
+        ]
+      },
+      "id": "node/2391114653"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2391120253",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6276585,
+          41.883855
+        ]
+      },
+      "id": "node/2391120253"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2391158945",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6238166,
+          41.8848386
+        ]
+      },
+      "id": "node/2391158945"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2391160914",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6229453,
+          41.8854002
+        ]
+      },
+      "id": "node/2391160914"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2391278936",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6218723,
+          41.8854601
+        ]
+      },
+      "id": "node/2391278936"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2391278941",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.621512,
+          41.8855495
+        ]
+      },
+      "id": "node/2391278941"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2391283010",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6218641,
+          41.8851112
+        ]
+      },
+      "id": "node/2391283010"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2391324751",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6209853,
+          41.8871541
+        ]
+      },
+      "id": "node/2391324751"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2391335514",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6235577,
+          41.8881075
+        ]
+      },
+      "id": "node/2391335514"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2394592081",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6318076,
+          41.8763932
+        ]
+      },
+      "id": "node/2394592081"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2394592082",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6326191,
+          41.8763826
+        ]
+      },
+      "id": "node/2394592082"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2394641713",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6398754,
+          41.8821493
+        ]
+      },
+      "id": "node/2394641713"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2394641714",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6394836,
+          41.8821541
+        ]
+      },
+      "id": "node/2394641714"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2394641728",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6387431,
+          41.8821589
+        ]
+      },
+      "id": "node/2394641728"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2394652635",
+        "highway": "elevator"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6379701,
+          41.8884286
+        ]
+      },
+      "id": "node/2394652635"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2394652636",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6378628,
+          41.8880688
+        ]
+      },
+      "id": "node/2394652636"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2394652643",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6370858,
+          41.8888128
+        ]
+      },
+      "id": "node/2394652643"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2394653169",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6341584,
+          41.8887065
+        ]
+      },
+      "id": "node/2394653169"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2394653899",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6341473,
+          41.8884629
+        ]
+      },
+      "id": "node/2394653899"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2397660731",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6223802,
+          41.88418
+        ]
+      },
+      "id": "node/2397660731"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2397697473",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6252636,
+          41.8841742
+        ]
+      },
+      "id": "node/2397697473"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2397697474",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6247064,
+          41.8841717
+        ]
+      },
+      "id": "node/2397697474"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2397703813",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6248016,
+          41.88462
+        ]
+      },
+      "id": "node/2397703813"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2397707751",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6246246,
+          41.8843321
+        ]
+      },
+      "id": "node/2397707751"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2397755752",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.624521,
+          41.8841105
+        ]
+      },
+      "id": "node/2397755752"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2423469490",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6289736,
+          41.8838448
+        ]
+      },
+      "id": "node/2423469490"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2423626232",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6244735,
+          41.8841318
+        ]
+      },
+      "id": "node/2423626232"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2423627063",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6245449,
+          41.8828138
+        ]
+      },
+      "id": "node/2423627063"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2423627065",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6245151,
+          41.8811955
+        ]
+      },
+      "id": "node/2423627065"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2423627070",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6245182,
+          41.8827041
+        ]
+      },
+      "id": "node/2423627070"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2423627077",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6245532,
+          41.8840305
+        ]
+      },
+      "id": "node/2423627077"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2427187892",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6242429,
+          41.8843728
+        ]
+      },
+      "id": "node/2427187892"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2427245786",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.623797,
+          41.884254
+        ]
+      },
+      "id": "node/2427245786"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2427308726",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6232655,
+          41.8842327
+        ]
+      },
+      "id": "node/2427308726"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2429279548",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6244202,
+          41.8770782
+        ]
+      },
+      "id": "node/2429279548"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2429684874",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6218876,
+          41.8841758
+        ]
+      },
+      "id": "node/2429684874"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2430619555",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6188103,
+          41.8842002
+        ]
+      },
+      "id": "node/2430619555"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2431735301",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6226846,
+          41.8841793
+        ]
+      },
+      "id": "node/2431735301"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2431735302",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6233237,
+          41.8841777
+        ]
+      },
+      "id": "node/2431735302"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2435693620",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6239591,
+          41.8784329
+        ]
+      },
+      "id": "node/2435693620"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2435961915",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.630338,
+          41.8812086
+        ]
+      },
+      "id": "node/2435961915"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2438069235",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.621859,
+          41.8850343
+        ]
+      },
+      "id": "node/2438069235"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2438340739",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6215013,
+          41.8850138
+        ]
+      },
+      "id": "node/2438340739"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2439978856",
+        "highway": "elevator"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.622017,
+          41.8851108
+        ]
+      },
+      "id": "node/2439978856"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2439985946",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.619237,
+          41.8865979
+        ]
+      },
+      "id": "node/2439985946"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2440002501",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6238213,
+          41.8869896
+        ]
+      },
+      "id": "node/2440002501"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2440004168",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6263683,
+          41.8841792
+        ]
+      },
+      "id": "node/2440004168"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2440017821",
+        "highway": "elevator"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6210967,
+          41.8860531
+        ]
+      },
+      "id": "node/2440017821"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2440028117",
+        "entrance": "yes",
+        "layer": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6201,
+          41.8871889
+        ]
+      },
+      "id": "node/2440028117"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2440028121",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6200488,
+          41.8871167
+        ]
+      },
+      "id": "node/2440028121"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2440029158",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6205933,
+          41.8872455
+        ]
+      },
+      "id": "node/2440029158"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2440527141",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6232587,
+          41.8770101
+        ]
+      },
+      "id": "node/2440527141"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2440533169",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6230833,
+          41.8770105
+        ]
+      },
+      "id": "node/2440533169"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2446585015",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6220432,
+          41.8861344
+        ]
+      },
+      "id": "node/2446585015"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2446615164",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6213563,
+          41.8876134
+        ]
+      },
+      "id": "node/2446615164"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2446641980",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6215568,
+          41.8864427
+        ]
+      },
+      "id": "node/2446641980"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2446641985",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6219347,
+          41.8864438
+        ]
+      },
+      "id": "node/2446641985"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2454868464",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6236493,
+          41.8866351
+        ]
+      },
+      "id": "node/2454868464"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2464854802",
+        "highway": "elevator"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6317794,
+          41.8843335
+        ]
+      },
+      "id": "node/2464854802"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2464864334",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.629274,
+          41.8858755
+        ]
+      },
+      "id": "node/2464864334"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2464864339",
+        "entrance": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6293521,
+          41.8859325
+        ]
+      },
+      "id": "node/2464864339"
+    }
+  ]
+}

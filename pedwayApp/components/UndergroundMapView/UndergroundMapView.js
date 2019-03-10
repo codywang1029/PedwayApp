@@ -2,9 +2,8 @@ import React, {Component} from 'react';
 import styles from './styles';
 import MapView, {MAP_TYPES, UrlTile} from 'react-native-maps';
 import RenderPedway from '../RenderPedway/RenderPedway';
-import RenderEntrance from '../RenderEntrance/RenderEntrance';
+import MapStyle from './mapStyleDark';
 import PedwayData from '../../mock_data/export';
-
 
 /**
  * Renders a MapView that display the ground level map
@@ -25,21 +24,6 @@ export default class GroundMapView extends React.Component {
     };
   }
 
-  componentDidMount() {
-    // navigator.geolocation.getCurrentPosition(
-    //   (position) => {
-    //     console.log(position.coords);
-    //     this.setState({
-    //       latitude: position.coords.latitude,
-    //       longitude: position.coords.longitude,
-    //       error: null,
-    //     });
-    //   },
-    //   (error) => this.setState({error: error.message}),
-    //   {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000},
-    // );
-  }
-
   render() {
     const latitude = this.state.latitude;
     const longitude = this.state.longitude;
@@ -47,23 +31,24 @@ export default class GroundMapView extends React.Component {
     return (
       <MapView
         style={styles.mainMap}
+        customMapStyle={MapStyle}
         // mapType={MAP_TYPES.NONE}
         region={{
           latitude: latitude,
           longitude: longitude,
-          latitudeDelta: 0.02,
-          longitudeDelta: 0.02,
+          latitudeDelta: 0.012,
+          longitudeDelta: 0.012,
         }}>
         {/*<UrlTile urlTemplate={this.state.apiServerURL}/>*/}
-        {/*<MapView.Marker*/}
-          {/*coordinate={{*/}
-            {/*latitude: latitude,*/}
-            {/*longitude: longitude,*/}
-          {/*}}*/}
-          {/*pinColor={'#1198ff'}*/}
-          {/*title={'You'}*/}
-        {/*/>*/}
-        <RenderEntrance JSONData={PedwayData}/>
+        <MapView.Marker
+          coordinate={{
+            latitude: latitude,
+            longitude: longitude,
+          }}
+          pinColor={'#1198ff'}
+          title={'You'}
+        />
+        <RenderPedway JSONData={PedwayData}/>
       </MapView>
     );
   }
