@@ -1,6 +1,6 @@
 const request = require('supertest');
-const {app, disconnect} = require('../../app');
-const {deleteAll} = require('./statusController');
+const {app, disconnect} = require('../src/app');
+const {deleteAll} = require('../api/controllers/statusController');
 
 afterAll(disconnect);
 

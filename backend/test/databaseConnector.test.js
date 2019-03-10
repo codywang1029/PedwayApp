@@ -1,4 +1,4 @@
-const connectDatabase = require('./connectDatabase');
+const connectDatabase = require('../src/databaseConnector');
 mongoose = require('mongoose');
 
 describe('Test the database connection', () => {

@@ -445,9 +445,9 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         }
         region={
           Object {
-            "latitude": 40.113918,
+            "latitude": -88.224916,
             "latitudeDelta": 0.1,
-            "longitude": -88.224916,
+            "longitude": 40.113918,
             "longitudeDelta": 0.1,
           }
         }
@@ -465,12 +465,12 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         <Marker
           coordinate={
             Object {
-              "latitude": 40.114399,
-              "longitude": -88.223961,
+              "latitude": -88.224916,
+              "longitude": 40.113918,
             }
           }
-          description="description"
-          title="title"
+          pinColor="#1198ff"
+          title="You"
         />
         <Polyline
           coordinates={
@@ -612,7 +612,7 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
               Array [
                 Object {
                   "color": "#555",
-                  "fontSize": 40,
+                  "fontSize": 35,
                 },
                 undefined,
                 Object {
@@ -1078,9 +1078,9 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
         }
         region={
           Object {
-            "latitude": 40.113918,
+            "latitude": -88.224916,
             "latitudeDelta": 0.1,
-            "longitude": -88.224916,
+            "longitude": 40.113918,
             "longitudeDelta": 0.1,
           }
         }
@@ -1098,12 +1098,12 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
         <Marker
           coordinate={
             Object {
-              "latitude": 40.114399,
-              "longitude": -88.223961,
+              "latitude": -88.224916,
+              "longitude": 40.113918,
             }
           }
-          description="description"
-          title="title"
+          pinColor="#1198ff"
+          title="You"
         />
         <Polyline
           coordinates={
@@ -1245,7 +1245,7 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               Array [
                 Object {
                   "color": "#555",
-                  "fontSize": 40,
+                  "fontSize": 35,
                 },
                 undefined,
                 Object {
@@ -1711,9 +1711,9 @@ exports[`Check if our MainView renders correctly 1`] = `
         }
         region={
           Object {
-            "latitude": 40.113918,
+            "latitude": -88.224916,
             "latitudeDelta": 0.1,
-            "longitude": -88.224916,
+            "longitude": 40.113918,
             "longitudeDelta": 0.1,
           }
         }
@@ -1731,12 +1731,12 @@ exports[`Check if our MainView renders correctly 1`] = `
         <Marker
           coordinate={
             Object {
-              "latitude": 40.114399,
-              "longitude": -88.223961,
+              "latitude": -88.224916,
+              "longitude": 40.113918,
             }
           }
-          description="description"
-          title="title"
+          pinColor="#1198ff"
+          title="You"
         />
         <Polyline
           coordinates={
@@ -1878,7 +1878,7 @@ exports[`Check if our MainView renders correctly 1`] = `
               Array [
                 Object {
                   "color": "#555",
-                  "fontSize": 40,
+                  "fontSize": 35,
                 },
                 undefined,
                 Object {
@@ -2344,9 +2344,9 @@ exports[`Check if our RenderPedway renders correctly 1`] = `
         }
         region={
           Object {
-            "latitude": 40.113918,
+            "latitude": -88.224916,
             "latitudeDelta": 0.1,
-            "longitude": -88.224916,
+            "longitude": 40.113918,
             "longitudeDelta": 0.1,
           }
         }
@@ -2364,12 +2364,12 @@ exports[`Check if our RenderPedway renders correctly 1`] = `
         <Marker
           coordinate={
             Object {
-              "latitude": 40.114399,
-              "longitude": -88.223961,
+              "latitude": -88.224916,
+              "longitude": 40.113918,
             }
           }
-          description="description"
-          title="title"
+          pinColor="#1198ff"
+          title="You"
         />
         <Polyline
           coordinates={
@@ -2511,7 +2511,7 @@ exports[`Check if our RenderPedway renders correctly 1`] = `
               Array [
                 Object {
                   "color": "#555",
-                  "fontSize": 40,
+                  "fontSize": 35,
                 },
                 undefined,
                 Object {
@@ -2977,9 +2977,9 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
         }
         region={
           Object {
-            "latitude": 40.113918,
+            "latitude": -88.224916,
             "latitudeDelta": 0.1,
-            "longitude": -88.224916,
+            "longitude": 40.113918,
             "longitudeDelta": 0.1,
           }
         }
@@ -2997,12 +2997,12 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
         <Marker
           coordinate={
             Object {
-              "latitude": 40.114399,
-              "longitude": -88.223961,
+              "latitude": -88.224916,
+              "longitude": 40.113918,
             }
           }
-          description="description"
-          title="title"
+          pinColor="#1198ff"
+          title="You"
         />
         <Polyline
           coordinates={
@@ -3144,7 +3144,7 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
               Array [
                 Object {
                   "color": "#555",
-                  "fontSize": 40,
+                  "fontSize": 35,
                 },
                 undefined,
                 Object {
@@ -3610,9 +3610,9 @@ exports[`Check if our main app renders correctly 1`] = `
         }
         region={
           Object {
-            "latitude": 40.113918,
+            "latitude": -88.224916,
             "latitudeDelta": 0.1,
-            "longitude": -88.224916,
+            "longitude": 40.113918,
             "longitudeDelta": 0.1,
           }
         }
@@ -3630,12 +3630,12 @@ exports[`Check if our main app renders correctly 1`] = `
         <Marker
           coordinate={
             Object {
-              "latitude": 40.114399,
-              "longitude": -88.223961,
+              "latitude": -88.224916,
+              "longitude": 40.113918,
             }
           }
-          description="description"
-          title="title"
+          pinColor="#1198ff"
+          title="You"
         />
         <Polyline
           coordinates={
@@ -3777,7 +3777,7 @@ exports[`Check if our main app renders correctly 1`] = `
               Array [
                 Object {
                   "color": "#555",
-                  "fontSize": 40,
+                  "fontSize": 35,
                 },
                 undefined,
                 Object {
