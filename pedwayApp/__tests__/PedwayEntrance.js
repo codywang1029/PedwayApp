@@ -6,7 +6,6 @@ test('Check Entrance Constructor', () => {
   expect(testCoord !== null);
   const testEntrance = new PedwayEntrance(testCoord, 'open', false);
   expect(testEntrance !== null);
-
 });
 
 test('Check Coordinate Getter', () => {
@@ -45,7 +44,6 @@ test('Check Status Setter', () => {
   expect('open' == testEntrance.getStatus());
   testEntrance.setStatus('closed');
   expect('closed' == testEntrance.getStatus());
-
 });
 
 test('Check Coordinate Setter', () => {
@@ -70,6 +68,6 @@ test('Check get JSON', () => {
   expect(testEntrance.getJSON() == {
     coordinate: {latitude: 42, longitude: 42},
     status: 'open',
-    elevator: false
+    elevator: false,
   });
 });
