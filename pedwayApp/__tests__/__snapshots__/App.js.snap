@@ -198,9 +198,9 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         provider={null}
         region={
           Object {
-            "latitude": -88.224916,
+            "latitude": 41.881899,
             "latitudeDelta": 0.1,
-            "longitude": 40.113918,
+            "longitude": -87.623977,
             "longitudeDelta": 0.1,
           }
         }
@@ -221,8 +221,8 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         <Marker
           coordinate={
             Object {
-              "latitude": -88.224916,
-              "longitude": 40.113918,
+              "latitude": 41.881899,
+              "longitude": -87.623977,
             }
           }
           pinColor="#1198ff"
@@ -551,9 +551,9 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
         provider={null}
         region={
           Object {
-            "latitude": -88.224916,
+            "latitude": 41.881899,
             "latitudeDelta": 0.1,
-            "longitude": 40.113918,
+            "longitude": -87.623977,
             "longitudeDelta": 0.1,
           }
         }
@@ -574,8 +574,8 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
         <Marker
           coordinate={
             Object {
-              "latitude": -88.224916,
-              "longitude": 40.113918,
+              "latitude": 41.881899,
+              "longitude": -87.623977,
             }
           }
           pinColor="#1198ff"
@@ -904,9 +904,9 @@ exports[`Check if our MainView renders correctly 1`] = `
         provider={null}
         region={
           Object {
-            "latitude": -88.224916,
+            "latitude": 41.881899,
             "latitudeDelta": 0.1,
-            "longitude": 40.113918,
+            "longitude": -87.623977,
             "longitudeDelta": 0.1,
           }
         }
@@ -927,8 +927,8 @@ exports[`Check if our MainView renders correctly 1`] = `
         <Marker
           coordinate={
             Object {
-              "latitude": -88.224916,
-              "longitude": 40.113918,
+              "latitude": 41.881899,
+              "longitude": -87.623977,
             }
           }
           pinColor="#1198ff"
@@ -1257,9 +1257,9 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
         provider={null}
         region={
           Object {
-            "latitude": -88.224916,
+            "latitude": 41.881899,
             "latitudeDelta": 0.1,
-            "longitude": 40.113918,
+            "longitude": -87.623977,
             "longitudeDelta": 0.1,
           }
         }
@@ -1280,8 +1280,8 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
         <Marker
           coordinate={
             Object {
-              "latitude": -88.224916,
-              "longitude": 40.113918,
+              "latitude": 41.881899,
+              "longitude": -87.623977,
             }
           }
           pinColor="#1198ff"
@@ -1610,9 +1610,9 @@ exports[`Check if our main app renders correctly 1`] = `
         provider={null}
         region={
           Object {
-            "latitude": -88.224916,
+            "latitude": 41.881899,
             "latitudeDelta": 0.1,
-            "longitude": 40.113918,
+            "longitude": -87.623977,
             "longitudeDelta": 0.1,
           }
         }
@@ -1633,8 +1633,8 @@ exports[`Check if our main app renders correctly 1`] = `
         <Marker
           coordinate={
             Object {
-              "latitude": -88.224916,
-              "longitude": 40.113918,
+              "latitude": 41.881899,
+              "longitude": -87.623977,
             }
           }
           pinColor="#1198ff"
