@@ -12,7 +12,7 @@ test('Check Coordinate Getter', () => {
   const testCoord = new PedwayCoordinate(-70.20232, 42.353523);
   expect(testCoord !== null);
   const testEntrance = new PedwayEntrance(testCoord, 'open', false);
-  expect(testCoord === testEntrance.getCoordinate());
+  expect(testCoord).toEqual(testEntrance.getCoordinate());
 });
 
 test('Check Status Getter', () => {
@@ -31,11 +31,11 @@ test('Check Coordinate Setter', () => {
   const testCoord = new PedwayCoordinate(-70.20232, 42.353523);
   const testCoord2 = new PedwayCoordinate(70.20232, -42.353523);
   const testEntrance = new PedwayEntrance(testCoord, 'open', false);
-  expect(testCoord === testEntrance.getCoordinate());
+  expect(testCoord).toEqual(testEntrance.getCoordinate());
   expect(testCoord2 !== testEntrance.getCoordinate());
   testEntrance.setCoordinate(testCoord2);
   expect(testCoord !== testEntrance.getCoordinate());
-  expect(testCoord2 === testEntrance.getCoordinate());
+  expect(testCoord2).toEqual(testEntrance.getCoordinate());
 });
 
 test('Check Status Setter', () => {
