@@ -15,12 +15,13 @@
  */
 
 import React, {Component} from 'react';
-import MapView, {MAP_TYPES, UrlTile} from 'react-native-maps';
 import {Button} from 'react-native';
 import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import SideMenu from 'react-native-side-menu';
-
+import styles from './styles/app.style';
+import RoundButton from './components/RoundButton/RoundButton';
+import GroundMapView from './components/GroundMapView/GroundMapView'
+import SearchBar from './components/SearchBar/SearchBar';
 
 /**
  * HomeScreen that gets rendered first when everything is loaded
@@ -43,8 +44,11 @@ class HomeScreen extends React.Component {
   }
 
   render() {
+
+      const toggleSideBar = () => {this.setState({sideMenuIsOpen: !this.state.sideMenuIsOpen,});}
+
     return (
-      <SideMenu
+     <SideMenu
         menu={<SideMenu navigator={navigator}/>}
         disableGestures={this.state.sideMenuDisableGesture}
         isOpen={this.state.sideMenuIsOpen}
@@ -53,25 +57,8 @@ class HomeScreen extends React.Component {
           this.setState({sideMenuDisableGesture: !openStatus});
         }}
       >
-        <TouchableOpacity
-          style={[styles.hamburgerButton, styles.floating, styles.roundButton]}
-          onPress={() => {
-            this.setState({
-              sideMenuIsOpen: !this.state.sideMenuIsOpen,
-            });
-          }}>
-          <View style={{
-            flexGrow: 1,
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}>
-            <Icon
-              name="bars"
-              size={35}
-              color="#555"
-            />
-          </View>
-        </TouchableOpacity>
+       <RoundButton style={[positions.hamburgerButton]} icon={"bars"} func={toggleSideBar}/>
+
         <MainView/>
       </SideMenu>
     );
@@ -87,79 +74,21 @@ class MainView extends React.Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <GroundMapView/>
-        <TouchableOpacity
-          style={[styles.floating, styles.searchBox]}
-        >
-          <View style={{
-            flexGrow: 1,
-            justifyContent: 'center',
-            alignItems: 'flex-start',
-          }}>
-            <Text style={{fontSize: 18}}>Enter your destination...</Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[styles.undergroundButton, styles.floating, styles.roundButton]}
-          onPress={() => {
-          }}>
-          <View style={{
-            flexGrow: 1,
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}>
-            <Icon
-              name="level-down"
-              size={40}
-              color="#555"
-            />
-          </View>
-        </TouchableOpacity>
+        <GroundMapView />
+        <SearchBar/>
+        <RoundButton style={[positions.undergroundButton]} icon={"level-down"} func={() => {
+          // this.props.navigation.dispatch(StackActions.reset({
+          //   index: 0,
+          //   actions: [
+          //     NavigationActions.navigate({routeName: 'Underground'})
+          //   ],
+          // }))
+        }}/>
       </View>
     );
   }
 }
 
-
-/**
- * Renders a MapView that display the ground level map
- * we are setting provider to null and UrlTile to OpenStreetMap's API
- * to use OSM
- */
-class GroundMapView extends React.Component {
-
-  constructor() {
-    super();
-    this.state = {
-      apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
-    };
-  }
-
-  render() {
-    return (
-      <MapView
-        style={styles.mainMap}
-        mapType={MAP_TYPES.NONE}
-        provider={null}
-        region={{
-          latitude: 40.113918,
-          longitude: -88.224916,
-          latitudeDelta: 0.1,
-          longitudeDelta: 0.1,
-        }}>
-        <UrlTile urlTemplate={this.state.apiServerURL}/>
-        <MapView.Marker
-          coordinate={{
-            latitude: 40.114399,
-            longitude: -88.223961,
-          }}
-          title={'title'}
-          description={'description'}
-        />
-      </MapView>
-    );
-  }
-}
 
 /**
  * WIP, should return a Component that only renders the pedway
@@ -170,72 +99,29 @@ class UndergroundScreen extends React.Component {
     return (
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <Text>Underground Screen</Text>
-        <TouchableOpacity
-          style={[styles.undergroundButton, styles.floating, styles.roundButton]}
-          onPress={() => {
-          }}>
-          <View style={{
-            flexGrow: 1,
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}>
-            <Icon
-              name="level-up"
-              size={40}
-              color="#555"
-            />
-          </View>
-        </TouchableOpacity>
+        <RoundButton style={[positions.undergroundButton]} icon={"level-up"} func={() => {
+          // this.props.navigation.dispatch(StackActions.reset({
+          //   index: 0,
+          //   actions: [
+          //     NavigationActions.navigate({routeName: 'Home'})
+          //   ],
+          // }))
+        }}/>
       </View>
     );
   }
 }
 
-
-const styles = StyleSheet.create({
-  searchBox: {
-    position: 'absolute',
-    top: 25,
-    left: 80,
-    height: 50,
-    width: 300,
-    backgroundColor: '#FFFFFF',
-    color: '#CCCCCC',
-    textAlignVertical: 'center',
-    paddingLeft: 5,
-    marginLeft: 20,
-    borderRadius: 10,
-  },
-  roundButton: {
-    zIndex: 1,
-    width: 60,
-    height: 60,
-    backgroundColor: '#FFFFFF',
-    borderRadius: 60,
-  },
-  floating: {
-    shadowOffset: {width: 30, height: 30},
-    shadowColor: 'rgba(0, 0, 0, 0.6)',
-    shadowOpacity: 0.8,
-    elevation: 6,
-    shadowRadius: 15,
-    alignItems: 'center',
-    textAlignVertical: 'center',
-    opacity: 0.95,
-  },
+const positions = StyleSheet.create({
   undergroundButton: {
     position: 'absolute',
-    bottom: 30,
-    right: 30,
+      bottom: 30,
+      right: 30,
   },
   hamburgerButton: {
     position: 'absolute',
     top: 20,
     left: 20,
-  },
-  mainMap: {
-    ...StyleSheet.absoluteFillObject,
-    zIndex: -1,
   },
 });
 
