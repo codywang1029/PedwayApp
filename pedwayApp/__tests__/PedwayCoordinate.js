@@ -43,5 +43,5 @@ test('Check get JSON', () => {
   expect(testVar.getJSON() == {latitude: 42, longitude: 42});
   testVar.setCoordinates(-70.20232, 42.353523);
   expect(testVar.getJSON() == {latitude: -70.20232, longitude: 42.353523});
-
 });
+
