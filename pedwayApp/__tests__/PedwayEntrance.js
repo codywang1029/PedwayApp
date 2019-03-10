@@ -53,3 +53,9 @@ test('Check Coordinate Setter', () => {
   expect(testVar.getLongitude()).toBeCloseTo(42.353523);
 });
 
+test('Check Elevator Setter', () => {
+  const testCoord = new PedwayCoordinate(-70.20232, 42.353523);
+  const testEntrance = new PedwayEntrance(testCoord, 'open', false);
+  testEntrance.setElevator(true);
+  expect(testEntrance.getElevatorAvailability()).toBe(true);
+});
