@@ -25,6 +25,7 @@
   "homepage": "https://github.com/cwlowder/pedway#readme",
   "dependencies": {
     "dotenv": "^6.2.0",
+    "es6-dynamic-template": "^1.0.5",
     "express": "^4.16.4",
     "mongoose": "^5.4.11",
     "request": "^2.88.0"

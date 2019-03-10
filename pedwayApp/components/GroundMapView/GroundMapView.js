@@ -43,7 +43,6 @@ export default class GroundMapView extends React.Component {
   render() {
     const latitude = this.state.latitude;
     const longitude = this.state.longitude;
-    console.log(latitude);
     return (
       <MapView
         style={styles.mainMap}
