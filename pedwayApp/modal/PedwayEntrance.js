@@ -9,7 +9,7 @@ export default class PedwaySection {
    * @param {string} status
    * @param {boolean} elevator
    */
-  constructor(inputCoordinate, status, elevator=false) {
+  constructor(inputCoordinate, status, elevator = false) {
     this.coordinate = inputCoordinate;
     this.status = status;
     this.elevator = elevator;
@@ -44,8 +44,13 @@ export default class PedwaySection {
    * @return {JSON}
    */
   getJSON() {
-    return (this.coordinate.getJSON());
+    return ({
+      coordinate: this.coordinate.getJSON(),
+      status: this.status,
+      elevator: this.elevator,
+    });
   }
+
   /**
    * update the coordinate
    * @param {PedwayCoordinate} inputCoordinate
@@ -53,6 +58,7 @@ export default class PedwaySection {
   setCoordinate(inputCoordinate) {
     this.coordinate = inputCoordinate;
   }
+
   /**
    * update the status
    * @param {string} status

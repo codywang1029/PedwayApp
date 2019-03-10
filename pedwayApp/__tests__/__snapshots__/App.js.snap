@@ -476,12 +476,16 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
           coordinates={
             Array [
               Object {
-                "latitude": 40.1163,
-                "longitude": -88.263778,
+                "latitude": 40.143,
+                "longitude": -88.231,
               },
               Object {
-                "latitude": 40.1163,
-                "longitude": -88.224462,
+                "latitude": 40.0953,
+                "longitude": -88.255462,
+              },
+              Object {
+                "latitude": 40.068305,
+                "longitude": -88.205,
               },
             ]
           }
@@ -492,16 +496,12 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
           coordinates={
             Array [
               Object {
-                "latitude": 40.1433,
-                "longitude": -88.231778,
+                "latitude": 40.1163,
+                "longitude": -88.2737,
               },
               Object {
-                "latitude": 40.0953,
-                "longitude": -88.255462,
-              },
-              Object {
-                "latitude": 40.068305,
-                "longitude": -88.205,
+                "latitude": 40.116329,
+                "longitude": -88.224462,
               },
             ]
           }
@@ -1109,12 +1109,16 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
           coordinates={
             Array [
               Object {
-                "latitude": 40.1163,
-                "longitude": -88.263778,
+                "latitude": 40.143,
+                "longitude": -88.231,
               },
               Object {
-                "latitude": 40.1163,
-                "longitude": -88.224462,
+                "latitude": 40.0953,
+                "longitude": -88.255462,
+              },
+              Object {
+                "latitude": 40.068305,
+                "longitude": -88.205,
               },
             ]
           }
@@ -1125,16 +1129,12 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
           coordinates={
             Array [
               Object {
-                "latitude": 40.1433,
-                "longitude": -88.231778,
+                "latitude": 40.1163,
+                "longitude": -88.2737,
               },
               Object {
-                "latitude": 40.0953,
-                "longitude": -88.255462,
-              },
-              Object {
-                "latitude": 40.068305,
-                "longitude": -88.205,
+                "latitude": 40.116329,
+                "longitude": -88.224462,
               },
             ]
           }
@@ -1742,12 +1742,16 @@ exports[`Check if our MainView renders correctly 1`] = `
           coordinates={
             Array [
               Object {
-                "latitude": 40.1163,
-                "longitude": -88.263778,
+                "latitude": 40.143,
+                "longitude": -88.231,
               },
               Object {
-                "latitude": 40.1163,
-                "longitude": -88.224462,
+                "latitude": 40.0953,
+                "longitude": -88.255462,
+              },
+              Object {
+                "latitude": 40.068305,
+                "longitude": -88.205,
               },
             ]
           }
@@ -1758,16 +1762,12 @@ exports[`Check if our MainView renders correctly 1`] = `
           coordinates={
             Array [
               Object {
-                "latitude": 40.1433,
-                "longitude": -88.231778,
+                "latitude": 40.1163,
+                "longitude": -88.2737,
               },
               Object {
-                "latitude": 40.0953,
-                "longitude": -88.255462,
-              },
-              Object {
-                "latitude": 40.068305,
-                "longitude": -88.205,
+                "latitude": 40.116329,
+                "longitude": -88.224462,
               },
             ]
           }
@@ -2375,12 +2375,16 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
           coordinates={
             Array [
               Object {
-                "latitude": 40.1163,
-                "longitude": -88.263778,
+                "latitude": 40.143,
+                "longitude": -88.231,
               },
               Object {
-                "latitude": 40.1163,
-                "longitude": -88.224462,
+                "latitude": 40.0953,
+                "longitude": -88.255462,
+              },
+              Object {
+                "latitude": 40.068305,
+                "longitude": -88.205,
               },
             ]
           }
@@ -2391,16 +2395,12 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
           coordinates={
             Array [
               Object {
-                "latitude": 40.1433,
-                "longitude": -88.231778,
+                "latitude": 40.1163,
+                "longitude": -88.2737,
               },
               Object {
-                "latitude": 40.0953,
-                "longitude": -88.255462,
-              },
-              Object {
-                "latitude": 40.068305,
-                "longitude": -88.205,
+                "latitude": 40.116329,
+                "longitude": -88.224462,
               },
             ]
           }
@@ -3008,12 +3008,16 @@ exports[`Check if our main app renders correctly 1`] = `
           coordinates={
             Array [
               Object {
-                "latitude": 40.1163,
-                "longitude": -88.263778,
+                "latitude": 40.143,
+                "longitude": -88.231,
               },
               Object {
-                "latitude": 40.1163,
-                "longitude": -88.224462,
+                "latitude": 40.0953,
+                "longitude": -88.255462,
+              },
+              Object {
+                "latitude": 40.068305,
+                "longitude": -88.205,
               },
             ]
           }
@@ -3024,16 +3028,12 @@ exports[`Check if our main app renders correctly 1`] = `
           coordinates={
             Array [
               Object {
-                "latitude": 40.1433,
-                "longitude": -88.231778,
+                "latitude": 40.1163,
+                "longitude": -88.2737,
               },
               Object {
-                "latitude": 40.0953,
-                "longitude": -88.255462,
-              },
-              Object {
-                "latitude": 40.068305,
-                "longitude": -88.205,
+                "latitude": 40.116329,
+                "longitude": -88.224462,
               },
             ]
           }
