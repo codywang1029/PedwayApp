@@ -19,7 +19,6 @@ export default class GroundMapView extends React.Component {
     };
   }
     componentDidMount() {
-
           navigator.geolocation.getCurrentPosition(
               (position) => {
                   console.log(position.coords);
@@ -32,7 +31,6 @@ export default class GroundMapView extends React.Component {
               (error) => this.setState({ error: error.message }),
               { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 },
           );
-     
     }
 
   render() {
