@@ -25,6 +25,8 @@ module.exports = function(opts = {
     // production password ends in two equal signs which breaks in azure
     mongoose.connect(
         'mongodb://' + uname + ':' + password + '==@' + host, opts);
+  } else if (process.env.APP_DEPLOYMENT_MODE === 'testing') {
+    mongoose.connect(host, opts);
   } else {
     // allows the connection to some custom server
     mongoose.connect('mongodb://' + uname + ':' + password + '@' + host, opts);
