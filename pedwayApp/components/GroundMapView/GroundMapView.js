@@ -13,13 +13,13 @@ export default class GroundMapView extends React.Component {
     super();
     this.state = {
         apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
-        latitude: -88.224916,
-        longitude: 40.113918,
+        latitude: 41.881899,
+        longitude: -87.623977,
         error: null
     };
   }
     componentDidMount() {
-          navigator.geolocation.getCurrentPosition(
+          navigator.geolocation.watchPosition(
               (position) => {
                   console.log(position.coords);
                   this.setState({
@@ -36,7 +36,6 @@ export default class GroundMapView extends React.Component {
   render() {
       const latitude = this.state.latitude;
       const longitude = this.state.longitude;
-      console.log(latitude);
     return (
       <MapView
         style={styles.mainMap}
