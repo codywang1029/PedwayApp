@@ -4,10 +4,11 @@
   "description": "the backend for the pedway app",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "start-dev": "nodemon server.js",
-    "mongodb-dev": "docker run --name pedmongo --restart=always -d -p 27017:27017 mongo mongod --auth",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js",
+    "start-dev": "nodemon src/server.js",
+    "mongodb-dev": "docker run --name pedmongo --restart=always -d -p 27017:27017 mongo mongod",
+    "lint": "gulp lint",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -23,11 +24,38 @@
   },
   "homepage": "https://github.com/cwlowder/pedway#readme",
   "dependencies": {
+    "dotenv": "^6.2.0",
+    "es6-dynamic-template": "^1.0.5",
     "express": "^4.16.4",
-    "mongoose": "^5.4.11"
+    "mongoose": "^5.4.11",
+    "request": "^2.88.0"
   },
   "devDependencies": {
+    "eslint": "^5.14.1",
+    "eslint-config-google": "^0.12.0",
+    "file-system": "^2.2.2",
     "gulp": "^4.0.0",
-    "nodemon": "^1.18.10"
+    "gulp-eslint": "^5.0.0",
+    "jest": "^24.1.0",
+    "jest-image-snapshot": "^2.8.1",
+    "jest-junit": "^6.3.0",
+    "nodemon": "^1.18.10",
+    "superagent": "^4.1.0",
+    "supertest": "^3.4.2"
+  },
+  "eslintConfig": {
+    "extends": "google",
+    "rules": {
+      "linebreak-style": "off",
+      "max-len": [
+        "error",
+        {
+          "ignoreStrings": true
+        }
+      ]
+    },
+    "env": {
+      "es6": true
+    }
   }
 }
