@@ -32,9 +32,9 @@ test('Check Coordinate Setter', () => {
   const testCoord2 = new PedwayCoordinate(70.20232, -42.353523);
   const testEntrance = new PedwayEntrance(testCoord, 'open', false);
   expect(testCoord).toEqual(testEntrance.getCoordinate());
-  expect(testCoord2 !== testEntrance.getCoordinate());
+  expect(testCoord2).not.toEqual(testEntrance.getCoordinate());
   testEntrance.setCoordinate(testCoord2);
-  expect(testCoord !== testEntrance.getCoordinate());
+  expect(testCoord).not.toEqual(testEntrance.getCoordinate());
   expect(testCoord2).toEqual(testEntrance.getCoordinate());
 });
 

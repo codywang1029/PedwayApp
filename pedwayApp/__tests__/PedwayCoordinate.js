@@ -1,4 +1,5 @@
 import PedwayCoordinate from '../model/PedwayCoordinate';
+import {toBeDeepCloseTo} from 'jest-matcher-deep-close-to';
 
 test('Check Coordinate Constructor', () => {
   let testVar = new PedwayCoordinate(42, 42);
