@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 // Load mongoose models into mongoose
 require('../api/models')();
@@ -16,7 +17,22 @@ app.use(express.static('./frontend'));
 
 // 404 function
 app.use(function(req, res) {
-  res.status(404).send({url: req.originalUrl + ' not found'});
+  res.status(404);
+
+  // html page
+  if (req.accepts('html')) {
+    res.sendFile('frontend/404.html', {root: __dirname + '/..'});
+    return;
+  }
+
+  // respond with json
+  if (req.accepts('json')) {
+    res.send({error: 'Not found'});
+    return;
+  }
+
+  // return plain text by default
+  res.type('txt').send('Not found');
 });
 
 /**
