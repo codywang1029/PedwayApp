@@ -27,14 +27,3 @@ test('Check Coordinates Setter', () => {
   expect(testSection.getCoordinates()).toEqual([testCoord2, testCoord1]);
 });
 
-
-test('Check get JSON', () => {
-  const testCoord1 = new PedwayCoordinate(-70.20232, 43.353523);
-  const testCoord2 = new PedwayCoordinate(-42.20232, 42.353523);
-
-  const testSection = new PedwaySection([testCoord1, testCoord2]);
-  expect(testSection.getJSONList()).toEqual([
-    {latitude: -70.20232, longitude: 43.353523},
-    {latitude: -42.20232, longitude: 42.353523},
-  ]);
-});

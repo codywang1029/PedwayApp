@@ -30,10 +30,3 @@ test('Check Coordinate Getter', () => {
   expect(testVar.getLongitude()).toBeCloseTo(42.353523);
 });
 
-test('Check get JSON', () => {
-  const testVar = new PedwayCoordinate(42, 42);
-  expect(testVar.getJSON()).toEqual({latitude: 42, longitude: 42});
-  testVar.setCoordinates(-70.20232, 42.353523);
-  expect(testVar.getJSON()).toEqual(
-      {latitude: -70.20232, longitude: 42.353523});
-});
