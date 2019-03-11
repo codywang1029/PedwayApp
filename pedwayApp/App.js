@@ -18,7 +18,6 @@ import React, {Component} from 'react';
 import {Button} from 'react-native';
 import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import SideMenu from 'react-native-side-menu';
-import styles from './styles/app.style';
 import RoundButton from './components/RoundButton/RoundButton';
 import GroundMapView from './components/GroundMapView/GroundMapView'
 import SearchBar from './components/SearchBar/SearchBar';
@@ -31,7 +30,6 @@ import SearchBar from './components/SearchBar/SearchBar';
 class HomeScreen extends React.Component {
 
   constructor() {
-    console.log('INIT Pedway App');
     super();
     this.state = {
       mainStatusText: 'Requesting from backend...',
@@ -130,3 +128,5 @@ export default class App extends React.Component {
     return <HomeScreen/>;
   }
 }
+
+
