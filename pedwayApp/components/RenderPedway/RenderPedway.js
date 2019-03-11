@@ -28,57 +28,58 @@ export default class RenderPedway extends Component {
   }
 
   parseLineJSON(inputJSON) {
-    // try {
-    //   const retval = inputJSON['geometry']['coordinates'].reduce((acc,item,idx,array)=>{
-    //     if(idx==array.length-1) {
-    //       return acc;
-    //     }
-    //     if(array.length==1) {
-    //       return acc;
-    //     }
-    //     return acc.concat(
-    //       new PedwaySection(new PedwayCoordinate(
-    //         item[1],
-    //         item[0]
-    //       ), new PedwayCoordinate(
-    //         item[1],
-    //         item[0]
-    //       ))
-    //     );
-    //   },[]);
-    // } catch(e) {
-    //   return null;
-    // }
+    try {
+      const retVal = [];
+      inputJSON['geometry']['coordinates'].forEach((item) => {
+        retVal.push(new PedwayCoordinate(item[1], item[0]));
+      });
+      return new PedwaySection(retVal);
+    } catch (e) {
+      return null;
+    }
   }
 
   parsePolygonJSON(inputJSON) {
-    return [];
+    try {
+      const retVal = [];
+      inputJSON['geometry']['coordinates'].forEach((itemList) => {
+        const thisList = [];
+        itemList.forEach((item) => {
+          thisList.push(new PedwayCoordinate(item[1], item[0]));
+        });
+        retVal.push(new PedwaySection(thisList));
+      });
+      return retVal;
+    } catch (e) {
+      return null;
+    }
   }
 
   parseJSONtoModel(inputJSON) {
-    // const paths = inputJSON['features'].filter((item)=>{
-    //   try {
-    //     if (item['geometry']['type'] == 'LineString' ||
-    //       item['geometry']['type'] == 'Polygon') {
-    //       return true;
-    //     }
-    //     return false;
-    //   } catch (e) {
-    //     return false;
-    //   }
-    // }).reduce((acc, item) => {
-    //   const thisLongitude = item['geometry']['coordinates'][0];
-    //   const thisLatitude = item['geometry']['coordinates'][1];
-    //   if(item['geometry']['type'] == 'LineString') {
-    //     console.log('This is the log output',this.parseLineJSON(item),item);
-    //     return acc.concat(this.parseLineJSON(item));
-    //   } else {
-    //     return acc
-    //
-    // }, []);
-    // this.setState({
-    //   pedwaySections: paths,
-    // });
+    const paths = inputJSON['features'].filter((item) => {
+      try {
+        if (item['geometry']['type'] === 'LineString' ||
+          item['geometry']['type'] === 'Polygon') {
+          return true;
+        }
+        return false;
+      } catch (e) {
+        return false;
+      }
+    }).reduce((acc, item) => {
+      if (item['geometry']['type'] === 'LineString') {
+        const thisSection = this.parseLineJSON(item);
+        return (thisSection !== null) ? (acc.concat(thisSection)) : (acc);
+      } else if (item['geometry']['type'] === 'Polygon') {
+        const thisSection = this.parsePolygonJSON(item);
+        return (thisSection !== null) ? (acc.concat(thisSection)) : (acc);
+      } else {
+        return acc;
+      }
+    }, []);
+    this.setState({
+      pedwaySections: paths,
+    });
   }
 
   componentWillMount() {
@@ -92,9 +93,8 @@ export default class RenderPedway extends Component {
   render() {
     return (
       this.state.pedwaySections.map((path, idx) => {
-        console.log('test',path);
         return (
-          <MapView.Polyline
+          <Polyline
             key={idx}
             coordinates={path.getJSONList()}
             strokeColor='#42b0f4'

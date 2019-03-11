@@ -30,7 +30,6 @@ export default class GroundMapView extends React.Component {
     if (this.state.updateGeoLocation) {
       navigator.geolocation.watchPosition(
         (position) => {
-          console.log(position.coords);
           this.setState({
             latitude: position.coords.latitude,
             longitude: position.coords.longitude,
