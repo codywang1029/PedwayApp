@@ -19,7 +19,9 @@ import {Button} from 'react-native';
 import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import SideMenu from 'react-native-side-menu';
 import RoundButton from './components/RoundButton/RoundButton';
-import GroundMapView from './components/GroundMapView/GroundMapView'
+import GroundMapView from './components/GroundMapView/GroundMapView';
+import UndergroundMapView
+  from './components/UndergroundMapView/UndergroundMapView';
 import SearchBar from './components/SearchBar/SearchBar';
 
 /**
@@ -41,12 +43,15 @@ class HomeScreen extends React.Component {
     };
   }
 
+
   render() {
 
-      const toggleSideBar = () => {this.setState({sideMenuIsOpen: !this.state.sideMenuIsOpen,});}
+    const toggleSideBar = () => {
+      this.setState({sideMenuIsOpen: !this.state.sideMenuIsOpen});
+    };
 
     return (
-     <SideMenu
+      <SideMenu
         menu={<SideMenu navigator={navigator}/>}
         disableGestures={this.state.sideMenuDisableGesture}
         isOpen={this.state.sideMenuIsOpen}
@@ -55,7 +60,8 @@ class HomeScreen extends React.Component {
           this.setState({sideMenuDisableGesture: !openStatus});
         }}
       >
-       <RoundButton style={[positions.hamburgerButton]} icon={"bars"} func={toggleSideBar}/>
+        <RoundButton style={[positions.hamburgerButton]} icon={'bars'}
+                     func={toggleSideBar}/>
 
         <MainView/>
       </SideMenu>
@@ -69,42 +75,32 @@ class HomeScreen extends React.Component {
  * The second button is the entry point for the underground map
  */
 class MainView extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      underground: false,
+    };
+    this.toggleUndergroundMap = this.toggleUndergroundMap.bind(this);
+
+  }
+
+  toggleUndergroundMap() {
+    this.setState({
+      underground: !this.state.underground,
+    });
+  }
+
   render() {
     return (
       <View style={{flex: 1}}>
-        <GroundMapView />
+        {(this.state.underground) ?
+          (<UndergroundMapView/>) :
+          (<GroundMapView/>)}
         <SearchBar/>
-        <RoundButton style={[positions.undergroundButton]} icon={"level-down"} func={() => {
-          // this.props.navigation.dispatch(StackActions.reset({
-          //   index: 0,
-          //   actions: [
-          //     NavigationActions.navigate({routeName: 'Underground'})
-          //   ],
-          // }))
-        }}/>
-      </View>
-    );
-  }
-}
-
-
-/**
- * WIP, should return a Component that only renders the pedway
- */
-class UndergroundScreen extends React.Component {
-
-  render() {
-    return (
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text>Underground Screen</Text>
-        <RoundButton style={[positions.undergroundButton]} icon={"level-up"} func={() => {
-          // this.props.navigation.dispatch(StackActions.reset({
-          //   index: 0,
-          //   actions: [
-          //     NavigationActions.navigate({routeName: 'Home'})
-          //   ],
-          // }))
-        }}/>
+        <RoundButton
+          style={[positions.undergroundButton]}
+          icon={'level-down'}
+          func={this.toggleUndergroundMap}/>
       </View>
     );
   }
@@ -113,8 +109,8 @@ class UndergroundScreen extends React.Component {
 const positions = StyleSheet.create({
   undergroundButton: {
     position: 'absolute',
-      bottom: 30,
-      right: 30,
+    bottom: 30,
+    right: 30,
   },
   hamburgerButton: {
     position: 'absolute',
