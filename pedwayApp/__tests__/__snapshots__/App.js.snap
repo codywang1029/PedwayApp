@@ -3051,6 +3051,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3087,6 +3092,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3151,6 +3161,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3175,6 +3190,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3191,6 +3211,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3207,6 +3232,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3231,6 +3261,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3247,6 +3282,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3263,6 +3303,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3291,6 +3336,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3307,6 +3357,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3327,6 +3382,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3347,6 +3407,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3367,6 +3432,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3383,6 +3453,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3423,6 +3498,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3439,6 +3519,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3487,6 +3572,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3503,6 +3593,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3519,6 +3614,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3535,6 +3635,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3559,6 +3664,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3575,6 +3685,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3591,6 +3706,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3611,6 +3731,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3627,6 +3752,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3651,6 +3781,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3675,6 +3810,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3691,6 +3831,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3715,6 +3860,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3731,6 +3881,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3755,6 +3910,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3775,6 +3935,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3811,6 +3976,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3847,6 +4017,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3867,6 +4042,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3883,6 +4063,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3907,6 +4092,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3935,6 +4125,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3971,6 +4166,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -3991,6 +4191,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4007,6 +4212,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4043,6 +4253,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4059,6 +4274,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4079,6 +4299,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4103,6 +4328,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4119,6 +4349,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4135,6 +4370,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4155,6 +4395,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4175,6 +4420,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4191,6 +4441,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4215,6 +4470,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4231,6 +4491,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4247,6 +4512,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4267,6 +4537,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4299,6 +4574,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4319,6 +4599,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4359,6 +4644,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4383,6 +4673,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4411,6 +4706,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4431,6 +4731,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4447,6 +4752,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4463,6 +4773,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4479,6 +4794,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4495,6 +4815,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4511,6 +4836,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4531,6 +4861,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4547,6 +4882,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4563,6 +4903,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4583,6 +4928,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4599,6 +4949,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4615,6 +4970,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4631,6 +4991,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4651,6 +5016,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4667,6 +5037,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4687,6 +5062,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4703,6 +5083,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4719,6 +5104,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4735,6 +5125,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4751,6 +5146,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4767,6 +5167,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4807,6 +5212,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4823,6 +5233,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4859,6 +5274,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4883,6 +5303,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4903,6 +5328,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4919,6 +5349,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4935,6 +5370,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4955,6 +5395,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4975,6 +5420,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -4995,6 +5445,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5011,6 +5466,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5035,6 +5495,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5063,6 +5528,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5079,6 +5549,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5095,6 +5570,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5115,6 +5595,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5131,6 +5616,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5147,6 +5637,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5163,6 +5658,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5179,6 +5679,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5199,6 +5704,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5223,6 +5733,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5251,6 +5766,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5267,6 +5787,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5283,6 +5808,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5303,6 +5833,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5319,6 +5854,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5347,6 +5887,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5363,6 +5908,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5379,6 +5929,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5423,6 +5978,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5455,6 +6015,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5471,6 +6036,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5491,6 +6061,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5507,6 +6082,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5523,6 +6103,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5563,6 +6148,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5579,6 +6169,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5599,6 +6194,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5619,6 +6219,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5635,6 +6240,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5651,6 +6261,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5667,6 +6282,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5695,6 +6315,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5715,6 +6340,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5743,6 +6373,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5759,6 +6394,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5795,6 +6435,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5815,6 +6460,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5839,6 +6489,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5855,6 +6510,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5875,6 +6535,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5891,6 +6556,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5907,6 +6577,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5923,6 +6598,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5951,6 +6631,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5967,6 +6652,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -5999,6 +6689,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6015,6 +6710,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6031,6 +6731,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6047,6 +6752,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6063,6 +6773,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6079,6 +6794,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6099,6 +6819,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6115,6 +6840,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6135,6 +6865,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6151,6 +6886,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6167,6 +6907,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6183,6 +6928,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6203,6 +6953,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6219,6 +6974,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6235,6 +6995,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6251,6 +7016,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6275,6 +7045,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6291,6 +7066,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6307,6 +7087,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6323,6 +7108,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6351,6 +7141,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6367,6 +7162,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6419,6 +7219,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6439,6 +7244,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6483,6 +7293,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6499,6 +7314,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6519,6 +7339,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6535,6 +7360,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6571,6 +7401,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6587,6 +7422,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6603,6 +7443,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6623,6 +7468,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6639,6 +7489,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6687,6 +7542,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6711,6 +7571,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6727,6 +7592,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6747,6 +7617,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6775,6 +7650,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6815,6 +7695,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6831,6 +7716,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6847,6 +7737,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6863,6 +7758,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
   <Polyline
     coordinates={
@@ -6879,6 +7779,11 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
     }
     strokeColor="#42b0f4"
     strokeWidth={3}
+    style={
+      Object {
+        "zIndex": 1,
+      }
+    }
   />
 </MapView>
 `;
