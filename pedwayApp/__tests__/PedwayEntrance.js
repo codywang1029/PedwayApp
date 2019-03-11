@@ -54,4 +54,3 @@ test('Check Elevator Setter', () => {
   expect(testEntrance.getElevatorAvailability()).toBe(true);
 });
 
-
