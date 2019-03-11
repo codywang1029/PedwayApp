@@ -5,15 +5,16 @@
  * We are only asserting if the UI is rendered correctly
  */
 
-import 'react-native';
-import React from 'react';
-import testRenderer from 'react-test-renderer';
-import App from '../App.js';
+import 'react-native'
+import React from 'react'
+import testRenderer from 'react-test-renderer'
+import App from '../App.js'
 import HomeScreen from '../App.js'
 import MainView from '../App.js'
-import GroundMapView from '../App.js'
-import UndergroundScreen from '../App.js'
-import RenderPedway from '../App.js'
+import GroundMapView from '../components/GroundMapView/GroundMapView'
+import UndergroundScreen from '../components/UndergroundMapView/UndergroundMapView'
+import RenderPedway from '../components/RenderPedway/RenderPedway'
+import RenderEntrance from '../components/RenderEntrance/RenderEntrance'
 
 
 test('Check if our main app renders correctly', () => {
@@ -38,10 +39,5 @@ test('Check if our GroundMapView renders correctly', () => {
 
 test('Check if our UndergroundScreen renders correctly', () => {
   const treeRendered = testRenderer.create(<UndergroundScreen />).toJSON();
-  expect(treeRendered).toMatchSnapshot();
-});
-
-test('Check if our RenderPedway renders correctly', () => {
-  const treeRendered = testRenderer.create(<RenderPedway />).toJSON();
   expect(treeRendered).toMatchSnapshot();
 });

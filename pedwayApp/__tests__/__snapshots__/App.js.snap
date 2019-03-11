@@ -1,999 +1,684 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Check if our GroundMapView renders correctly 1`] = `
-<View
-  onLayout={[Function]}
+<MapView
+  region={
+    Object {
+      "latitude": 41.881899,
+      "latitudeDelta": 0.02,
+      "longitude": -87.623977,
+      "longitudeDelta": 0.02,
+    }
+  }
   style={
     Object {
       "bottom": 0,
-      "justifyContent": "center",
       "left": 0,
       "position": "absolute",
       "right": 0,
       "top": 0,
+      "zIndex": -1,
     }
   }
 >
-  <View
-    style={
-      Array [
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        },
-        Object {
-          "right": 250,
-        },
-      ]
-    }
-  >
-    <View
-      onLayout={[Function]}
-      style={
-        Object {
-          "bottom": 0,
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
-      }
-    >
-      <View
-        style={
-          Array [
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            },
-            Object {
-              "right": 250,
-            },
-          ]
-        }
-      />
-      <View
-        onMoveShouldSetResponder={[Function]}
-        onMoveShouldSetResponderCapture={[Function]}
-        onResponderEnd={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderReject={[Function]}
-        onResponderRelease={[Function]}
-        onResponderStart={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        onStartShouldSetResponderCapture={[Function]}
-        style={
-          Object {
-            "backgroundColor": "transparent",
-            "flex": 1,
-            "height": 1334,
-            "left": 0,
-            "overflow": "hidden",
-            "position": "absolute",
-            "top": 0,
-            "transform": Array [
-              Object {
-                "translateX": 0,
-              },
-            ],
-            "width": 750,
-          }
-        }
-      />
-    </View>
-  </View>
-  <View
-    onMoveShouldSetResponder={[Function]}
-    onMoveShouldSetResponderCapture={[Function]}
-    onResponderEnd={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderReject={[Function]}
-    onResponderRelease={[Function]}
-    onResponderStart={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    onStartShouldSetResponderCapture={[Function]}
-    style={
+  <Marker
+    coordinate={
       Object {
-        "backgroundColor": "transparent",
-        "flex": 1,
-        "height": 1334,
-        "left": 0,
-        "overflow": "hidden",
-        "position": "absolute",
-        "top": 0,
-        "transform": Array [
-          Object {
-            "translateX": 0,
-          },
-        ],
-        "width": 750,
+        "latitude": 41.8862637,
+        "longitude": -87.6306729,
       }
     }
-  >
-    <View
-      accessible={true}
-      isTVSelectable={true}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 60,
-          "elevation": 6,
-          "height": 60,
-          "left": 20,
-          "opacity": 0.95,
-          "position": "absolute",
-          "shadowColor": "rgba(0, 0, 0, 0.6)",
-          "shadowOffset": Object {
-            "height": 30,
-            "width": 30,
-          },
-          "shadowOpacity": 0.8,
-          "shadowRadius": 15,
-          "textAlignVertical": "center",
-          "top": 20,
-          "width": 60,
-          "zIndex": 1,
-        }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8859675,
+        "longitude": -87.6308302,
       }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flexGrow": 1,
-            "justifyContent": "center",
-          }
-        }
-      >
-        <Text
-          allowFontScaling={false}
-          style={
-            Array [
-              Object {
-                "color": "#555",
-                "fontSize": 35,
-              },
-              undefined,
-              Object {
-                "fontFamily": "FontAwesome",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
-          }
-        >
-          
-        </Text>
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "flex": 1,
-        }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8863129,
+        "longitude": -87.6306746,
       }
-    >
-      <MapView
-        region={
-          Object {
-            "latitude": 41.881899,
-            "latitudeDelta": 0.02,
-            "longitude": -87.623977,
-            "longitudeDelta": 0.02,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "zIndex": -1,
-          }
-        }
-      >
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8862637,
-              "longitude": -87.6306729,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8859675,
-              "longitude": -87.6308302,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8863129,
-              "longitude": -87.6306746,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.885963,
-              "longitude": -87.6311264,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8858832,
-              "longitude": -87.6281675,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8833266,
-              "longitude": -87.626503,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8831073,
-              "longitude": -87.6264962,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8883616,
-              "longitude": -87.6364478,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8883325,
-              "longitude": -87.6369002,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8848508,
-              "longitude": -87.631341,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8838464,
-              "longitude": -87.6310922,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8836083,
-              "longitude": -87.6326252,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8836132,
-              "longitude": -87.6322178,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8863955,
-              "longitude": -87.6293223,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8866922,
-              "longitude": -87.6290591,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8867157,
-              "longitude": -87.6306371,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.883854,
-              "longitude": -87.6280557,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.883855,
-              "longitude": -87.6276585,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8848386,
-              "longitude": -87.6238166,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8854002,
-              "longitude": -87.6229453,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8854601,
-              "longitude": -87.6218723,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8855495,
-              "longitude": -87.621512,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8851112,
-              "longitude": -87.6218641,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8871541,
-              "longitude": -87.6209853,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8881075,
-              "longitude": -87.6235577,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8763932,
-              "longitude": -87.6318076,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8763826,
-              "longitude": -87.6326191,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8821493,
-              "longitude": -87.6398754,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8821541,
-              "longitude": -87.6394836,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8821589,
-              "longitude": -87.6387431,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8880688,
-              "longitude": -87.6378628,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8888128,
-              "longitude": -87.6370858,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8887065,
-              "longitude": -87.6341584,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8884629,
-              "longitude": -87.6341473,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.88418,
-              "longitude": -87.6223802,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8841742,
-              "longitude": -87.6252636,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8841717,
-              "longitude": -87.6247064,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.88462,
-              "longitude": -87.6248016,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8843321,
-              "longitude": -87.6246246,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8841105,
-              "longitude": -87.624521,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8838448,
-              "longitude": -87.6289736,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8841318,
-              "longitude": -87.6244735,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8828138,
-              "longitude": -87.6245449,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8811955,
-              "longitude": -87.6245151,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8827041,
-              "longitude": -87.6245182,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8840305,
-              "longitude": -87.6245532,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8843728,
-              "longitude": -87.6242429,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.884254,
-              "longitude": -87.623797,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8842327,
-              "longitude": -87.6232655,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8770782,
-              "longitude": -87.6244202,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8841758,
-              "longitude": -87.6218876,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8842002,
-              "longitude": -87.6188103,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8841793,
-              "longitude": -87.6226846,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8841777,
-              "longitude": -87.6233237,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8784329,
-              "longitude": -87.6239591,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8812086,
-              "longitude": -87.630338,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8850343,
-              "longitude": -87.621859,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8850138,
-              "longitude": -87.6215013,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8865979,
-              "longitude": -87.619237,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8869896,
-              "longitude": -87.6238213,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8841792,
-              "longitude": -87.6263683,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8871889,
-              "longitude": -87.6201,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8871167,
-              "longitude": -87.6200488,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8872455,
-              "longitude": -87.6205933,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8770101,
-              "longitude": -87.6232587,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8770105,
-              "longitude": -87.6230833,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8861344,
-              "longitude": -87.6220432,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8876134,
-              "longitude": -87.6213563,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8864427,
-              "longitude": -87.6215568,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8864438,
-              "longitude": -87.6219347,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8866351,
-              "longitude": -87.6236493,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8858755,
-              "longitude": -87.629274,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8859325,
-              "longitude": -87.6293521,
-            }
-          }
-          pinColor="#1198ff"
-        />
-      </MapView>
-      <View
-        accessible={true}
-        isTVSelectable={true}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#FFFFFF",
-            "borderRadius": 10,
-            "color": "#CCCCCC",
-            "elevation": 6,
-            "height": 50,
-            "left": 80,
-            "marginLeft": 20,
-            "opacity": 0.95,
-            "paddingLeft": 5,
-            "position": "absolute",
-            "shadowColor": "rgba(0, 0, 0, 0.6)",
-            "shadowOffset": Object {
-              "height": 30,
-              "width": 30,
-            },
-            "shadowOpacity": 0.8,
-            "shadowRadius": 15,
-            "textAlignVertical": "center",
-            "top": 25,
-            "width": 300,
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "alignItems": "flex-start",
-              "flexGrow": 1,
-              "justifyContent": "center",
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "fontSize": 18,
-              }
-            }
-          >
-            Enter your destination...
-          </Text>
-        </View>
-      </View>
-      <View
-        accessible={true}
-        isTVSelectable={true}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#FFFFFF",
-            "borderRadius": 60,
-            "bottom": 30,
-            "elevation": 6,
-            "height": 60,
-            "opacity": 0.95,
-            "position": "absolute",
-            "right": 30,
-            "shadowColor": "rgba(0, 0, 0, 0.6)",
-            "shadowOffset": Object {
-              "height": 30,
-              "width": 30,
-            },
-            "shadowOpacity": 0.8,
-            "shadowRadius": 15,
-            "textAlignVertical": "center",
-            "width": 60,
-            "zIndex": 1,
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "flexGrow": 1,
-              "justifyContent": "center",
-            }
-          }
-        >
-          <Text
-            allowFontScaling={false}
-            style={
-              Array [
-                Object {
-                  "color": "#555",
-                  "fontSize": 35,
-                },
-                undefined,
-                Object {
-                  "fontFamily": "FontAwesome",
-                  "fontStyle": "normal",
-                  "fontWeight": "normal",
-                },
-                Object {},
-              ]
-            }
-          >
-            
-          </Text>
-        </View>
-      </View>
-    </View>
-  </View>
-</View>
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.885963,
+        "longitude": -87.6311264,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8858832,
+        "longitude": -87.6281675,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8833266,
+        "longitude": -87.626503,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8831073,
+        "longitude": -87.6264962,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8883616,
+        "longitude": -87.6364478,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8883325,
+        "longitude": -87.6369002,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8848508,
+        "longitude": -87.631341,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8838464,
+        "longitude": -87.6310922,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8836083,
+        "longitude": -87.6326252,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8836132,
+        "longitude": -87.6322178,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8863955,
+        "longitude": -87.6293223,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8866922,
+        "longitude": -87.6290591,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8867157,
+        "longitude": -87.6306371,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.883854,
+        "longitude": -87.6280557,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.883855,
+        "longitude": -87.6276585,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8848386,
+        "longitude": -87.6238166,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8854002,
+        "longitude": -87.6229453,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8854601,
+        "longitude": -87.6218723,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8855495,
+        "longitude": -87.621512,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8851112,
+        "longitude": -87.6218641,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8871541,
+        "longitude": -87.6209853,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8881075,
+        "longitude": -87.6235577,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8763932,
+        "longitude": -87.6318076,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8763826,
+        "longitude": -87.6326191,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8821493,
+        "longitude": -87.6398754,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8821541,
+        "longitude": -87.6394836,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8821589,
+        "longitude": -87.6387431,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8880688,
+        "longitude": -87.6378628,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8888128,
+        "longitude": -87.6370858,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8887065,
+        "longitude": -87.6341584,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8884629,
+        "longitude": -87.6341473,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.88418,
+        "longitude": -87.6223802,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8841742,
+        "longitude": -87.6252636,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8841717,
+        "longitude": -87.6247064,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.88462,
+        "longitude": -87.6248016,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8843321,
+        "longitude": -87.6246246,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8841105,
+        "longitude": -87.624521,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8838448,
+        "longitude": -87.6289736,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8841318,
+        "longitude": -87.6244735,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8828138,
+        "longitude": -87.6245449,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8811955,
+        "longitude": -87.6245151,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8827041,
+        "longitude": -87.6245182,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8840305,
+        "longitude": -87.6245532,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8843728,
+        "longitude": -87.6242429,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.884254,
+        "longitude": -87.623797,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8842327,
+        "longitude": -87.6232655,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8770782,
+        "longitude": -87.6244202,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8841758,
+        "longitude": -87.6218876,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8842002,
+        "longitude": -87.6188103,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8841793,
+        "longitude": -87.6226846,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8841777,
+        "longitude": -87.6233237,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8784329,
+        "longitude": -87.6239591,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8812086,
+        "longitude": -87.630338,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8850343,
+        "longitude": -87.621859,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8850138,
+        "longitude": -87.6215013,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8865979,
+        "longitude": -87.619237,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8869896,
+        "longitude": -87.6238213,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8841792,
+        "longitude": -87.6263683,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8871889,
+        "longitude": -87.6201,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8871167,
+        "longitude": -87.6200488,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8872455,
+        "longitude": -87.6205933,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8770101,
+        "longitude": -87.6232587,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8770105,
+        "longitude": -87.6230833,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8861344,
+        "longitude": -87.6220432,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8876134,
+        "longitude": -87.6213563,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8864427,
+        "longitude": -87.6215568,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8864438,
+        "longitude": -87.6219347,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8866351,
+        "longitude": -87.6236493,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8858755,
+        "longitude": -87.629274,
+      }
+    }
+    pinColor="#1198ff"
+  />
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.8859325,
+        "longitude": -87.6293521,
+      }
+    }
+    pinColor="#1198ff"
+  />
+</MapView>
 `;
 
 exports[`Check if our HomeScreen renders correctly 1`] = `
@@ -2988,1996 +2673,4214 @@ exports[`Check if our MainView renders correctly 1`] = `
 </View>
 `;
 
-exports[`Check if our RenderPedway renders correctly 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Object {
-      "bottom": 0,
-      "justifyContent": "center",
-      "left": 0,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
-    }
-  }
->
-  <View
-    style={
-      Array [
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        },
-        Object {
-          "right": 250,
-        },
-      ]
-    }
-  >
-    <View
-      onLayout={[Function]}
-      style={
-        Object {
-          "bottom": 0,
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
-      }
-    >
-      <View
-        style={
-          Array [
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            },
-            Object {
-              "right": 250,
-            },
-          ]
-        }
-      />
-      <View
-        onMoveShouldSetResponder={[Function]}
-        onMoveShouldSetResponderCapture={[Function]}
-        onResponderEnd={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderReject={[Function]}
-        onResponderRelease={[Function]}
-        onResponderStart={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        onStartShouldSetResponderCapture={[Function]}
-        style={
-          Object {
-            "backgroundColor": "transparent",
-            "flex": 1,
-            "height": 1334,
-            "left": 0,
-            "overflow": "hidden",
-            "position": "absolute",
-            "top": 0,
-            "transform": Array [
-              Object {
-                "translateX": 0,
-              },
-            ],
-            "width": 750,
-          }
-        }
-      />
-    </View>
-  </View>
-  <View
-    onMoveShouldSetResponder={[Function]}
-    onMoveShouldSetResponderCapture={[Function]}
-    onResponderEnd={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderReject={[Function]}
-    onResponderRelease={[Function]}
-    onResponderStart={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    onStartShouldSetResponderCapture={[Function]}
-    style={
-      Object {
-        "backgroundColor": "transparent",
-        "flex": 1,
-        "height": 1334,
-        "left": 0,
-        "overflow": "hidden",
-        "position": "absolute",
-        "top": 0,
-        "transform": Array [
-          Object {
-            "translateX": 0,
-          },
-        ],
-        "width": 750,
-      }
-    }
-  >
-    <View
-      accessible={true}
-      isTVSelectable={true}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 60,
-          "elevation": 6,
-          "height": 60,
-          "left": 20,
-          "opacity": 0.95,
-          "position": "absolute",
-          "shadowColor": "rgba(0, 0, 0, 0.6)",
-          "shadowOffset": Object {
-            "height": 30,
-            "width": 30,
-          },
-          "shadowOpacity": 0.8,
-          "shadowRadius": 15,
-          "textAlignVertical": "center",
-          "top": 20,
-          "width": 60,
-          "zIndex": 1,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flexGrow": 1,
-            "justifyContent": "center",
-          }
-        }
-      >
-        <Text
-          allowFontScaling={false}
-          style={
-            Array [
-              Object {
-                "color": "#555",
-                "fontSize": 35,
-              },
-              undefined,
-              Object {
-                "fontFamily": "FontAwesome",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
-          }
-        >
-          
-        </Text>
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "flex": 1,
-        }
-      }
-    >
-      <MapView
-        region={
-          Object {
-            "latitude": 41.881899,
-            "latitudeDelta": 0.02,
-            "longitude": -87.623977,
-            "longitudeDelta": 0.02,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "zIndex": -1,
-          }
-        }
-      >
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8862637,
-              "longitude": -87.6306729,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8859675,
-              "longitude": -87.6308302,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8863129,
-              "longitude": -87.6306746,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.885963,
-              "longitude": -87.6311264,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8858832,
-              "longitude": -87.6281675,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8833266,
-              "longitude": -87.626503,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8831073,
-              "longitude": -87.6264962,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8883616,
-              "longitude": -87.6364478,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8883325,
-              "longitude": -87.6369002,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8848508,
-              "longitude": -87.631341,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8838464,
-              "longitude": -87.6310922,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8836083,
-              "longitude": -87.6326252,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8836132,
-              "longitude": -87.6322178,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8863955,
-              "longitude": -87.6293223,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8866922,
-              "longitude": -87.6290591,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8867157,
-              "longitude": -87.6306371,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.883854,
-              "longitude": -87.6280557,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.883855,
-              "longitude": -87.6276585,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8848386,
-              "longitude": -87.6238166,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8854002,
-              "longitude": -87.6229453,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8854601,
-              "longitude": -87.6218723,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8855495,
-              "longitude": -87.621512,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8851112,
-              "longitude": -87.6218641,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8871541,
-              "longitude": -87.6209853,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8881075,
-              "longitude": -87.6235577,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8763932,
-              "longitude": -87.6318076,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8763826,
-              "longitude": -87.6326191,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8821493,
-              "longitude": -87.6398754,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8821541,
-              "longitude": -87.6394836,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8821589,
-              "longitude": -87.6387431,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8880688,
-              "longitude": -87.6378628,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8888128,
-              "longitude": -87.6370858,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8887065,
-              "longitude": -87.6341584,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8884629,
-              "longitude": -87.6341473,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.88418,
-              "longitude": -87.6223802,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8841742,
-              "longitude": -87.6252636,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8841717,
-              "longitude": -87.6247064,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.88462,
-              "longitude": -87.6248016,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8843321,
-              "longitude": -87.6246246,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8841105,
-              "longitude": -87.624521,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8838448,
-              "longitude": -87.6289736,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8841318,
-              "longitude": -87.6244735,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8828138,
-              "longitude": -87.6245449,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8811955,
-              "longitude": -87.6245151,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8827041,
-              "longitude": -87.6245182,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8840305,
-              "longitude": -87.6245532,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8843728,
-              "longitude": -87.6242429,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.884254,
-              "longitude": -87.623797,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8842327,
-              "longitude": -87.6232655,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8770782,
-              "longitude": -87.6244202,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8841758,
-              "longitude": -87.6218876,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8842002,
-              "longitude": -87.6188103,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8841793,
-              "longitude": -87.6226846,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8841777,
-              "longitude": -87.6233237,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8784329,
-              "longitude": -87.6239591,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8812086,
-              "longitude": -87.630338,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8850343,
-              "longitude": -87.621859,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8850138,
-              "longitude": -87.6215013,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8865979,
-              "longitude": -87.619237,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8869896,
-              "longitude": -87.6238213,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8841792,
-              "longitude": -87.6263683,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8871889,
-              "longitude": -87.6201,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8871167,
-              "longitude": -87.6200488,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8872455,
-              "longitude": -87.6205933,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8770101,
-              "longitude": -87.6232587,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8770105,
-              "longitude": -87.6230833,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8861344,
-              "longitude": -87.6220432,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8876134,
-              "longitude": -87.6213563,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8864427,
-              "longitude": -87.6215568,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8864438,
-              "longitude": -87.6219347,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8866351,
-              "longitude": -87.6236493,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8858755,
-              "longitude": -87.629274,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8859325,
-              "longitude": -87.6293521,
-            }
-          }
-          pinColor="#1198ff"
-        />
-      </MapView>
-      <View
-        accessible={true}
-        isTVSelectable={true}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#FFFFFF",
-            "borderRadius": 10,
-            "color": "#CCCCCC",
-            "elevation": 6,
-            "height": 50,
-            "left": 80,
-            "marginLeft": 20,
-            "opacity": 0.95,
-            "paddingLeft": 5,
-            "position": "absolute",
-            "shadowColor": "rgba(0, 0, 0, 0.6)",
-            "shadowOffset": Object {
-              "height": 30,
-              "width": 30,
-            },
-            "shadowOpacity": 0.8,
-            "shadowRadius": 15,
-            "textAlignVertical": "center",
-            "top": 25,
-            "width": 300,
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "alignItems": "flex-start",
-              "flexGrow": 1,
-              "justifyContent": "center",
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "fontSize": 18,
-              }
-            }
-          >
-            Enter your destination...
-          </Text>
-        </View>
-      </View>
-      <View
-        accessible={true}
-        isTVSelectable={true}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#FFFFFF",
-            "borderRadius": 60,
-            "bottom": 30,
-            "elevation": 6,
-            "height": 60,
-            "opacity": 0.95,
-            "position": "absolute",
-            "right": 30,
-            "shadowColor": "rgba(0, 0, 0, 0.6)",
-            "shadowOffset": Object {
-              "height": 30,
-              "width": 30,
-            },
-            "shadowOpacity": 0.8,
-            "shadowRadius": 15,
-            "textAlignVertical": "center",
-            "width": 60,
-            "zIndex": 1,
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "flexGrow": 1,
-              "justifyContent": "center",
-            }
-          }
-        >
-          <Text
-            allowFontScaling={false}
-            style={
-              Array [
-                Object {
-                  "color": "#555",
-                  "fontSize": 35,
-                },
-                undefined,
-                Object {
-                  "fontFamily": "FontAwesome",
-                  "fontStyle": "normal",
-                  "fontWeight": "normal",
-                },
-                Object {},
-              ]
-            }
-          >
-            
-          </Text>
-        </View>
-      </View>
-    </View>
-  </View>
-</View>
-`;
-
 exports[`Check if our UndergroundScreen renders correctly 1`] = `
-<View
-  onLayout={[Function]}
+<MapView
+  customMapStyle={
+    Array [
+      Object {
+        "elementType": "geometry",
+        "stylers": Array [
+          Object {
+            "color": "#212121",
+          },
+        ],
+      },
+      Object {
+        "elementType": "labels.icon",
+        "stylers": Array [
+          Object {
+            "visibility": "off",
+          },
+        ],
+      },
+      Object {
+        "elementType": "labels.text.fill",
+        "stylers": Array [
+          Object {
+            "color": "#757575",
+          },
+        ],
+      },
+      Object {
+        "elementType": "labels.text.stroke",
+        "stylers": Array [
+          Object {
+            "color": "#212121",
+          },
+        ],
+      },
+      Object {
+        "elementType": "geometry",
+        "featureType": "administrative",
+        "stylers": Array [
+          Object {
+            "color": "#757575",
+          },
+        ],
+      },
+      Object {
+        "elementType": "labels.text.fill",
+        "featureType": "administrative.country",
+        "stylers": Array [
+          Object {
+            "color": "#9e9e9e",
+          },
+        ],
+      },
+      Object {
+        "featureType": "administrative.land_parcel",
+        "stylers": Array [
+          Object {
+            "visibility": "off",
+          },
+        ],
+      },
+      Object {
+        "elementType": "labels.text.fill",
+        "featureType": "administrative.locality",
+        "stylers": Array [
+          Object {
+            "color": "#bdbdbd",
+          },
+        ],
+      },
+      Object {
+        "featureType": "administrative.neighborhood",
+        "stylers": Array [
+          Object {
+            "visibility": "off",
+          },
+        ],
+      },
+      Object {
+        "elementType": "labels.text",
+        "featureType": "poi",
+        "stylers": Array [
+          Object {
+            "visibility": "off",
+          },
+        ],
+      },
+      Object {
+        "elementType": "labels.text.fill",
+        "featureType": "poi",
+        "stylers": Array [
+          Object {
+            "color": "#757575",
+          },
+        ],
+      },
+      Object {
+        "featureType": "poi.business",
+        "stylers": Array [
+          Object {
+            "visibility": "off",
+          },
+        ],
+      },
+      Object {
+        "elementType": "geometry",
+        "featureType": "poi.park",
+        "stylers": Array [
+          Object {
+            "color": "#181818",
+          },
+        ],
+      },
+      Object {
+        "elementType": "labels.text.fill",
+        "featureType": "poi.park",
+        "stylers": Array [
+          Object {
+            "color": "#616161",
+          },
+        ],
+      },
+      Object {
+        "elementType": "labels.text.stroke",
+        "featureType": "poi.park",
+        "stylers": Array [
+          Object {
+            "color": "#1b1b1b",
+          },
+        ],
+      },
+      Object {
+        "elementType": "geometry.fill",
+        "featureType": "road",
+        "stylers": Array [
+          Object {
+            "color": "#2c2c2c",
+          },
+        ],
+      },
+      Object {
+        "elementType": "labels",
+        "featureType": "road",
+        "stylers": Array [
+          Object {
+            "visibility": "off",
+          },
+        ],
+      },
+      Object {
+        "elementType": "labels.icon",
+        "featureType": "road",
+        "stylers": Array [
+          Object {
+            "visibility": "off",
+          },
+        ],
+      },
+      Object {
+        "elementType": "labels.text.fill",
+        "featureType": "road",
+        "stylers": Array [
+          Object {
+            "color": "#8a8a8a",
+          },
+        ],
+      },
+      Object {
+        "elementType": "geometry",
+        "featureType": "road.arterial",
+        "stylers": Array [
+          Object {
+            "color": "#373737",
+          },
+        ],
+      },
+      Object {
+        "elementType": "geometry",
+        "featureType": "road.highway",
+        "stylers": Array [
+          Object {
+            "color": "#3c3c3c",
+          },
+        ],
+      },
+      Object {
+        "elementType": "geometry",
+        "featureType": "road.highway.controlled_access",
+        "stylers": Array [
+          Object {
+            "color": "#4e4e4e",
+          },
+        ],
+      },
+      Object {
+        "elementType": "labels.text.fill",
+        "featureType": "road.local",
+        "stylers": Array [
+          Object {
+            "color": "#616161",
+          },
+        ],
+      },
+      Object {
+        "featureType": "transit",
+        "stylers": Array [
+          Object {
+            "visibility": "off",
+          },
+        ],
+      },
+      Object {
+        "elementType": "labels.text.fill",
+        "featureType": "transit",
+        "stylers": Array [
+          Object {
+            "color": "#757575",
+          },
+        ],
+      },
+      Object {
+        "elementType": "geometry",
+        "featureType": "water",
+        "stylers": Array [
+          Object {
+            "color": "#000000",
+          },
+        ],
+      },
+      Object {
+        "elementType": "labels.text",
+        "featureType": "water",
+        "stylers": Array [
+          Object {
+            "visibility": "off",
+          },
+        ],
+      },
+      Object {
+        "elementType": "labels.text.fill",
+        "featureType": "water",
+        "stylers": Array [
+          Object {
+            "color": "#3d3d3d",
+          },
+        ],
+      },
+    ]
+  }
+  region={
+    Object {
+      "latitude": 41.884243,
+      "latitudeDelta": 0.012,
+      "longitude": -87.626936,
+      "longitudeDelta": 0.012,
+    }
+  }
   style={
     Object {
       "bottom": 0,
-      "justifyContent": "center",
       "left": 0,
       "position": "absolute",
       "right": 0,
       "top": 0,
+      "zIndex": -1,
     }
   }
 >
-  <View
-    style={
+  <Marker
+    coordinate={
+      Object {
+        "latitude": 41.884243,
+        "longitude": -87.626936,
+      }
+    }
+    pinColor="#1198ff"
+    title="You"
+  />
+  <Polyline
+    coordinates={
       Array [
         Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
+          "latitude": 41.8849212,
+          "longitude": -87.6314955,
         },
         Object {
-          "right": 250,
+          "latitude": 41.8849813,
+          "longitude": -87.6314078,
+        },
+        Object {
+          "latitude": 41.8850597,
+          "longitude": -87.6313488,
+        },
+        Object {
+          "latitude": 41.8851864,
+          "longitude": -87.631324,
+        },
+        Object {
+          "latitude": 41.8852919,
+          "longitude": -87.6313618,
+        },
+        Object {
+          "latitude": 41.8853793,
+          "longitude": -87.6314478,
+        },
+        Object {
+          "latitude": 41.8853976,
+          "longitude": -87.6314832,
+        },
+        Object {
+          "latitude": 41.8854284,
+          "longitude": -87.6315427,
+        },
+        Object {
+          "latitude": 41.8854393,
+          "longitude": -87.6315861,
+        },
+        Object {
+          "latitude": 41.8854536,
+          "longitude": -87.6316429,
+        },
+        Object {
+          "latitude": 41.885459,
+          "longitude": -87.6317225,
+        },
+        Object {
+          "latitude": 41.8854452,
+          "longitude": -87.6318385,
+        },
+        Object {
+          "latitude": 41.8854304,
+          "longitude": -87.6319046,
+        },
+        Object {
+          "latitude": 41.8853736,
+          "longitude": -87.6319966,
+        },
+        Object {
+          "latitude": 41.8853267,
+          "longitude": -87.6320487,
+        },
+        Object {
+          "latitude": 41.8852483,
+          "longitude": -87.6320978,
+        },
+        Object {
+          "latitude": 41.8851429,
+          "longitude": -87.632113,
+        },
+        Object {
+          "latitude": 41.8850285,
+          "longitude": -87.6320694,
+        },
+        Object {
+          "latitude": 41.8849425,
+          "longitude": -87.6319785,
+        },
+        Object {
+          "latitude": 41.8848997,
+          "longitude": -87.6318915,
+        },
+        Object {
+          "latitude": 41.8848719,
+          "longitude": -87.6317,
+        },
+        Object {
+          "latitude": 41.8848887,
+          "longitude": -87.6315798,
+        },
+        Object {
+          "latitude": 41.8849212,
+          "longitude": -87.6314955,
         },
       ]
     }
-  >
-    <View
-      onLayout={[Function]}
-      style={
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
         Object {
-          "bottom": 0,
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
-      }
-    >
-      <View
-        style={
-          Array [
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            },
-            Object {
-              "right": 250,
-            },
-          ]
-        }
-      />
-      <View
-        onMoveShouldSetResponder={[Function]}
-        onMoveShouldSetResponderCapture={[Function]}
-        onResponderEnd={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderReject={[Function]}
-        onResponderRelease={[Function]}
-        onResponderStart={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        onStartShouldSetResponderCapture={[Function]}
-        style={
-          Object {
-            "backgroundColor": "transparent",
-            "flex": 1,
-            "height": 1334,
-            "left": 0,
-            "overflow": "hidden",
-            "position": "absolute",
-            "top": 0,
-            "transform": Array [
-              Object {
-                "translateX": 0,
-              },
-            ],
-            "width": 750,
-          }
-        }
-      />
-    </View>
-  </View>
-  <View
-    onMoveShouldSetResponder={[Function]}
-    onMoveShouldSetResponderCapture={[Function]}
-    onResponderEnd={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderReject={[Function]}
-    onResponderRelease={[Function]}
-    onResponderStart={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    onStartShouldSetResponderCapture={[Function]}
-    style={
-      Object {
-        "backgroundColor": "transparent",
-        "flex": 1,
-        "height": 1334,
-        "left": 0,
-        "overflow": "hidden",
-        "position": "absolute",
-        "top": 0,
-        "transform": Array [
-          Object {
-            "translateX": 0,
-          },
-        ],
-        "width": 750,
-      }
+          "latitude": 41.8860564,
+          "longitude": -87.6311749,
+        },
+        Object {
+          "latitude": 41.8860512,
+          "longitude": -87.6318056,
+        },
+        Object {
+          "latitude": 41.8860502,
+          "longitude": -87.6319267,
+        },
+        Object {
+          "latitude": 41.8859755,
+          "longitude": -87.6319235,
+        },
+        Object {
+          "latitude": 41.885977,
+          "longitude": -87.6318041,
+        },
+        Object {
+          "latitude": 41.8859839,
+          "longitude": -87.6311737,
+        },
+        Object {
+          "latitude": 41.8860564,
+          "longitude": -87.6311749,
+        },
+      ]
     }
-  >
-    <View
-      accessible={true}
-      isTVSelectable={true}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
         Object {
-          "alignItems": "center",
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 60,
-          "elevation": 6,
-          "height": 60,
-          "left": 20,
-          "opacity": 0.95,
-          "position": "absolute",
-          "shadowColor": "rgba(0, 0, 0, 0.6)",
-          "shadowOffset": Object {
-            "height": 30,
-            "width": 30,
-          },
-          "shadowOpacity": 0.8,
-          "shadowRadius": 15,
-          "textAlignVertical": "center",
-          "top": 20,
-          "width": 60,
-          "zIndex": 1,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flexGrow": 1,
-            "justifyContent": "center",
-          }
-        }
-      >
-        <Text
-          allowFontScaling={false}
-          style={
-            Array [
-              Object {
-                "color": "#555",
-                "fontSize": 35,
-              },
-              undefined,
-              Object {
-                "fontFamily": "FontAwesome",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
-          }
-        >
-          
-        </Text>
-      </View>
-    </View>
-    <View
-      style={
+          "latitude": 44.6646997,
+          "longitude": -63.5691752,
+        },
         Object {
-          "flex": 1,
-        }
-      }
-    >
-      <MapView
-        region={
-          Object {
-            "latitude": 41.881899,
-            "latitudeDelta": 0.02,
-            "longitude": -87.623977,
-            "longitudeDelta": 0.02,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "zIndex": -1,
-          }
-        }
-      >
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8862637,
-              "longitude": -87.6306729,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8859675,
-              "longitude": -87.6308302,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8863129,
-              "longitude": -87.6306746,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.885963,
-              "longitude": -87.6311264,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8858832,
-              "longitude": -87.6281675,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8833266,
-              "longitude": -87.626503,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8831073,
-              "longitude": -87.6264962,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8883616,
-              "longitude": -87.6364478,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8883325,
-              "longitude": -87.6369002,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8848508,
-              "longitude": -87.631341,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8838464,
-              "longitude": -87.6310922,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8836083,
-              "longitude": -87.6326252,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8836132,
-              "longitude": -87.6322178,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8863955,
-              "longitude": -87.6293223,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8866922,
-              "longitude": -87.6290591,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8867157,
-              "longitude": -87.6306371,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.883854,
-              "longitude": -87.6280557,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.883855,
-              "longitude": -87.6276585,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8848386,
-              "longitude": -87.6238166,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8854002,
-              "longitude": -87.6229453,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8854601,
-              "longitude": -87.6218723,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8855495,
-              "longitude": -87.621512,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8851112,
-              "longitude": -87.6218641,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8871541,
-              "longitude": -87.6209853,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8881075,
-              "longitude": -87.6235577,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8763932,
-              "longitude": -87.6318076,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8763826,
-              "longitude": -87.6326191,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8821493,
-              "longitude": -87.6398754,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8821541,
-              "longitude": -87.6394836,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8821589,
-              "longitude": -87.6387431,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8880688,
-              "longitude": -87.6378628,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8888128,
-              "longitude": -87.6370858,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8887065,
-              "longitude": -87.6341584,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8884629,
-              "longitude": -87.6341473,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.88418,
-              "longitude": -87.6223802,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8841742,
-              "longitude": -87.6252636,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8841717,
-              "longitude": -87.6247064,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.88462,
-              "longitude": -87.6248016,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8843321,
-              "longitude": -87.6246246,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8841105,
-              "longitude": -87.624521,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8838448,
-              "longitude": -87.6289736,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8841318,
-              "longitude": -87.6244735,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8828138,
-              "longitude": -87.6245449,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8811955,
-              "longitude": -87.6245151,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8827041,
-              "longitude": -87.6245182,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8840305,
-              "longitude": -87.6245532,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8843728,
-              "longitude": -87.6242429,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.884254,
-              "longitude": -87.623797,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8842327,
-              "longitude": -87.6232655,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8770782,
-              "longitude": -87.6244202,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8841758,
-              "longitude": -87.6218876,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8842002,
-              "longitude": -87.6188103,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8841793,
-              "longitude": -87.6226846,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8841777,
-              "longitude": -87.6233237,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8784329,
-              "longitude": -87.6239591,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8812086,
-              "longitude": -87.630338,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8850343,
-              "longitude": -87.621859,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8850138,
-              "longitude": -87.6215013,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8865979,
-              "longitude": -87.619237,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8869896,
-              "longitude": -87.6238213,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8841792,
-              "longitude": -87.6263683,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8871889,
-              "longitude": -87.6201,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8871167,
-              "longitude": -87.6200488,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8872455,
-              "longitude": -87.6205933,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8770101,
-              "longitude": -87.6232587,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8770105,
-              "longitude": -87.6230833,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8861344,
-              "longitude": -87.6220432,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8876134,
-              "longitude": -87.6213563,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8864427,
-              "longitude": -87.6215568,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8864438,
-              "longitude": -87.6219347,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8866351,
-              "longitude": -87.6236493,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8858755,
-              "longitude": -87.629274,
-            }
-          }
-          pinColor="#1198ff"
-        />
-        <Marker
-          coordinate={
-            Object {
-              "latitude": 41.8859325,
-              "longitude": -87.6293521,
-            }
-          }
-          pinColor="#1198ff"
-        />
-      </MapView>
-      <View
-        accessible={true}
-        isTVSelectable={true}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#FFFFFF",
-            "borderRadius": 10,
-            "color": "#CCCCCC",
-            "elevation": 6,
-            "height": 50,
-            "left": 80,
-            "marginLeft": 20,
-            "opacity": 0.95,
-            "paddingLeft": 5,
-            "position": "absolute",
-            "shadowColor": "rgba(0, 0, 0, 0.6)",
-            "shadowOffset": Object {
-              "height": 30,
-              "width": 30,
-            },
-            "shadowOpacity": 0.8,
-            "shadowRadius": 15,
-            "textAlignVertical": "center",
-            "top": 25,
-            "width": 300,
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "alignItems": "flex-start",
-              "flexGrow": 1,
-              "justifyContent": "center",
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "fontSize": 18,
-              }
-            }
-          >
-            Enter your destination...
-          </Text>
-        </View>
-      </View>
-      <View
-        accessible={true}
-        isTVSelectable={true}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#FFFFFF",
-            "borderRadius": 60,
-            "bottom": 30,
-            "elevation": 6,
-            "height": 60,
-            "opacity": 0.95,
-            "position": "absolute",
-            "right": 30,
-            "shadowColor": "rgba(0, 0, 0, 0.6)",
-            "shadowOffset": Object {
-              "height": 30,
-              "width": 30,
-            },
-            "shadowOpacity": 0.8,
-            "shadowRadius": 15,
-            "textAlignVertical": "center",
-            "width": 60,
-            "zIndex": 1,
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "flexGrow": 1,
-              "justifyContent": "center",
-            }
-          }
-        >
-          <Text
-            allowFontScaling={false}
-            style={
-              Array [
-                Object {
-                  "color": "#555",
-                  "fontSize": 35,
-                },
-                undefined,
-                Object {
-                  "fontFamily": "FontAwesome",
-                  "fontStyle": "normal",
-                  "fontWeight": "normal",
-                },
-                Object {},
-              ]
-            }
-          >
-            
-          </Text>
-        </View>
-      </View>
-    </View>
-  </View>
-</View>
+          "latitude": 44.6647396,
+          "longitude": -63.5692439,
+        },
+        Object {
+          "latitude": 44.664746,
+          "longitude": -63.5692545,
+        },
+        Object {
+          "latitude": 44.664498,
+          "longitude": -63.5695393,
+        },
+        Object {
+          "latitude": 44.6644042,
+          "longitude": -63.5696581,
+        },
+        Object {
+          "latitude": 44.6644026,
+          "longitude": -63.5697204,
+        },
+        Object {
+          "latitude": 44.664379,
+          "longitude": -63.5697257,
+        },
+        Object {
+          "latitude": 44.6643617,
+          "longitude": -63.5697414,
+        },
+        Object {
+          "latitude": 44.6643476,
+          "longitude": -63.5697177,
+        },
+        Object {
+          "latitude": 44.6642905,
+          "longitude": -63.5696275,
+        },
+        Object {
+          "latitude": 44.6643424,
+          "longitude": -63.5695578,
+        },
+        Object {
+          "latitude": 44.664447,
+          "longitude": -63.5694547,
+        },
+        Object {
+          "latitude": 44.6646933,
+          "longitude": -63.5691664,
+        },
+        Object {
+          "latitude": 44.6646997,
+          "longitude": -63.5691752,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8843199,
+          "longitude": -87.6265404,
+        },
+        Object {
+          "latitude": 41.8833266,
+          "longitude": -87.626503,
+        },
+        Object {
+          "latitude": 41.8831073,
+          "longitude": -87.6264962,
+        },
+        Object {
+          "latitude": 41.8830204,
+          "longitude": -87.6264925,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8823551,
+          "longitude": -87.6299205,
+        },
+        Object {
+          "latitude": 41.8825376,
+          "longitude": -87.629927,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8881075,
+          "longitude": -87.6235577,
+        },
+        Object {
+          "latitude": 41.8880839,
+          "longitude": -87.6235587,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8876578,
+          "longitude": -87.6226542,
+        },
+        Object {
+          "latitude": 41.8876135,
+          "longitude": -87.6226533,
+        },
+        Object {
+          "latitude": 41.8870615,
+          "longitude": -87.6226422,
+        },
+        Object {
+          "latitude": 41.8869426,
+          "longitude": -87.6226408,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.885963,
+          "longitude": -87.6311264,
+        },
+        Object {
+          "latitude": 41.8859675,
+          "longitude": -87.6308302,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8859137,
+          "longitude": -87.6296937,
+        },
+        Object {
+          "latitude": 41.885912,
+          "longitude": -87.629351,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8859675,
+          "longitude": -87.6308302,
+        },
+        Object {
+          "latitude": 41.8859669,
+          "longitude": -87.6307494,
+        },
+        Object {
+          "latitude": 41.8860445,
+          "longitude": -87.6307477,
+        },
+        Object {
+          "latitude": 41.886171,
+          "longitude": -87.6306326,
+        },
+        Object {
+          "latitude": 41.8862637,
+          "longitude": -87.6306729,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8769766,
+          "longitude": -87.623878,
+        },
+        Object {
+          "latitude": 41.8769769,
+          "longitude": -87.6238351,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8813354,
+          "longitude": -87.6295163,
+        },
+        Object {
+          "latitude": 41.8813352,
+          "longitude": -87.6294761,
+        },
+        Object {
+          "latitude": 41.8813344,
+          "longitude": -87.6292849,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.881395,
+          "longitude": -87.6292869,
+        },
+        Object {
+          "latitude": 41.8813344,
+          "longitude": -87.6292849,
+        },
+        Object {
+          "latitude": 41.8812805,
+          "longitude": -87.6292832,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8810908,
+          "longitude": -87.6305691,
+        },
+        Object {
+          "latitude": 41.8812084,
+          "longitude": -87.6305697,
+        },
+        Object {
+          "latitude": 41.8813815,
+          "longitude": -87.6305705,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8838495,
+          "longitude": -87.6298564,
+        },
+        Object {
+          "latitude": 41.8833663,
+          "longitude": -87.6298476,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8838462,
+          "longitude": -87.6311708,
+        },
+        Object {
+          "latitude": 41.8838464,
+          "longitude": -87.6310922,
+        },
+        Object {
+          "latitude": 41.8838472,
+          "longitude": -87.6307867,
+        },
+        Object {
+          "latitude": 41.8838495,
+          "longitude": -87.6298564,
+        },
+        Object {
+          "latitude": 41.8838497,
+          "longitude": -87.6297976,
+        },
+        Object {
+          "latitude": 41.8838501,
+          "longitude": -87.6296004,
+        },
+        Object {
+          "latitude": 41.8838508,
+          "longitude": -87.6293523,
+        },
+        Object {
+          "latitude": 41.8838448,
+          "longitude": -87.6289736,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8838323,
+          "longitude": -87.6317744,
+        },
+        Object {
+          "latitude": 41.8838865,
+          "longitude": -87.6317796,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8838323,
+          "longitude": -87.6317744,
+        },
+        Object {
+          "latitude": 41.8838299,
+          "longitude": -87.6320131,
+        },
+        Object {
+          "latitude": 41.8837224,
+          "longitude": -87.6320107,
+        },
+        Object {
+          "latitude": 41.8836705,
+          "longitude": -87.6320077,
+        },
+        Object {
+          "latitude": 41.8836718,
+          "longitude": -87.6317627,
+        },
+        Object {
+          "latitude": 41.8836187,
+          "longitude": -87.6317614,
+        },
+        Object {
+          "latitude": 41.8836132,
+          "longitude": -87.6322178,
+        },
+        Object {
+          "latitude": 41.8836083,
+          "longitude": -87.6326252,
+        },
+        Object {
+          "latitude": 41.8836077,
+          "longitude": -87.6326772,
+        },
+        Object {
+          "latitude": 41.8835826,
+          "longitude": -87.6326782,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8843307,
+          "longitude": -87.6316046,
+        },
+        Object {
+          "latitude": 41.8842898,
+          "longitude": -87.631604,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8842889,
+          "longitude": -87.6317332,
+        },
+        Object {
+          "latitude": 41.8843402,
+          "longitude": -87.6317343,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8842898,
+          "longitude": -87.631604,
+        },
+        Object {
+          "latitude": 41.8842889,
+          "longitude": -87.6317332,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8846929,
+          "longitude": -87.6305378,
+        },
+        Object {
+          "latitude": 41.8846933,
+          "longitude": -87.6307076,
+        },
+        Object {
+          "latitude": 41.8847693,
+          "longitude": -87.6307076,
+        },
+        Object {
+          "latitude": 41.8848332,
+          "longitude": -87.6307076,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8862637,
+          "longitude": -87.6306729,
+        },
+        Object {
+          "latitude": 41.8863129,
+          "longitude": -87.6306746,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8863129,
+          "longitude": -87.6306746,
+        },
+        Object {
+          "latitude": 41.8863897,
+          "longitude": -87.6306761,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.886171,
+          "longitude": -87.6306326,
+        },
+        Object {
+          "latitude": 41.8860505,
+          "longitude": -87.6305176,
+        },
+        Object {
+          "latitude": 41.8860523,
+          "longitude": -87.6302569,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.886394,
+          "longitude": -87.6295325,
+        },
+        Object {
+          "latitude": 41.8863955,
+          "longitude": -87.6293223,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8843736,
+          "longitude": -87.6247066,
+        },
+        Object {
+          "latitude": 41.8843732,
+          "longitude": -87.6246798,
+        },
+        Object {
+          "latitude": 41.8843731,
+          "longitude": -87.6246232,
+        },
+        Object {
+          "latitude": 41.8843728,
+          "longitude": -87.6242429,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8859654,
+          "longitude": -87.6220766,
+        },
+        Object {
+          "latitude": 41.8859663,
+          "longitude": -87.6219259,
+        },
+        Object {
+          "latitude": 41.8859699,
+          "longitude": -87.6215244,
+        },
+        Object {
+          "latitude": 41.8859684,
+          "longitude": -87.6213615,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8854647,
+          "longitude": -87.6215113,
+        },
+        Object {
+          "latitude": 41.8855495,
+          "longitude": -87.621512,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8872018,
+          "longitude": -87.6192841,
+        },
+        Object {
+          "latitude": 41.8871974,
+          "longitude": -87.619678,
+        },
+        Object {
+          "latitude": 41.8871894,
+          "longitude": -87.6200495,
+        },
+        Object {
+          "latitude": 41.8871889,
+          "longitude": -87.6201,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8876549,
+          "longitude": -87.623552,
+        },
+        Object {
+          "latitude": 41.8876558,
+          "longitude": -87.6234496,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8788086,
+          "longitude": -87.6294187,
+        },
+        Object {
+          "latitude": 41.8788086,
+          "longitude": -87.6291931,
+        },
+        Object {
+          "latitude": 41.8788177,
+          "longitude": -87.6278204,
+        },
+        Object {
+          "latitude": 41.87882,
+          "longitude": -87.6275722,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8859839,
+          "longitude": -87.6311737,
+        },
+        Object {
+          "latitude": 41.8859629,
+          "longitude": -87.631173,
+        },
+        Object {
+          "latitude": 41.885963,
+          "longitude": -87.6311264,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.876382,
+          "longitude": -87.6326656,
+        },
+        Object {
+          "latitude": 41.8763826,
+          "longitude": -87.6326191,
+        },
+        Object {
+          "latitude": 41.8763833,
+          "longitude": -87.6325669,
+        },
+        Object {
+          "latitude": 41.8763867,
+          "longitude": -87.6322443,
+        },
+        Object {
+          "latitude": 41.8763912,
+          "longitude": -87.6319777,
+        },
+        Object {
+          "latitude": 41.8763932,
+          "longitude": -87.6318076,
+        },
+        Object {
+          "latitude": 41.876394,
+          "longitude": -87.6317447,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.87599,
+          "longitude": -87.6325032,
+        },
+        Object {
+          "latitude": 41.8758348,
+          "longitude": -87.6324983,
+        },
+        Object {
+          "latitude": 41.8753479,
+          "longitude": -87.6324832,
+        },
+        Object {
+          "latitude": 41.8753251,
+          "longitude": -87.6324825,
+        },
+        Object {
+          "latitude": 41.8752397,
+          "longitude": -87.6324798,
+        },
+        Object {
+          "latitude": 41.8752457,
+          "longitude": -87.6318629,
+        },
+        Object {
+          "latitude": 41.8759949,
+          "longitude": -87.6318914,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8759447,
+          "longitude": -87.6323377,
+        },
+        Object {
+          "latitude": 41.8758328,
+          "longitude": -87.632335,
+        },
+        Object {
+          "latitude": 41.8758348,
+          "longitude": -87.6324983,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8821541,
+          "longitude": -87.6394836,
+        },
+        Object {
+          "latitude": 41.8821589,
+          "longitude": -87.6387431,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8821493,
+          "longitude": -87.6398754,
+        },
+        Object {
+          "latitude": 41.8821467,
+          "longitude": -87.6403776,
+        },
+        Object {
+          "latitude": 41.8821436,
+          "longitude": -87.6406021,
+        },
+        Object {
+          "latitude": 41.8821382,
+          "longitude": -87.640982,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8887065,
+          "longitude": -87.6341584,
+        },
+        Object {
+          "latitude": 41.8887066,
+          "longitude": -87.6343052,
+        },
+        Object {
+          "latitude": 41.8883726,
+          "longitude": -87.6343031,
+        },
+        Object {
+          "latitude": 41.8883672,
+          "longitude": -87.6353525,
+        },
+        Object {
+          "latitude": 41.8883616,
+          "longitude": -87.6364478,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8880688,
+          "longitude": -87.6378628,
+        },
+        Object {
+          "latitude": 41.8884151,
+          "longitude": -87.6378763,
+        },
+        Object {
+          "latitude": 41.8884421,
+          "longitude": -87.6378773,
+        },
+        Object {
+          "latitude": 41.888505,
+          "longitude": -87.6378798,
+        },
+        Object {
+          "latitude": 41.888505,
+          "longitude": -87.6378155,
+        },
+        Object {
+          "latitude": 41.8888113,
+          "longitude": -87.6378219,
+        },
+        Object {
+          "latitude": 41.8888128,
+          "longitude": -87.6370858,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8841653,
+          "longitude": -87.624627,
+        },
+        Object {
+          "latitude": 41.8841107,
+          "longitude": -87.624626,
+        },
+        Object {
+          "latitude": 41.8840655,
+          "longitude": -87.6246252,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8841106,
+          "longitude": -87.6245537,
+        },
+        Object {
+          "latitude": 41.8840904,
+          "longitude": -87.6245535,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.88462,
+          "longitude": -87.6248016,
+        },
+        Object {
+          "latitude": 41.8845707,
+          "longitude": -87.624737,
+        },
+        Object {
+          "latitude": 41.884587,
+          "longitude": -87.6247163,
+        },
+        Object {
+          "latitude": 41.8845617,
+          "longitude": -87.6246821,
+        },
+        Object {
+          "latitude": 41.8843732,
+          "longitude": -87.6246798,
+        },
+        Object {
+          "latitude": 41.8841716,
+          "longitude": -87.6246772,
+        },
+        Object {
+          "latitude": 41.8841108,
+          "longitude": -87.6246765,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8843321,
+          "longitude": -87.6246246,
+        },
+        Object {
+          "latitude": 41.8843731,
+          "longitude": -87.6246232,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8841689,
+          "longitude": -87.6239021,
+        },
+        Object {
+          "latitude": 41.8841683,
+          "longitude": -87.6237964,
+        },
+        Object {
+          "latitude": 41.8841777,
+          "longitude": -87.6233237,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8851112,
+          "longitude": -87.6218641,
+        },
+        Object {
+          "latitude": 41.885111,
+          "longitude": -87.6219253,
+        },
+        Object {
+          "latitude": 41.8851108,
+          "longitude": -87.622017,
+        },
+        Object {
+          "latitude": 41.8851107,
+          "longitude": -87.6220974,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.88484,
+          "longitude": -87.6236472,
+        },
+        Object {
+          "latitude": 41.8848404,
+          "longitude": -87.6235694,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8847948,
+          "longitude": -87.623787,
+        },
+        Object {
+          "latitude": 41.8848383,
+          "longitude": -87.6237887,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8848388,
+          "longitude": -87.6229032,
+        },
+        Object {
+          "latitude": 41.8851241,
+          "longitude": -87.6229057,
+        },
+        Object {
+          "latitude": 41.8854021,
+          "longitude": -87.6229108,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8848404,
+          "longitude": -87.6235547,
+        },
+        Object {
+          "latitude": 41.8848414,
+          "longitude": -87.6231736,
+        },
+        Object {
+          "latitude": 41.8848388,
+          "longitude": -87.6229032,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8814245,
+          "longitude": -87.6303427,
+        },
+        Object {
+          "latitude": 41.8814247,
+          "longitude": -87.6303199,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.881275,
+          "longitude": -87.6295164,
+        },
+        Object {
+          "latitude": 41.8813354,
+          "longitude": -87.6295163,
+        },
+        Object {
+          "latitude": 41.8813948,
+          "longitude": -87.6295187,
+        },
+        Object {
+          "latitude": 41.8813934,
+          "longitude": -87.6296021,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8814324,
+          "longitude": -87.6299149,
+        },
+        Object {
+          "latitude": 41.8814326,
+          "longitude": -87.6298921,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8833663,
+          "longitude": -87.6298476,
+        },
+        Object {
+          "latitude": 41.883367,
+          "longitude": -87.629795,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8843126,
+          "longitude": -87.6276319,
+        },
+        Object {
+          "latitude": 41.8843199,
+          "longitude": -87.6265404,
+        },
+        Object {
+          "latitude": 41.884321,
+          "longitude": -87.626475,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.883854,
+          "longitude": -87.6280557,
+        },
+        Object {
+          "latitude": 41.8838541,
+          "longitude": -87.6280263,
+        },
+        Object {
+          "latitude": 41.8838548,
+          "longitude": -87.6278825,
+        },
+        Object {
+          "latitude": 41.8838549,
+          "longitude": -87.6277253,
+        },
+        Object {
+          "latitude": 41.883855,
+          "longitude": -87.6276585,
+        },
+        Object {
+          "latitude": 41.8838544,
+          "longitude": -87.6276193,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8838448,
+          "longitude": -87.6289736,
+        },
+        Object {
+          "latitude": 41.8838496,
+          "longitude": -87.6284437,
+        },
+        Object {
+          "latitude": 41.883854,
+          "longitude": -87.6280557,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8813934,
+          "longitude": -87.6296021,
+        },
+        Object {
+          "latitude": 41.8813922,
+          "longitude": -87.6297223,
+        },
+        Object {
+          "latitude": 41.8813903,
+          "longitude": -87.6299136,
+        },
+        Object {
+          "latitude": 41.8814324,
+          "longitude": -87.6299149,
+        },
+        Object {
+          "latitude": 41.881429,
+          "longitude": -87.6301247,
+        },
+        Object {
+          "latitude": 41.8814247,
+          "longitude": -87.6303199,
+        },
+        Object {
+          "latitude": 41.8813837,
+          "longitude": -87.6303178,
+        },
+        Object {
+          "latitude": 41.8813815,
+          "longitude": -87.6305705,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8770142,
+          "longitude": -87.6244709,
+        },
+        Object {
+          "latitude": 41.8770146,
+          "longitude": -87.6244176,
+        },
+        Object {
+          "latitude": 41.8770211,
+          "longitude": -87.6238357,
+        },
+        Object {
+          "latitude": 41.8770401,
+          "longitude": -87.6232379,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8841104,
+          "longitude": -87.6244735,
+        },
+        Object {
+          "latitude": 41.8841105,
+          "longitude": -87.624521,
+        },
+        Object {
+          "latitude": 41.8841106,
+          "longitude": -87.6245537,
+        },
+        Object {
+          "latitude": 41.8841107,
+          "longitude": -87.624626,
+        },
+        Object {
+          "latitude": 41.8841108,
+          "longitude": -87.6246765,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8842394,
+          "longitude": -87.6244727,
+        },
+        Object {
+          "latitude": 41.8841318,
+          "longitude": -87.6244735,
+        },
+        Object {
+          "latitude": 41.8841104,
+          "longitude": -87.6244735,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8842394,
+          "longitude": -87.6244727,
+        },
+        Object {
+          "latitude": 41.8842364,
+          "longitude": -87.6239021,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.882704,
+          "longitude": -87.6245106,
+        },
+        Object {
+          "latitude": 41.8811955,
+          "longitude": -87.6245083,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8827203,
+          "longitude": -87.6245441,
+        },
+        Object {
+          "latitude": 41.8827044,
+          "longitude": -87.624544,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8811955,
+          "longitude": -87.6245083,
+        },
+        Object {
+          "latitude": 41.8811955,
+          "longitude": -87.6245151,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8840355,
+          "longitude": -87.6245532,
+        },
+        Object {
+          "latitude": 41.8840305,
+          "longitude": -87.6245532,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.882705,
+          "longitude": -87.6245902,
+        },
+        Object {
+          "latitude": 41.8827044,
+          "longitude": -87.624544,
+        },
+        Object {
+          "latitude": 41.8827041,
+          "longitude": -87.6245182,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8827247,
+          "longitude": -87.6245894,
+        },
+        Object {
+          "latitude": 41.882705,
+          "longitude": -87.6245902,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8811955,
+          "longitude": -87.6245378,
+        },
+        Object {
+          "latitude": 41.8811733,
+          "longitude": -87.6245379,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8787705,
+          "longitude": -87.6244596,
+        },
+        Object {
+          "latitude": 41.8787067,
+          "longitude": -87.6244588,
+        },
+        Object {
+          "latitude": 41.8770782,
+          "longitude": -87.6244202,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8787067,
+          "longitude": -87.6244588,
+        },
+        Object {
+          "latitude": 41.8787078,
+          "longitude": -87.6243083,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8847079,
+          "longitude": -87.6237875,
+        },
+        Object {
+          "latitude": 41.8847948,
+          "longitude": -87.623787,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8842364,
+          "longitude": -87.6239021,
+        },
+        Object {
+          "latitude": 41.8841689,
+          "longitude": -87.6239021,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.884254,
+          "longitude": -87.623797,
+        },
+        Object {
+          "latitude": 41.8842442,
+          "longitude": -87.6237969,
+        },
+        Object {
+          "latitude": 41.8841683,
+          "longitude": -87.6237964,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8842327,
+          "longitude": -87.6232655,
+        },
+        Object {
+          "latitude": 41.8841781,
+          "longitude": -87.6231724,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8848386,
+          "longitude": -87.6238166,
+        },
+        Object {
+          "latitude": 41.8848383,
+          "longitude": -87.6237887,
+        },
+        Object {
+          "latitude": 41.88484,
+          "longitude": -87.6236472,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8770782,
+          "longitude": -87.6244202,
+        },
+        Object {
+          "latitude": 41.8770146,
+          "longitude": -87.6244176,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8811955,
+          "longitude": -87.6245151,
+        },
+        Object {
+          "latitude": 41.8811955,
+          "longitude": -87.6245378,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8827041,
+          "longitude": -87.6245182,
+        },
+        Object {
+          "latitude": 41.882704,
+          "longitude": -87.6245106,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8828138,
+          "longitude": -87.6245449,
+        },
+        Object {
+          "latitude": 41.8827994,
+          "longitude": -87.6245446,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8840305,
+          "longitude": -87.6245532,
+        },
+        Object {
+          "latitude": 41.8828138,
+          "longitude": -87.6245449,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8833663,
+          "longitude": -87.6298476,
+        },
+        Object {
+          "latitude": 41.8830651,
+          "longitude": -87.6298433,
+        },
+        Object {
+          "latitude": 41.8830627,
+          "longitude": -87.6301537,
+        },
+        Object {
+          "latitude": 41.8828308,
+          "longitude": -87.6301515,
+        },
+        Object {
+          "latitude": 41.8828316,
+          "longitude": -87.6300469,
+        },
+        Object {
+          "latitude": 41.8828332,
+          "longitude": -87.6298229,
+        },
+        Object {
+          "latitude": 41.8827269,
+          "longitude": -87.6298231,
+        },
+        Object {
+          "latitude": 41.88254,
+          "longitude": -87.6298235,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8844015,
+          "longitude": -87.6218917,
+        },
+        Object {
+          "latitude": 41.8841758,
+          "longitude": -87.6218876,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8849641,
+          "longitude": -87.620373,
+        },
+        Object {
+          "latitude": 41.8847272,
+          "longitude": -87.6203663,
+        },
+        Object {
+          "latitude": 41.8846694,
+          "longitude": -87.6202827,
+        },
+        Object {
+          "latitude": 41.8846712,
+          "longitude": -87.6201318,
+        },
+        Object {
+          "latitude": 41.8846779,
+          "longitude": -87.6195504,
+        },
+        Object {
+          "latitude": 41.8846793,
+          "longitude": -87.6193948,
+        },
+        Object {
+          "latitude": 41.8846583,
+          "longitude": -87.6193954,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8846583,
+          "longitude": -87.6193954,
+        },
+        Object {
+          "latitude": 41.8846217,
+          "longitude": -87.6193952,
+        },
+        Object {
+          "latitude": 41.8846156,
+          "longitude": -87.6188183,
+        },
+        Object {
+          "latitude": 41.8842002,
+          "longitude": -87.6188103,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8841777,
+          "longitude": -87.6233237,
+        },
+        Object {
+          "latitude": 41.8841781,
+          "longitude": -87.6231724,
+        },
+        Object {
+          "latitude": 41.8841793,
+          "longitude": -87.6226846,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8787078,
+          "longitude": -87.6243083,
+        },
+        Object {
+          "latitude": 41.8784347,
+          "longitude": -87.6243072,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8784329,
+          "longitude": -87.6239591,
+        },
+        Object {
+          "latitude": 41.8784375,
+          "longitude": -87.6239597,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8784347,
+          "longitude": -87.6243072,
+        },
+        Object {
+          "latitude": 41.8784367,
+          "longitude": -87.6240316,
+        },
+        Object {
+          "latitude": 41.8784375,
+          "longitude": -87.6239597,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8770211,
+          "longitude": -87.6238357,
+        },
+        Object {
+          "latitude": 41.8770092,
+          "longitude": -87.6233216,
+        },
+        Object {
+          "latitude": 41.8770101,
+          "longitude": -87.6232587,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8848282,
+          "longitude": -87.6195857,
+        },
+        Object {
+          "latitude": 41.8848282,
+          "longitude": -87.6193917,
+        },
+        Object {
+          "latitude": 41.8846793,
+          "longitude": -87.6193948,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8812086,
+          "longitude": -87.630338,
+        },
+        Object {
+          "latitude": 41.8812084,
+          "longitude": -87.6305697,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8810286,
+          "longitude": -87.6298797,
+        },
+        Object {
+          "latitude": 41.8812608,
+          "longitude": -87.6298819,
+        },
+        Object {
+          "latitude": 41.8812608,
+          "longitude": -87.6297216,
+        },
+        Object {
+          "latitude": 41.8813922,
+          "longitude": -87.6297223,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8841797,
+          "longitude": -87.6264719,
+        },
+        Object {
+          "latitude": 41.8841792,
+          "longitude": -87.6263683,
+        },
+        Object {
+          "latitude": 41.8841762,
+          "longitude": -87.6256887,
+        },
+        Object {
+          "latitude": 41.8841753,
+          "longitude": -87.6254955,
+        },
+        Object {
+          "latitude": 41.8841745,
+          "longitude": -87.6253223,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8854601,
+          "longitude": -87.6218723,
+        },
+        Object {
+          "latitude": 41.8854597,
+          "longitude": -87.6219255,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.885034,
+          "longitude": -87.6219252,
+        },
+        Object {
+          "latitude": 41.8850343,
+          "longitude": -87.621859,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8851112,
+          "longitude": -87.6218641,
+        },
+        Object {
+          "latitude": 41.885112,
+          "longitude": -87.6215025,
+        },
+        Object {
+          "latitude": 41.8851127,
+          "longitude": -87.6211999,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8851309,
+          "longitude": -87.6224073,
+        },
+        Object {
+          "latitude": 41.8851308,
+          "longitude": -87.6224729,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8850138,
+          "longitude": -87.6215013,
+        },
+        Object {
+          "latitude": 41.885112,
+          "longitude": -87.6215025,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8851308,
+          "longitude": -87.6224729,
+        },
+        Object {
+          "latitude": 41.8851241,
+          "longitude": -87.6229057,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8857888,
+          "longitude": -87.6219264,
+        },
+        Object {
+          "latitude": 41.8857914,
+          "longitude": -87.6220278,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8854666,
+          "longitude": -87.6212055,
+        },
+        Object {
+          "latitude": 41.8854647,
+          "longitude": -87.6215113,
+        },
+        Object {
+          "latitude": 41.8854601,
+          "longitude": -87.6218723,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8863142,
+          "longitude": -87.6208562,
+        },
+        Object {
+          "latitude": 41.8863164,
+          "longitude": -87.6206978,
+        },
+        Object {
+          "latitude": 41.8863175,
+          "longitude": -87.6206236,
+        },
+        Object {
+          "latitude": 41.88632,
+          "longitude": -87.6204441,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.88632,
+          "longitude": -87.6204441,
+        },
+        Object {
+          "latitude": 41.8863207,
+          "longitude": -87.6203943,
+        },
+        Object {
+          "latitude": 41.8865915,
+          "longitude": -87.6204005,
+        },
+        Object {
+          "latitude": 41.8865935,
+          "longitude": -87.6200437,
+        },
+        Object {
+          "latitude": 41.8865979,
+          "longitude": -87.619237,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.887023,
+          "longitude": -87.6224773,
+        },
+        Object {
+          "latitude": 41.8870622,
+          "longitude": -87.6224785,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8870587,
+          "longitude": -87.6230544,
+        },
+        Object {
+          "latitude": 41.887656,
+          "longitude": -87.6230663,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8871894,
+          "longitude": -87.6200495,
+        },
+        Object {
+          "latitude": 41.8871167,
+          "longitude": -87.6200488,
+        },
+        Object {
+          "latitude": 41.8865935,
+          "longitude": -87.6200437,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8869896,
+          "longitude": -87.6238213,
+        },
+        Object {
+          "latitude": 41.8870535,
+          "longitude": -87.6238243,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8841743,
+          "longitude": -87.6252794,
+        },
+        Object {
+          "latitude": 41.8841742,
+          "longitude": -87.6252636,
+        },
+        Object {
+          "latitude": 41.884173,
+          "longitude": -87.6249805,
+        },
+        Object {
+          "latitude": 41.8841717,
+          "longitude": -87.6247064,
+        },
+        Object {
+          "latitude": 41.8841716,
+          "longitude": -87.6246772,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8851107,
+          "longitude": -87.6220974,
+        },
+        Object {
+          "latitude": 41.8851309,
+          "longitude": -87.6224073,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8860531,
+          "longitude": -87.6210967,
+        },
+        Object {
+          "latitude": 41.8860387,
+          "longitude": -87.6210726,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8871889,
+          "longitude": -87.6201,
+        },
+        Object {
+          "latitude": 41.8871885,
+          "longitude": -87.6201419,
+        },
+        Object {
+          "latitude": 41.8871879,
+          "longitude": -87.6202019,
+        },
+        Object {
+          "latitude": 41.8871878,
+          "longitude": -87.6204095,
+        },
+        Object {
+          "latitude": 41.8872246,
+          "longitude": -87.6204101,
+        },
+        Object {
+          "latitude": 41.8875608,
+          "longitude": -87.6204205,
+        },
+        Object {
+          "latitude": 41.8875605,
+          "longitude": -87.6203414,
+        },
+        Object {
+          "latitude": 41.887539,
+          "longitude": -87.6203414,
+        },
+        Object {
+          "latitude": 41.887539,
+          "longitude": -87.6201427,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8871885,
+          "longitude": -87.6201419,
+        },
+        Object {
+          "latitude": 41.887539,
+          "longitude": -87.6201427,
+        },
+        Object {
+          "latitude": 41.8875607,
+          "longitude": -87.6201427,
+        },
+        Object {
+          "latitude": 41.887584,
+          "longitude": -87.6201429,
+        },
+        Object {
+          "latitude": 41.887585,
+          "longitude": -87.6203414,
+        },
+        Object {
+          "latitude": 41.8875605,
+          "longitude": -87.6203414,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8872243,
+          "longitude": -87.6205925,
+        },
+        Object {
+          "latitude": 41.8872455,
+          "longitude": -87.6205933,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8855495,
+          "longitude": -87.621512,
+        },
+        Object {
+          "latitude": 41.8856836,
+          "longitude": -87.621516,
+        },
+        Object {
+          "latitude": 41.8859699,
+          "longitude": -87.6215244,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8859663,
+          "longitude": -87.6219259,
+        },
+        Object {
+          "latitude": 41.8858746,
+          "longitude": -87.6219261,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8854021,
+          "longitude": -87.6229108,
+        },
+        Object {
+          "latitude": 41.8854002,
+          "longitude": -87.6229453,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8859684,
+          "longitude": -87.6213615,
+        },
+        Object {
+          "latitude": 41.8859683,
+          "longitude": -87.6211626,
+        },
+        Object {
+          "latitude": 41.8860387,
+          "longitude": -87.6210726,
+        },
+        Object {
+          "latitude": 41.8861025,
+          "longitude": -87.6209911,
+        },
+        Object {
+          "latitude": 41.8861685,
+          "longitude": -87.6209901,
+        },
+        Object {
+          "latitude": 41.8862042,
+          "longitude": -87.6209893,
+        },
+        Object {
+          "latitude": 41.8862055,
+          "longitude": -87.620928,
+        },
+        Object {
+          "latitude": 41.8862714,
+          "longitude": -87.6209294,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8861685,
+          "longitude": -87.6209901,
+        },
+        Object {
+          "latitude": 41.8861333,
+          "longitude": -87.6210348,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8862714,
+          "longitude": -87.6209294,
+        },
+        Object {
+          "latitude": 41.8863132,
+          "longitude": -87.6209286,
+        },
+        Object {
+          "latitude": 41.8863142,
+          "longitude": -87.6208562,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8770101,
+          "longitude": -87.6232587,
+        },
+        Object {
+          "latitude": 41.8770104,
+          "longitude": -87.6232381,
+        },
+        Object {
+          "latitude": 41.8770105,
+          "longitude": -87.6230833,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8861344,
+          "longitude": -87.6220432,
+        },
+        Object {
+          "latitude": 41.8861344,
+          "longitude": -87.6220778,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8871541,
+          "longitude": -87.6209853,
+        },
+        Object {
+          "latitude": 41.8872236,
+          "longitude": -87.6209861,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8877331,
+          "longitude": -87.6215325,
+        },
+        Object {
+          "latitude": 41.8876395,
+          "longitude": -87.6213906,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8876395,
+          "longitude": -87.6213906,
+        },
+        Object {
+          "latitude": 41.8876114,
+          "longitude": -87.6213899,
+        },
+        Object {
+          "latitude": 41.8873713,
+          "longitude": -87.6213848,
+        },
+        Object {
+          "latitude": 41.8872204,
+          "longitude": -87.6213815,
+        },
+        Object {
+          "latitude": 41.8870408,
+          "longitude": -87.6213754,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8870408,
+          "longitude": -87.6213754,
+        },
+        Object {
+          "latitude": 41.8870363,
+          "longitude": -87.6217211,
+        },
+        Object {
+          "latitude": 41.8870332,
+          "longitude": -87.6221245,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8872204,
+          "longitude": -87.6213815,
+        },
+        Object {
+          "latitude": 41.8872234,
+          "longitude": -87.6211064,
+        },
+        Object {
+          "latitude": 41.8872236,
+          "longitude": -87.6209861,
+        },
+        Object {
+          "latitude": 41.8872243,
+          "longitude": -87.6205925,
+        },
+        Object {
+          "latitude": 41.8872246,
+          "longitude": -87.6204101,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8876134,
+          "longitude": -87.6213563,
+        },
+        Object {
+          "latitude": 41.8876114,
+          "longitude": -87.6213899,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8863942,
+          "longitude": -87.6214264,
+        },
+        Object {
+          "latitude": 41.8863928,
+          "longitude": -87.6216275,
+        },
+        Object {
+          "latitude": 41.8863912,
+          "longitude": -87.6218585,
+        },
+        Object {
+          "latitude": 41.8863705,
+          "longitude": -87.6218831,
+        },
+        Object {
+          "latitude": 41.8862064,
+          "longitude": -87.6220783,
+        },
+        Object {
+          "latitude": 41.8861344,
+          "longitude": -87.6220778,
+        },
+        Object {
+          "latitude": 41.8859654,
+          "longitude": -87.6220766,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8864438,
+          "longitude": -87.6219347,
+        },
+        Object {
+          "latitude": 41.8864037,
+          "longitude": -87.6219333,
+        },
+        Object {
+          "latitude": 41.8863705,
+          "longitude": -87.6218831,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8864427,
+          "longitude": -87.6215568,
+        },
+        Object {
+          "latitude": 41.8864167,
+          "longitude": -87.6215551,
+        },
+        Object {
+          "latitude": 41.8864157,
+          "longitude": -87.6216275,
+        },
+        Object {
+          "latitude": 41.8863928,
+          "longitude": -87.6216275,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8870535,
+          "longitude": -87.6238243,
+        },
+        Object {
+          "latitude": 41.8870554,
+          "longitude": -87.623609,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8868157,
+          "longitude": -87.6239915,
+        },
+        Object {
+          "latitude": 41.8866307,
+          "longitude": -87.6239901,
+        },
+        Object {
+          "latitude": 41.8866351,
+          "longitude": -87.6236493,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8866351,
+          "longitude": -87.6236493,
+        },
+        Object {
+          "latitude": 41.8866361,
+          "longitude": -87.6235876,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8865742,
+          "longitude": -87.6235876,
+        },
+        Object {
+          "latitude": 41.8865752,
+          "longitude": -87.6235301,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8866361,
+          "longitude": -87.6235876,
+        },
+        Object {
+          "latitude": 41.8865742,
+          "longitude": -87.6235876,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8880839,
+          "longitude": -87.6235587,
+        },
+        Object {
+          "latitude": 41.8876549,
+          "longitude": -87.623552,
+        },
+        Object {
+          "latitude": 41.8870558,
+          "longitude": -87.6235388,
+        },
+        Object {
+          "latitude": 41.8865752,
+          "longitude": -87.6235301,
+        },
+        Object {
+          "latitude": 41.8862157,
+          "longitude": -87.6235256,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8870332,
+          "longitude": -87.6221245,
+        },
+        Object {
+          "latitude": 41.8870643,
+          "longitude": -87.622123,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8870643,
+          "longitude": -87.622123,
+        },
+        Object {
+          "latitude": 41.8870622,
+          "longitude": -87.6224785,
+        },
+        Object {
+          "latitude": 41.8870615,
+          "longitude": -87.6226422,
+        },
+        Object {
+          "latitude": 41.8870587,
+          "longitude": -87.6230544,
+        },
+        Object {
+          "latitude": 41.8870558,
+          "longitude": -87.6235388,
+        },
+        Object {
+          "latitude": 41.8870554,
+          "longitude": -87.623609,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8876558,
+          "longitude": -87.6234496,
+        },
+        Object {
+          "latitude": 41.8876557,
+          "longitude": -87.6233985,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8876557,
+          "longitude": -87.6233985,
+        },
+        Object {
+          "latitude": 41.8876558,
+          "longitude": -87.6231307,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.887656,
+          "longitude": -87.6230663,
+        },
+        Object {
+          "latitude": 41.8876575,
+          "longitude": -87.6227226,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8876558,
+          "longitude": -87.6231307,
+        },
+        Object {
+          "latitude": 41.887656,
+          "longitude": -87.6230663,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8877268,
+          "longitude": -87.6220808,
+        },
+        Object {
+          "latitude": 41.8877331,
+          "longitude": -87.6215325,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.88764,
+          "longitude": -87.6220812,
+        },
+        Object {
+          "latitude": 41.8876642,
+          "longitude": -87.622081,
+        },
+        Object {
+          "latitude": 41.8877268,
+          "longitude": -87.6220808,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8876575,
+          "longitude": -87.6227226,
+        },
+        Object {
+          "latitude": 41.8876577,
+          "longitude": -87.6226823,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8876577,
+          "longitude": -87.6226823,
+        },
+        Object {
+          "latitude": 41.8876578,
+          "longitude": -87.6226542,
+        },
+        Object {
+          "latitude": 41.8876642,
+          "longitude": -87.622081,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8866681,
+          "longitude": -87.6282904,
+        },
+        Object {
+          "latitude": 41.8859281,
+          "longitude": -87.6282874,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8848961,
+          "longitude": -87.631395,
+        },
+        Object {
+          "latitude": 41.8848508,
+          "longitude": -87.631341,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8849813,
+          "longitude": -87.6314078,
+        },
+        Object {
+          "latitude": 41.8849308,
+          "longitude": -87.6313511,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8848735,
+          "longitude": -87.6312641,
+        },
+        Object {
+          "latitude": 41.8847735,
+          "longitude": -87.631115,
+        },
+        Object {
+          "latitude": 41.8847693,
+          "longitude": -87.6307076,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8848671,
+          "longitude": -87.6314349,
+        },
+        Object {
+          "latitude": 41.8849212,
+          "longitude": -87.6314955,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8853976,
+          "longitude": -87.6314832,
+        },
+        Object {
+          "latitude": 41.8858848,
+          "longitude": -87.6314879,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8843402,
+          "longitude": -87.6317343,
+        },
+        Object {
+          "latitude": 41.8843335,
+          "longitude": -87.6317794,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8843402,
+          "longitude": -87.6317343,
+        },
+        Object {
+          "latitude": 41.8843987,
+          "longitude": -87.6317339,
+        },
+        Object {
+          "latitude": 41.8845361,
+          "longitude": -87.631691,
+        },
+        Object {
+          "latitude": 41.8848719,
+          "longitude": -87.6317,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8863207,
+          "longitude": -87.6306084,
+        },
+        Object {
+          "latitude": 41.8863702,
+          "longitude": -87.6306095,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8863916,
+          "longitude": -87.6305803,
+        },
+        Object {
+          "latitude": 41.8863207,
+          "longitude": -87.6305789,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8863207,
+          "longitude": -87.6305789,
+        },
+        Object {
+          "latitude": 41.8863207,
+          "longitude": -87.6306084,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8860523,
+          "longitude": -87.6302569,
+        },
+        Object {
+          "latitude": 41.8858861,
+          "longitude": -87.6300292,
+        },
+        Object {
+          "latitude": 41.8858859,
+          "longitude": -87.6297145,
+        },
+        Object {
+          "latitude": 41.8859095,
+          "longitude": -87.6297137,
+        },
+        Object {
+          "latitude": 41.8859137,
+          "longitude": -87.6296937,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8863897,
+          "longitude": -87.6306761,
+        },
+        Object {
+          "latitude": 41.8863916,
+          "longitude": -87.6305803,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8863702,
+          "longitude": -87.6306095,
+        },
+        Object {
+          "latitude": 41.886372,
+          "longitude": -87.6306517,
+        },
+        Object {
+          "latitude": 41.8864185,
+          "longitude": -87.6306501,
+        },
+        Object {
+          "latitude": 41.8864172,
+          "longitude": -87.6307053,
+        },
+        Object {
+          "latitude": 41.8864554,
+          "longitude": -87.6307063,
+        },
+        Object {
+          "latitude": 41.8864545,
+          "longitude": -87.6307667,
+        },
+        Object {
+          "latitude": 41.8865014,
+          "longitude": -87.6307667,
+        },
+        Object {
+          "latitude": 41.8866083,
+          "longitude": -87.6307667,
+        },
+        Object {
+          "latitude": 41.8866682,
+          "longitude": -87.630705,
+        },
+        Object {
+          "latitude": 41.8866682,
+          "longitude": -87.6306363,
+        },
+        Object {
+          "latitude": 41.8867157,
+          "longitude": -87.6306371,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8858755,
+          "longitude": -87.629274,
+        },
+        Object {
+          "latitude": 41.8859332,
+          "longitude": -87.6292748,
+        },
+        Object {
+          "latitude": 41.8859325,
+          "longitude": -87.6293521,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8859332,
+          "longitude": -87.6292748,
+        },
+        Object {
+          "latitude": 41.8859437,
+          "longitude": -87.6292636,
+        },
+        Object {
+          "latitude": 41.8859537,
+          "longitude": -87.6292529,
+        },
+        Object {
+          "latitude": 41.8859526,
+          "longitude": -87.6291074,
+        },
+        Object {
+          "latitude": 41.8859541,
+          "longitude": -87.6284361,
+        },
+        Object {
+          "latitude": 41.8859288,
+          "longitude": -87.6283759,
+        },
+        Object {
+          "latitude": 41.8859281,
+          "longitude": -87.6282874,
+        },
+        Object {
+          "latitude": 41.8859277,
+          "longitude": -87.6282401,
+        },
+        Object {
+          "latitude": 41.8858832,
+          "longitude": -87.6281675,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8859714,
+          "longitude": -87.6293121,
+        },
+        Object {
+          "latitude": 41.8859437,
+          "longitude": -87.6292636,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.885912,
+          "longitude": -87.629351,
+        },
+        Object {
+          "latitude": 41.8859114,
+          "longitude": -87.6293116,
+        },
+        Object {
+          "latitude": 41.8859714,
+          "longitude": -87.6293121,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8863955,
+          "longitude": -87.6293223,
+        },
+        Object {
+          "latitude": 41.8863973,
+          "longitude": -87.6292203,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8866922,
+          "longitude": -87.6290591,
+        },
+        Object {
+          "latitude": 41.8866626,
+          "longitude": -87.6290593,
+        },
+        Object {
+          "latitude": 41.886613,
+          "longitude": -87.6292259,
+        },
+        Object {
+          "latitude": 41.8863973,
+          "longitude": -87.6292203,
+        },
+        Object {
+          "latitude": 41.8862444,
+          "longitude": -87.6292158,
+        },
+        Object {
+          "latitude": 41.8861855,
+          "longitude": -87.629109,
+        },
+        Object {
+          "latitude": 41.88612,
+          "longitude": -87.6291084,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8860229,
+          "longitude": -87.6291075,
+        },
+        Object {
+          "latitude": 41.8859526,
+          "longitude": -87.6291074,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.88612,
+          "longitude": -87.6291084,
+        },
+        Object {
+          "latitude": 41.8860229,
+          "longitude": -87.6291075,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8841793,
+          "longitude": -87.6226846,
+        },
+        Object {
+          "latitude": 41.88418,
+          "longitude": -87.6223802,
+        },
+        Object {
+          "latitude": 41.8841802,
+          "longitude": -87.6223135,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8858746,
+          "longitude": -87.6219261,
+        },
+        Object {
+          "latitude": 41.8858013,
+          "longitude": -87.6219264,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8858013,
+          "longitude": -87.6219264,
+        },
+        Object {
+          "latitude": 41.8857888,
+          "longitude": -87.6219264,
+        },
+        Object {
+          "latitude": 41.8856895,
+          "longitude": -87.6219257,
+        },
+        Object {
+          "latitude": 41.8854597,
+          "longitude": -87.6219255,
+        },
+        Object {
+          "latitude": 41.8851373,
+          "longitude": -87.6219253,
+        },
+        Object {
+          "latitude": 41.885111,
+          "longitude": -87.6219253,
+        },
+        Object {
+          "latitude": 41.8850848,
+          "longitude": -87.6219253,
+        },
+        Object {
+          "latitude": 41.885034,
+          "longitude": -87.6219252,
+        },
+        Object {
+          "latitude": 41.8848643,
+          "longitude": -87.6219251,
+        },
+        Object {
+          "latitude": 41.8847345,
+          "longitude": -87.621925,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8821467,
+          "longitude": -87.6403776,
+        },
+        Object {
+          "latitude": 41.8823241,
+          "longitude": -87.6403852,
+        },
+        Object {
+          "latitude": 41.8826233,
+          "longitude": -87.6403951,
+        },
+        Object {
+          "latitude": 41.8826687,
+          "longitude": -87.6403963,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8888128,
+          "longitude": -87.6370858,
+        },
+        Object {
+          "latitude": 41.8888132,
+          "longitude": -87.6369486,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8884151,
+          "longitude": -87.6378763,
+        },
+        Object {
+          "latitude": 41.8884141,
+          "longitude": -87.6379703,
+        },
+        Object {
+          "latitude": 41.8884286,
+          "longitude": -87.6379701,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8884286,
+          "longitude": -87.6379701,
+        },
+        Object {
+          "latitude": 41.8884289,
+          "longitude": -87.6379301,
+        },
+        Object {
+          "latitude": 41.8884358,
+          "longitude": -87.6370888,
+        },
+        Object {
+          "latitude": 41.8883299,
+          "longitude": -87.6370042,
+        },
+        Object {
+          "latitude": 41.8883325,
+          "longitude": -87.6369002,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8889277,
+          "longitude": -87.636795,
+        },
+        Object {
+          "latitude": 41.8884421,
+          "longitude": -87.6361522,
+        },
+        Object {
+          "latitude": 41.8884511,
+          "longitude": -87.6353524,
+        },
+        Object {
+          "latitude": 41.8884522,
+          "longitude": -87.6352577,
+        },
+        Object {
+          "latitude": 41.8884539,
+          "longitude": -87.6350861,
+        },
+        Object {
+          "latitude": 41.8884602,
+          "longitude": -87.6344297,
+        },
+        Object {
+          "latitude": 41.8884619,
+          "longitude": -87.6342572,
+        },
+        Object {
+          "latitude": 41.8884629,
+          "longitude": -87.6341473,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8890179,
+          "longitude": -87.6369566,
+        },
+        Object {
+          "latitude": 41.8889277,
+          "longitude": -87.636795,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8884629,
+          "longitude": -87.6341473,
+        },
+        Object {
+          "latitude": 41.888464,
+          "longitude": -87.6339936,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.8843126,
+          "longitude": -87.6276319,
+        },
+        Object {
+          "latitude": 41.8838544,
+          "longitude": -87.6276193,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+  <Polyline
+    coordinates={
+      Array [
+        Object {
+          "latitude": 41.884321,
+          "longitude": -87.626475,
+        },
+        Object {
+          "latitude": 41.8841797,
+          "longitude": -87.6264719,
+        },
+      ]
+    }
+    strokeColor="#42b0f4"
+    strokeWidth={3}
+  />
+</MapView>
 `;
 
 exports[`Check if our main app renders correctly 1`] = `

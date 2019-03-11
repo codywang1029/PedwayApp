@@ -83,11 +83,15 @@ export default class RenderPedway extends Component {
   }
 
   componentWillMount() {
-    this.parseJSONtoModel(this.props.JSONData);
+    if(this.props.JSONData!==undefined) {
+      this.parseJSONtoModel(this.props.JSONData);
+    }
   }
 
   componentWillReceiveProps(next) {
-    this.parseJSONtoModel(next.JSONData);
+    if(this.props.JSONData!==undefined) {
+      this.parseJSONtoModel(next.JSONData);
+    }
   }
 
   render() {
