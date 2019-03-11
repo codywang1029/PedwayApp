@@ -46,12 +46,6 @@ test('Check Status Setter', () => {
   expect(testEntrance.getStatus()).toBe('closed');
 });
 
-test('Check Coordinate Setter', () => {
-  const testVar = new PedwayCoordinate(42, 42);
-  testVar.setCoordinates(-70.20232, 42.353523);
-  expect(testVar.getLatitude()).toBeCloseTo(-70.20232);
-  expect(testVar.getLongitude()).toBeCloseTo(42.353523);
-});
 
 test('Check Elevator Setter', () => {
   const testCoord = new PedwayCoordinate(-70.20232, 42.353523);
@@ -59,3 +53,4 @@ test('Check Elevator Setter', () => {
   testEntrance.setElevator(true);
   expect(testEntrance.getElevatorAvailability()).toBe(true);
 });
+

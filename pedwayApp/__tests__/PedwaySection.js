@@ -27,3 +27,4 @@ test('Check Coordinates Setter', () => {
   expect(testSection.getCoordinates()).toEqual([testCoord2, testCoord1]);
 });
 
+

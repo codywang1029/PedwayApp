@@ -195,260 +195,12 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
       }
     >
       <MapView
-        customMapStyle={
-          Array [
-            Object {
-              "elementType": "geometry",
-              "stylers": Array [
-                Object {
-                  "color": "#212121",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.icon",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "stylers": Array [
-                Object {
-                  "color": "#757575",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.stroke",
-              "stylers": Array [
-                Object {
-                  "color": "#212121",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "administrative",
-              "stylers": Array [
-                Object {
-                  "color": "#757575",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "administrative.country",
-              "stylers": Array [
-                Object {
-                  "color": "#9e9e9e",
-                },
-              ],
-            },
-            Object {
-              "featureType": "administrative.land_parcel",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "administrative.locality",
-              "stylers": Array [
-                Object {
-                  "color": "#bdbdbd",
-                },
-              ],
-            },
-            Object {
-              "featureType": "administrative.neighborhood",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text",
-              "featureType": "poi",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "poi",
-              "stylers": Array [
-                Object {
-                  "color": "#757575",
-                },
-              ],
-            },
-            Object {
-              "featureType": "poi.business",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "poi.park",
-              "stylers": Array [
-                Object {
-                  "color": "#181818",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "poi.park",
-              "stylers": Array [
-                Object {
-                  "color": "#616161",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.stroke",
-              "featureType": "poi.park",
-              "stylers": Array [
-                Object {
-                  "color": "#1b1b1b",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry.fill",
-              "featureType": "road",
-              "stylers": Array [
-                Object {
-                  "color": "#2c2c2c",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels",
-              "featureType": "road",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.icon",
-              "featureType": "road",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "road",
-              "stylers": Array [
-                Object {
-                  "color": "#8a8a8a",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "road.arterial",
-              "stylers": Array [
-                Object {
-                  "color": "#373737",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "road.highway",
-              "stylers": Array [
-                Object {
-                  "color": "#3c3c3c",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "road.highway.controlled_access",
-              "stylers": Array [
-                Object {
-                  "color": "#4e4e4e",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "road.local",
-              "stylers": Array [
-                Object {
-                  "color": "#616161",
-                },
-              ],
-            },
-            Object {
-              "featureType": "transit",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "transit",
-              "stylers": Array [
-                Object {
-                  "color": "#757575",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "water",
-              "stylers": Array [
-                Object {
-                  "color": "#000000",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text",
-              "featureType": "water",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "water",
-              "stylers": Array [
-                Object {
-                  "color": "#3d3d3d",
-                },
-              ],
-            },
-          ]
-        }
         region={
           Object {
-            "latitude": -88.224916,
-            "latitudeDelta": 0.1,
-            "longitude": 40.113918,
-            "longitudeDelta": 0.1,
+            "latitude": 41.881899,
+            "latitudeDelta": 0.02,
+            "longitude": -87.623977,
+            "longitudeDelta": 0.02,
           }
         }
         style={
@@ -465,48 +217,659 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         <Marker
           coordinate={
             Object {
-              "latitude": -88.224916,
-              "longitude": 40.113918,
+              "latitude": 41.8862637,
+              "longitude": -87.6306729,
             }
           }
           pinColor="#1198ff"
-          title="You"
         />
-        <Polyline
-          coordinates={
-            Array [
-              Object {
-                "latitude": 40.143,
-                "longitude": -88.231,
-              },
-              Object {
-                "latitude": 40.0953,
-                "longitude": -88.255462,
-              },
-              Object {
-                "latitude": 40.068305,
-                "longitude": -88.205,
-              },
-            ]
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8859675,
+              "longitude": -87.6308302,
+            }
           }
-          strokeColor="#42b0f4"
-          strokeWidth={3}
+          pinColor="#1198ff"
         />
-        <Polyline
-          coordinates={
-            Array [
-              Object {
-                "latitude": 40.1163,
-                "longitude": -88.2737,
-              },
-              Object {
-                "latitude": 40.116329,
-                "longitude": -88.224462,
-              },
-            ]
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8863129,
+              "longitude": -87.6306746,
+            }
           }
-          strokeColor="#42b0f4"
-          strokeWidth={3}
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.885963,
+              "longitude": -87.6311264,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8858832,
+              "longitude": -87.6281675,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8833266,
+              "longitude": -87.626503,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8831073,
+              "longitude": -87.6264962,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8883616,
+              "longitude": -87.6364478,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8883325,
+              "longitude": -87.6369002,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8848508,
+              "longitude": -87.631341,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8838464,
+              "longitude": -87.6310922,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8836083,
+              "longitude": -87.6326252,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8836132,
+              "longitude": -87.6322178,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8863955,
+              "longitude": -87.6293223,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8866922,
+              "longitude": -87.6290591,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8867157,
+              "longitude": -87.6306371,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.883854,
+              "longitude": -87.6280557,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.883855,
+              "longitude": -87.6276585,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8848386,
+              "longitude": -87.6238166,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8854002,
+              "longitude": -87.6229453,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8854601,
+              "longitude": -87.6218723,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8855495,
+              "longitude": -87.621512,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8851112,
+              "longitude": -87.6218641,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8871541,
+              "longitude": -87.6209853,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8881075,
+              "longitude": -87.6235577,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8763932,
+              "longitude": -87.6318076,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8763826,
+              "longitude": -87.6326191,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8821493,
+              "longitude": -87.6398754,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8821541,
+              "longitude": -87.6394836,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8821589,
+              "longitude": -87.6387431,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8880688,
+              "longitude": -87.6378628,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8888128,
+              "longitude": -87.6370858,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8887065,
+              "longitude": -87.6341584,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8884629,
+              "longitude": -87.6341473,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.88418,
+              "longitude": -87.6223802,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841742,
+              "longitude": -87.6252636,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841717,
+              "longitude": -87.6247064,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.88462,
+              "longitude": -87.6248016,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8843321,
+              "longitude": -87.6246246,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841105,
+              "longitude": -87.624521,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8838448,
+              "longitude": -87.6289736,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841318,
+              "longitude": -87.6244735,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8828138,
+              "longitude": -87.6245449,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8811955,
+              "longitude": -87.6245151,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8827041,
+              "longitude": -87.6245182,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8840305,
+              "longitude": -87.6245532,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8843728,
+              "longitude": -87.6242429,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.884254,
+              "longitude": -87.623797,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8842327,
+              "longitude": -87.6232655,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8770782,
+              "longitude": -87.6244202,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841758,
+              "longitude": -87.6218876,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8842002,
+              "longitude": -87.6188103,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841793,
+              "longitude": -87.6226846,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841777,
+              "longitude": -87.6233237,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8784329,
+              "longitude": -87.6239591,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8812086,
+              "longitude": -87.630338,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8850343,
+              "longitude": -87.621859,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8850138,
+              "longitude": -87.6215013,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8865979,
+              "longitude": -87.619237,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8869896,
+              "longitude": -87.6238213,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841792,
+              "longitude": -87.6263683,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8871889,
+              "longitude": -87.6201,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8871167,
+              "longitude": -87.6200488,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8872455,
+              "longitude": -87.6205933,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8770101,
+              "longitude": -87.6232587,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8770105,
+              "longitude": -87.6230833,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8861344,
+              "longitude": -87.6220432,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8876134,
+              "longitude": -87.6213563,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8864427,
+              "longitude": -87.6215568,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8864438,
+              "longitude": -87.6219347,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8866351,
+              "longitude": -87.6236493,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8858755,
+              "longitude": -87.629274,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8859325,
+              "longitude": -87.6293521,
+            }
+          }
+          pinColor="#1198ff"
         />
       </MapView>
       <View
@@ -828,260 +1191,12 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
       }
     >
       <MapView
-        customMapStyle={
-          Array [
-            Object {
-              "elementType": "geometry",
-              "stylers": Array [
-                Object {
-                  "color": "#212121",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.icon",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "stylers": Array [
-                Object {
-                  "color": "#757575",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.stroke",
-              "stylers": Array [
-                Object {
-                  "color": "#212121",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "administrative",
-              "stylers": Array [
-                Object {
-                  "color": "#757575",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "administrative.country",
-              "stylers": Array [
-                Object {
-                  "color": "#9e9e9e",
-                },
-              ],
-            },
-            Object {
-              "featureType": "administrative.land_parcel",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "administrative.locality",
-              "stylers": Array [
-                Object {
-                  "color": "#bdbdbd",
-                },
-              ],
-            },
-            Object {
-              "featureType": "administrative.neighborhood",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text",
-              "featureType": "poi",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "poi",
-              "stylers": Array [
-                Object {
-                  "color": "#757575",
-                },
-              ],
-            },
-            Object {
-              "featureType": "poi.business",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "poi.park",
-              "stylers": Array [
-                Object {
-                  "color": "#181818",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "poi.park",
-              "stylers": Array [
-                Object {
-                  "color": "#616161",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.stroke",
-              "featureType": "poi.park",
-              "stylers": Array [
-                Object {
-                  "color": "#1b1b1b",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry.fill",
-              "featureType": "road",
-              "stylers": Array [
-                Object {
-                  "color": "#2c2c2c",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels",
-              "featureType": "road",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.icon",
-              "featureType": "road",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "road",
-              "stylers": Array [
-                Object {
-                  "color": "#8a8a8a",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "road.arterial",
-              "stylers": Array [
-                Object {
-                  "color": "#373737",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "road.highway",
-              "stylers": Array [
-                Object {
-                  "color": "#3c3c3c",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "road.highway.controlled_access",
-              "stylers": Array [
-                Object {
-                  "color": "#4e4e4e",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "road.local",
-              "stylers": Array [
-                Object {
-                  "color": "#616161",
-                },
-              ],
-            },
-            Object {
-              "featureType": "transit",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "transit",
-              "stylers": Array [
-                Object {
-                  "color": "#757575",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "water",
-              "stylers": Array [
-                Object {
-                  "color": "#000000",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text",
-              "featureType": "water",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "water",
-              "stylers": Array [
-                Object {
-                  "color": "#3d3d3d",
-                },
-              ],
-            },
-          ]
-        }
         region={
           Object {
-            "latitude": -88.224916,
-            "latitudeDelta": 0.1,
-            "longitude": 40.113918,
-            "longitudeDelta": 0.1,
+            "latitude": 41.881899,
+            "latitudeDelta": 0.02,
+            "longitude": -87.623977,
+            "longitudeDelta": 0.02,
           }
         }
         style={
@@ -1098,48 +1213,659 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
         <Marker
           coordinate={
             Object {
-              "latitude": -88.224916,
-              "longitude": 40.113918,
+              "latitude": 41.8862637,
+              "longitude": -87.6306729,
             }
           }
           pinColor="#1198ff"
-          title="You"
         />
-        <Polyline
-          coordinates={
-            Array [
-              Object {
-                "latitude": 40.143,
-                "longitude": -88.231,
-              },
-              Object {
-                "latitude": 40.0953,
-                "longitude": -88.255462,
-              },
-              Object {
-                "latitude": 40.068305,
-                "longitude": -88.205,
-              },
-            ]
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8859675,
+              "longitude": -87.6308302,
+            }
           }
-          strokeColor="#42b0f4"
-          strokeWidth={3}
+          pinColor="#1198ff"
         />
-        <Polyline
-          coordinates={
-            Array [
-              Object {
-                "latitude": 40.1163,
-                "longitude": -88.2737,
-              },
-              Object {
-                "latitude": 40.116329,
-                "longitude": -88.224462,
-              },
-            ]
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8863129,
+              "longitude": -87.6306746,
+            }
           }
-          strokeColor="#42b0f4"
-          strokeWidth={3}
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.885963,
+              "longitude": -87.6311264,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8858832,
+              "longitude": -87.6281675,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8833266,
+              "longitude": -87.626503,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8831073,
+              "longitude": -87.6264962,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8883616,
+              "longitude": -87.6364478,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8883325,
+              "longitude": -87.6369002,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8848508,
+              "longitude": -87.631341,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8838464,
+              "longitude": -87.6310922,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8836083,
+              "longitude": -87.6326252,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8836132,
+              "longitude": -87.6322178,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8863955,
+              "longitude": -87.6293223,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8866922,
+              "longitude": -87.6290591,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8867157,
+              "longitude": -87.6306371,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.883854,
+              "longitude": -87.6280557,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.883855,
+              "longitude": -87.6276585,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8848386,
+              "longitude": -87.6238166,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8854002,
+              "longitude": -87.6229453,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8854601,
+              "longitude": -87.6218723,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8855495,
+              "longitude": -87.621512,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8851112,
+              "longitude": -87.6218641,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8871541,
+              "longitude": -87.6209853,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8881075,
+              "longitude": -87.6235577,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8763932,
+              "longitude": -87.6318076,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8763826,
+              "longitude": -87.6326191,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8821493,
+              "longitude": -87.6398754,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8821541,
+              "longitude": -87.6394836,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8821589,
+              "longitude": -87.6387431,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8880688,
+              "longitude": -87.6378628,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8888128,
+              "longitude": -87.6370858,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8887065,
+              "longitude": -87.6341584,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8884629,
+              "longitude": -87.6341473,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.88418,
+              "longitude": -87.6223802,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841742,
+              "longitude": -87.6252636,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841717,
+              "longitude": -87.6247064,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.88462,
+              "longitude": -87.6248016,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8843321,
+              "longitude": -87.6246246,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841105,
+              "longitude": -87.624521,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8838448,
+              "longitude": -87.6289736,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841318,
+              "longitude": -87.6244735,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8828138,
+              "longitude": -87.6245449,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8811955,
+              "longitude": -87.6245151,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8827041,
+              "longitude": -87.6245182,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8840305,
+              "longitude": -87.6245532,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8843728,
+              "longitude": -87.6242429,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.884254,
+              "longitude": -87.623797,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8842327,
+              "longitude": -87.6232655,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8770782,
+              "longitude": -87.6244202,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841758,
+              "longitude": -87.6218876,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8842002,
+              "longitude": -87.6188103,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841793,
+              "longitude": -87.6226846,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841777,
+              "longitude": -87.6233237,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8784329,
+              "longitude": -87.6239591,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8812086,
+              "longitude": -87.630338,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8850343,
+              "longitude": -87.621859,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8850138,
+              "longitude": -87.6215013,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8865979,
+              "longitude": -87.619237,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8869896,
+              "longitude": -87.6238213,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841792,
+              "longitude": -87.6263683,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8871889,
+              "longitude": -87.6201,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8871167,
+              "longitude": -87.6200488,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8872455,
+              "longitude": -87.6205933,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8770101,
+              "longitude": -87.6232587,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8770105,
+              "longitude": -87.6230833,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8861344,
+              "longitude": -87.6220432,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8876134,
+              "longitude": -87.6213563,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8864427,
+              "longitude": -87.6215568,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8864438,
+              "longitude": -87.6219347,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8866351,
+              "longitude": -87.6236493,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8858755,
+              "longitude": -87.629274,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8859325,
+              "longitude": -87.6293521,
+            }
+          }
+          pinColor="#1198ff"
         />
       </MapView>
       <View
@@ -1461,260 +2187,12 @@ exports[`Check if our MainView renders correctly 1`] = `
       }
     >
       <MapView
-        customMapStyle={
-          Array [
-            Object {
-              "elementType": "geometry",
-              "stylers": Array [
-                Object {
-                  "color": "#212121",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.icon",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "stylers": Array [
-                Object {
-                  "color": "#757575",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.stroke",
-              "stylers": Array [
-                Object {
-                  "color": "#212121",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "administrative",
-              "stylers": Array [
-                Object {
-                  "color": "#757575",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "administrative.country",
-              "stylers": Array [
-                Object {
-                  "color": "#9e9e9e",
-                },
-              ],
-            },
-            Object {
-              "featureType": "administrative.land_parcel",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "administrative.locality",
-              "stylers": Array [
-                Object {
-                  "color": "#bdbdbd",
-                },
-              ],
-            },
-            Object {
-              "featureType": "administrative.neighborhood",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text",
-              "featureType": "poi",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "poi",
-              "stylers": Array [
-                Object {
-                  "color": "#757575",
-                },
-              ],
-            },
-            Object {
-              "featureType": "poi.business",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "poi.park",
-              "stylers": Array [
-                Object {
-                  "color": "#181818",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "poi.park",
-              "stylers": Array [
-                Object {
-                  "color": "#616161",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.stroke",
-              "featureType": "poi.park",
-              "stylers": Array [
-                Object {
-                  "color": "#1b1b1b",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry.fill",
-              "featureType": "road",
-              "stylers": Array [
-                Object {
-                  "color": "#2c2c2c",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels",
-              "featureType": "road",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.icon",
-              "featureType": "road",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "road",
-              "stylers": Array [
-                Object {
-                  "color": "#8a8a8a",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "road.arterial",
-              "stylers": Array [
-                Object {
-                  "color": "#373737",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "road.highway",
-              "stylers": Array [
-                Object {
-                  "color": "#3c3c3c",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "road.highway.controlled_access",
-              "stylers": Array [
-                Object {
-                  "color": "#4e4e4e",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "road.local",
-              "stylers": Array [
-                Object {
-                  "color": "#616161",
-                },
-              ],
-            },
-            Object {
-              "featureType": "transit",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "transit",
-              "stylers": Array [
-                Object {
-                  "color": "#757575",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "water",
-              "stylers": Array [
-                Object {
-                  "color": "#000000",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text",
-              "featureType": "water",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "water",
-              "stylers": Array [
-                Object {
-                  "color": "#3d3d3d",
-                },
-              ],
-            },
-          ]
-        }
         region={
           Object {
-            "latitude": -88.224916,
-            "latitudeDelta": 0.1,
-            "longitude": 40.113918,
-            "longitudeDelta": 0.1,
+            "latitude": 41.881899,
+            "latitudeDelta": 0.02,
+            "longitude": -87.623977,
+            "longitudeDelta": 0.02,
           }
         }
         style={
@@ -1731,48 +2209,659 @@ exports[`Check if our MainView renders correctly 1`] = `
         <Marker
           coordinate={
             Object {
-              "latitude": -88.224916,
-              "longitude": 40.113918,
+              "latitude": 41.8862637,
+              "longitude": -87.6306729,
             }
           }
           pinColor="#1198ff"
-          title="You"
         />
-        <Polyline
-          coordinates={
-            Array [
-              Object {
-                "latitude": 40.143,
-                "longitude": -88.231,
-              },
-              Object {
-                "latitude": 40.0953,
-                "longitude": -88.255462,
-              },
-              Object {
-                "latitude": 40.068305,
-                "longitude": -88.205,
-              },
-            ]
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8859675,
+              "longitude": -87.6308302,
+            }
           }
-          strokeColor="#42b0f4"
-          strokeWidth={3}
+          pinColor="#1198ff"
         />
-        <Polyline
-          coordinates={
-            Array [
-              Object {
-                "latitude": 40.1163,
-                "longitude": -88.2737,
-              },
-              Object {
-                "latitude": 40.116329,
-                "longitude": -88.224462,
-              },
-            ]
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8863129,
+              "longitude": -87.6306746,
+            }
           }
-          strokeColor="#42b0f4"
-          strokeWidth={3}
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.885963,
+              "longitude": -87.6311264,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8858832,
+              "longitude": -87.6281675,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8833266,
+              "longitude": -87.626503,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8831073,
+              "longitude": -87.6264962,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8883616,
+              "longitude": -87.6364478,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8883325,
+              "longitude": -87.6369002,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8848508,
+              "longitude": -87.631341,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8838464,
+              "longitude": -87.6310922,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8836083,
+              "longitude": -87.6326252,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8836132,
+              "longitude": -87.6322178,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8863955,
+              "longitude": -87.6293223,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8866922,
+              "longitude": -87.6290591,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8867157,
+              "longitude": -87.6306371,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.883854,
+              "longitude": -87.6280557,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.883855,
+              "longitude": -87.6276585,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8848386,
+              "longitude": -87.6238166,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8854002,
+              "longitude": -87.6229453,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8854601,
+              "longitude": -87.6218723,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8855495,
+              "longitude": -87.621512,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8851112,
+              "longitude": -87.6218641,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8871541,
+              "longitude": -87.6209853,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8881075,
+              "longitude": -87.6235577,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8763932,
+              "longitude": -87.6318076,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8763826,
+              "longitude": -87.6326191,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8821493,
+              "longitude": -87.6398754,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8821541,
+              "longitude": -87.6394836,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8821589,
+              "longitude": -87.6387431,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8880688,
+              "longitude": -87.6378628,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8888128,
+              "longitude": -87.6370858,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8887065,
+              "longitude": -87.6341584,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8884629,
+              "longitude": -87.6341473,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.88418,
+              "longitude": -87.6223802,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841742,
+              "longitude": -87.6252636,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841717,
+              "longitude": -87.6247064,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.88462,
+              "longitude": -87.6248016,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8843321,
+              "longitude": -87.6246246,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841105,
+              "longitude": -87.624521,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8838448,
+              "longitude": -87.6289736,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841318,
+              "longitude": -87.6244735,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8828138,
+              "longitude": -87.6245449,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8811955,
+              "longitude": -87.6245151,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8827041,
+              "longitude": -87.6245182,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8840305,
+              "longitude": -87.6245532,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8843728,
+              "longitude": -87.6242429,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.884254,
+              "longitude": -87.623797,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8842327,
+              "longitude": -87.6232655,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8770782,
+              "longitude": -87.6244202,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841758,
+              "longitude": -87.6218876,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8842002,
+              "longitude": -87.6188103,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841793,
+              "longitude": -87.6226846,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841777,
+              "longitude": -87.6233237,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8784329,
+              "longitude": -87.6239591,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8812086,
+              "longitude": -87.630338,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8850343,
+              "longitude": -87.621859,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8850138,
+              "longitude": -87.6215013,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8865979,
+              "longitude": -87.619237,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8869896,
+              "longitude": -87.6238213,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841792,
+              "longitude": -87.6263683,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8871889,
+              "longitude": -87.6201,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8871167,
+              "longitude": -87.6200488,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8872455,
+              "longitude": -87.6205933,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8770101,
+              "longitude": -87.6232587,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8770105,
+              "longitude": -87.6230833,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8861344,
+              "longitude": -87.6220432,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8876134,
+              "longitude": -87.6213563,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8864427,
+              "longitude": -87.6215568,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8864438,
+              "longitude": -87.6219347,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8866351,
+              "longitude": -87.6236493,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8858755,
+              "longitude": -87.629274,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8859325,
+              "longitude": -87.6293521,
+            }
+          }
+          pinColor="#1198ff"
         />
       </MapView>
       <View
@@ -2094,260 +3183,12 @@ exports[`Check if our RenderPedway renders correctly 1`] = `
       }
     >
       <MapView
-        customMapStyle={
-          Array [
-            Object {
-              "elementType": "geometry",
-              "stylers": Array [
-                Object {
-                  "color": "#212121",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.icon",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "stylers": Array [
-                Object {
-                  "color": "#757575",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.stroke",
-              "stylers": Array [
-                Object {
-                  "color": "#212121",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "administrative",
-              "stylers": Array [
-                Object {
-                  "color": "#757575",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "administrative.country",
-              "stylers": Array [
-                Object {
-                  "color": "#9e9e9e",
-                },
-              ],
-            },
-            Object {
-              "featureType": "administrative.land_parcel",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "administrative.locality",
-              "stylers": Array [
-                Object {
-                  "color": "#bdbdbd",
-                },
-              ],
-            },
-            Object {
-              "featureType": "administrative.neighborhood",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text",
-              "featureType": "poi",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "poi",
-              "stylers": Array [
-                Object {
-                  "color": "#757575",
-                },
-              ],
-            },
-            Object {
-              "featureType": "poi.business",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "poi.park",
-              "stylers": Array [
-                Object {
-                  "color": "#181818",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "poi.park",
-              "stylers": Array [
-                Object {
-                  "color": "#616161",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.stroke",
-              "featureType": "poi.park",
-              "stylers": Array [
-                Object {
-                  "color": "#1b1b1b",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry.fill",
-              "featureType": "road",
-              "stylers": Array [
-                Object {
-                  "color": "#2c2c2c",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels",
-              "featureType": "road",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.icon",
-              "featureType": "road",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "road",
-              "stylers": Array [
-                Object {
-                  "color": "#8a8a8a",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "road.arterial",
-              "stylers": Array [
-                Object {
-                  "color": "#373737",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "road.highway",
-              "stylers": Array [
-                Object {
-                  "color": "#3c3c3c",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "road.highway.controlled_access",
-              "stylers": Array [
-                Object {
-                  "color": "#4e4e4e",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "road.local",
-              "stylers": Array [
-                Object {
-                  "color": "#616161",
-                },
-              ],
-            },
-            Object {
-              "featureType": "transit",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "transit",
-              "stylers": Array [
-                Object {
-                  "color": "#757575",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "water",
-              "stylers": Array [
-                Object {
-                  "color": "#000000",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text",
-              "featureType": "water",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "water",
-              "stylers": Array [
-                Object {
-                  "color": "#3d3d3d",
-                },
-              ],
-            },
-          ]
-        }
         region={
           Object {
-            "latitude": -88.224916,
-            "latitudeDelta": 0.1,
-            "longitude": 40.113918,
-            "longitudeDelta": 0.1,
+            "latitude": 41.881899,
+            "latitudeDelta": 0.02,
+            "longitude": -87.623977,
+            "longitudeDelta": 0.02,
           }
         }
         style={
@@ -2364,48 +3205,659 @@ exports[`Check if our RenderPedway renders correctly 1`] = `
         <Marker
           coordinate={
             Object {
-              "latitude": -88.224916,
-              "longitude": 40.113918,
+              "latitude": 41.8862637,
+              "longitude": -87.6306729,
             }
           }
           pinColor="#1198ff"
-          title="You"
         />
-        <Polyline
-          coordinates={
-            Array [
-              Object {
-                "latitude": 40.143,
-                "longitude": -88.231,
-              },
-              Object {
-                "latitude": 40.0953,
-                "longitude": -88.255462,
-              },
-              Object {
-                "latitude": 40.068305,
-                "longitude": -88.205,
-              },
-            ]
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8859675,
+              "longitude": -87.6308302,
+            }
           }
-          strokeColor="#42b0f4"
-          strokeWidth={3}
+          pinColor="#1198ff"
         />
-        <Polyline
-          coordinates={
-            Array [
-              Object {
-                "latitude": 40.1163,
-                "longitude": -88.2737,
-              },
-              Object {
-                "latitude": 40.116329,
-                "longitude": -88.224462,
-              },
-            ]
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8863129,
+              "longitude": -87.6306746,
+            }
           }
-          strokeColor="#42b0f4"
-          strokeWidth={3}
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.885963,
+              "longitude": -87.6311264,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8858832,
+              "longitude": -87.6281675,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8833266,
+              "longitude": -87.626503,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8831073,
+              "longitude": -87.6264962,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8883616,
+              "longitude": -87.6364478,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8883325,
+              "longitude": -87.6369002,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8848508,
+              "longitude": -87.631341,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8838464,
+              "longitude": -87.6310922,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8836083,
+              "longitude": -87.6326252,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8836132,
+              "longitude": -87.6322178,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8863955,
+              "longitude": -87.6293223,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8866922,
+              "longitude": -87.6290591,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8867157,
+              "longitude": -87.6306371,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.883854,
+              "longitude": -87.6280557,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.883855,
+              "longitude": -87.6276585,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8848386,
+              "longitude": -87.6238166,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8854002,
+              "longitude": -87.6229453,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8854601,
+              "longitude": -87.6218723,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8855495,
+              "longitude": -87.621512,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8851112,
+              "longitude": -87.6218641,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8871541,
+              "longitude": -87.6209853,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8881075,
+              "longitude": -87.6235577,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8763932,
+              "longitude": -87.6318076,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8763826,
+              "longitude": -87.6326191,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8821493,
+              "longitude": -87.6398754,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8821541,
+              "longitude": -87.6394836,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8821589,
+              "longitude": -87.6387431,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8880688,
+              "longitude": -87.6378628,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8888128,
+              "longitude": -87.6370858,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8887065,
+              "longitude": -87.6341584,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8884629,
+              "longitude": -87.6341473,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.88418,
+              "longitude": -87.6223802,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841742,
+              "longitude": -87.6252636,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841717,
+              "longitude": -87.6247064,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.88462,
+              "longitude": -87.6248016,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8843321,
+              "longitude": -87.6246246,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841105,
+              "longitude": -87.624521,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8838448,
+              "longitude": -87.6289736,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841318,
+              "longitude": -87.6244735,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8828138,
+              "longitude": -87.6245449,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8811955,
+              "longitude": -87.6245151,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8827041,
+              "longitude": -87.6245182,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8840305,
+              "longitude": -87.6245532,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8843728,
+              "longitude": -87.6242429,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.884254,
+              "longitude": -87.623797,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8842327,
+              "longitude": -87.6232655,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8770782,
+              "longitude": -87.6244202,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841758,
+              "longitude": -87.6218876,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8842002,
+              "longitude": -87.6188103,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841793,
+              "longitude": -87.6226846,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841777,
+              "longitude": -87.6233237,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8784329,
+              "longitude": -87.6239591,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8812086,
+              "longitude": -87.630338,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8850343,
+              "longitude": -87.621859,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8850138,
+              "longitude": -87.6215013,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8865979,
+              "longitude": -87.619237,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8869896,
+              "longitude": -87.6238213,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841792,
+              "longitude": -87.6263683,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8871889,
+              "longitude": -87.6201,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8871167,
+              "longitude": -87.6200488,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8872455,
+              "longitude": -87.6205933,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8770101,
+              "longitude": -87.6232587,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8770105,
+              "longitude": -87.6230833,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8861344,
+              "longitude": -87.6220432,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8876134,
+              "longitude": -87.6213563,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8864427,
+              "longitude": -87.6215568,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8864438,
+              "longitude": -87.6219347,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8866351,
+              "longitude": -87.6236493,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8858755,
+              "longitude": -87.629274,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8859325,
+              "longitude": -87.6293521,
+            }
+          }
+          pinColor="#1198ff"
         />
       </MapView>
       <View
@@ -2727,260 +4179,12 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
       }
     >
       <MapView
-        customMapStyle={
-          Array [
-            Object {
-              "elementType": "geometry",
-              "stylers": Array [
-                Object {
-                  "color": "#212121",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.icon",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "stylers": Array [
-                Object {
-                  "color": "#757575",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.stroke",
-              "stylers": Array [
-                Object {
-                  "color": "#212121",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "administrative",
-              "stylers": Array [
-                Object {
-                  "color": "#757575",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "administrative.country",
-              "stylers": Array [
-                Object {
-                  "color": "#9e9e9e",
-                },
-              ],
-            },
-            Object {
-              "featureType": "administrative.land_parcel",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "administrative.locality",
-              "stylers": Array [
-                Object {
-                  "color": "#bdbdbd",
-                },
-              ],
-            },
-            Object {
-              "featureType": "administrative.neighborhood",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text",
-              "featureType": "poi",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "poi",
-              "stylers": Array [
-                Object {
-                  "color": "#757575",
-                },
-              ],
-            },
-            Object {
-              "featureType": "poi.business",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "poi.park",
-              "stylers": Array [
-                Object {
-                  "color": "#181818",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "poi.park",
-              "stylers": Array [
-                Object {
-                  "color": "#616161",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.stroke",
-              "featureType": "poi.park",
-              "stylers": Array [
-                Object {
-                  "color": "#1b1b1b",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry.fill",
-              "featureType": "road",
-              "stylers": Array [
-                Object {
-                  "color": "#2c2c2c",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels",
-              "featureType": "road",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.icon",
-              "featureType": "road",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "road",
-              "stylers": Array [
-                Object {
-                  "color": "#8a8a8a",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "road.arterial",
-              "stylers": Array [
-                Object {
-                  "color": "#373737",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "road.highway",
-              "stylers": Array [
-                Object {
-                  "color": "#3c3c3c",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "road.highway.controlled_access",
-              "stylers": Array [
-                Object {
-                  "color": "#4e4e4e",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "road.local",
-              "stylers": Array [
-                Object {
-                  "color": "#616161",
-                },
-              ],
-            },
-            Object {
-              "featureType": "transit",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "transit",
-              "stylers": Array [
-                Object {
-                  "color": "#757575",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "water",
-              "stylers": Array [
-                Object {
-                  "color": "#000000",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text",
-              "featureType": "water",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "water",
-              "stylers": Array [
-                Object {
-                  "color": "#3d3d3d",
-                },
-              ],
-            },
-          ]
-        }
         region={
           Object {
-            "latitude": -88.224916,
-            "latitudeDelta": 0.1,
-            "longitude": 40.113918,
-            "longitudeDelta": 0.1,
+            "latitude": 41.881899,
+            "latitudeDelta": 0.02,
+            "longitude": -87.623977,
+            "longitudeDelta": 0.02,
           }
         }
         style={
@@ -2997,48 +4201,659 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
         <Marker
           coordinate={
             Object {
-              "latitude": -88.224916,
-              "longitude": 40.113918,
+              "latitude": 41.8862637,
+              "longitude": -87.6306729,
             }
           }
           pinColor="#1198ff"
-          title="You"
         />
-        <Polyline
-          coordinates={
-            Array [
-              Object {
-                "latitude": 40.143,
-                "longitude": -88.231,
-              },
-              Object {
-                "latitude": 40.0953,
-                "longitude": -88.255462,
-              },
-              Object {
-                "latitude": 40.068305,
-                "longitude": -88.205,
-              },
-            ]
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8859675,
+              "longitude": -87.6308302,
+            }
           }
-          strokeColor="#42b0f4"
-          strokeWidth={3}
+          pinColor="#1198ff"
         />
-        <Polyline
-          coordinates={
-            Array [
-              Object {
-                "latitude": 40.1163,
-                "longitude": -88.2737,
-              },
-              Object {
-                "latitude": 40.116329,
-                "longitude": -88.224462,
-              },
-            ]
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8863129,
+              "longitude": -87.6306746,
+            }
           }
-          strokeColor="#42b0f4"
-          strokeWidth={3}
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.885963,
+              "longitude": -87.6311264,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8858832,
+              "longitude": -87.6281675,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8833266,
+              "longitude": -87.626503,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8831073,
+              "longitude": -87.6264962,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8883616,
+              "longitude": -87.6364478,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8883325,
+              "longitude": -87.6369002,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8848508,
+              "longitude": -87.631341,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8838464,
+              "longitude": -87.6310922,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8836083,
+              "longitude": -87.6326252,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8836132,
+              "longitude": -87.6322178,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8863955,
+              "longitude": -87.6293223,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8866922,
+              "longitude": -87.6290591,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8867157,
+              "longitude": -87.6306371,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.883854,
+              "longitude": -87.6280557,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.883855,
+              "longitude": -87.6276585,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8848386,
+              "longitude": -87.6238166,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8854002,
+              "longitude": -87.6229453,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8854601,
+              "longitude": -87.6218723,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8855495,
+              "longitude": -87.621512,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8851112,
+              "longitude": -87.6218641,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8871541,
+              "longitude": -87.6209853,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8881075,
+              "longitude": -87.6235577,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8763932,
+              "longitude": -87.6318076,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8763826,
+              "longitude": -87.6326191,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8821493,
+              "longitude": -87.6398754,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8821541,
+              "longitude": -87.6394836,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8821589,
+              "longitude": -87.6387431,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8880688,
+              "longitude": -87.6378628,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8888128,
+              "longitude": -87.6370858,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8887065,
+              "longitude": -87.6341584,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8884629,
+              "longitude": -87.6341473,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.88418,
+              "longitude": -87.6223802,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841742,
+              "longitude": -87.6252636,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841717,
+              "longitude": -87.6247064,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.88462,
+              "longitude": -87.6248016,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8843321,
+              "longitude": -87.6246246,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841105,
+              "longitude": -87.624521,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8838448,
+              "longitude": -87.6289736,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841318,
+              "longitude": -87.6244735,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8828138,
+              "longitude": -87.6245449,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8811955,
+              "longitude": -87.6245151,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8827041,
+              "longitude": -87.6245182,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8840305,
+              "longitude": -87.6245532,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8843728,
+              "longitude": -87.6242429,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.884254,
+              "longitude": -87.623797,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8842327,
+              "longitude": -87.6232655,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8770782,
+              "longitude": -87.6244202,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841758,
+              "longitude": -87.6218876,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8842002,
+              "longitude": -87.6188103,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841793,
+              "longitude": -87.6226846,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841777,
+              "longitude": -87.6233237,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8784329,
+              "longitude": -87.6239591,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8812086,
+              "longitude": -87.630338,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8850343,
+              "longitude": -87.621859,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8850138,
+              "longitude": -87.6215013,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8865979,
+              "longitude": -87.619237,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8869896,
+              "longitude": -87.6238213,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841792,
+              "longitude": -87.6263683,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8871889,
+              "longitude": -87.6201,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8871167,
+              "longitude": -87.6200488,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8872455,
+              "longitude": -87.6205933,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8770101,
+              "longitude": -87.6232587,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8770105,
+              "longitude": -87.6230833,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8861344,
+              "longitude": -87.6220432,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8876134,
+              "longitude": -87.6213563,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8864427,
+              "longitude": -87.6215568,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8864438,
+              "longitude": -87.6219347,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8866351,
+              "longitude": -87.6236493,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8858755,
+              "longitude": -87.629274,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8859325,
+              "longitude": -87.6293521,
+            }
+          }
+          pinColor="#1198ff"
         />
       </MapView>
       <View
@@ -3360,260 +5175,12 @@ exports[`Check if our main app renders correctly 1`] = `
       }
     >
       <MapView
-        customMapStyle={
-          Array [
-            Object {
-              "elementType": "geometry",
-              "stylers": Array [
-                Object {
-                  "color": "#212121",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.icon",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "stylers": Array [
-                Object {
-                  "color": "#757575",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.stroke",
-              "stylers": Array [
-                Object {
-                  "color": "#212121",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "administrative",
-              "stylers": Array [
-                Object {
-                  "color": "#757575",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "administrative.country",
-              "stylers": Array [
-                Object {
-                  "color": "#9e9e9e",
-                },
-              ],
-            },
-            Object {
-              "featureType": "administrative.land_parcel",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "administrative.locality",
-              "stylers": Array [
-                Object {
-                  "color": "#bdbdbd",
-                },
-              ],
-            },
-            Object {
-              "featureType": "administrative.neighborhood",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text",
-              "featureType": "poi",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "poi",
-              "stylers": Array [
-                Object {
-                  "color": "#757575",
-                },
-              ],
-            },
-            Object {
-              "featureType": "poi.business",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "poi.park",
-              "stylers": Array [
-                Object {
-                  "color": "#181818",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "poi.park",
-              "stylers": Array [
-                Object {
-                  "color": "#616161",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.stroke",
-              "featureType": "poi.park",
-              "stylers": Array [
-                Object {
-                  "color": "#1b1b1b",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry.fill",
-              "featureType": "road",
-              "stylers": Array [
-                Object {
-                  "color": "#2c2c2c",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels",
-              "featureType": "road",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.icon",
-              "featureType": "road",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "road",
-              "stylers": Array [
-                Object {
-                  "color": "#8a8a8a",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "road.arterial",
-              "stylers": Array [
-                Object {
-                  "color": "#373737",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "road.highway",
-              "stylers": Array [
-                Object {
-                  "color": "#3c3c3c",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "road.highway.controlled_access",
-              "stylers": Array [
-                Object {
-                  "color": "#4e4e4e",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "road.local",
-              "stylers": Array [
-                Object {
-                  "color": "#616161",
-                },
-              ],
-            },
-            Object {
-              "featureType": "transit",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "transit",
-              "stylers": Array [
-                Object {
-                  "color": "#757575",
-                },
-              ],
-            },
-            Object {
-              "elementType": "geometry",
-              "featureType": "water",
-              "stylers": Array [
-                Object {
-                  "color": "#000000",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text",
-              "featureType": "water",
-              "stylers": Array [
-                Object {
-                  "visibility": "off",
-                },
-              ],
-            },
-            Object {
-              "elementType": "labels.text.fill",
-              "featureType": "water",
-              "stylers": Array [
-                Object {
-                  "color": "#3d3d3d",
-                },
-              ],
-            },
-          ]
-        }
         region={
           Object {
-            "latitude": -88.224916,
-            "latitudeDelta": 0.1,
-            "longitude": 40.113918,
-            "longitudeDelta": 0.1,
+            "latitude": 41.881899,
+            "latitudeDelta": 0.02,
+            "longitude": -87.623977,
+            "longitudeDelta": 0.02,
           }
         }
         style={
@@ -3630,48 +5197,659 @@ exports[`Check if our main app renders correctly 1`] = `
         <Marker
           coordinate={
             Object {
-              "latitude": -88.224916,
-              "longitude": 40.113918,
+              "latitude": 41.8862637,
+              "longitude": -87.6306729,
             }
           }
           pinColor="#1198ff"
-          title="You"
         />
-        <Polyline
-          coordinates={
-            Array [
-              Object {
-                "latitude": 40.143,
-                "longitude": -88.231,
-              },
-              Object {
-                "latitude": 40.0953,
-                "longitude": -88.255462,
-              },
-              Object {
-                "latitude": 40.068305,
-                "longitude": -88.205,
-              },
-            ]
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8859675,
+              "longitude": -87.6308302,
+            }
           }
-          strokeColor="#42b0f4"
-          strokeWidth={3}
+          pinColor="#1198ff"
         />
-        <Polyline
-          coordinates={
-            Array [
-              Object {
-                "latitude": 40.1163,
-                "longitude": -88.2737,
-              },
-              Object {
-                "latitude": 40.116329,
-                "longitude": -88.224462,
-              },
-            ]
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8863129,
+              "longitude": -87.6306746,
+            }
           }
-          strokeColor="#42b0f4"
-          strokeWidth={3}
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.885963,
+              "longitude": -87.6311264,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8858832,
+              "longitude": -87.6281675,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8833266,
+              "longitude": -87.626503,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8831073,
+              "longitude": -87.6264962,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8883616,
+              "longitude": -87.6364478,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8883325,
+              "longitude": -87.6369002,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8848508,
+              "longitude": -87.631341,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8838464,
+              "longitude": -87.6310922,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8836083,
+              "longitude": -87.6326252,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8836132,
+              "longitude": -87.6322178,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8863955,
+              "longitude": -87.6293223,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8866922,
+              "longitude": -87.6290591,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8867157,
+              "longitude": -87.6306371,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.883854,
+              "longitude": -87.6280557,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.883855,
+              "longitude": -87.6276585,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8848386,
+              "longitude": -87.6238166,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8854002,
+              "longitude": -87.6229453,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8854601,
+              "longitude": -87.6218723,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8855495,
+              "longitude": -87.621512,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8851112,
+              "longitude": -87.6218641,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8871541,
+              "longitude": -87.6209853,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8881075,
+              "longitude": -87.6235577,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8763932,
+              "longitude": -87.6318076,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8763826,
+              "longitude": -87.6326191,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8821493,
+              "longitude": -87.6398754,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8821541,
+              "longitude": -87.6394836,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8821589,
+              "longitude": -87.6387431,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8880688,
+              "longitude": -87.6378628,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8888128,
+              "longitude": -87.6370858,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8887065,
+              "longitude": -87.6341584,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8884629,
+              "longitude": -87.6341473,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.88418,
+              "longitude": -87.6223802,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841742,
+              "longitude": -87.6252636,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841717,
+              "longitude": -87.6247064,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.88462,
+              "longitude": -87.6248016,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8843321,
+              "longitude": -87.6246246,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841105,
+              "longitude": -87.624521,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8838448,
+              "longitude": -87.6289736,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841318,
+              "longitude": -87.6244735,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8828138,
+              "longitude": -87.6245449,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8811955,
+              "longitude": -87.6245151,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8827041,
+              "longitude": -87.6245182,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8840305,
+              "longitude": -87.6245532,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8843728,
+              "longitude": -87.6242429,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.884254,
+              "longitude": -87.623797,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8842327,
+              "longitude": -87.6232655,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8770782,
+              "longitude": -87.6244202,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841758,
+              "longitude": -87.6218876,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8842002,
+              "longitude": -87.6188103,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841793,
+              "longitude": -87.6226846,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841777,
+              "longitude": -87.6233237,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8784329,
+              "longitude": -87.6239591,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8812086,
+              "longitude": -87.630338,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8850343,
+              "longitude": -87.621859,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8850138,
+              "longitude": -87.6215013,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8865979,
+              "longitude": -87.619237,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8869896,
+              "longitude": -87.6238213,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8841792,
+              "longitude": -87.6263683,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8871889,
+              "longitude": -87.6201,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8871167,
+              "longitude": -87.6200488,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8872455,
+              "longitude": -87.6205933,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8770101,
+              "longitude": -87.6232587,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8770105,
+              "longitude": -87.6230833,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8861344,
+              "longitude": -87.6220432,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8876134,
+              "longitude": -87.6213563,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8864427,
+              "longitude": -87.6215568,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8864438,
+              "longitude": -87.6219347,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8866351,
+              "longitude": -87.6236493,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8858755,
+              "longitude": -87.629274,
+            }
+          }
+          pinColor="#1198ff"
+        />
+        <Marker
+          coordinate={
+            Object {
+              "latitude": 41.8859325,
+              "longitude": -87.6293521,
+            }
+          }
+          pinColor="#1198ff"
         />
       </MapView>
       <View
