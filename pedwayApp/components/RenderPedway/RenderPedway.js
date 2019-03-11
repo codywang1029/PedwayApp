@@ -19,6 +19,10 @@ export default class RenderPedway extends Component {
       new PedwayCoordinate(40.116329, -88.224462)]);
     this.state = {
       pedwaySections: [],
+      strokeColor: '#42b0f4',
+      strokeWidth: 3,
+      zIndex: 1,
+
     };
     this.parseJSONtoModel = this.parseJSONtoModel.bind(this);
     this.parseLineJSON = this.parseLineJSON.bind(this);
@@ -86,6 +90,21 @@ export default class RenderPedway extends Component {
     if(this.props.JSONData!==undefined) {
       this.parseJSONtoModel(this.props.JSONData);
     }
+    if(this.props.strokeWidth!==undefined) {
+      this.setState({
+        strokeWidth: this.props.strokeWidth,
+      });
+    }
+    if(this.props.strokeColor!==undefined) {
+      this.setState({
+        strokeColor: this.props.strokeColor,
+      });
+    }
+    if(this.props.zIndex!==undefined) {
+      this.setState({
+        zIndex: this.props.zIndex,
+      });
+    }
   }
 
   componentWillReceiveProps(next) {
@@ -101,8 +120,9 @@ export default class RenderPedway extends Component {
           <Polyline
             key={idx}
             coordinates={path.getJSONList()}
-            strokeColor='#42b0f4'
-            strokeWidth={3}
+            strokeColor={this.state.strokeColor}
+            strokeWidth={this.state.strokeWidth}
+            style={{ zIndex: this.state.zIndex }}
           />
         );
       })
