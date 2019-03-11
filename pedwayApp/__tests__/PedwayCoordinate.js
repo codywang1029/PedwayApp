@@ -29,6 +29,7 @@ test('Check Coordinate Getter', () => {
   expect(testVar.getLongitude()).toBeCloseTo(42.353523);
 });
 
+
 test('Check Coordinate Setter', () => {
   const testVar = new PedwayCoordinate(42, 42);
   expect(testVar.getLatitude()).toBeCloseTo(42);
