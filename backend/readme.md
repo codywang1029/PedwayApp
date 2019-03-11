@@ -27,16 +27,20 @@ This file will be ignored by git, and should contain any configuration environme
 The following variables are currently supported:
 ```
 # Server port
-PORT=
+PORT=...
+
+# Mongo database configuration style. Can be left undefined, or set to 'production', 'testing',
+or 'custom'
+APP_DEPLOYMENT_MODE=...
 
 # Mongo database password
-MONGODB_URI=
+MONGODB_URI=...
 
 # Mongo database username
-MONGODB_UNAME=
+MONGODB_UNAME=...
 
 # Mongo database hostpath
-MONGODB_HOST=
+MONGODB_HOST=...
 
 # Openroutingservice.org API key
 ORS_API_KEY=... 
