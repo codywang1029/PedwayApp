@@ -16,7 +16,7 @@ export default class GroundMapView extends React.Component {
     super();
     this.state = {
       apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
-      latitude:  41.884243,
+      latitude: 41.884243,
       longitude: -87.626936,
       error: null,
       pedwayData: PedwayData,

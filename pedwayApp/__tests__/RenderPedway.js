@@ -1,6 +1,6 @@
 import RenderPedway from '../components/RenderPedway/RenderPedway'
 import testRenderer from 'react-test-renderer';
-import React from "react";
+import React from 'react';
 import PedwayMockData from '../mock_data/sections';
 
 

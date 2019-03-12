@@ -124,7 +124,7 @@ export default class RenderPedway extends Component {
             coordinates={path.getJSONList()}
             strokeColor={this.state.strokeColor}
             strokeWidth={this.state.strokeWidth}
-            style={{ zIndex: this.state.zIndex }}
+            style={{zIndex: this.state.zIndex}}
           />
         );
       })

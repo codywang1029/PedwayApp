@@ -1,6 +1,6 @@
 import RenderEntrance from '../components/RenderEntrance/RenderEntrance'
 import testRenderer from 'react-test-renderer';
-import React from "react";
+import React from 'react';
 import PedwayMockData from '../mock_data/export';
 
 
