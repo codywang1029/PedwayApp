@@ -4,10 +4,10 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
 <MapView
   region={
     Object {
-      "latitude": 41.881899,
-      "latitudeDelta": 0.02,
+      "latitude": 41.88189833333333,
+      "latitudeDelta": 0.01,
       "longitude": -87.623977,
-      "longitudeDelta": 0.02,
+      "longitudeDelta": 0.01,
     }
   }
   style={
@@ -24,11 +24,30 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
   <Marker
     coordinate={
       Object {
+        "latitude": 41.88189833333333,
+        "longitude": -87.623977,
+      }
+    }
+    image={
+      Object {
+        "testUri": "../../../media/pedwayEntranceMarker.png",
+      }
+    }
+    pinColor="#1198ff"
+    style={
+      Object {
+        "zIndex": 10,
+      }
+    }
+    title="You"
+  />
+  <Marker
+    coordinate={
+      Object {
         "latitude": 41.8862637,
         "longitude": -87.6306729,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -37,7 +56,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6308302,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -46,7 +64,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6306746,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -55,7 +72,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6311264,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -64,7 +80,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6281675,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -73,7 +88,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.626503,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -82,7 +96,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6264962,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -91,7 +104,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6364478,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -100,7 +112,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6369002,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -109,7 +120,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.631341,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -118,7 +128,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6310922,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -127,7 +136,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6326252,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -136,7 +144,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6322178,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -145,7 +152,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6293223,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -154,7 +160,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6290591,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -163,7 +168,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6306371,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -172,7 +176,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6280557,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -181,7 +184,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6276585,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -190,7 +192,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6238166,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -199,7 +200,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6229453,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -208,7 +208,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6218723,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -217,7 +216,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.621512,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -226,7 +224,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6218641,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -235,7 +232,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6209853,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -244,7 +240,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6235577,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -253,7 +248,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6318076,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -262,7 +256,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6326191,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -271,7 +264,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6398754,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -280,7 +272,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6394836,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -289,7 +280,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6387431,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -298,7 +288,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6378628,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -307,7 +296,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6370858,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -316,7 +304,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6341584,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -325,7 +312,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6341473,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -334,7 +320,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6223802,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -343,7 +328,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6252636,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -352,7 +336,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6247064,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -361,7 +344,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6248016,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -370,7 +352,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6246246,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -379,7 +360,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.624521,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -388,7 +368,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6289736,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -397,7 +376,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6244735,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -406,7 +384,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6245449,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -415,7 +392,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6245151,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -424,7 +400,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6245182,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -433,7 +408,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6245532,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -442,7 +416,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6242429,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -451,7 +424,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.623797,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -460,7 +432,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6232655,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -469,7 +440,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6244202,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -478,7 +448,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6218876,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -487,7 +456,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6188103,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -496,7 +464,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6226846,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -505,7 +472,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6233237,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -514,7 +480,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6239591,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -523,7 +488,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.630338,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -532,7 +496,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.621859,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -541,7 +504,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6215013,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -550,7 +512,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.619237,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -559,7 +520,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6238213,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -568,7 +528,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6263683,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -577,7 +536,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6201,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -586,7 +544,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6200488,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -595,7 +552,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6205933,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -604,7 +560,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6232587,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -613,7 +568,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6230833,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -622,7 +576,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6220432,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -631,7 +584,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6213563,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -640,7 +592,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6215568,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -649,7 +600,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6219347,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -658,7 +608,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6236493,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -667,7 +616,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.629274,
       }
     }
-    pinColor="#1198ff"
   />
   <Marker
     coordinate={
@@ -676,7 +624,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6293521,
       }
     }
-    pinColor="#1198ff"
   />
 </MapView>
 `;
@@ -878,10 +825,10 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
       <MapView
         region={
           Object {
-            "latitude": 41.881899,
-            "latitudeDelta": 0.02,
+            "latitude": 41.88189833333333,
+            "latitudeDelta": 0.01,
             "longitude": -87.623977,
-            "longitudeDelta": 0.02,
+            "longitudeDelta": 0.01,
           }
         }
         style={
@@ -898,11 +845,30 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
         <Marker
           coordinate={
             Object {
+              "latitude": 41.88189833333333,
+              "longitude": -87.623977,
+            }
+          }
+          image={
+            Object {
+              "testUri": "../../../media/pedwayEntranceMarker.png",
+            }
+          }
+          pinColor="#1198ff"
+          style={
+            Object {
+              "zIndex": 10,
+            }
+          }
+          title="You"
+        />
+        <Marker
+          coordinate={
+            Object {
               "latitude": 41.8862637,
               "longitude": -87.6306729,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -911,7 +877,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6308302,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -920,7 +885,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6306746,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -929,7 +893,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6311264,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -938,7 +901,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6281675,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -947,7 +909,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.626503,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -956,7 +917,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6264962,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -965,7 +925,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6364478,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -974,7 +933,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6369002,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -983,7 +941,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.631341,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -992,7 +949,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6310922,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1001,7 +957,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6326252,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1010,7 +965,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6322178,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1019,7 +973,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6293223,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1028,7 +981,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6290591,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1037,7 +989,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6306371,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1046,7 +997,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6280557,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1055,7 +1005,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6276585,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1064,7 +1013,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6238166,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1073,7 +1021,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6229453,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1082,7 +1029,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6218723,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1091,7 +1037,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.621512,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1100,7 +1045,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6218641,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1109,7 +1053,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6209853,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1118,7 +1061,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6235577,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1127,7 +1069,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6318076,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1136,7 +1077,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6326191,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1145,7 +1085,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6398754,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1154,7 +1093,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6394836,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1163,7 +1101,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6387431,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1172,7 +1109,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6378628,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1181,7 +1117,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6370858,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1190,7 +1125,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6341584,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1199,7 +1133,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6341473,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1208,7 +1141,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6223802,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1217,7 +1149,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6252636,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1226,7 +1157,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6247064,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1235,7 +1165,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6248016,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1244,7 +1173,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6246246,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1253,7 +1181,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.624521,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1262,7 +1189,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6289736,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1271,7 +1197,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6244735,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1280,7 +1205,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6245449,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1289,7 +1213,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6245151,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1298,7 +1221,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6245182,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1307,7 +1229,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6245532,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1316,7 +1237,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6242429,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1325,7 +1245,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.623797,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1334,7 +1253,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6232655,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1343,7 +1261,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6244202,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1352,7 +1269,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6218876,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1361,7 +1277,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6188103,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1370,7 +1285,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6226846,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1379,7 +1293,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6233237,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1388,7 +1301,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6239591,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1397,7 +1309,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.630338,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1406,7 +1317,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.621859,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1415,7 +1325,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6215013,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1424,7 +1333,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.619237,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1433,7 +1341,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6238213,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1442,7 +1349,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6263683,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1451,7 +1357,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6201,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1460,7 +1365,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6200488,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1469,7 +1373,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6205933,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1478,7 +1381,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6232587,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1487,7 +1389,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6230833,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1496,7 +1397,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6220432,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1505,7 +1405,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6213563,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1514,7 +1413,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6215568,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1523,7 +1421,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6219347,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1532,7 +1429,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6236493,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1541,7 +1437,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.629274,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1550,7 +1445,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6293521,
             }
           }
-          pinColor="#1198ff"
         />
       </MapView>
       <View
@@ -1874,10 +1768,10 @@ exports[`Check if our MainView renders correctly 1`] = `
       <MapView
         region={
           Object {
-            "latitude": 41.881899,
-            "latitudeDelta": 0.02,
+            "latitude": 41.88189833333333,
+            "latitudeDelta": 0.01,
             "longitude": -87.623977,
-            "longitudeDelta": 0.02,
+            "longitudeDelta": 0.01,
           }
         }
         style={
@@ -1894,11 +1788,30 @@ exports[`Check if our MainView renders correctly 1`] = `
         <Marker
           coordinate={
             Object {
+              "latitude": 41.88189833333333,
+              "longitude": -87.623977,
+            }
+          }
+          image={
+            Object {
+              "testUri": "../../../media/pedwayEntranceMarker.png",
+            }
+          }
+          pinColor="#1198ff"
+          style={
+            Object {
+              "zIndex": 10,
+            }
+          }
+          title="You"
+        />
+        <Marker
+          coordinate={
+            Object {
               "latitude": 41.8862637,
               "longitude": -87.6306729,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1907,7 +1820,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6308302,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1916,7 +1828,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6306746,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1925,7 +1836,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6311264,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1934,7 +1844,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6281675,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1943,7 +1852,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.626503,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1952,7 +1860,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6264962,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1961,7 +1868,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6364478,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1970,7 +1876,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6369002,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1979,7 +1884,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.631341,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1988,7 +1892,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6310922,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -1997,7 +1900,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6326252,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2006,7 +1908,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6322178,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2015,7 +1916,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6293223,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2024,7 +1924,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6290591,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2033,7 +1932,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6306371,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2042,7 +1940,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6280557,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2051,7 +1948,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6276585,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2060,7 +1956,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6238166,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2069,7 +1964,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6229453,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2078,7 +1972,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6218723,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2087,7 +1980,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.621512,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2096,7 +1988,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6218641,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2105,7 +1996,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6209853,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2114,7 +2004,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6235577,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2123,7 +2012,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6318076,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2132,7 +2020,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6326191,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2141,7 +2028,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6398754,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2150,7 +2036,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6394836,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2159,7 +2044,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6387431,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2168,7 +2052,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6378628,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2177,7 +2060,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6370858,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2186,7 +2068,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6341584,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2195,7 +2076,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6341473,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2204,7 +2084,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6223802,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2213,7 +2092,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6252636,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2222,7 +2100,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6247064,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2231,7 +2108,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6248016,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2240,7 +2116,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6246246,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2249,7 +2124,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.624521,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2258,7 +2132,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6289736,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2267,7 +2140,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6244735,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2276,7 +2148,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6245449,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2285,7 +2156,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6245151,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2294,7 +2164,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6245182,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2303,7 +2172,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6245532,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2312,7 +2180,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6242429,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2321,7 +2188,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.623797,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2330,7 +2196,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6232655,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2339,7 +2204,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6244202,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2348,7 +2212,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6218876,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2357,7 +2220,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6188103,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2366,7 +2228,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6226846,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2375,7 +2236,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6233237,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2384,7 +2244,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6239591,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2393,7 +2252,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.630338,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2402,7 +2260,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.621859,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2411,7 +2268,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6215013,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2420,7 +2276,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.619237,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2429,7 +2284,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6238213,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2438,7 +2292,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6263683,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2447,7 +2300,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6201,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2456,7 +2308,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6200488,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2465,7 +2316,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6205933,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2474,7 +2324,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6232587,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2483,7 +2332,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6230833,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2492,7 +2340,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6220432,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2501,7 +2348,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6213563,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2510,7 +2356,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6215568,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2519,7 +2364,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6219347,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2528,7 +2372,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6236493,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2537,7 +2380,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.629274,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -2546,7 +2388,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6293521,
             }
           }
-          pinColor="#1198ff"
         />
       </MapView>
       <View
@@ -2925,9 +2766,9 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
   }
   region={
     Object {
-      "latitude": 41.884243,
+      "latitude": 41.881899,
       "latitudeDelta": 0.012,
-      "longitude": -87.626936,
+      "longitude": -87.623977,
       "longitudeDelta": 0.012,
     }
   }
@@ -2945,8 +2786,13 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
   <Marker
     coordinate={
       Object {
-        "latitude": 41.884243,
-        "longitude": -87.626936,
+        "latitude": 41.881899,
+        "longitude": -87.623977,
+      }
+    }
+    image={
+      Object {
+        "testUri": "../../../media/pedwayEntranceMarker.png",
       }
     }
     pinColor="#1198ff"
@@ -11836,10 +11682,10 @@ exports[`Check if our main app renders correctly 1`] = `
       <MapView
         region={
           Object {
-            "latitude": 41.881899,
-            "latitudeDelta": 0.02,
+            "latitude": 41.88189833333333,
+            "latitudeDelta": 0.01,
             "longitude": -87.623977,
-            "longitudeDelta": 0.02,
+            "longitudeDelta": 0.01,
           }
         }
         style={
@@ -11856,11 +11702,30 @@ exports[`Check if our main app renders correctly 1`] = `
         <Marker
           coordinate={
             Object {
+              "latitude": 41.88189833333333,
+              "longitude": -87.623977,
+            }
+          }
+          image={
+            Object {
+              "testUri": "../../../media/pedwayEntranceMarker.png",
+            }
+          }
+          pinColor="#1198ff"
+          style={
+            Object {
+              "zIndex": 10,
+            }
+          }
+          title="You"
+        />
+        <Marker
+          coordinate={
+            Object {
               "latitude": 41.8862637,
               "longitude": -87.6306729,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -11869,7 +11734,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6308302,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -11878,7 +11742,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6306746,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -11887,7 +11750,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6311264,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -11896,7 +11758,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6281675,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -11905,7 +11766,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.626503,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -11914,7 +11774,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6264962,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -11923,7 +11782,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6364478,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -11932,7 +11790,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6369002,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -11941,7 +11798,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.631341,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -11950,7 +11806,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6310922,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -11959,7 +11814,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6326252,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -11968,7 +11822,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6322178,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -11977,7 +11830,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6293223,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -11986,7 +11838,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6290591,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -11995,7 +11846,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6306371,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12004,7 +11854,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6280557,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12013,7 +11862,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6276585,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12022,7 +11870,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6238166,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12031,7 +11878,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6229453,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12040,7 +11886,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6218723,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12049,7 +11894,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.621512,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12058,7 +11902,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6218641,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12067,7 +11910,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6209853,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12076,7 +11918,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6235577,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12085,7 +11926,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6318076,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12094,7 +11934,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6326191,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12103,7 +11942,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6398754,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12112,7 +11950,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6394836,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12121,7 +11958,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6387431,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12130,7 +11966,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6378628,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12139,7 +11974,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6370858,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12148,7 +11982,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6341584,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12157,7 +11990,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6341473,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12166,7 +11998,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6223802,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12175,7 +12006,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6252636,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12184,7 +12014,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6247064,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12193,7 +12022,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6248016,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12202,7 +12030,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6246246,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12211,7 +12038,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.624521,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12220,7 +12046,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6289736,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12229,7 +12054,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6244735,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12238,7 +12062,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6245449,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12247,7 +12070,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6245151,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12256,7 +12078,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6245182,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12265,7 +12086,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6245532,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12274,7 +12094,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6242429,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12283,7 +12102,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.623797,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12292,7 +12110,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6232655,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12301,7 +12118,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6244202,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12310,7 +12126,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6218876,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12319,7 +12134,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6188103,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12328,7 +12142,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6226846,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12337,7 +12150,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6233237,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12346,7 +12158,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6239591,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12355,7 +12166,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.630338,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12364,7 +12174,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.621859,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12373,7 +12182,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6215013,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12382,7 +12190,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.619237,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12391,7 +12198,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6238213,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12400,7 +12206,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6263683,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12409,7 +12214,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6201,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12418,7 +12222,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6200488,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12427,7 +12230,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6205933,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12436,7 +12238,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6232587,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12445,7 +12246,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6230833,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12454,7 +12254,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6220432,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12463,7 +12262,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6213563,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12472,7 +12270,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6215568,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12481,7 +12278,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6219347,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12490,7 +12286,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6236493,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12499,7 +12294,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.629274,
             }
           }
-          pinColor="#1198ff"
         />
         <Marker
           coordinate={
@@ -12508,7 +12302,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6293521,
             }
           }
-          pinColor="#1198ff"
         />
       </MapView>
       <View
