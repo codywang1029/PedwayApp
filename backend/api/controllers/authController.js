@@ -18,9 +18,7 @@ function generateKey() {
   // https://gist.github.com/joepie91/7105003c3b26e65efcea63f3db82dfba
   // This is by far the most important part of our security strategy
   return uuidv4();
-};
-
-
+}
 /**
 * @description This function returns a promise
 *    that returns the userId of this session
@@ -40,8 +38,7 @@ exports.auth = function(req, level=roles.NONE) {
       if (err) {
         reject(err);
         return;
-      };
-
+      }
       // No session exists
       if (!session) {
         reject(Error('No valid session exists'));

@@ -4,4 +4,4 @@ export default StyleSheet.create({
   mainMap: {
     ...StyleSheet.absoluteFillObject,
     zIndex: -1,
-},});
+  }});

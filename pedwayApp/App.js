@@ -31,7 +31,6 @@ import Icon from 'react-native-vector-icons/FontAwesome';
  * Sidemenu/MainView
  */
 class HomeScreen extends React.Component {
-
   constructor() {
     super();
     this.state = {
@@ -46,34 +45,33 @@ class HomeScreen extends React.Component {
 
 
   render() {
-
     const toggleSideBar = () => {
       this.setState({sideMenuIsOpen: !this.state.sideMenuIsOpen});
     };
 
-      const MenuComponent = (
-          <View style={{flex: 1, backgroundColor: '#a9a9a9', padding: 30}}>
-              <Text style={styles.item}>
-                  <Icon name="heart" style={styles.item}/>
+    const MenuComponent = (
+      <View style={{flex: 1, backgroundColor: '#a9a9a9', padding: 30}}>
+        <Text style={styles.item}>
+          <Icon name="heart" style={styles.item}/>
                   Favorites
-              </Text>
-              <Text style={styles.item}>
-                  <Icon name="bell" style={styles.item}/>
+        </Text>
+        <Text style={styles.item}>
+          <Icon name="bell" style={styles.item}/>
                   Updates
-              </Text>
-              <Text style={styles.item}>
-                  <Icon name="users" style={styles.item}/>
+        </Text>
+        <Text style={styles.item}>
+          <Icon name="users" style={styles.item}/>
                   Feedback
-              </Text>
-              <Text style={styles.item}>
-                  <Icon name="gear" style={styles.item}/>
+        </Text>
+        <Text style={styles.item}>
+          <Icon name="gear" style={styles.item}/>
                   Settings
-              </Text>
-          </View>
-      );
+        </Text>
+      </View>
+    );
 
     return (
-     <SideMenu
+      <SideMenu
         menu={MenuComponent}
         disableGestures={this.state.sideMenuDisableGesture}
         isOpen={this.state.sideMenuIsOpen}
@@ -83,7 +81,7 @@ class HomeScreen extends React.Component {
         }}
       >
         <RoundButton style={[positions.hamburgerButton]} icon={'bars'}
-                     func={toggleSideBar}/>
+          func={toggleSideBar}/>
 
         <MainView/>
       </SideMenu>
@@ -103,7 +101,6 @@ class MainView extends React.Component {
       underground: false,
     };
     this.toggleUndergroundMap = this.toggleUndergroundMap.bind(this);
-
   }
 
   toggleUndergroundMap() {
@@ -142,11 +139,11 @@ const positions = StyleSheet.create({
 });
 
 const styles = StyleSheet.create({
-    item: {
-        fontSize: 30,
-        fontWeight: '300',
-        top: 30,
-    },
+  item: {
+    fontSize: 30,
+    fontWeight: '300',
+    top: 30,
+  },
 });
 
 export default class App extends React.Component {

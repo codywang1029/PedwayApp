@@ -12,7 +12,6 @@ import PedwayData from '../../mock_data/export';
  * to use OSM
  */
 export default class GroundMapView extends React.Component {
-
   constructor() {
     super();
     this.state = {
@@ -29,15 +28,15 @@ export default class GroundMapView extends React.Component {
   componentDidMount() {
     if (this.state.updateGeoLocation) {
       navigator.geolocation.watchPosition(
-        (position) => {
-          this.setState({
-            latitude: position.coords.latitude,
-            longitude: position.coords.longitude,
-            error: null,
-          });
-        },
-        (error) => this.setState({error: error.message}),
-        {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
+          (position) => {
+            this.setState({
+              latitude: position.coords.latitude,
+              longitude: position.coords.longitude,
+              error: null,
+            });
+          },
+          (error) => this.setState({error: error.message}),
+          {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
       );
     }
   }
@@ -55,15 +54,15 @@ export default class GroundMapView extends React.Component {
           latitudeDelta: 0.02,
           longitudeDelta: 0.02,
         }}>
-        {/*<UrlTile urlTemplate={this.state.apiServerURL}/>*/}
-        {/*<MapView.Marker*/}
-        {/*coordinate={{*/}
-        {/*latitude: latitude,*/}
-        {/*longitude: longitude,*/}
-        {/*}}*/}
-        {/*pinColor={'#1198ff'}*/}
-        {/*title={'You'}*/}
-        {/*/>*/}
+        {/* <UrlTile urlTemplate={this.state.apiServerURL}/>*/}
+        {/* <MapView.Marker*/}
+        {/* coordinate={{*/}
+        {/* latitude: latitude,*/}
+        {/* longitude: longitude,*/}
+        {/* }}*/}
+        {/* pinColor={'#1198ff'}*/}
+        {/* title={'You'}*/}
+        {/* />*/}
         <RenderEntrance JSONData={PedwayData}/>
       </MapView>
     );

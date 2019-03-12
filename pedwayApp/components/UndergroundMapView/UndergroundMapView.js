@@ -11,7 +11,6 @@ import PedwayData from '../../mock_data/sections';
  * to use OSM
  */
 export default class GroundMapView extends React.Component {
-
   constructor() {
     super();
     this.state = {
@@ -38,7 +37,7 @@ export default class GroundMapView extends React.Component {
           latitudeDelta: 0.012,
           longitudeDelta: 0.012,
         }}>
-        {/*<UrlTile urlTemplate={this.state.apiServerURL}/>*/}
+        {/* <UrlTile urlTemplate={this.state.apiServerURL}/>*/}
         <MapView.Marker
           coordinate={{
             latitude: latitude,

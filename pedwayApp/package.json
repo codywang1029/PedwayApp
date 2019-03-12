@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "lint": "gulp lint"
   },
   "dependencies": {
     "appcenter": "1.12.0",
@@ -59,14 +60,7 @@
       "linebreak-style": "off",
       "require-jsdoc": "off",
       "no-unused-vars": "off",
-      "indent": "off",
-      "padded-blocks": "off",
-      "space-before-blocks": "off",
-      "keyword-spacing": "off",
-      "semi": "off",
-      "spaced-comment": "off",
       "max-len": "off",
-      "comma-spacing": "off",
       "prefer-const": "off"
     },
     "extends": "google",

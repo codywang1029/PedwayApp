@@ -2,9 +2,9 @@ import styles from './styles';
 import {Text, TouchableOpacity, View} from 'react-native';
 import React, {Component} from 'react';
 
-export default class SearchBar extends React.Component{
-  render(){
-    return(
+export default class SearchBar extends React.Component {
+  render() {
+    return (
       <TouchableOpacity
         style={[styles.floating, styles.searchBox]}
       >
@@ -16,7 +16,7 @@ export default class SearchBar extends React.Component{
           <Text style={{fontSize: 18}}>Enter your destination...</Text>
         </View>
       </TouchableOpacity>
-    )
+    );
   }
 }
 

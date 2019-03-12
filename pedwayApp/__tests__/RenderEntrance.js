@@ -1,4 +1,4 @@
-import RenderEntrance from '../components/RenderEntrance/RenderEntrance'
+import RenderEntrance from '../components/RenderEntrance/RenderEntrance';
 import testRenderer from 'react-test-renderer';
 import React from 'react';
 import PedwayMockData from '../mock_data/export';
@@ -10,8 +10,8 @@ test('Check if our RenderPedway renders correctly', () => {
 });
 
 
-test('test JSON helpers',()=>{
+test('test JSON helpers', ()=>{
   const treeRendered = testRenderer.create(<RenderEntrance
     JSONData={PedwayMockData}/>).toJSON();
   expect(treeRendered.length).toBe(73);
-})
+});
