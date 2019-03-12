@@ -1,7 +1,12 @@
 import React, {Component} from 'react';
 import styles from './styles';
 import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-import MapView, {MAP_TYPES, UrlTile, Callout} from 'react-native-maps';
+import MapView, {
+  MAP_TYPES,
+  UrlTile,
+  Callout,
+  Polyline,
+} from 'react-native-maps';
 import RenderPedway from '../RenderPedway/RenderPedway';
 import RenderEntrance from '../RenderEntrance/RenderEntrance';
 import MapCallout from 'react-native-maps/lib/components/MapCallout';
@@ -10,6 +15,8 @@ import axios from 'axios';
 import RoundButton from '../RoundButton/RoundButton';
 import * as polyline from 'google-polyline';
 import PedwayData from '../../mock_data/export.json';
+import PedwayCoordinate from '../../model/PedwayCoordinate';
+import PedwaySection from '../../model/PedwaySection';
 
 /**
  * Renders a MapView that display the ground level map
@@ -35,17 +42,16 @@ export default class GroundMapView extends React.Component {
     this.renderPath = this.renderPath.bind(this);
     this.requestEntranceData = this.requestEntranceData.bind(this);
     this.recenter = this.recenter.bind(this);
+    this.getGeometry = this.getGeometry.bind(this);
   }
 
 
   requestEntranceData() {
     axios.get('https://pedway.azurewebsites.net/api/pedway/entrance').then(res => {
-      console.log('We got res');
       this.setState({
         pedwayData: res,
       });
     }).catch(e => {
-        console.log(e);
       },
     );
   }
@@ -62,6 +68,7 @@ export default class GroundMapView extends React.Component {
             updateGeoLocation: false,
             id: 0,
             navigate: false,
+            navigateList: null,
             navigateTo: null,
           });
         });
@@ -80,21 +87,29 @@ export default class GroundMapView extends React.Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.navigate !== undefined) {
       this.setState({
-          navigate: nextProps.navigate,
           navigateTo: nextProps.navigateTo,
         },
       );
-      console.log('here!!!!!!');
       this.renderPath(nextProps.navigateTo);
     }
   }
 
   getGeometry(start, end) {
-    axios.get('http://192.168.86.122:3000/api/ors/directions?coordinates=' + start[1] + ',%20' + start[0] + '%7C' + end[1] + ',%20' + end[0] + '&profile=foot-walking')
+
+    return axios.get(
+      'https://pedway.azurewebsites.net/api/ors/directions?coordinates=' + start[1] + ',%20' + start[0] + '%7C' + end[1] + ',%20' + end[0] + '&profile=foot-walking')
       .then(json => {
         const geometry = json.data.routes[0].geometry;
         const coords = polyline.decode(geometry);
-        console.log(coords);
+        let retList = [];
+        coords.forEach((item)=>{
+          retList.push(new PedwayCoordinate(item[0],item[1]));
+        });
+        let retSection = new PedwaySection(retList);
+        this.setState({
+          navigate: true,
+          navigateList: retSection,
+        });
       })
       .catch(error => console.log(error));
   }
@@ -107,9 +122,9 @@ export default class GroundMapView extends React.Component {
    */
   renderPath(inputEntrance) {
     // request api here
-    console.log('final===',inputEntrance);
     // parse line string
-
+    this.getGeometry([this.state.latitude,this.state.longitude],
+      [inputEntrance.getCoordinates().getLatitude(),inputEntrance.getCoordinates().getLongitude()]);
     // render on map
 
     // remove other plots
@@ -121,7 +136,8 @@ export default class GroundMapView extends React.Component {
    * @param inputEntrance
    */
   renderPath(inputEntrance) {
-    console.log('here', inputEntrance);
+    this.getGeometry([this.state.latitude,this.state.longitude],
+      [inputEntrance.getCoordinate().getLatitude(),inputEntrance.getCoordinate().getLongitude()]);
     // request api here
 
     // parse line string
@@ -149,43 +165,91 @@ export default class GroundMapView extends React.Component {
   render() {
     const latitude = this.state.latitude;
     const longitude = this.state.longitude;
-    console.log(latitude + ' ' + longitude);
-    return (
-      <View style={StyleSheet.absoluteFillObject}>
-        <RoundButton
-          style={[styles.focusButton]}
-          icon={'crosshairs'}
-          func={this.recenter}/>
-        <MapView
-          ref={(mapView) => {
-            this.map = mapView;
-          }}
-          style={styles.mainMap}
-          initialRegion={{
-            latitude: latitude,
-            longitude: longitude,
-            latitudeDelta: 0.01,
-            longitudeDelta: 0.01,
-          }}
-        >
-
-          <RenderEntrance
-            JSONData={this.state.pedwayData}
-            callbackFunc={(input) => {
-              this.forwardSelectedEntrance(input);
-            }}/>
-          <MapView.Marker
-            coordinate={{
+    if(this.state.navigate===true) {
+      return(
+        <View style={StyleSheet.absoluteFillObject}>
+          <RoundButton
+            style={[styles.focusButton]}
+            icon={'crosshairs'}
+            func={this.recenter}/>
+          <MapView
+            ref={(mapView) => {
+              this.map = mapView;
+            }}
+            style={styles.mainMap}
+            initialRegion={{
               latitude: latitude,
               longitude: longitude,
+              latitudeDelta: 0.01,
+              longitudeDelta: 0.01,
             }}
-            style={{zIndex: 10}}
-            pinColor={'#1198ff'}
-            title={'You'}
-            image={circle}/>
+          >
+            <Polyline
+              coordinates={this.state.navigateList.getJSONList()}
+              strokeColor={'#AA0022'}
+              strokeWidth={6}
+              style={{ zIndex: 100000 }}
+            />
+            <MapView.Marker
+              coordinate={{
+                latitude: latitude,
+                longitude: longitude,
+              }}
+              style={{zIndex: 10}}
+              pinColor={'#1198ff'}
+              title={'You'}
+              image={circle}/>
+            <MapView.Marker
+              coordinate={{
+                latitude: this.state.navigateTo.getCoordinate().getLatitude(),
+                longitude: this.state.navigateTo.getCoordinate().getLongitude(),
+              }}
+              style={{zIndex: 10}}
+              title={'You'}
+              image={circle}/>
+          </MapView>
+        </View>
+      );
+    } else {
+      return (
+        <View style={StyleSheet.absoluteFillObject}>
+          <RoundButton
+            style={[styles.focusButton]}
+            icon={'crosshairs'}
+            func={this.recenter}/>
+          <MapView
+            ref={(mapView) => {
+              this.map = mapView;
+            }}
+            style={styles.mainMap}
+            initialRegion={{
+              latitude: latitude,
+              longitude: longitude,
+              latitudeDelta: 0.01,
+              longitudeDelta: 0.01,
+            }}
+          >
 
-        </MapView>
-      </View>);
+            <RenderEntrance
+              JSONData={this.state.pedwayData}
+              callbackFunc={(input) => {
+                this.forwardSelectedEntrance(input);
+              }}/>
+            <MapView.Marker
+              coordinate={{
+                latitude: latitude,
+                longitude: longitude,
+              }}
+              style={{zIndex: 10}}
+              pinColor={'#1198ff'}
+              title={'You'}
+              image={circle}/>
+
+
+          </MapView>
+        </View>);
+    }
+
 
   }
 }
