@@ -1,5 +1,4 @@
 import PedwayCoordinate from '../model/PedwayCoordinate';
-import {toBeDeepCloseTo} from 'jest-matcher-deep-close-to';
 
 test('Check Coordinate Constructor', () => {
   let testVar = new PedwayCoordinate(42, 42);
@@ -29,4 +28,15 @@ test('Check Coordinate Getter', () => {
   expect(testVar.getLatitude()).toBeCloseTo(-70.20232);
   expect(testVar.getLongitude()).toBeCloseTo(42.353523);
 });
+
+
+test('Check Coordinate Setter', () => {
+  const testVar = new PedwayCoordinate(42, 42);
+  expect(testVar.getLatitude()).toBeCloseTo(42);
+  expect(testVar.getLongitude()).toBeCloseTo(42);
+  testVar.setCoordinates(-70.20232, 42.353523);
+  expect(testVar.getLatitude()).toBeCloseTo(-70.20232);
+  expect(testVar.getLongitude()).toBeCloseTo(42.353523);
+});
+
 
