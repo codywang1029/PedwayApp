@@ -3,7 +3,7 @@ import styles from './styles';
 import MapView, {MAP_TYPES, UrlTile} from 'react-native-maps';
 import RenderPedway from '../RenderPedway/RenderPedway';
 import MapStyle from './mapStyleDark';
-import PedwayData from '../../mock_data/export';
+import PedwayData from '../../mock_data/sections';
 
 /**
  * Renders a MapView that display the ground level map

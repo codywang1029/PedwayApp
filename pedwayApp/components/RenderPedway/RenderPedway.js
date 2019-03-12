@@ -26,7 +26,7 @@ export default class RenderPedway extends Component {
     };
     this.parseJSONtoModel = this.parseJSONtoModel.bind(this);
     this.parseLineJSON = this.parseLineJSON.bind(this);
-    this.parsePolygonJSON = this.parsePolygonJSON.bind(this);
+    this.parseMultiLineJSON = this.parseMultiLineJSON.bind(this);
 
 
   }
@@ -43,7 +43,7 @@ export default class RenderPedway extends Component {
     }
   }
 
-  parsePolygonJSON(inputJSON) {
+  parseMultiLineJSON(inputJSON) {
     try {
       const retVal = [];
       inputJSON['geometry']['coordinates'].forEach((itemList) => {
@@ -63,7 +63,8 @@ export default class RenderPedway extends Component {
     const paths = inputJSON['features'].filter((item) => {
       try {
         if (item['geometry']['type'] === 'LineString' ||
-          item['geometry']['type'] === 'Polygon') {
+          item['geometry']['type'] === 'Polygon' ||
+          item['geometry']['type'] === 'MultiLineString') {
           return true;
         }
         return false;
@@ -74,8 +75,9 @@ export default class RenderPedway extends Component {
       if (item['geometry']['type'] === 'LineString') {
         const thisSection = this.parseLineJSON(item);
         return (thisSection !== null) ? (acc.concat(thisSection)) : (acc);
-      } else if (item['geometry']['type'] === 'Polygon') {
-        const thisSection = this.parsePolygonJSON(item);
+      } else if (item['geometry']['type'] === 'Polygon' ||
+        item['geometry']['type'] === 'MultiLineString') {
+        const thisSection = this.parseMultiLineJSON(item);
         return (thisSection !== null) ? (acc.concat(thisSection)) : (acc);
       } else {
         return acc;

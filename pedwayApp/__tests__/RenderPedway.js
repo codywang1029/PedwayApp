@@ -1,7 +1,7 @@
 import RenderPedway from '../components/RenderPedway/RenderPedway'
 import testRenderer from 'react-test-renderer';
 import React from "react";
-import PedwayMockData from '../mock_data/export';
+import PedwayMockData from '../mock_data/sections';
 
 
 test('Check if our RenderPedway renders correctly', () => {
@@ -12,5 +12,5 @@ test('Check if our RenderPedway renders correctly', () => {
 
 test('test JSON helpers',()=>{
     const treeRendered = testRenderer.create(<RenderPedway JSONData={PedwayMockData}/>).toJSON();
-    expect(treeRendered.length).toBe(181);
+    expect(treeRendered.length).toBe(336);
 })
