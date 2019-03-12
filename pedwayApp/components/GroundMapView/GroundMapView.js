@@ -9,6 +9,7 @@ import MapCallout from 'react-native-maps/lib/components/MapCallout';
 import circle from '../../media/pedwayEntranceMarker.png';
 import axios from 'axios';
 import RoundButton from "../RoundButton/RoundButton";
+import * as polyline from 'google-polyline';
 
 /**
  * Renders a MapView that display the ground level map
@@ -57,7 +58,12 @@ export default class GroundMapView extends React.Component {
 
     getGeometry(start, end) {
         axios.get('http://192.168.86.122:3000/api/ors/directions?coordinates=' + start[1] + ',%20' + start[0] + '%7C' + end[1] + ',%20' + end[0] + '&profile=foot-walking')
-            .then(json => console.log(json)).catch(error => console.log(error));
+            .then(json => {
+                const geometry = json.data.routes[0].geometry;
+                const coords = polyline.decode(geometry);
+                console.log(coords);
+            })
+            .catch(error => console.log(error));
 
     }
 
@@ -77,9 +83,10 @@ export default class GroundMapView extends React.Component {
     }
 
     render() {
+
         const latitude = this.state.latitude;
         const longitude = this.state.longitude;
-        console.log(latitude + " " + longitude);
+        this.getGeometry([latitude,longitude],[41.8818991,-87.638977]);
         return (
             <View style={StyleSheet.absoluteFillObject}>
                 <RoundButton

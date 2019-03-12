@@ -88,7 +88,7 @@ class HomeScreen extends React.Component {
         }}
       >
         <RoundButton style={[positions.hamburgerButton]} icon={'bars'}
-                     func={this.toggleSideBar}/>
+                     func={this.toggleSideBar} size={35}/>
 
         <MainView/>
       </SideMenu>
@@ -157,12 +157,16 @@ const positions = StyleSheet.create({
     position: 'absolute',
     top: 100,
     right: 20,
+    width: 40,
+    height: 40,
   },
 
   hamburgerButton: {
     position: 'absolute',
     top: 20,
     left: 20,
+    width: 60,
+    height: 60,
   },
 });
 
