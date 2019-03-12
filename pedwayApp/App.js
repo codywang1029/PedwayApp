@@ -45,14 +45,16 @@ class HomeScreen extends React.Component {
       apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
       detailViewOpen: false,
     };
+
+    this.toggleSideBar = this.toggleSideBar.bind(this);
   }
+
+  toggleSideBar() {
+    this.setState({sideMenuIsOpen: !this.state.sideMenuIsOpen});
+  };
 
 
   render() {
-
-    const toggleSideBar = () => {
-      this.setState({sideMenuIsOpen: !this.state.sideMenuIsOpen});
-    };
 
     const MenuComponent = (
       <View style={{flex: 1, backgroundColor: '#a9a9a9', padding: 30}}>
@@ -86,7 +88,7 @@ class HomeScreen extends React.Component {
         }}
       >
         <RoundButton style={[positions.hamburgerButton]} icon={'bars'}
-                     func={toggleSideBar}/>
+                     func={this.toggleSideBar}/>
 
         <MainView/>
       </SideMenu>
