@@ -67,7 +67,6 @@ export default class RenderEntrance extends Component {
           <MapView.Marker
             coordinate={input.getCoordinate().getJSON()}
             // image={require('../../media/pedwayEntranceMarker.png')}
-            pinColor={'#1198ff'}
             key={idx}
             onPress={()=>{this.props.callbackFunc(this.state.pedwayEntrances[idx])}}
           />

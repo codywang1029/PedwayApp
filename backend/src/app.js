@@ -10,6 +10,10 @@ const dbdisconnect = require('./databaseConnector')();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
+// Parses cookies for easier handling
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
+
 require('../api/routes')(app); // register routes
 
 // Serves static files from frontend directory

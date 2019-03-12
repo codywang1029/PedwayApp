@@ -25,7 +25,7 @@ import UndergroundMapView
 import SearchBar from './components/SearchBar/SearchBar';
 import SlidingUpDetailView
   from './components/SlidingUpDetailView/SlidingUpDetailView';
-
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 /**
  * HomeScreen that gets rendered first when everything is loaded
@@ -54,9 +54,30 @@ class HomeScreen extends React.Component {
       this.setState({sideMenuIsOpen: !this.state.sideMenuIsOpen});
     };
 
+    const MenuComponent = (
+      <View style={{flex: 1, backgroundColor: '#a9a9a9', padding: 30}}>
+        <Text style={styles.item}>
+          <Icon name="heart" style={styles.item}/>
+          Favorites
+        </Text>
+        <Text style={styles.item}>
+          <Icon name="bell" style={styles.item}/>
+          Updates
+        </Text>
+        <Text style={styles.item}>
+          <Icon name="users" style={styles.item}/>
+          Feedback
+        </Text>
+        <Text style={styles.item}>
+          <Icon name="gear" style={styles.item}/>
+          Settings
+        </Text>
+      </View>
+    );
+
     return (
       <SideMenu
-        menu={<SideMenu navigator={navigator}/>}
+        menu={MenuComponent}
         disableGestures={this.state.sideMenuDisableGesture}
         isOpen={this.state.sideMenuIsOpen}
         onChange={(openStatus) => {
@@ -112,7 +133,9 @@ class MainView extends React.Component {
         {(this.state.underground) ?
           (<UndergroundMapView/>) :
           (<GroundMapView
-            selectedMarkerCallback={(input)=>{this.updateSlidingDetailView(input)}}
+            selectedMarkerCallback={(input) => {
+              this.updateSlidingDetailView(input);
+            }}
           />)}
         <SlidingUpDetailView
           open={this.state.detailViewOpen}
@@ -121,7 +144,7 @@ class MainView extends React.Component {
         <SearchBar/>
         <RoundButton
           style={[positions.undergroundButton]}
-          icon={'level-down'}
+          icon={this.state.underground ? 'level-up' : 'level-down'}
           func={this.toggleUndergroundMap}/>
       </View>
     );
@@ -139,6 +162,14 @@ const positions = StyleSheet.create({
     position: 'absolute',
     top: 20,
     left: 20,
+  },
+});
+
+const styles = StyleSheet.create({
+  item: {
+    fontSize: 30,
+    fontWeight: '300',
+    top: 30,
   },
 });
 
