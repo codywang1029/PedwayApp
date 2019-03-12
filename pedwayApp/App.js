@@ -21,7 +21,7 @@ import SideMenu from 'react-native-side-menu';
 import RoundButton from './components/RoundButton/RoundButton';
 import GroundMapView from './components/GroundMapView/GroundMapView';
 import UndergroundMapView
-  from './components/UndergroundMapView/UndergroundMapView';
+    from './components/UndergroundMapView/UndergroundMapView';
 import SearchBar from './components/SearchBar/SearchBar';
 
 /**
@@ -31,42 +31,42 @@ import SearchBar from './components/SearchBar/SearchBar';
  */
 class HomeScreen extends React.Component {
 
-  constructor() {
-    super();
-    this.state = {
-      mainStatusText: 'Requesting from backend...',
-      entrance1StatusText: '',
-      macysStatusText: '',
-      sideMenuIsOpen: false,
-      sideMenuDisableGesture: true,
-      apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
-    };
-  }
+    constructor() {
+        super();
+        this.state = {
+            mainStatusText: 'Requesting from backend...',
+            entrance1StatusText: '',
+            macysStatusText: '',
+            sideMenuIsOpen: false,
+            sideMenuDisableGesture: true,
+            apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
+
+        };
+    }
 
 
-  render() {
+    render() {
+        const toggleSideBar = () => {
+            this.setState({sideMenuIsOpen: !this.state.sideMenuIsOpen});
+        };
 
-    const toggleSideBar = () => {
-      this.setState({sideMenuIsOpen: !this.state.sideMenuIsOpen});
-    };
+        return (
+            <SideMenu
+                menu={<SideMenu navigator={navigator}/>}
+                disableGestures={this.state.sideMenuDisableGesture}
+                isOpen={this.state.sideMenuIsOpen}
+                onChange={(openStatus) => {
+                    this.state.sideMenuIsOpen = openStatus;
+                    this.setState({sideMenuDisableGesture: !openStatus});
+                }}
+            >
+                <RoundButton style={[positions.hamburgerButton]} icon={'bars'}
+                             func={toggleSideBar}/>
 
-    return (
-      <SideMenu
-        menu={<SideMenu navigator={navigator}/>}
-        disableGestures={this.state.sideMenuDisableGesture}
-        isOpen={this.state.sideMenuIsOpen}
-        onChange={(openStatus) => {
-          this.state.sideMenuIsOpen = openStatus;
-          this.setState({sideMenuDisableGesture: !openStatus});
-        }}
-      >
-        <RoundButton style={[positions.hamburgerButton]} icon={'bars'}
-                     func={toggleSideBar}/>
-
-        <MainView/>
-      </SideMenu>
-    );
-  }
+                <MainView/>
+            </SideMenu>
+        );
+    }
 }
 
 /**
@@ -75,54 +75,67 @@ class HomeScreen extends React.Component {
  * The second button is the entry point for the underground map
  */
 class MainView extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      underground: false,
-    };
-    this.toggleUndergroundMap = this.toggleUndergroundMap.bind(this);
+    constructor(props) {
+        super(props);
+        this.state = {
+            underground: false
+        };
+        this.toggleUndergroundMap = this.toggleUndergroundMap.bind(this);
 
-  }
+    }
 
-  toggleUndergroundMap() {
-    this.setState({
-      underground: !this.state.underground,
-    });
-  }
+    toggleUndergroundMap() {
+        this.setState({
+            underground: !this.state.underground,
+        });
+        // navigator.geolocation.watchPosition(
+        //     (position) => {
+        //         this.setState({
+        //             latitude: position.coords.latitude,
+        //             longitude: position.coords.longitude,
+        //             error:null,
+        //
+        //         });
+        //     },
+        //     (error) => this.setState({error: error.message}),
+        //     {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
+        // );
+    }
 
-  render() {
-    return (
-      <View style={{flex: 1}}>
-        {(this.state.underground) ?
-          (<UndergroundMapView/>) :
-          (<GroundMapView/>)}
-        <SearchBar/>
-        <RoundButton
-          style={[positions.undergroundButton]}
-          icon={'level-down'}
-          func={this.toggleUndergroundMap}/>
-      </View>
-    );
-  }
+    render() {
+
+        return (
+            <View style={{flex: 1}}>
+                {(this.state.underground) ?
+                    (<UndergroundMapView/>) :
+                    (<GroundMapView/>)}
+                <SearchBar/>
+                <RoundButton
+                    style={[positions.undergroundButton]}
+                    icon={this.state.underground?'level-up':'level-down'}
+                    func={this.toggleUndergroundMap}/>
+            </View>
+        );
+    }
 }
 
 const positions = StyleSheet.create({
-  undergroundButton: {
-    position: 'absolute',
-    bottom: 30,
-    right: 30,
-  },
-  hamburgerButton: {
-    position: 'absolute',
-    top: 20,
-    left: 20,
-  },
+    undergroundButton: {
+        position: 'absolute',
+        bottom: 30,
+        right: 30,
+    },
+    hamburgerButton: {
+        position: 'absolute',
+        top: 20,
+        left: 20,
+    },
 });
 
 export default class App extends React.Component {
-  render() {
-    return <HomeScreen/>;
-  }
+    render() {
+        return <HomeScreen/>;
+    }
 }
 
 
