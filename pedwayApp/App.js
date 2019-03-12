@@ -44,6 +44,8 @@ class HomeScreen extends React.Component {
       sideMenuDisableGesture: true,
       apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
       detailViewOpen: false,
+      navigateGround: false,
+      navigateTo: null,
     };
 
     this.toggleSideBar = this.toggleSideBar.bind(this);
@@ -109,6 +111,8 @@ class MainView extends React.Component {
       selectedEntrance: null,
     };
     this.toggleUndergroundMap = this.toggleUndergroundMap.bind(this);
+    this.startNavigateCallback = this.startNavigateCallback.bind(this);
+
   }
 
   toggleUndergroundMap() {
@@ -127,6 +131,14 @@ class MainView extends React.Component {
     });
   }
 
+  startNavigateCallback(inputEntrance) {
+    // now we need to
+    this.setState({
+      navigateGround: true,
+      navigateTo: inputEntrance,
+    });
+  }
+
   render() {
     return (
       <View style={{flex: 1}}>
@@ -136,10 +148,13 @@ class MainView extends React.Component {
             selectedMarkerCallback={(input) => {
               this.updateSlidingDetailView(input);
             }}
+            navigate={this.state.navigateGround}
+            navigateTo={this.state.navigateTo}
           />)}
         <SlidingUpDetailView
           open={this.state.detailViewOpen}
           entrance={this.state.selectedEntrance}
+          startNavigate={this.startNavigateCallback}
         />
         <SearchBar/>
         <RoundButton
