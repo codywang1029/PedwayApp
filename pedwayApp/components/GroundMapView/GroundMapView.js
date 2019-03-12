@@ -5,7 +5,7 @@ import RenderPedway from '../RenderPedway/RenderPedway';
 import RenderEntrance from '../RenderEntrance/RenderEntrance';
 import PedwayData from '../../mock_data/export';
 import circle from '../../media/pedwayEntranceMarker.png';
-
+import axios from 'axios';
 /**
  * Renders a MapView that display the ground level map
  * we are setting provider to null and UrlTile to OpenStreetMap's API
@@ -16,7 +16,6 @@ export default class GroundMapView extends React.Component {
   constructor() {
     super();
     this.state = {
-
       apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
       latitude: 41.88189833333333,
       longitude: -87.623977,
@@ -44,6 +43,11 @@ export default class GroundMapView extends React.Component {
     }
   }
 
+  getGeometry(start,end){
+      axios.get("http://localhost:3000/api/ors/directions?coordinates="+start[1]+",%20"+start[0]+"%7C"+end[1]+",%20"+end[0]+"&profile=foot-walking")
+          .then(json=>console.log(json));
+  }
+
   componentWillUnmount(){
       navigator.geolocation.clearWatch(this.state.id);
   }
@@ -51,7 +55,7 @@ export default class GroundMapView extends React.Component {
   render() {
     const latitude = this.state.latitude;
     const longitude = this.state.longitude;
-
+    this.getGeometry([latitude,longitude],[41.881899,-83.633977]);
     return (
       <MapView
         style={styles.mainMap}
