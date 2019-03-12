@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
 import styles from './styles';
-import MapView, {MAP_TYPES, UrlTile} from 'react-native-maps';
+import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import MapView, {MAP_TYPES, UrlTile, Callout} from 'react-native-maps';
 import RenderPedway from '../RenderPedway/RenderPedway';
 import RenderEntrance from '../RenderEntrance/RenderEntrance';
 import PedwayData from '../../mock_data/export';
+import MapCallout from 'react-native-maps/lib/components/MapCallout';
 import circle from '../../media/pedwayEntranceMarker.png';
 import axios from 'axios';
+
 /**
  * Renders a MapView that display the ground level map
  * we are setting provider to null and UrlTile to OpenStreetMap's API
@@ -21,9 +24,10 @@ export default class GroundMapView extends React.Component {
       longitude: -87.623977,
       error: null,
       pedwayData: PedwayData,
-      updateGeoLocation: true,
-        id: 0,
+      updateGeoLocation: false,
+      id: 0,
     };
+    this.forwardSelectedEntrance = this.forwardSelectedEntrance.bind(this);
   }
 
   componentDidMount() {
@@ -34,51 +38,63 @@ export default class GroundMapView extends React.Component {
             latitude: position.coords.latitude,
             longitude: position.coords.longitude,
             error: null,
-              id:id,
+            id: id,
           });
         },
         (error) => this.setState({error: error.message}),
-        {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
+        {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000},
       );
     }
   }
 
-  getGeometry(start,end){
-      axios.get("http://localhost:3000/api/ors/directions?coordinates="+start[1]+",%20"+start[0]+"%7C"+end[1]+",%20"+end[0]+"&profile=foot-walking")
-          .then(json=>console.log(json));
+  forwardSelectedEntrance(inputEntrance) {
+    if(this.props.selectedMarkerCallback!==undefined) {
+      this.props.selectedMarkerCallback(inputEntrance);
+    }
   }
 
-  componentWillUnmount(){
-      navigator.geolocation.clearWatch(this.state.id);
+  getGeometry(start, end) {
+    axios.get('http://192.168.86.122:3000/api/ors/directions?coordinates=' + start[1] + ',%20' + start[0] + '%7C' + end[1] + ',%20' + end[0] + '&profile=foot-walking')
+      .then(json => console.log(json)).catch(error => console.log(error));
+
+  }
+
+  componentWillUnmount() {
+    navigator.geolocation.clearWatch(this.state.id);
   }
 
   render() {
     const latitude = this.state.latitude;
     const longitude = this.state.longitude;
-    this.getGeometry([latitude,longitude],[41.881899,-83.633977]);
+    this.getGeometry([latitude, longitude], [41.881899, -87.643977]);
+
     return (
       <MapView
         style={styles.mainMap}
-        // mapType={MAP_TYPES.NONE}
-        region={{
+        initialRegion={{
           latitude: latitude,
           longitude: longitude,
           latitudeDelta: 0.01,
           longitudeDelta: 0.01,
-        }}>
-        {/*<UrlTile urlTemplate={this.state.apiServerURL}/>*/}
-        <MapView.Marker
-        coordinate={{
-        latitude: latitude,
-        longitude: longitude,
         }}
-        style={{zIndex:10}}
-        pinColor={'#1198ff'}
-        title={'You'}
-        image={circle}
-        />
-        <RenderEntrance JSONData={PedwayData}/>
-      </MapView>
-    );
+      >
+        <RenderEntrance
+          JSONData={PedwayData}
+          callbackFunc={(input) => {
+            this.forwardSelectedEntrance(input);
+          }}/>
+        <MapView.Marker
+          coordinate={{
+            latitude: latitude,
+            longitude: longitude,
+          }}
+          style={{zIndex: 10}}
+          pinColor={'#1198ff'}
+          title={'You'}
+          image={circle}/>
+      </MapView>);
+
   }
 }
+
+

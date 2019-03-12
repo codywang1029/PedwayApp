@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import styles from './styles';
-import MapView, {MAP_TYPES, UrlTile} from 'react-native-maps';
+import MapView, {MAP_TYPES, UrlTile, Callout} from 'react-native-maps';
+import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import RenderPedway from '../RenderPedway/RenderPedway';
 import MapStyle from './mapStyleDark';
 import PedwayData from '../../mock_data/sections';
@@ -16,36 +17,40 @@ export default class GroundMapView extends React.Component {
   constructor() {
     super();
     this.state = {
-        apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
-        latitude:  41.881899,
-        longitude: -87.623977,
-        error: null,
-        pedwayData: PedwayData,
-        updateGeoLocation:true,
-        id:0,
+      apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
+      latitude: 41.881899,
+      longitude: -87.623977,
+      error: null,
+      pedwayData: PedwayData,
+      updateGeoLocation: false,
+      id: 0,
     };
+    this.handleOnPress = this.handleOnPress.bind(this);
   }
 
-    componentDidMount() {
-        if (this.state.updateGeoLocation) {
-            let id = navigator.geolocation.watchPosition(
-                (position) => {
-                    this.setState({
-                        latitude: position.coords.latitude,
-                        longitude: position.coords.longitude,
-                        error: null,
-                        id:id
-                    });
-                },
-                (error) => this.setState({error: error.message}),
-                {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
-            );
-        }
-    }
+  handleOnPress() {
+  }
 
-    componentWillUnmount(){
-        navigator.geolocation.clearWatch(this.state.id);
+  componentDidMount() {
+    if (this.state.updateGeoLocation) {
+      let id = navigator.geolocation.watchPosition(
+        (position) => {
+          this.setState({
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+            error: null,
+            id: id,
+          });
+        },
+        (error) => this.setState({error: error.message}),
+        {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000},
+      );
     }
+  }
+
+  componentWillUnmount() {
+    navigator.geolocation.clearWatch(this.state.id);
+  }
 
 
   render() {
@@ -61,7 +66,8 @@ export default class GroundMapView extends React.Component {
           longitude: longitude,
           latitudeDelta: 0.012,
           longitudeDelta: 0.012,
-        }}>
+        }}
+      >
         {/*<UrlTile urlTemplate={this.state.apiServerURL}/>*/}
         <MapView.Marker
           coordinate={{
@@ -72,7 +78,9 @@ export default class GroundMapView extends React.Component {
           title={'You'}
           image={circle}
         />
+
         <RenderPedway JSONData={PedwayData}/>
+
       </MapView>
     );
   }
