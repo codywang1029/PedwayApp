@@ -136,8 +136,14 @@ export default class GroundMapView extends React.Component {
    * @param inputEntrance
    */
   renderPath(inputEntrance) {
-    this.getGeometry([this.state.latitude,this.state.longitude],
-      [inputEntrance.getCoordinate().getLatitude(),inputEntrance.getCoordinate().getLongitude()]);
+    if(this.state.navigate==false) {
+      this.getGeometry([this.state.latitude, this.state.longitude],
+        [inputEntrance.getCoordinate().getLatitude(), inputEntrance.getCoordinate().getLongitude()]);
+    } else {
+      this.setState({
+        navigate: false
+      });
+    }
     // request api here
 
     // parse line string
