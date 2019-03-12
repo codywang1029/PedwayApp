@@ -18,11 +18,12 @@ export default class SlidingUpDetailView extends Component {
     this.state = {
       open: false,
       entrance: null,
+      navigateFunctor: null,
     };
     this.updateState = this.updateState.bind(this);
     this.openView = this.openView.bind(this);
     this.closeView = this.closeView.bind(this);
-
+    this.navigateButtonOnPress = this.navigateButtonOnPress.bind(this);
   }
 
   updateState(inputProps) {
@@ -62,6 +63,10 @@ export default class SlidingUpDetailView extends Component {
     this.updateState(nextProps);
   }
 
+  navigateButtonOnPress() {
+    this.props.startNavigate(this.state.entrance);
+  }
+
   render() {
     if (this.state.entrance !== undefined && this.state.entrance !== null) {
       return (
@@ -80,7 +85,7 @@ export default class SlidingUpDetailView extends Component {
               <TouchableOpacity
                 style={styles.routeBackgroundContainer}
                 onPress={() => {
-                  console.log('pressed!');
+                  this.navigateButtonOnPress();
                 }}
               >
                 <Icon

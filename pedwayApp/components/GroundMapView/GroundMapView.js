@@ -26,8 +26,11 @@ export default class GroundMapView extends React.Component {
       pedwayData: PedwayData,
       updateGeoLocation: false,
       id: 0,
+      navigate: false,
+      navigateTo: null,
     };
     this.forwardSelectedEntrance = this.forwardSelectedEntrance.bind(this);
+    this.renderPath = this.renderPath.bind(this);
   }
 
   componentDidMount() {
@@ -47,16 +50,42 @@ export default class GroundMapView extends React.Component {
     }
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.navigate !== undefined) {
+      this.setState({
+          navigate: nextProps.navigate,
+          navigateTo: nextProps.navigateTo,
+        },
+      );
+      this.renderPath(nextProps.navigateTo);
+    }
+  }
+
   forwardSelectedEntrance(inputEntrance) {
-    if(this.props.selectedMarkerCallback!==undefined) {
+    if (this.props.selectedMarkerCallback !== undefined) {
       this.props.selectedMarkerCallback(inputEntrance);
     }
   }
 
   getGeometry(start, end) {
     axios.get('http://192.168.86.122:3000/api/ors/directions?coordinates=' + start[1] + ',%20' + start[0] + '%7C' + end[1] + ',%20' + end[0] + '&profile=foot-walking')
-      .then(json => console.log(json)).catch(error => console.log(error));
+      .then(json => console.log('json')).catch(error => console.log('error'));
 
+  }
+
+  /**
+   * request the API and render a path from this.state.latitude/longitude
+   * to inputEntrance's coordinate
+   * @param inputEntrance
+   */
+  renderPath(inputEntrance) {
+    // request api here
+
+    // parse line string
+
+    // render on map
+
+    // remove other plots
   }
 
   componentWillUnmount() {
