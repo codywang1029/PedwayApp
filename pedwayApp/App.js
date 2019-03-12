@@ -23,6 +23,7 @@ import GroundMapView from './components/GroundMapView/GroundMapView';
 import UndergroundMapView
     from './components/UndergroundMapView/UndergroundMapView';
 import SearchBar from './components/SearchBar/SearchBar';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 /**
  * HomeScreen that gets rendered first when everything is loaded
@@ -31,42 +32,63 @@ import SearchBar from './components/SearchBar/SearchBar';
  */
 class HomeScreen extends React.Component {
 
-    constructor() {
-        super();
-        this.state = {
-            mainStatusText: 'Requesting from backend...',
-            entrance1StatusText: '',
-            macysStatusText: '',
-            sideMenuIsOpen: false,
-            sideMenuDisableGesture: true,
-            apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
+  constructor() {
+    super();
+    this.state = {
+      mainStatusText: 'Requesting from backend...',
+      entrance1StatusText: '',
+      macysStatusText: '',
+      sideMenuIsOpen: false,
+      sideMenuDisableGesture: true,
+      apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
+    };
+  }
 
-        };
-    }
 
+  render() {
 
-    render() {
-        const toggleSideBar = () => {
-            this.setState({sideMenuIsOpen: !this.state.sideMenuIsOpen});
-        };
+    const toggleSideBar = () => {
+      this.setState({sideMenuIsOpen: !this.state.sideMenuIsOpen});
+    };
 
-        return (
-            <SideMenu
-                menu={<SideMenu navigator={navigator}/>}
-                disableGestures={this.state.sideMenuDisableGesture}
-                isOpen={this.state.sideMenuIsOpen}
-                onChange={(openStatus) => {
-                    this.state.sideMenuIsOpen = openStatus;
-                    this.setState({sideMenuDisableGesture: !openStatus});
-                }}
-            >
-                <RoundButton style={[positions.hamburgerButton]} icon={'bars'}
-                             func={toggleSideBar}/>
+      const MenuComponent = (
+          <View style={{flex: 1, backgroundColor: '#a9a9a9', padding: 30}}>
+              <Text style={styles.item}>
+                  <Icon name="heart" style={styles.item}/>
+                  Favorites
+              </Text>
+              <Text style={styles.item}>
+                  <Icon name="bell" style={styles.item}/>
+                  Updates
+              </Text>
+              <Text style={styles.item}>
+                  <Icon name="users" style={styles.item}/>
+                  Feedback
+              </Text>
+              <Text style={styles.item}>
+                  <Icon name="gear" style={styles.item}/>
+                  Settings
+              </Text>
+          </View>
+      );
 
-                <MainView/>
-            </SideMenu>
-        );
-    }
+    return (
+     <SideMenu
+        menu={MenuComponent}
+        disableGestures={this.state.sideMenuDisableGesture}
+        isOpen={this.state.sideMenuIsOpen}
+        onChange={(openStatus) => {
+          this.state.sideMenuIsOpen = openStatus;
+          this.setState({sideMenuDisableGesture: !openStatus});
+        }}
+      >
+        <RoundButton style={[positions.hamburgerButton]} icon={'bars'}
+                     func={toggleSideBar}/>
+
+        <MainView/>
+      </SideMenu>
+    );
+  }
 }
 
 /**
@@ -129,6 +151,14 @@ const positions = StyleSheet.create({
         position: 'absolute',
         top: 20,
         left: 20,
+    },
+});
+
+const styles = StyleSheet.create({
+    item: {
+        fontSize: 30,
+        fontWeight: '300',
+        top: 30,
     },
 });
 
