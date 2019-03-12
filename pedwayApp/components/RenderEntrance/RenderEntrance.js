@@ -22,6 +22,7 @@ export default class RenderEntrance extends Component {
   }
 
   parseJSONtoModel(inputJSON) {
+    console.log(inputJSON.length);
     const entrances = inputJSON['features'].filter((item) => {
       try {
         if (item['properties']['entrance'] === 'yes' &&
@@ -55,7 +56,7 @@ export default class RenderEntrance extends Component {
   }
 
   componentWillReceiveProps(next) {
-    if(this.props.JSONData!==undefined) {
+    if(next.JSONData!==undefined) {
       this.parseJSONtoModel(next.JSONData);
     }
     this.forceUpdate();
