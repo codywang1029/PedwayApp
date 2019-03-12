@@ -19,6 +19,7 @@ export default class SlidingUpDetailView extends Component {
       open: false,
       entrance: null,
       navigateFunctor: null,
+      navigate: false,
     };
     this.updateState = this.updateState.bind(this);
     this.openView = this.openView.bind(this);
@@ -65,6 +66,9 @@ export default class SlidingUpDetailView extends Component {
 
   navigateButtonOnPress() {
     this.props.startNavigate(this.state.entrance);
+    this.setState({
+      navigate: !this.state.navigate,
+    });
   }
 
   render() {
@@ -90,7 +94,7 @@ export default class SlidingUpDetailView extends Component {
               >
                 <Icon
                   style={styles.routeButton}
-                  name={'directions-walk'}
+                  name={this.state.navigate?'rotate-left':'directions-walk'}
                 />
               </TouchableOpacity>
             </View>
