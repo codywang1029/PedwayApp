@@ -1,3 +1,5 @@
+/** @module app */
+
 require('dotenv').config();
 const express = require('express');
 // Load mongoose models into mongoose
@@ -40,13 +42,16 @@ app.use(function(req, res) {
 });
 
 /**
- * This function will disconnect the database and any other connections as
- * needed
+ * @description disconnects any connections the app maintains
  */
 function disconnect() {
   dbdisconnect();
 }
 
+/**
+ * @description returns the app object and the
+ *    disconnect function, which closes any active connections
+ */
 module.exports = {
   app: app,
   disconnect: disconnect,
