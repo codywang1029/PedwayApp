@@ -10,8 +10,8 @@ const SectionSchema = new Schema({
       required: true,
       validate: {
         validator: Number.isInteger,
-        message: '{VALUE} is not an integer value'
-      }
+        message: '{VALUE} is not an integer value',
+      },
     },
     PED_ROUTE: {type: String, required: true},
     SHAPE_LEN: {type: Number, required: true},
