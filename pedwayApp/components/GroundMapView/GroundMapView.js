@@ -4,8 +4,8 @@ import MapView, {MAP_TYPES, UrlTile} from 'react-native-maps';
 import RenderPedway from '../RenderPedway/RenderPedway';
 import RenderEntrance from '../RenderEntrance/RenderEntrance';
 import PedwayData from '../../mock_data/export';
-
-
+import circle from '../../media/pedwayEntranceMarker.png';
+import axios from 'axios';
 /**
  * Renders a MapView that display the ground level map
  * we are setting provider to null and UrlTile to OpenStreetMap's API
@@ -17,23 +17,24 @@ export default class GroundMapView extends React.Component {
     super();
     this.state = {
       apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
-      latitude: 41.881899,
+      latitude: 41.88189833333333,
       longitude: -87.623977,
       error: null,
       pedwayData: PedwayData,
-      updateGeoLocation: false,
-
+      updateGeoLocation: true,
+        id: 0,
     };
   }
 
   componentDidMount() {
     if (this.state.updateGeoLocation) {
-      navigator.geolocation.watchPosition(
+      let id = navigator.geolocation.watchPosition(
         (position) => {
           this.setState({
             latitude: position.coords.latitude,
             longitude: position.coords.longitude,
             error: null,
+              id:id,
           });
         },
         (error) => this.setState({error: error.message}),
@@ -42,9 +43,19 @@ export default class GroundMapView extends React.Component {
     }
   }
 
+  getGeometry(start,end){
+      axios.get("http://localhost:3000/api/ors/directions?coordinates="+start[1]+",%20"+start[0]+"%7C"+end[1]+",%20"+end[0]+"&profile=foot-walking")
+          .then(json=>console.log(json));
+  }
+
+  componentWillUnmount(){
+      navigator.geolocation.clearWatch(this.state.id);
+  }
+
   render() {
     const latitude = this.state.latitude;
     const longitude = this.state.longitude;
+    this.getGeometry([latitude,longitude],[41.881899,-83.633977]);
     return (
       <MapView
         style={styles.mainMap}
@@ -52,18 +63,20 @@ export default class GroundMapView extends React.Component {
         region={{
           latitude: latitude,
           longitude: longitude,
-          latitudeDelta: 0.02,
-          longitudeDelta: 0.02,
+          latitudeDelta: 0.01,
+          longitudeDelta: 0.01,
         }}>
         {/*<UrlTile urlTemplate={this.state.apiServerURL}/>*/}
-        {/*<MapView.Marker*/}
-        {/*coordinate={{*/}
-        {/*latitude: latitude,*/}
-        {/*longitude: longitude,*/}
-        {/*}}*/}
-        {/*pinColor={'#1198ff'}*/}
-        {/*title={'You'}*/}
-        {/*/>*/}
+        <MapView.Marker
+        coordinate={{
+        latitude: latitude,
+        longitude: longitude,
+        }}
+        style={{zIndex:10}}
+        pinColor={'#1198ff'}
+        title={'You'}
+        image={circle}
+        />
         <RenderEntrance JSONData={PedwayData}/>
       </MapView>
     );
