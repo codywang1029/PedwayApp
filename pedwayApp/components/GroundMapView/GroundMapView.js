@@ -8,6 +8,7 @@ import PedwayData from '../../mock_data/export';
 import MapCallout from 'react-native-maps/lib/components/MapCallout';
 import circle from '../../media/pedwayEntranceMarker.png';
 import axios from 'axios';
+import RoundButton from '../RoundButton/RoundButton';
 
 /**
  * Renders a MapView that display the ground level map
@@ -50,6 +51,12 @@ export default class GroundMapView extends React.Component {
     }
   }
 
+  forwardSelectedEntrance(inputEntrance) {
+    if (this.props.selectedMarkerCallback !== undefined) {
+      this.props.selectedMarkerCallback(inputEntrance);
+    }
+  }
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.navigate !== undefined) {
       this.setState({
@@ -65,12 +72,6 @@ export default class GroundMapView extends React.Component {
     if (this.props.selectedMarkerCallback !== undefined) {
       this.props.selectedMarkerCallback(inputEntrance);
     }
-  }
-
-  getGeometry(start, end) {
-    axios.get('http://192.168.86.122:3000/api/ors/directions?coordinates=' + start[1] + ',%20' + start[0] + '%7C' + end[1] + ',%20' + end[0] + '&profile=foot-walking')
-      .then(json => console.log('json')).catch(error => console.log('error'));
-
   }
 
   /**
@@ -92,36 +93,57 @@ export default class GroundMapView extends React.Component {
     navigator.geolocation.clearWatch(this.state.id);
   }
 
+
+  recenter() {
+    const region = {
+      latitude: this.state.latitude,
+      longitude: this.state.longitude,
+      latitudeDelta: 0.01,
+      longitudeDelta: 0.01,
+    };
+    this.map.animateToRegion(region, 1000);
+  }
+
   render() {
     const latitude = this.state.latitude;
     const longitude = this.state.longitude;
-    this.getGeometry([latitude, longitude], [41.881899, -87.643977]);
-
+    console.log(latitude + ' ' + longitude);
     return (
-      <MapView
-        style={styles.mainMap}
-        initialRegion={{
-          latitude: latitude,
-          longitude: longitude,
-          latitudeDelta: 0.01,
-          longitudeDelta: 0.01,
-        }}
-      >
-        <RenderEntrance
-          JSONData={PedwayData}
-          callbackFunc={(input) => {
-            this.forwardSelectedEntrance(input);
-          }}/>
-        <MapView.Marker
-          coordinate={{
+      <View style={StyleSheet.absoluteFillObject}>
+        <RoundButton
+          style={[styles.focusButton]}
+          icon={'crosshairs'}
+          func={this.recenter}/>
+        <MapView
+          ref={(mapView) => {
+            this.map = mapView;
+          }}
+          style={styles.mainMap}
+          initialRegion={{
             latitude: latitude,
             longitude: longitude,
+            latitudeDelta: 0.01,
+            longitudeDelta: 0.01,
           }}
-          style={{zIndex: 10}}
-          pinColor={'#1198ff'}
-          title={'You'}
-          image={circle}/>
-      </MapView>);
+        >
+
+          <RenderEntrance
+            JSONData={PedwayData}
+            callbackFunc={(input) => {
+              this.forwardSelectedEntrance(input);
+            }}/>
+          <MapView.Marker
+            coordinate={{
+              latitude: latitude,
+              longitude: longitude,
+            }}
+            style={{zIndex: 10}}
+            pinColor={'#1198ff'}
+            title={'You'}
+            image={circle}/>
+
+        </MapView>
+      </View>);
 
   }
 }

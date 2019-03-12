@@ -112,6 +112,7 @@ class MainView extends React.Component {
     };
     this.toggleUndergroundMap = this.toggleUndergroundMap.bind(this);
     this.startNavigateCallback = this.startNavigateCallback.bind(this);
+
   }
 
   toggleUndergroundMap() {
@@ -120,6 +121,7 @@ class MainView extends React.Component {
       detailViewOpen: false,
     });
     this.updateSlidingDetailView = this.updateSlidingDetailView.bind(this);
+
   }
 
   updateSlidingDetailView(inputEntrance) {
@@ -171,6 +173,7 @@ const positions = StyleSheet.create({
     top: 100,
     right: 20,
   },
+
   hamburgerButton: {
     position: 'absolute',
     top: 20,
