@@ -107,7 +107,6 @@ class MainView extends React.Component {
       selectedEntrance: null,
     };
     this.toggleUndergroundMap = this.toggleUndergroundMap.bind(this);
-
   }
 
   toggleUndergroundMap() {
@@ -116,6 +115,7 @@ class MainView extends React.Component {
       detailViewOpen: false,
     });
     this.updateSlidingDetailView = this.updateSlidingDetailView.bind(this);
+
   }
 
   updateSlidingDetailView(inputEntrance) {
@@ -123,7 +123,6 @@ class MainView extends React.Component {
       selectedEntrance: inputEntrance,
       detailViewOpen: !this.state.underground,
     });
-
   }
 
   render() {
@@ -157,6 +156,7 @@ const positions = StyleSheet.create({
     top: 100,
     right: 20,
   },
+
   hamburgerButton: {
     position: 'absolute',
     top: 20,
