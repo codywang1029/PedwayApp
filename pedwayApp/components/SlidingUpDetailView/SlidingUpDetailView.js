@@ -3,7 +3,7 @@ import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import styles from './styles';
 import RoundButton from '../RoundButton/RoundButton';
 import SlidingUpPanel from 'rn-sliding-up-panel';
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import PedwayEntrance from '../../model/PedwayEntrance';
 
 
@@ -63,35 +63,43 @@ export default class SlidingUpDetailView extends Component {
   }
 
   render() {
-    if(this.state.entrance!==undefined && this.state.entrance!==null) {
-      return(
-      <SlidingUpPanel
-        draggableRange={{top: 150, bottom: 0}}
-        showBackdrop={false}
-        ref={thisView => {
-          this.detailView = thisView;
-        }}
-      >
-        <View style={styles.backgroundView}>
-          <Text style={styles.entranceLabel}>
-            {this.state.entrance.getName()}
-          </Text>
-          <TouchableOpacity style={styles.routeButtonContainer}>
-            <Icon
-              style={styles.routeButton}
-              name={'route'}
-            />
-          </TouchableOpacity>
-          <StatusLabel text={this.state.entrance.getStatus()?'open':'closed'}/>
-          <Text style={styles.coordinateText}>
-            {this.state.entrance.getCoordinate().getLatitude() + ', '
-            + this.state.entrance.getCoordinate().getLongitude()}
-          </Text>
-        </View>
-      </SlidingUpPanel>
-    );
+    if (this.state.entrance !== undefined && this.state.entrance !== null) {
+      return (
+        <SlidingUpPanel
+          draggableRange={{top: 150, bottom: 0}}
+          showBackdrop={false}
+          ref={thisView => {
+            this.detailView = thisView;
+          }}
+        >
+          <View style={styles.backgroundView}>
+            <Text style={styles.entranceLabel}>
+              {this.state.entrance.getName()}
+            </Text>
+            <View style={styles.routeButtonContainer}>
+              <TouchableOpacity
+                style={styles.routeBackgroundContainer}
+                onPress={() => {
+                  console.log('pressed!');
+                }}
+              >
+                <Icon
+                  style={styles.routeButton}
+                  name={'directions-walk'}
+                />
+              </TouchableOpacity>
+            </View>
+            <StatusLabel
+              text={this.state.entrance.getStatus() ? 'open' : 'closed'}/>
+            <Text style={styles.coordinateText}>
+              {this.state.entrance.getCoordinate().getLatitude() + ', '
+              + this.state.entrance.getCoordinate().getLongitude()}
+            </Text>
+          </View>
+        </SlidingUpPanel>
+      );
     } else {
-      return(
+      return (
         <SlidingUpPanel
           draggableRange={{top: 150, bottom: 0}}
           showBackdrop={false}
