@@ -712,65 +712,154 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
-          "bottom": 0,
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
+          "backgroundColor": "#a9a9a9",
+          "flex": 1,
+          "padding": 30,
         }
       }
     >
-      <View
-        style={
-          Array [
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            },
-            Object {
-              "right": 250,
-            },
-          ]
-        }
-      />
-      <View
-        onMoveShouldSetResponder={[Function]}
-        onMoveShouldSetResponderCapture={[Function]}
-        onResponderEnd={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderReject={[Function]}
-        onResponderRelease={[Function]}
-        onResponderStart={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        onStartShouldSetResponderCapture={[Function]}
+      <Text
         style={
           Object {
-            "backgroundColor": "transparent",
-            "flex": 1,
-            "height": 1334,
-            "left": 0,
-            "overflow": "hidden",
-            "position": "absolute",
-            "top": 0,
-            "transform": Array [
-              Object {
-                "translateX": 0,
-              },
-            ],
-            "width": 750,
+            "fontSize": 30,
+            "fontWeight": "300",
+            "top": 30,
           }
         }
-      />
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 12,
+              },
+              Object {
+                "fontSize": 30,
+                "fontWeight": "300",
+                "top": 30,
+              },
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        Favorites
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 30,
+            "fontWeight": "300",
+            "top": 30,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 12,
+              },
+              Object {
+                "fontSize": 30,
+                "fontWeight": "300",
+                "top": 30,
+              },
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        Updates
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 30,
+            "fontWeight": "300",
+            "top": 30,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 12,
+              },
+              Object {
+                "fontSize": 30,
+                "fontWeight": "300",
+                "top": 30,
+              },
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        Feedback
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 30,
+            "fontWeight": "300",
+            "top": 30,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 12,
+              },
+              Object {
+                "fontSize": 30,
+                "fontWeight": "300",
+                "top": 30,
+              },
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        Settings
+      </Text>
     </View>
   </View>
   <View
@@ -1708,65 +1797,154 @@ exports[`Check if our MainView renders correctly 1`] = `
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
-          "bottom": 0,
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
+          "backgroundColor": "#a9a9a9",
+          "flex": 1,
+          "padding": 30,
         }
       }
     >
-      <View
-        style={
-          Array [
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            },
-            Object {
-              "right": 250,
-            },
-          ]
-        }
-      />
-      <View
-        onMoveShouldSetResponder={[Function]}
-        onMoveShouldSetResponderCapture={[Function]}
-        onResponderEnd={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderReject={[Function]}
-        onResponderRelease={[Function]}
-        onResponderStart={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        onStartShouldSetResponderCapture={[Function]}
+      <Text
         style={
           Object {
-            "backgroundColor": "transparent",
-            "flex": 1,
-            "height": 1334,
-            "left": 0,
-            "overflow": "hidden",
-            "position": "absolute",
-            "top": 0,
-            "transform": Array [
-              Object {
-                "translateX": 0,
-              },
-            ],
-            "width": 750,
+            "fontSize": 30,
+            "fontWeight": "300",
+            "top": 30,
           }
         }
-      />
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 12,
+              },
+              Object {
+                "fontSize": 30,
+                "fontWeight": "300",
+                "top": 30,
+              },
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        Favorites
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 30,
+            "fontWeight": "300",
+            "top": 30,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 12,
+              },
+              Object {
+                "fontSize": 30,
+                "fontWeight": "300",
+                "top": 30,
+              },
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        Updates
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 30,
+            "fontWeight": "300",
+            "top": 30,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 12,
+              },
+              Object {
+                "fontSize": 30,
+                "fontWeight": "300",
+                "top": 30,
+              },
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        Feedback
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 30,
+            "fontWeight": "300",
+            "top": 30,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 12,
+              },
+              Object {
+                "fontSize": 30,
+                "fontWeight": "300",
+                "top": 30,
+              },
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        Settings
+      </Text>
     </View>
   </View>
   <View
@@ -11670,65 +11848,154 @@ exports[`Check if our main app renders correctly 1`] = `
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
-          "bottom": 0,
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
+          "backgroundColor": "#a9a9a9",
+          "flex": 1,
+          "padding": 30,
         }
       }
     >
-      <View
-        style={
-          Array [
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            },
-            Object {
-              "right": 250,
-            },
-          ]
-        }
-      />
-      <View
-        onMoveShouldSetResponder={[Function]}
-        onMoveShouldSetResponderCapture={[Function]}
-        onResponderEnd={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderReject={[Function]}
-        onResponderRelease={[Function]}
-        onResponderStart={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        onStartShouldSetResponderCapture={[Function]}
+      <Text
         style={
           Object {
-            "backgroundColor": "transparent",
-            "flex": 1,
-            "height": 1334,
-            "left": 0,
-            "overflow": "hidden",
-            "position": "absolute",
-            "top": 0,
-            "transform": Array [
-              Object {
-                "translateX": 0,
-              },
-            ],
-            "width": 750,
+            "fontSize": 30,
+            "fontWeight": "300",
+            "top": 30,
           }
         }
-      />
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 12,
+              },
+              Object {
+                "fontSize": 30,
+                "fontWeight": "300",
+                "top": 30,
+              },
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        Favorites
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 30,
+            "fontWeight": "300",
+            "top": 30,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 12,
+              },
+              Object {
+                "fontSize": 30,
+                "fontWeight": "300",
+                "top": 30,
+              },
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        Updates
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 30,
+            "fontWeight": "300",
+            "top": 30,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 12,
+              },
+              Object {
+                "fontSize": 30,
+                "fontWeight": "300",
+                "top": 30,
+              },
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        Feedback
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 30,
+            "fontWeight": "300",
+            "top": 30,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 12,
+              },
+              Object {
+                "fontSize": 30,
+                "fontWeight": "300",
+                "top": 30,
+              },
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        Settings
+      </Text>
     </View>
   </View>
   <View

@@ -23,6 +23,7 @@ import GroundMapView from './components/GroundMapView/GroundMapView';
 import UndergroundMapView
   from './components/UndergroundMapView/UndergroundMapView';
 import SearchBar from './components/SearchBar/SearchBar';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 /**
  * HomeScreen that gets rendered first when everything is loaded
@@ -50,9 +51,30 @@ class HomeScreen extends React.Component {
       this.setState({sideMenuIsOpen: !this.state.sideMenuIsOpen});
     };
 
+      const MenuComponent = (
+          <View style={{flex: 1, backgroundColor: '#a9a9a9', padding: 30}}>
+              <Text style={styles.item}>
+                  <Icon name="heart" style={styles.item}/>
+                  Favorites
+              </Text>
+              <Text style={styles.item}>
+                  <Icon name="bell" style={styles.item}/>
+                  Updates
+              </Text>
+              <Text style={styles.item}>
+                  <Icon name="users" style={styles.item}/>
+                  Feedback
+              </Text>
+              <Text style={styles.item}>
+                  <Icon name="gear" style={styles.item}/>
+                  Settings
+              </Text>
+          </View>
+      );
+
     return (
-      <SideMenu
-        menu={<SideMenu navigator={navigator}/>}
+     <SideMenu
+        menu={MenuComponent}
         disableGestures={this.state.sideMenuDisableGesture}
         isOpen={this.state.sideMenuIsOpen}
         onChange={(openStatus) => {
@@ -117,6 +139,14 @@ const positions = StyleSheet.create({
     top: 20,
     left: 20,
   },
+});
+
+const styles = StyleSheet.create({
+    item: {
+        fontSize: 30,
+        fontWeight: '300',
+        top: 30,
+    },
 });
 
 export default class App extends React.Component {
