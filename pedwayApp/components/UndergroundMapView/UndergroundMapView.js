@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import styles from './styles';
-import MapView, {MAP_TYPES, UrlTile} from 'react-native-maps';
+import MapView, {MAP_TYPES, UrlTile, Callout} from 'react-native-maps';
+import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import RenderPedway from '../RenderPedway/RenderPedway';
 import MapStyle from './mapStyleDark';
 import PedwayData from '../../mock_data/sections';
@@ -16,12 +17,16 @@ export default class GroundMapView extends React.Component {
     super();
     this.state = {
       apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
-      latitude:  41.884243,
+      latitude: 41.884243,
       longitude: -87.626936,
       error: null,
       pedwayData: PedwayData,
 
     };
+    this.handleOnPress = this.handleOnPress.bind(this);
+  }
+
+  handleOnPress() {
   }
 
   render() {
@@ -37,7 +42,8 @@ export default class GroundMapView extends React.Component {
           longitude: longitude,
           latitudeDelta: 0.012,
           longitudeDelta: 0.012,
-        }}>
+        }}
+      >
         {/*<UrlTile urlTemplate={this.state.apiServerURL}/>*/}
         <MapView.Marker
           coordinate={{
@@ -46,8 +52,10 @@ export default class GroundMapView extends React.Component {
           }}
           pinColor={'#1198ff'}
           title={'You'}
-        />
+        >
+        </MapView.Marker>
         <RenderPedway JSONData={PedwayData}/>
+
       </MapView>
     );
   }

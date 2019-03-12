@@ -23,6 +23,9 @@ import GroundMapView from './components/GroundMapView/GroundMapView';
 import UndergroundMapView
   from './components/UndergroundMapView/UndergroundMapView';
 import SearchBar from './components/SearchBar/SearchBar';
+import SlidingUpDetailView
+  from './components/SlidingUpDetailView/SlidingUpDetailView';
+
 
 /**
  * HomeScreen that gets rendered first when everything is loaded
@@ -40,6 +43,7 @@ class HomeScreen extends React.Component {
       sideMenuIsOpen: false,
       sideMenuDisableGesture: true,
       apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
+      detailViewOpen: false,
     };
   }
 
@@ -79,6 +83,7 @@ class MainView extends React.Component {
     super(props);
     this.state = {
       underground: false,
+      selectedEntrance: null,
     };
     this.toggleUndergroundMap = this.toggleUndergroundMap.bind(this);
 
@@ -87,7 +92,18 @@ class MainView extends React.Component {
   toggleUndergroundMap() {
     this.setState({
       underground: !this.state.underground,
+      detailViewOpen: false,
+
     });
+    this.updateSlidingDetailView = this.updateSlidingDetailView.bind(this);
+  }
+
+  updateSlidingDetailView(inputEntrance) {
+    this.setState({
+      selectedEntrance: inputEntrance,
+      detailViewOpen: !this.state.underground,
+    });
+
   }
 
   render() {
@@ -95,7 +111,13 @@ class MainView extends React.Component {
       <View style={{flex: 1}}>
         {(this.state.underground) ?
           (<UndergroundMapView/>) :
-          (<GroundMapView/>)}
+          (<GroundMapView
+            selectedMarkerCallback={(input)=>{this.updateSlidingDetailView(input)}}
+          />)}
+        <SlidingUpDetailView
+          open={this.state.detailViewOpen}
+          entrance={this.state.selectedEntrance}
+        />
         <SearchBar/>
         <RoundButton
           style={[positions.undergroundButton]}
@@ -108,9 +130,10 @@ class MainView extends React.Component {
 
 const positions = StyleSheet.create({
   undergroundButton: {
+    zIndex: 0,
     position: 'absolute',
-    bottom: 30,
-    right: 30,
+    top: 100,
+    right: 20,
   },
   hamburgerButton: {
     position: 'absolute',

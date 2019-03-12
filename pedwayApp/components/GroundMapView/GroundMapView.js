@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import styles from './styles';
-import MapView, {MAP_TYPES, UrlTile} from 'react-native-maps';
+import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import MapView, {MAP_TYPES, UrlTile, Callout} from 'react-native-maps';
 import RenderPedway from '../RenderPedway/RenderPedway';
 import RenderEntrance from '../RenderEntrance/RenderEntrance';
 import PedwayData from '../../mock_data/export';
+import MapCallout from 'react-native-maps/lib/components/MapCallout';
 
 
 /**
@@ -22,8 +24,8 @@ export default class GroundMapView extends React.Component {
       error: null,
       pedwayData: PedwayData,
       updateGeoLocation: false,
-
     };
+    this.forwardSelectedEntrance = this.forwardSelectedEntrance.bind(this);
   }
 
   componentDidMount() {
@@ -37,8 +39,14 @@ export default class GroundMapView extends React.Component {
           });
         },
         (error) => this.setState({error: error.message}),
-        {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
+        {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000},
       );
+    }
+  }
+
+  forwardSelectedEntrance(inputEntrance) {
+    if(this.props.selectedMarkerCallback!==undefined) {
+      this.props.selectedMarkerCallback(inputEntrance);
     }
   }
 
@@ -49,22 +57,20 @@ export default class GroundMapView extends React.Component {
       <MapView
         style={styles.mainMap}
         // mapType={MAP_TYPES.NONE}
-        region={{
+        // bug fixes, or else cause region to reset whenever opress
+        // reference: https://github.com/react-native-community/react-native-maps/issues/2308
+        initialRegion={{
           latitude: latitude,
           longitude: longitude,
           latitudeDelta: 0.02,
           longitudeDelta: 0.02,
-        }}>
-        {/*<UrlTile urlTemplate={this.state.apiServerURL}/>*/}
-        {/*<MapView.Marker*/}
-        {/*coordinate={{*/}
-        {/*latitude: latitude,*/}
-        {/*longitude: longitude,*/}
-        {/*}}*/}
-        {/*pinColor={'#1198ff'}*/}
-        {/*title={'You'}*/}
-        {/*/>*/}
-        <RenderEntrance JSONData={PedwayData}/>
+        }}
+      >
+        <RenderEntrance
+          JSONData={PedwayData}
+          callbackFunc={(input) => {
+            this.forwardSelectedEntrance(input);
+          }}/>
       </MapView>
     );
   }
