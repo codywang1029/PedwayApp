@@ -28,6 +28,7 @@ describe('Conditional test using the ors endpoint', () => {
   testIfORSAPIKeyAvailable(
       'a tile PNG should be returned from the GET method on the mapsurfer endpoint',
       (done) => {
+        jest.setTimeout(10*1000);
         request(app)
             // Get a Mapsurfer tile for Millennium Park
             .get('/api/ors/mapsurfer/15/8408/12178.png')

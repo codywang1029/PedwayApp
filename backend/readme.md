@@ -42,6 +42,10 @@ MONGODB_UNAME=...
 # Mongo database hostpath
 MONGODB_HOST=...
 
+# Default admin user for backend, should only be used in dev
+# When you signup, this email will create an admin account
+DEFAULT_ADMIN_EMAIL=
+
 # Openroutingservice.org API key
 ORS_API_KEY=... 
 ```
