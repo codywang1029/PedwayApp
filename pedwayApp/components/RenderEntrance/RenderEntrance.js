@@ -32,7 +32,7 @@ export default class RenderEntrance extends Component {
       } catch (e) {
         return false;
       }
-    }).reduce((acc, item) => {
+    }).reduce((acc, item, idx) => {
       const thisLongitude = item['geometry']['coordinates'][0];
       const thisLatitude = item['geometry']['coordinates'][1];
       return acc.concat(
@@ -40,7 +40,8 @@ export default class RenderEntrance extends Component {
           thisLatitude,
           thisLongitude),
           true,
-          false));
+          false,
+          'Entrance #'+idx.toString()));
     }, []);
     this.setState({
       pedwayEntrances: entrances,
@@ -57,6 +58,7 @@ export default class RenderEntrance extends Component {
     if(this.props.JSONData!==undefined) {
       this.parseJSONtoModel(next.JSONData);
     }
+    this.forceUpdate();
   }
 
   render() {
@@ -66,6 +68,7 @@ export default class RenderEntrance extends Component {
             coordinate={input.getCoordinate().getJSON()}
             // image={require('../../media/pedwayEntranceMarker.png')}
             key={idx}
+            onPress={()=>{this.props.callbackFunc(this.state.pedwayEntrances[idx])}}
           />
         );
       },

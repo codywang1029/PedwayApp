@@ -13,8 +13,7 @@ import HomeScreen from '../App.js'
 import MainView from '../App.js'
 import GroundMapView from '../components/GroundMapView/GroundMapView'
 import UndergroundScreen from '../components/UndergroundMapView/UndergroundMapView'
-import RenderPedway from '../components/RenderPedway/RenderPedway'
-import RenderEntrance from '../components/RenderEntrance/RenderEntrance'
+
 
 
 test('Check if our main app renders correctly', () => {

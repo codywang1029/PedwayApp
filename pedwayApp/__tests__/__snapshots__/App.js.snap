@@ -2,7 +2,7 @@
 
 exports[`Check if our GroundMapView renders correctly 1`] = `
 <MapView
-  region={
+  initialRegion={
     Object {
       "latitude": 41.88189833333333,
       "latitudeDelta": 0.01,
@@ -48,6 +48,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6306729,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -56,6 +61,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6308302,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -64,6 +74,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6306746,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -72,6 +87,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6311264,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -80,6 +100,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6281675,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -88,6 +113,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.626503,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -96,6 +126,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6264962,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -104,6 +139,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6364478,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -112,6 +152,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6369002,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -120,6 +165,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.631341,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -128,6 +178,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6310922,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -136,6 +191,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6326252,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -144,6 +204,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6322178,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -152,6 +217,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6293223,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -160,6 +230,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6290591,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -168,6 +243,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6306371,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -176,6 +256,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6280557,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -184,6 +269,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6276585,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -192,6 +282,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6238166,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -200,6 +295,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6229453,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -208,6 +308,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6218723,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -216,6 +321,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.621512,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -224,6 +334,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6218641,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -232,6 +347,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6209853,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -240,6 +360,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6235577,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -248,6 +373,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6318076,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -256,6 +386,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6326191,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -264,6 +399,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6398754,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -272,6 +412,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6394836,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -280,6 +425,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6387431,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -288,6 +438,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6378628,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -296,6 +451,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6370858,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -304,6 +464,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6341584,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -312,6 +477,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6341473,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -320,6 +490,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6223802,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -328,6 +503,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6252636,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -336,6 +516,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6247064,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -344,6 +529,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6248016,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -352,6 +542,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6246246,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -360,6 +555,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.624521,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -368,6 +568,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6289736,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -376,6 +581,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6244735,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -384,6 +594,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6245449,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -392,6 +607,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6245151,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -400,6 +620,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6245182,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -408,6 +633,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6245532,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -416,6 +646,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6242429,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -424,6 +659,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.623797,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -432,6 +672,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6232655,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -440,6 +685,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6244202,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -448,6 +698,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6218876,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -456,6 +711,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6188103,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -464,6 +724,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6226846,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -472,6 +737,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6233237,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -480,6 +750,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6239591,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -488,6 +763,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.630338,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -496,6 +776,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.621859,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -504,6 +789,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6215013,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -512,6 +802,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.619237,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -520,6 +815,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6238213,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -528,6 +828,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6263683,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -536,6 +841,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6201,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -544,6 +854,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6200488,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -552,6 +867,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6205933,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -560,6 +880,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6232587,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -568,6 +893,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6230833,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -576,6 +906,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6220432,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -584,6 +919,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6213563,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -592,6 +932,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6215568,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -600,6 +945,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6219347,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -608,6 +958,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6236493,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -616,6 +971,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.629274,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
   <Marker
     coordinate={
@@ -624,6 +984,11 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         "longitude": -87.6293521,
       }
     }
+<<<<<<< HEAD
+    onPress={[Function]}
+    pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
   />
 </MapView>
 `;
@@ -912,7 +1277,7 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
       }
     >
       <MapView
-        region={
+        initialRegion={
           Object {
             "latitude": 41.88189833333333,
             "latitudeDelta": 0.01,
@@ -958,6 +1323,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6306729,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -966,6 +1336,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6308302,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -974,6 +1349,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6306746,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -982,6 +1362,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6311264,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -990,6 +1375,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6281675,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -998,6 +1388,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.626503,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1006,6 +1401,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6264962,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1014,6 +1414,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6364478,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1022,6 +1427,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6369002,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1030,6 +1440,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.631341,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1038,6 +1453,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6310922,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1046,6 +1466,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6326252,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1054,6 +1479,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6322178,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1062,6 +1492,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6293223,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1070,6 +1505,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6290591,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1078,6 +1518,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6306371,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1086,6 +1531,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6280557,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1094,6 +1544,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6276585,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1102,6 +1557,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6238166,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1110,6 +1570,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6229453,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1118,6 +1583,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6218723,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1126,6 +1596,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.621512,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1134,6 +1609,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6218641,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1142,6 +1622,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6209853,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1150,6 +1635,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6235577,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1158,6 +1648,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6318076,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1166,6 +1661,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6326191,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1174,6 +1674,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6398754,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1182,6 +1687,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6394836,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1190,6 +1700,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6387431,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1198,6 +1713,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6378628,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1206,6 +1726,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6370858,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1214,6 +1739,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6341584,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1222,6 +1752,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6341473,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1230,6 +1765,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6223802,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1238,6 +1778,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6252636,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1246,6 +1791,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6247064,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1254,6 +1804,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6248016,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1262,6 +1817,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6246246,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1270,6 +1830,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.624521,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1278,6 +1843,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6289736,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1286,6 +1856,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6244735,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1294,6 +1869,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6245449,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1302,6 +1882,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6245151,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1310,6 +1895,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6245182,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1318,6 +1908,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6245532,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1326,6 +1921,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6242429,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1334,6 +1934,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.623797,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1342,6 +1947,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6232655,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1350,6 +1960,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6244202,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1358,6 +1973,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6218876,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1366,6 +1986,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6188103,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1374,6 +1999,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6226846,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1382,6 +2012,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6233237,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1390,6 +2025,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6239591,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1398,6 +2038,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.630338,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1406,6 +2051,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.621859,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1414,6 +2064,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6215013,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1422,6 +2077,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.619237,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1430,6 +2090,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6238213,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1438,6 +2103,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6263683,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1446,6 +2116,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6201,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1454,6 +2129,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6200488,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1462,6 +2142,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6205933,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1470,6 +2155,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6232587,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1478,6 +2168,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6230833,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1486,6 +2181,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6220432,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1494,6 +2194,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6213563,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1502,6 +2207,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6215568,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1510,6 +2220,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6219347,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1518,6 +2233,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6236493,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1526,6 +2246,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.629274,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1534,8 +2259,22 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "longitude": -87.6293521,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
       </MapView>
+      <SlidingUpPanel
+        draggableRange={
+          Object {
+            "bottom": 0,
+            "top": 150,
+          }
+        }
+        showBackdrop={false}
+      />
       <View
         accessible={true}
         isTVSelectable={true}
@@ -1605,12 +2344,11 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
             "alignItems": "center",
             "backgroundColor": "#FFFFFF",
             "borderRadius": 60,
-            "bottom": 30,
             "elevation": 6,
             "height": 60,
             "opacity": 0.95,
             "position": "absolute",
-            "right": 30,
+            "right": 20,
             "shadowColor": "rgba(0, 0, 0, 0.6)",
             "shadowOffset": Object {
               "height": 30,
@@ -1619,6 +2357,7 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
             "shadowOpacity": 0.8,
             "shadowRadius": 15,
             "textAlignVertical": "center",
+            "top": 100,
             "width": 60,
             "zIndex": 1,
           }
@@ -1944,7 +2683,7 @@ exports[`Check if our MainView renders correctly 1`] = `
       }
     >
       <MapView
-        region={
+        initialRegion={
           Object {
             "latitude": 41.88189833333333,
             "latitudeDelta": 0.01,
@@ -1990,6 +2729,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6306729,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -1998,6 +2742,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6308302,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2006,6 +2755,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6306746,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2014,6 +2768,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6311264,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2022,6 +2781,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6281675,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2030,6 +2794,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.626503,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2038,6 +2807,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6264962,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2046,6 +2820,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6364478,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2054,6 +2833,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6369002,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2062,6 +2846,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.631341,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2070,6 +2859,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6310922,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2078,6 +2872,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6326252,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2086,6 +2885,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6322178,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2094,6 +2898,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6293223,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2102,6 +2911,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6290591,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2110,6 +2924,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6306371,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2118,6 +2937,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6280557,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2126,6 +2950,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6276585,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2134,6 +2963,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6238166,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2142,6 +2976,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6229453,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2150,6 +2989,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6218723,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2158,6 +3002,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.621512,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2166,6 +3015,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6218641,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2174,6 +3028,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6209853,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2182,6 +3041,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6235577,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2190,6 +3054,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6318076,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2198,6 +3067,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6326191,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2206,6 +3080,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6398754,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2214,6 +3093,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6394836,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2222,6 +3106,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6387431,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2230,6 +3119,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6378628,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2238,6 +3132,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6370858,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2246,6 +3145,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6341584,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2254,6 +3158,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6341473,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2262,6 +3171,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6223802,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2270,6 +3184,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6252636,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2278,6 +3197,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6247064,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2286,6 +3210,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6248016,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2294,6 +3223,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6246246,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2302,6 +3236,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.624521,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2310,6 +3249,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6289736,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2318,6 +3262,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6244735,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2326,6 +3275,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6245449,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2334,6 +3288,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6245151,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2342,6 +3301,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6245182,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2350,6 +3314,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6245532,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2358,6 +3327,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6242429,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2366,6 +3340,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.623797,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2374,6 +3353,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6232655,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2382,6 +3366,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6244202,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2390,6 +3379,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6218876,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2398,6 +3392,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6188103,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2406,6 +3405,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6226846,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2414,6 +3418,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6233237,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2422,6 +3431,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6239591,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2430,6 +3444,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.630338,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2438,6 +3457,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.621859,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2446,6 +3470,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6215013,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2454,6 +3483,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.619237,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2462,6 +3496,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6238213,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2470,6 +3509,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6263683,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2478,6 +3522,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6201,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2486,6 +3535,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6200488,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2494,6 +3548,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6205933,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2502,6 +3561,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6232587,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2510,6 +3574,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6230833,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2518,6 +3587,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6220432,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2526,6 +3600,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6213563,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2534,6 +3613,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6215568,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2542,6 +3626,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6219347,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2550,6 +3639,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6236493,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2558,6 +3652,11 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.629274,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -2566,8 +3665,22 @@ exports[`Check if our MainView renders correctly 1`] = `
               "longitude": -87.6293521,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
       </MapView>
+      <SlidingUpPanel
+        draggableRange={
+          Object {
+            "bottom": 0,
+            "top": 150,
+          }
+        }
+        showBackdrop={false}
+      />
       <View
         accessible={true}
         isTVSelectable={true}
@@ -2637,12 +3750,11 @@ exports[`Check if our MainView renders correctly 1`] = `
             "alignItems": "center",
             "backgroundColor": "#FFFFFF",
             "borderRadius": 60,
-            "bottom": 30,
             "elevation": 6,
             "height": 60,
             "opacity": 0.95,
             "position": "absolute",
-            "right": 30,
+            "right": 20,
             "shadowColor": "rgba(0, 0, 0, 0.6)",
             "shadowOffset": Object {
               "height": 30,
@@ -2651,6 +3763,7 @@ exports[`Check if our MainView renders correctly 1`] = `
             "shadowOpacity": 0.8,
             "shadowRadius": 15,
             "textAlignVertical": "center",
+            "top": 100,
             "width": 60,
             "zIndex": 1,
           }
@@ -11947,7 +13060,7 @@ exports[`Check if our main app renders correctly 1`] = `
       }
     >
       <MapView
-        region={
+        initialRegion={
           Object {
             "latitude": 41.88189833333333,
             "latitudeDelta": 0.01,
@@ -11993,6 +13106,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6306729,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12001,6 +13119,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6308302,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12009,6 +13132,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6306746,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12017,6 +13145,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6311264,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12025,6 +13158,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6281675,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12033,6 +13171,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.626503,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12041,6 +13184,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6264962,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12049,6 +13197,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6364478,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12057,6 +13210,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6369002,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12065,6 +13223,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.631341,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12073,6 +13236,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6310922,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12081,6 +13249,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6326252,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12089,6 +13262,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6322178,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12097,6 +13275,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6293223,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12105,6 +13288,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6290591,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12113,6 +13301,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6306371,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12121,6 +13314,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6280557,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12129,6 +13327,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6276585,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12137,6 +13340,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6238166,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12145,6 +13353,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6229453,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12153,6 +13366,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6218723,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12161,6 +13379,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.621512,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12169,6 +13392,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6218641,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12177,6 +13405,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6209853,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12185,6 +13418,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6235577,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12193,6 +13431,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6318076,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12201,6 +13444,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6326191,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12209,6 +13457,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6398754,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12217,6 +13470,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6394836,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12225,6 +13483,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6387431,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12233,6 +13496,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6378628,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12241,6 +13509,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6370858,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12249,6 +13522,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6341584,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12257,6 +13535,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6341473,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12265,6 +13548,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6223802,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12273,6 +13561,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6252636,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12281,6 +13574,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6247064,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12289,6 +13587,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6248016,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12297,6 +13600,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6246246,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12305,6 +13613,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.624521,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12313,6 +13626,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6289736,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12321,6 +13639,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6244735,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12329,6 +13652,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6245449,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12337,6 +13665,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6245151,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12345,6 +13678,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6245182,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12353,6 +13691,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6245532,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12361,6 +13704,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6242429,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12369,6 +13717,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.623797,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12377,6 +13730,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6232655,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12385,6 +13743,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6244202,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12393,6 +13756,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6218876,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12401,6 +13769,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6188103,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12409,6 +13782,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6226846,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12417,6 +13795,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6233237,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12425,6 +13808,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6239591,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12433,6 +13821,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.630338,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12441,6 +13834,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.621859,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12449,6 +13847,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6215013,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12457,6 +13860,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.619237,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12465,6 +13873,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6238213,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12473,6 +13886,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6263683,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12481,6 +13899,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6201,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12489,6 +13912,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6200488,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12497,6 +13925,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6205933,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12505,6 +13938,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6232587,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12513,6 +13951,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6230833,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12521,6 +13964,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6220432,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12529,6 +13977,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6213563,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12537,6 +13990,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6215568,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12545,6 +14003,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6219347,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12553,6 +14016,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6236493,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12561,6 +14029,11 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.629274,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
         <Marker
           coordinate={
@@ -12569,8 +14042,22 @@ exports[`Check if our main app renders correctly 1`] = `
               "longitude": -87.6293521,
             }
           }
+<<<<<<< HEAD
+          onPress={[Function]}
+          pinColor="#1198ff"
+=======
+>>>>>>> 12221737f99ba916977dcb1193a1e7c6c47592c5
         />
       </MapView>
+      <SlidingUpPanel
+        draggableRange={
+          Object {
+            "bottom": 0,
+            "top": 150,
+          }
+        }
+        showBackdrop={false}
+      />
       <View
         accessible={true}
         isTVSelectable={true}
@@ -12640,12 +14127,11 @@ exports[`Check if our main app renders correctly 1`] = `
             "alignItems": "center",
             "backgroundColor": "#FFFFFF",
             "borderRadius": 60,
-            "bottom": 30,
             "elevation": 6,
             "height": 60,
             "opacity": 0.95,
             "position": "absolute",
-            "right": 30,
+            "right": 20,
             "shadowColor": "rgba(0, 0, 0, 0.6)",
             "shadowOffset": Object {
               "height": 30,
@@ -12654,6 +14140,7 @@ exports[`Check if our main app renders correctly 1`] = `
             "shadowOpacity": 0.8,
             "shadowRadius": 15,
             "textAlignVertical": "center",
+            "top": 100,
             "width": 60,
             "zIndex": 1,
           }

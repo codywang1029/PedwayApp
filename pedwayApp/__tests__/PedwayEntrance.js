@@ -4,7 +4,9 @@ import PedwayCoordinate from '../model/PedwayCoordinate';
 test('Check Entrance Constructor', () => {
   const testCoord = new PedwayCoordinate(-70.20232, 42.353523);
   expect(testCoord !== null);
-  const testEntrance = new PedwayEntrance(testCoord, 'open', false);
+  let testEntrance = new PedwayEntrance(testCoord, 'open', false);
+  expect(testEntrance !== null);
+  testEntrance = new PedwayEntrance(testCoord, 'open', false,'entrance1');
   expect(testEntrance !== null);
 });
 
@@ -52,5 +54,26 @@ test('Check Elevator Setter', () => {
   const testEntrance = new PedwayEntrance(testCoord, 'open', false);
   testEntrance.setElevator(true);
   expect(testEntrance.getElevatorAvailability()).toBe(true);
+});
+
+test('Check Name Getter and Setter', () => {
+  const testCoord = new PedwayCoordinate(-70.20232, 42.353523);
+  let testEntrance = new PedwayEntrance(testCoord, 'open', false);
+  testEntrance.setElevator(true);
+  testEntrance.setName('Entrance 1');
+  expect(testEntrance.getName()).toBe('Entrance 1');
+
+  testEntrance = new PedwayEntrance(testCoord, 'open', false, 'Entrance 42');
+  testEntrance.setName('Entrance 42');
+
+  testEntrance.setName('');
+  expect(testEntrance.getName()).toBe('');
+
+  testEntrance.setName('Lorem ipsum dolor sit amet, ' +
+    'consectetur adipiscing elit, sed do ' +
+    'eiusmod tempor incididunt ut labore et dolore magna aliqua.');
+  expect(testEntrance.getName()).toBe('Lorem ipsum dolor sit amet,' +
+    ' consectetur adipiscing elit, sed do eiusmod t' +
+    'empor incididunt ut labore et dolore magna aliqua.');
 });
 
