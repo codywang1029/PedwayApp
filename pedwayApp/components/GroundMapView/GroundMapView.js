@@ -47,15 +47,10 @@ export default class GroundMapView extends React.Component {
     }
   }
 
-  forwardSelectedEntrance(inputEntrance) {
-    if (this.props.selectedMarkerCallback !== undefined) {
-      this.props.selectedMarkerCallback(inputEntrance);
-    }
-  }
-
   getGeometry(start, end) {
-    axios.get('http://localhost:3000/api/ors/directions?coordinates=' + start[1] + ',%20' + start[0] + '%7C' + end[1] + ',%20' + end[0] + '&profile=foot-walking')
-      .then(json => console.log(json)).catch(e=>{});
+    axios.get('http://192.168.86.122:3000/api/ors/directions?coordinates=' + start[1] + ',%20' + start[0] + '%7C' + end[1] + ',%20' + end[0] + '&profile=foot-walking')
+      .then(json => console.log(json)).catch(error => console.log(error));
+      
   }
 
   componentWillUnmount() {
@@ -65,7 +60,8 @@ export default class GroundMapView extends React.Component {
   render() {
     const latitude = this.state.latitude;
     const longitude = this.state.longitude;
-    this.getGeometry([latitude, longitude], [41.881899, -83.633977]);
+    this.getGeometry([latitude, longitude], [41.881899, -87.643977]);
+
     return (
       <MapView
         style={styles.mainMap}
