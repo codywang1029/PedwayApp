@@ -52,21 +52,6 @@ export default class GroundMapView extends React.Component {
     const latitude = this.state.latitude;
     const longitude = this.state.longitude;
 
-
-    if (latitude===41.881899){
-        console.log("change");
-        navigator.geolocation.getCurrentPosition(
-            (position) => {
-                this.setState({
-                    latitude: position.coords.latitude,
-                    longitude: position.coords.longitude,
-                    error: null,
-                });
-            },
-            (error) => this.setState({error: error.message}),
-            {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
-        );
-    }
     return (
       <MapView
         style={styles.mainMap}
