@@ -39,15 +39,15 @@ describe('Test the root of the entrance api', () => {
       'properties': {
         'OBJECTID': 35,
         'PED_ROUTE': 'ONE ILLINOIS CENTER - TWO ILLINOIS CENTER WALKWAY',
-        'SHAPE_LEN': 201.999236
+        'SHAPE_LEN': 201.999236,
       },
       'geometry': {
         'type': 'MultiLineString',
         'coordinates': [[
           [-87.623053972872867, 41.887066159936772],
-          [-87.623071155091367, 41.88762032643141]
-        ]]
-      }
+          [-87.623071155091367, 41.88762032643141],
+        ]],
+      },
     }).save();
 
     request(app).get('/api/pedway/section').then((response) => {
