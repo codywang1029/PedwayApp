@@ -24,7 +24,7 @@ export default class GroundMapView extends React.Component {
       longitude: -87.623977,
       error: null,
       pedwayData: PedwayData,
-      updateGeoLocation: true,
+      updateGeoLocation: false,
       id: 0,
     };
     this.forwardSelectedEntrance = this.forwardSelectedEntrance.bind(this);
@@ -55,7 +55,7 @@ export default class GroundMapView extends React.Component {
 
   getGeometry(start, end) {
     axios.get('http://localhost:3000/api/ors/directions?coordinates=' + start[1] + ',%20' + start[0] + '%7C' + end[1] + ',%20' + end[0] + '&profile=foot-walking')
-      .then(json => console.log(json));
+      .then(json => console.log(json)).catch(e=>{});
   }
 
   componentWillUnmount() {
@@ -69,9 +69,6 @@ export default class GroundMapView extends React.Component {
     return (
       <MapView
         style={styles.mainMap}
-        // mapType={MAP_TYPES.NONE}
-        // bug fixes, or else cause region to reset whenever opress
-        // reference: https://github.com/react-native-community/react-native-maps/issues/2308
         initialRegion={{
           latitude: latitude,
           longitude: longitude,
@@ -84,10 +81,6 @@ export default class GroundMapView extends React.Component {
           callbackFunc={(input) => {
             this.forwardSelectedEntrance(input);
           }}/>
-        latitudeDelta: 0.01,
-        longitudeDelta: 0.01,
-        }}>
-        {/*<UrlTile urlTemplate={this.state.apiServerURL}/>*/}
         <MapView.Marker
           coordinate={{
             latitude: latitude,
@@ -96,11 +89,9 @@ export default class GroundMapView extends React.Component {
           style={{zIndex: 10}}
           pinColor={'#1198ff'}
           title={'You'}
-          image={circle}
-        />
-        <RenderEntrance JSONData={PedwayData}/>
-      </MapView>
-    );
+          image={circle}/>
+      </MapView>);
+
   }
 }
 

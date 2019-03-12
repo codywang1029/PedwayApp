@@ -114,7 +114,6 @@ class MainView extends React.Component {
     this.setState({
       underground: !this.state.underground,
       detailViewOpen: false,
-
     });
     this.updateSlidingDetailView = this.updateSlidingDetailView.bind(this);
   }
