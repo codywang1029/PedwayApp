@@ -12,6 +12,7 @@ import MapView, {
  * In the future we are gonna to get those values from the API
  * */
 export default class RenderEntrance extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -31,15 +32,16 @@ export default class RenderEntrance extends Component {
       } catch (e) {
         return false;
       }
-    }).reduce((acc, item) => {
+    }).reduce((acc, item, idx) => {
       const thisLongitude = item['geometry']['coordinates'][0];
       const thisLatitude = item['geometry']['coordinates'][1];
       return acc.concat(
-          new PedwayEntrance(new PedwayCoordinate(
-              thisLatitude,
-              thisLongitude),
+        new PedwayEntrance(new PedwayCoordinate(
+          thisLatitude,
+          thisLongitude),
           true,
-          false));
+          false,
+          'Entrance #'+idx.toString()));
     }, []);
     this.setState({
       pedwayEntrances: entrances,
@@ -47,28 +49,29 @@ export default class RenderEntrance extends Component {
   }
 
   componentWillMount() {
-    if (this.props.JSONData!==undefined) {
+    if(this.props.JSONData!==undefined) {
       this.parseJSONtoModel(this.props.JSONData);
     }
   }
 
   componentWillReceiveProps(next) {
-    if (this.props.JSONData!==undefined) {
+    if(this.props.JSONData!==undefined) {
       this.parseJSONtoModel(next.JSONData);
     }
+    this.forceUpdate();
   }
 
   render() {
     const retMarkerList = this.state.pedwayEntrances.map((input, idx) => {
-      return (
-        <MapView.Marker
-          coordinate={input.getCoordinate().getJSON()}
-          // image={require('../../media/pedwayEntranceMarker.png')}
-          pinColor={'#1198ff'}
-          key={idx}
-        />
-      );
-    },
+        return (
+          <MapView.Marker
+            coordinate={input.getCoordinate().getJSON()}
+            // image={require('../../media/pedwayEntranceMarker.png')}
+            key={idx}
+            onPress={()=>{this.props.callbackFunc(this.state.pedwayEntrances[idx])}}
+          />
+        );
+      },
     );
     return (
       retMarkerList
