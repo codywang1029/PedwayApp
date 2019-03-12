@@ -33,7 +33,6 @@ import Icon from 'react-native-vector-icons/FontAwesome';
  * Sidemenu/MainView
  */
 class HomeScreen extends React.Component {
-
   constructor() {
     super();
     this.state = {
@@ -49,7 +48,6 @@ class HomeScreen extends React.Component {
 
 
   render() {
-
     const toggleSideBar = () => {
       this.setState({sideMenuIsOpen: !this.state.sideMenuIsOpen});
     };
@@ -86,7 +84,7 @@ class HomeScreen extends React.Component {
         }}
       >
         <RoundButton style={[positions.hamburgerButton]} icon={'bars'}
-                     func={toggleSideBar}/>
+          func={toggleSideBar}/>
 
         <MainView/>
       </SideMenu>
@@ -107,7 +105,6 @@ class MainView extends React.Component {
       selectedEntrance: null,
     };
     this.toggleUndergroundMap = this.toggleUndergroundMap.bind(this);
-
   }
 
   toggleUndergroundMap() {
@@ -123,7 +120,6 @@ class MainView extends React.Component {
       selectedEntrance: inputEntrance,
       detailViewOpen: !this.state.underground,
     });
-
   }
 
   render() {

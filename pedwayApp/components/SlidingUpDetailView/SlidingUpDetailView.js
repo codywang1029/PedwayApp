@@ -22,7 +22,6 @@ export default class SlidingUpDetailView extends Component {
     this.updateState = this.updateState.bind(this);
     this.openView = this.openView.bind(this);
     this.closeView = this.closeView.bind(this);
-
   }
 
   updateState(inputProps) {
@@ -47,7 +46,6 @@ export default class SlidingUpDetailView extends Component {
 
   openView() {
     this.detailView.show();
-
   }
 
   closeView() {
@@ -63,39 +61,39 @@ export default class SlidingUpDetailView extends Component {
   }
 
   render() {
-    if(this.state.entrance!==undefined && this.state.entrance!==null) {
-      return(
-      <SlidingUpPanel
-        draggableRange={{top: 150, bottom: 0}}
-        showBackdrop={false}
-        ref={thisView => {
-          this.detailView = thisView;
-        }}
-      >
-        <View style={styles.backgroundView}>
-          <Text style={styles.entranceLabel}>
-            {this.state.entrance.getName()}
-          </Text>
-          <TouchableOpacity style={styles.routeButtonContainer}>
-            <Icon
-              style={styles.routeButton}
-              name={'route'}
-            />
-          </TouchableOpacity>
-          <StatusLabel text={this.state.entrance.getStatus()?'open':'closed'}/>
-          <Text style={styles.coordinateText}>
-            {this.state.entrance.getCoordinate().getLatitude() + ', '
-            + this.state.entrance.getCoordinate().getLongitude()}
-          </Text>
-        </View>
-      </SlidingUpPanel>
-    );
-    } else {
-      return(
+    if (this.state.entrance!==undefined && this.state.entrance!==null) {
+      return (
         <SlidingUpPanel
           draggableRange={{top: 150, bottom: 0}}
           showBackdrop={false}
-          ref={thisView => {
+          ref={(thisView) => {
+            this.detailView = thisView;
+          }}
+        >
+          <View style={styles.backgroundView}>
+            <Text style={styles.entranceLabel}>
+              {this.state.entrance.getName()}
+            </Text>
+            <TouchableOpacity style={styles.routeButtonContainer}>
+              <Icon
+                style={styles.routeButton}
+                name={'route'}
+              />
+            </TouchableOpacity>
+            <StatusLabel text={this.state.entrance.getStatus()?'open':'closed'}/>
+            <Text style={styles.coordinateText}>
+              {this.state.entrance.getCoordinate().getLatitude() + ', '
+            + this.state.entrance.getCoordinate().getLongitude()}
+            </Text>
+          </View>
+        </SlidingUpPanel>
+      );
+    } else {
+      return (
+        <SlidingUpPanel
+          draggableRange={{top: 150, bottom: 0}}
+          showBackdrop={false}
+          ref={(thisView) => {
             this.detailView = thisView;
           }}
         ></SlidingUpPanel>

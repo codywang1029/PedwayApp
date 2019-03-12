@@ -62,6 +62,7 @@
     "rules": {
       "linebreak-style": "off",
       "require-jsdoc": "off",
+      "valid-jsdoc": "off",
       "no-unused-vars": "off",
       "max-len": "off",
       "prefer-const": "off"

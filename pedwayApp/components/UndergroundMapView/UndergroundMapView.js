@@ -13,7 +13,6 @@ import circle from '../../media/pedwayEntranceMarker.png';
  * to use OSM
  */
 export default class GroundMapView extends React.Component {
-
   constructor() {
     super();
     this.state = {
@@ -34,16 +33,16 @@ export default class GroundMapView extends React.Component {
   componentDidMount() {
     if (this.state.updateGeoLocation) {
       let id = navigator.geolocation.watchPosition(
-        (position) => {
-          this.setState({
-            latitude: position.coords.latitude,
-            longitude: position.coords.longitude,
-            error: null,
-            id: id,
-          });
-        },
-        (error) => this.setState({error: error.message}),
-        {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000},
+          (position) => {
+            this.setState({
+              latitude: position.coords.latitude,
+              longitude: position.coords.longitude,
+              error: null,
+              id: id,
+            });
+          },
+          (error) => this.setState({error: error.message}),
+          {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000},
       );
     }
   }
@@ -68,7 +67,7 @@ export default class GroundMapView extends React.Component {
           longitudeDelta: 0.012,
         }}
       >
-        {/*<UrlTile urlTemplate={this.state.apiServerURL}/>*/}
+        {/* <UrlTile urlTemplate={this.state.apiServerURL}/>*/}
         <MapView.Marker
           coordinate={{
             latitude: latitude,

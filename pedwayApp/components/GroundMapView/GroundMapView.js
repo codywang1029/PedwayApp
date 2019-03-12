@@ -15,7 +15,6 @@ import axios from 'axios';
  * to use OSM
  */
 export default class GroundMapView extends React.Component {
-
   constructor() {
     super();
     this.state = {
@@ -33,30 +32,29 @@ export default class GroundMapView extends React.Component {
   componentDidMount() {
     if (this.state.updateGeoLocation) {
       let id = navigator.geolocation.watchPosition(
-        (position) => {
-          this.setState({
-            latitude: position.coords.latitude,
-            longitude: position.coords.longitude,
-            error: null,
-            id: id,
-          });
-        },
-        (error) => this.setState({error: error.message}),
-        {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000},
+          (position) => {
+            this.setState({
+              latitude: position.coords.latitude,
+              longitude: position.coords.longitude,
+              error: null,
+              id: id,
+            });
+          },
+          (error) => this.setState({error: error.message}),
+          {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000},
       );
     }
   }
 
   forwardSelectedEntrance(inputEntrance) {
-    if(this.props.selectedMarkerCallback!==undefined) {
+    if (this.props.selectedMarkerCallback!==undefined) {
       this.props.selectedMarkerCallback(inputEntrance);
     }
   }
 
   getGeometry(start, end) {
     axios.get('http://192.168.86.122:3000/api/ors/directions?coordinates=' + start[1] + ',%20' + start[0] + '%7C' + end[1] + ',%20' + end[0] + '&profile=foot-walking')
-      .then(json => console.log(json)).catch(error => console.log(error));
-
+        .then((json) => console.log(json)).catch((error) => console.log(error));
   }
 
   componentWillUnmount() {
@@ -93,7 +91,6 @@ export default class GroundMapView extends React.Component {
           title={'You'}
           image={circle}/>
       </MapView>);
-
   }
 }
 
