@@ -144,13 +144,6 @@ export default class GroundMapView extends React.Component {
         navigate: false
       });
     }
-    // request api here
-
-    // parse line string
-
-    // render on map
-
-    // remove other plots
   }
 
   componentWillUnmount() {

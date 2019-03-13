@@ -6,7 +6,7 @@ test('Check Entrance Constructor', () => {
   expect(testCoord !== null);
   let testEntrance = new PedwayEntrance(testCoord, 'open', false);
   expect(testEntrance !== null);
-  testEntrance = new PedwayEntrance(testCoord, 'open', false,'entrance1');
+  testEntrance = new PedwayEntrance(testCoord, 'open', false, 'entrance1');
   expect(testEntrance !== null);
 });
 
