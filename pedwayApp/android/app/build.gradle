@@ -78,6 +78,8 @@ project.ext.react = [
 
 apply from: "../../node_modules/react-native/react.gradle"
 
+
+
 // Instal React-Native-Vector-Icons
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 

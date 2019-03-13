@@ -17,7 +17,7 @@ export default class RoundButton extends React.Component {
           }}>
             <Icon
               name={this.props.icon}
-              size={35}
+              size={this.props.size===undefined?20:this.props.size}
               color="#555"
             />
           </View>

@@ -44,15 +44,19 @@ class HomeScreen extends React.Component {
       sideMenuDisableGesture: true,
       apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
       detailViewOpen: false,
+      navigateGround: false,
+      navigateTo: null,
     };
+
+    this.toggleSideBar = this.toggleSideBar.bind(this);
   }
+
+  toggleSideBar() {
+    this.setState({sideMenuIsOpen: !this.state.sideMenuIsOpen});
+  };
 
 
   render() {
-
-    const toggleSideBar = () => {
-      this.setState({sideMenuIsOpen: !this.state.sideMenuIsOpen});
-    };
 
     const MenuComponent = (
       <View style={{flex: 1, backgroundColor: '#a9a9a9', padding: 30}}>
@@ -86,7 +90,7 @@ class HomeScreen extends React.Component {
         }}
       >
         <RoundButton style={[positions.hamburgerButton]} icon={'bars'}
-                     func={toggleSideBar}/>
+                     func={this.toggleSideBar} size={35}/>
 
         <MainView/>
       </SideMenu>
@@ -107,6 +111,7 @@ class MainView extends React.Component {
       selectedEntrance: null,
     };
     this.toggleUndergroundMap = this.toggleUndergroundMap.bind(this);
+    this.startNavigateCallback = this.startNavigateCallback.bind(this);
 
   }
 
@@ -116,6 +121,7 @@ class MainView extends React.Component {
       detailViewOpen: false,
     });
     this.updateSlidingDetailView = this.updateSlidingDetailView.bind(this);
+
   }
 
   updateSlidingDetailView(inputEntrance) {
@@ -123,7 +129,14 @@ class MainView extends React.Component {
       selectedEntrance: inputEntrance,
       detailViewOpen: !this.state.underground,
     });
+  }
 
+  startNavigateCallback(inputEntrance) {
+    // now we need to
+    this.setState({
+      navigateGround: true,
+      navigateTo: inputEntrance,
+    });
   }
 
   render() {
@@ -135,10 +148,13 @@ class MainView extends React.Component {
             selectedMarkerCallback={(input) => {
               this.updateSlidingDetailView(input);
             }}
+            navigate={this.state.navigateGround}
+            navigateTo={this.state.navigateTo}
           />)}
         <SlidingUpDetailView
           open={this.state.detailViewOpen}
           entrance={this.state.selectedEntrance}
+          startNavigate={this.startNavigateCallback}
         />
         <SearchBar/>
         <RoundButton
@@ -156,11 +172,16 @@ const positions = StyleSheet.create({
     position: 'absolute',
     top: 100,
     right: 20,
+    width: 40,
+    height: 40,
   },
+
   hamburgerButton: {
     position: 'absolute',
     top: 20,
     left: 20,
+    width: 60,
+    height: 60,
   },
 });
 

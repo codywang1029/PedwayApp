@@ -21,10 +21,12 @@ export default StyleSheet.create({
     flex: 1,
     alignItems: 'flex-end',
   },
-  routeButton: {
+  routeBackgroundContainer: {
     top: 20,
-    fontSize: 40,
     marginRight: 40,
+  },
+  routeButton: {
+    fontSize: 40,
   },
   statusLabelContainer: {
     position: 'absolute',
