@@ -3,7 +3,7 @@ import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import styles from './styles';
 import RoundButton from '../RoundButton/RoundButton';
 import SlidingUpPanel from 'rn-sliding-up-panel';
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import PedwayEntrance from '../../model/PedwayEntrance';
 
 
@@ -18,10 +18,13 @@ export default class SlidingUpDetailView extends Component {
     this.state = {
       open: false,
       entrance: null,
+      navigateFunctor: null,
+      navigate: false,
     };
     this.updateState = this.updateState.bind(this);
     this.openView = this.openView.bind(this);
     this.closeView = this.closeView.bind(this);
+    this.navigateButtonOnPress = this.navigateButtonOnPress.bind(this);
   }
 
   updateState(inputProps) {
@@ -46,6 +49,7 @@ export default class SlidingUpDetailView extends Component {
 
   openView() {
     this.detailView.show();
+
   }
 
   closeView() {
@@ -60,13 +64,20 @@ export default class SlidingUpDetailView extends Component {
     this.updateState(nextProps);
   }
 
+  navigateButtonOnPress() {
+    this.props.startNavigate(this.state.entrance);
+    this.setState({
+      navigate: !this.state.navigate,
+    });
+  }
+
   render() {
-    if (this.state.entrance!==undefined && this.state.entrance!==null) {
+    if (this.state.entrance !== undefined && this.state.entrance !== null) {
       return (
         <SlidingUpPanel
           draggableRange={{top: 150, bottom: 0}}
           showBackdrop={false}
-          ref={(thisView) => {
+          ref={thisView => {
             this.detailView = thisView;
           }}
         >
@@ -74,16 +85,24 @@ export default class SlidingUpDetailView extends Component {
             <Text style={styles.entranceLabel}>
               {this.state.entrance.getName()}
             </Text>
-            <TouchableOpacity style={styles.routeButtonContainer}>
-              <Icon
-                style={styles.routeButton}
-                name={'route'}
-              />
-            </TouchableOpacity>
-            <StatusLabel text={this.state.entrance.getStatus()?'open':'closed'}/>
+            <View style={styles.routeButtonContainer}>
+              <TouchableOpacity
+                style={styles.routeBackgroundContainer}
+                onPress={() => {
+                  this.navigateButtonOnPress();
+                }}
+              >
+                <Icon
+                  style={styles.routeButton}
+                  name={this.state.navigate?'rotate-left':'directions-walk'}
+                />
+              </TouchableOpacity>
+            </View>
+            <StatusLabel
+              text={this.state.entrance.getStatus() ? 'open' : 'closed'}/>
             <Text style={styles.coordinateText}>
               {this.state.entrance.getCoordinate().getLatitude() + ', '
-            + this.state.entrance.getCoordinate().getLongitude()}
+              + this.state.entrance.getCoordinate().getLongitude()}
             </Text>
           </View>
         </SlidingUpPanel>
@@ -93,7 +112,7 @@ export default class SlidingUpDetailView extends Component {
         <SlidingUpPanel
           draggableRange={{top: 150, bottom: 0}}
           showBackdrop={false}
-          ref={(thisView) => {
+          ref={thisView => {
             this.detailView = thisView;
           }}
         ></SlidingUpPanel>
