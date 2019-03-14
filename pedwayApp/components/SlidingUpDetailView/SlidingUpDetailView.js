@@ -49,7 +49,6 @@ export default class SlidingUpDetailView extends Component {
 
   openView() {
     this.detailView.show();
-
   }
 
   closeView() {
@@ -77,7 +76,7 @@ export default class SlidingUpDetailView extends Component {
         <SlidingUpPanel
           draggableRange={{top: 150, bottom: 0}}
           showBackdrop={false}
-          ref={thisView => {
+          ref={(thisView) => {
             this.detailView = thisView;
           }}
         >
@@ -112,7 +111,7 @@ export default class SlidingUpDetailView extends Component {
         <SlidingUpPanel
           draggableRange={{top: 150, bottom: 0}}
           showBackdrop={false}
-          ref={thisView => {
+          ref={(thisView) => {
             this.detailView = thisView;
           }}
         ></SlidingUpPanel>

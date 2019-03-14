@@ -1,4 +1,4 @@
-import {StyleSheet} from "react-native";
+import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   focusButton: {
@@ -12,4 +12,4 @@ export default StyleSheet.create({
   mainMap: {
     ...StyleSheet.absoluteFillObject,
     zIndex: -1,
-},});
+  }});

@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "lint": "gulp lint"
   },
   "dependencies": {
     "appcenter": "1.12.0",
     "appcenter-analytics": "1.12.0",
     "appcenter-crashes": "1.12.0",
+    "babel-eslint": "^10.0.1",
     "axios": "^0.18.0",
     "google-polyline": "^1.0.3",
     "isomorphic-fetch": "^2.2.1",
@@ -53,13 +55,19 @@
     ]
   },
   "eslintConfig": {
-    "extends": "google",
+    "parser": "babel-eslint",
     "parserOptions": {
       "sourceType": "module"
     },
     "rules": {
-      "linebreak-style": "off"
+      "linebreak-style": "off",
+      "require-jsdoc": "off",
+      "valid-jsdoc": "off",
+      "no-unused-vars": "off",
+      "max-len": "off",
+      "prefer-const": "off"
     },
+    "extends": "google",
     "env": {
       "es6": true
     }
