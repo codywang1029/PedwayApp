@@ -69,3 +69,19 @@ jest.mock('react-native-maps', () => {
 
 jest.mock('react-native-gesture-handler', () => {
 });
+
+
+jest.mock('rn-sliding-up-panel', () => {
+  const React = require.requireActual('react');
+
+  /* eslint-disable */
+  class RetMockSlidingUpPanel extends React.Component {
+    render() {
+      return React.createElement('SlidingUpPanel', this.props, this.props.children);
+    }
+  }
+
+  /* eslint-enable */
+  return RetMockSlidingUpPanel;
+});
+

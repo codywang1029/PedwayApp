@@ -5,16 +5,14 @@
  * We are only asserting if the UI is rendered correctly
  */
 
-import 'react-native'
-import React from 'react'
-import testRenderer from 'react-test-renderer'
-import App from '../App.js'
-import HomeScreen from '../App.js'
-import MainView from '../App.js'
-import GroundMapView from '../components/GroundMapView/GroundMapView'
-import UndergroundScreen from '../components/UndergroundMapView/UndergroundMapView'
-import RenderPedway from '../components/RenderPedway/RenderPedway'
-import RenderEntrance from '../components/RenderEntrance/RenderEntrance'
+import 'react-native';
+import React from 'react';
+import testRenderer from 'react-test-renderer';
+import App from '../App.js';
+import HomeScreen from '../App.js';
+import MainView from '../App.js';
+import GroundMapView from '../components/GroundMapView/GroundMapView';
+import UndergroundScreen from '../components/UndergroundMapView/UndergroundMapView';
 
 
 test('Check if our main app renders correctly', () => {

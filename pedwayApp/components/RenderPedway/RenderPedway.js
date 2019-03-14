@@ -10,7 +10,6 @@ import MapView, {
  * In the future we are gonna to get those values from the API
  * */
 export default class RenderPedway extends Component {
-
   constructor(props) {
     super(props);
     let section1 = new PedwaySection([new PedwayCoordinate(40.143, -88.231),
@@ -27,8 +26,6 @@ export default class RenderPedway extends Component {
     this.parseJSONtoModel = this.parseJSONtoModel.bind(this);
     this.parseLineJSON = this.parseLineJSON.bind(this);
     this.parseMultiLineJSON = this.parseMultiLineJSON.bind(this);
-
-
   }
 
   parseLineJSON(inputJSON) {
@@ -89,20 +86,20 @@ export default class RenderPedway extends Component {
   }
 
   componentWillMount() {
-    if(this.props.JSONData!==undefined) {
+    if (this.props.JSONData!==undefined) {
       this.parseJSONtoModel(this.props.JSONData);
     }
-    if(this.props.strokeWidth!==undefined) {
+    if (this.props.strokeWidth!==undefined) {
       this.setState({
         strokeWidth: this.props.strokeWidth,
       });
     }
-    if(this.props.strokeColor!==undefined) {
+    if (this.props.strokeColor!==undefined) {
       this.setState({
         strokeColor: this.props.strokeColor,
       });
     }
-    if(this.props.zIndex!==undefined) {
+    if (this.props.zIndex!==undefined) {
       this.setState({
         zIndex: this.props.zIndex,
       });
@@ -110,7 +107,7 @@ export default class RenderPedway extends Component {
   }
 
   componentWillReceiveProps(next) {
-    if(this.props.JSONData!==undefined) {
+    if (this.props.JSONData!==undefined) {
       this.parseJSONtoModel(next.JSONData);
     }
   }
@@ -124,7 +121,7 @@ export default class RenderPedway extends Component {
             coordinates={path.getJSONList()}
             strokeColor={this.state.strokeColor}
             strokeWidth={this.state.strokeWidth}
-            style={{ zIndex: this.state.zIndex }}
+            style={{zIndex: this.state.zIndex}}
           />
         );
       })

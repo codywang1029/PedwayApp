@@ -8,11 +8,13 @@ export default class PedwayEntrance {
    * @param {PedwayCoordinate} inputCoordinate
    * @param {string} status
    * @param {boolean} elevator
+   * @param {string} name
    */
-  constructor(inputCoordinate, status, elevator = false) {
+  constructor(inputCoordinate, status, elevator = false, name = '') {
     this.coordinate = inputCoordinate;
     this.status = status;
     this.elevator = elevator;
+    this.name = name;
   }
 
   /**
@@ -73,5 +75,21 @@ export default class PedwayEntrance {
    */
   setElevator(elevator) {
     this.elevator = elevator;
+  }
+
+  /**
+   * update the name for this entrance
+   * @param {string} name of this entrance
+   */
+  setName(name) {
+    this.name = name;
+  }
+
+  /**
+   * get the name for this entrance
+   * @return {string}
+   */
+  getName() {
+    return this.name;
   }
 }

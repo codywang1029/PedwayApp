@@ -23,6 +23,8 @@ import GroundMapView from './components/GroundMapView/GroundMapView';
 import UndergroundMapView
   from './components/UndergroundMapView/UndergroundMapView';
 import SearchBar from './components/SearchBar/SearchBar';
+import SlidingUpDetailView
+  from './components/SlidingUpDetailView/SlidingUpDetailView';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 /**
@@ -31,7 +33,6 @@ import Icon from 'react-native-vector-icons/FontAwesome';
  * Sidemenu/MainView
  */
 class HomeScreen extends React.Component {
-
   constructor() {
     super();
     this.state = {
@@ -41,39 +42,43 @@ class HomeScreen extends React.Component {
       sideMenuIsOpen: false,
       sideMenuDisableGesture: true,
       apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
+      detailViewOpen: false,
+      navigateGround: false,
+      navigateTo: null,
     };
+
+    this.toggleSideBar = this.toggleSideBar.bind(this);
   }
+
+  toggleSideBar() {
+    this.setState({sideMenuIsOpen: !this.state.sideMenuIsOpen});
+  };
 
 
   render() {
-
-    const toggleSideBar = () => {
-      this.setState({sideMenuIsOpen: !this.state.sideMenuIsOpen});
-    };
-
-      const MenuComponent = (
-          <View style={{flex: 1, backgroundColor: '#a9a9a9', padding: 30}}>
-              <Text style={styles.item}>
-                  <Icon name="heart" style={styles.item}/>
-                  Favorites
-              </Text>
-              <Text style={styles.item}>
-                  <Icon name="bell" style={styles.item}/>
-                  Updates
-              </Text>
-              <Text style={styles.item}>
-                  <Icon name="users" style={styles.item}/>
-                  Feedback
-              </Text>
-              <Text style={styles.item}>
-                  <Icon name="gear" style={styles.item}/>
-                  Settings
-              </Text>
-          </View>
-      );
+    const MenuComponent = (
+      <View style={{flex: 1, backgroundColor: '#a9a9a9', padding: 30}}>
+        <Text style={styles.item}>
+          <Icon name="heart" style={styles.item}/>
+          Favorites
+        </Text>
+        <Text style={styles.item}>
+          <Icon name="bell" style={styles.item}/>
+          Updates
+        </Text>
+        <Text style={styles.item}>
+          <Icon name="users" style={styles.item}/>
+          Feedback
+        </Text>
+        <Text style={styles.item}>
+          <Icon name="gear" style={styles.item}/>
+          Settings
+        </Text>
+      </View>
+    );
 
     return (
-     <SideMenu
+      <SideMenu
         menu={MenuComponent}
         disableGestures={this.state.sideMenuDisableGesture}
         isOpen={this.state.sideMenuIsOpen}
@@ -83,7 +88,7 @@ class HomeScreen extends React.Component {
         }}
       >
         <RoundButton style={[positions.hamburgerButton]} icon={'bars'}
-                     func={toggleSideBar}/>
+          func={this.toggleSideBar} size={35}/>
 
         <MainView/>
       </SideMenu>
@@ -101,14 +106,32 @@ class MainView extends React.Component {
     super(props);
     this.state = {
       underground: false,
+      selectedEntrance: null,
     };
     this.toggleUndergroundMap = this.toggleUndergroundMap.bind(this);
-
+    this.startNavigateCallback = this.startNavigateCallback.bind(this);
   }
 
   toggleUndergroundMap() {
     this.setState({
       underground: !this.state.underground,
+      detailViewOpen: false,
+    });
+    this.updateSlidingDetailView = this.updateSlidingDetailView.bind(this);
+  }
+
+  updateSlidingDetailView(inputEntrance) {
+    this.setState({
+      selectedEntrance: inputEntrance,
+      detailViewOpen: !this.state.underground,
+    });
+  }
+
+  startNavigateCallback(inputEntrance) {
+    // now we need to
+    this.setState({
+      navigateGround: true,
+      navigateTo: inputEntrance,
     });
   }
 
@@ -117,11 +140,22 @@ class MainView extends React.Component {
       <View style={{flex: 1}}>
         {(this.state.underground) ?
           (<UndergroundMapView/>) :
-          (<GroundMapView/>)}
+          (<GroundMapView
+            selectedMarkerCallback={(input) => {
+              this.updateSlidingDetailView(input);
+            }}
+            navigate={this.state.navigateGround}
+            navigateTo={this.state.navigateTo}
+          />)}
+        <SlidingUpDetailView
+          open={this.state.detailViewOpen}
+          entrance={this.state.selectedEntrance}
+          startNavigate={this.startNavigateCallback}
+        />
         <SearchBar/>
         <RoundButton
           style={[positions.undergroundButton]}
-          icon={'level-down'}
+          icon={this.state.underground ? 'level-up' : 'level-down'}
           func={this.toggleUndergroundMap}/>
       </View>
     );
@@ -130,23 +164,29 @@ class MainView extends React.Component {
 
 const positions = StyleSheet.create({
   undergroundButton: {
+    zIndex: 0,
     position: 'absolute',
-    bottom: 30,
-    right: 30,
+    top: 100,
+    right: 20,
+    width: 40,
+    height: 40,
   },
+
   hamburgerButton: {
     position: 'absolute',
     top: 20,
     left: 20,
+    width: 60,
+    height: 60,
   },
 });
 
 const styles = StyleSheet.create({
-    item: {
-        fontSize: 30,
-        fontWeight: '300',
-        top: 30,
-    },
+  item: {
+    fontSize: 30,
+    fontWeight: '300',
+    top: 30,
+  },
 });
 
 export default class App extends React.Component {

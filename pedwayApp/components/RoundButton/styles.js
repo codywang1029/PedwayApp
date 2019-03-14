@@ -4,8 +4,6 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   roundButton: {
     zIndex: 1,
-    width: 60,
-    height: 60,
     backgroundColor: '#FFFFFF',
     borderRadius: 60,
   },
