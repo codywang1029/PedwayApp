@@ -79,7 +79,7 @@ export default class PedwayEntrance {
 
   /**
    * update the name for this entrance
-   * @param name
+   * @param {string} name of this entrance
    */
   setName(name) {
     this.name = name;
