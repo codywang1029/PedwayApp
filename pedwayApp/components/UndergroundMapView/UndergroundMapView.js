@@ -23,7 +23,7 @@ export default class GroundMapView extends React.Component {
             longitude: -87.623977,
             error: null,
             pedwayData: PedwayData,
-            updateGeoLocation: false,
+            updateGeoLocation: true,
             id: 0,
         };
         this.recenter = this.recenter.bind(this);

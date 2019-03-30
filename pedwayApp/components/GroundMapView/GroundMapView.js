@@ -33,7 +33,7 @@ export default class GroundMapView extends React.Component {
       longitude: -87.623977,
       error: null,
       pedwayData: PedwayData,
-      updateGeoLocation: false,
+      updateGeoLocation: true,
       id: 0,
       navigate: false,
       navigateTo: null,
@@ -65,12 +65,13 @@ export default class GroundMapView extends React.Component {
             longitude: position.coords.longitude,
             error: null,
             pedwayData: PedwayData,
-            updateGeoLocation: false,
-            id: 0,
-            navigate: false,
-            navigateList: null,
-            navigateTo: null,
+            id: id,
           });
+          if (this.state.navigate && this.state.navigateTo){
+            console.log(this.state.navigateTo);
+            this.getGeometry([this.state.latitude,this.state.longitude],
+                [this.state.navigateTo.getCoordinate().getLatitude(),this.state.navigateTo.getCoordinate().getLongitude()]);
+          }
         });
     }
   }
@@ -202,17 +203,17 @@ export default class GroundMapView extends React.Component {
                 longitude: longitude,
               }}
               style={{zIndex: 10}}
-              pinColor={'#1198ff'}
               title={'You'}
-              image={circle}/>
+              image={circle}
+              />
             <MapView.Marker
               coordinate={{
                 latitude: this.state.navigateTo.getCoordinate().getLatitude(),
                 longitude: this.state.navigateTo.getCoordinate().getLongitude(),
               }}
               style={{zIndex: 10}}
-              title={'You'}
-              image={circle}/>
+              pinColor={'#009e4c'}
+              />
           </MapView>
         </View>
       );
