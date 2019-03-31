@@ -15,8 +15,7 @@ import RenderEntrance from '../RenderEntrance/RenderEntrance';
  * to use OSM
  */
 export default class GroundMapView extends React.Component {
-
-    constructor() {
+  constructor() {
         super();
         this.state = {
             apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
@@ -34,26 +33,27 @@ export default class GroundMapView extends React.Component {
     handleOnPress() {
     }
 
-    componentDidMount() {
-        if (this.state.updateGeoLocation) {
-            let id = navigator.geolocation.watchPosition(
-                (position) => {
-                    this.setState({
-                        latitude: position.coords.latitude,
-                        longitude: position.coords.longitude,
-                        error: null,
-                        id: id,
-                    });
-                },
-                (error) => this.setState({error: error.message}),
-                {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
-              );
-        }
+  componentDidMount() {
+    if (this.state.updateGeoLocation) {
+      let id = navigator.geolocation.watchPosition(
+          (position) => {
+            this.setState({
+              latitude: position.coords.latitude,
+              longitude: position.coords.longitude,
+              error: null,
+              id: id,
+            });
+          },
+          (error) => this.setState({error: error.message}),
+          {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
+      );
     }
+  }
 
-    componentWillUnmount() {
-        navigator.geolocation.clearWatch(this.state.id);
-    }
+  componentWillUnmount() {
+    navigator.geolocation.clearWatch(this.state.id);
+  }
+
 
     recenter() {
         const region = {
@@ -104,10 +104,11 @@ export default class GroundMapView extends React.Component {
                         image={circle}
                     />
 
-                    <RenderPedway JSONData={PedwayData}/>
 
-                </MapView>
-            </View>
-        );
-    }
+          <RenderPedway JSONData={PedwayData}/>
+
+        </MapView>
+      </View>
+    );
+  }
 }

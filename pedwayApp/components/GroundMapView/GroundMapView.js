@@ -24,7 +24,6 @@ import PedwaySection from '../../model/PedwaySection';
  * to use OSM
  */
 export default class GroundMapView extends React.Component {
-
   constructor() {
     super();
     this.state = {
@@ -47,12 +46,12 @@ export default class GroundMapView extends React.Component {
 
 
   requestEntranceData() {
-    axios.get('https://pedway.azurewebsites.net/api/pedway/entrance').then(res => {
+    axios.get('https://pedway.azurewebsites.net/api/pedway/entrance').then((res) => {
       this.setState({
         pedwayData: res,
       });
-    }).catch(e => {
-      },
+    }).catch((e) => {
+    },
     );
   }
 
@@ -73,6 +72,7 @@ export default class GroundMapView extends React.Component {
                 [this.state.navigateTo.getCoordinate().getLatitude(),this.state.navigateTo.getCoordinate().getLongitude()]);
           }
         });
+
     }
   }
 
@@ -88,31 +88,30 @@ export default class GroundMapView extends React.Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.navigate !== undefined) {
       this.setState({
-          navigateTo: nextProps.navigateTo,
-        },
+        navigateTo: nextProps.navigateTo,
+      },
       );
       this.renderPath(nextProps.navigateTo);
     }
   }
 
   getGeometry(start, end) {
-
     return axios.get(
-      'https://pedway.azurewebsites.net/api/ors/directions?coordinates=' + start[1] + ',%20' + start[0] + '%7C' + end[1] + ',%20' + end[0] + '&profile=foot-walking')
-      .then(json => {
-        const geometry = json.data.routes[0].geometry;
-        const coords = polyline.decode(geometry);
-        let retList = [];
-        coords.forEach((item)=>{
-          retList.push(new PedwayCoordinate(item[0],item[1]));
-        });
-        let retSection = new PedwaySection(retList);
-        this.setState({
-          navigate: true,
-          navigateList: retSection,
-        });
-      })
-      .catch(error => console.log(error));
+        'https://pedway.azurewebsites.net/api/ors/directions?coordinates=' + start[1] + ',%20' + start[0] + '%7C' + end[1] + ',%20' + end[0] + '&profile=foot-walking')
+        .then((json) => {
+          const geometry = json.data.routes[0].geometry;
+          const coords = polyline.decode(geometry);
+          let retList = [];
+          coords.forEach((item)=>{
+            retList.push(new PedwayCoordinate(item[0], item[1]));
+          });
+          let retSection = new PedwaySection(retList);
+          this.setState({
+            navigate: true,
+            navigateList: retSection,
+          });
+        })
+        .catch((error) => console.log(error));
   }
 
 
@@ -124,8 +123,8 @@ export default class GroundMapView extends React.Component {
   renderPath(inputEntrance) {
     // request api here
     // parse line string
-    this.getGeometry([this.state.latitude,this.state.longitude],
-      [inputEntrance.getCoordinates().getLatitude(),inputEntrance.getCoordinates().getLongitude()]);
+    this.getGeometry([this.state.latitude, this.state.longitude],
+        [inputEntrance.getCoordinates().getLatitude(), inputEntrance.getCoordinates().getLongitude()]);
     // render on map
 
     // remove other plots
@@ -137,12 +136,12 @@ export default class GroundMapView extends React.Component {
    * @param inputEntrance
    */
   renderPath(inputEntrance) {
-    if(this.state.navigate==false) {
+    if (this.state.navigate==false) {
       this.getGeometry([this.state.latitude, this.state.longitude],
-        [inputEntrance.getCoordinate().getLatitude(), inputEntrance.getCoordinate().getLongitude()]);
+          [inputEntrance.getCoordinate().getLatitude(), inputEntrance.getCoordinate().getLongitude()]);
     } else {
       this.setState({
-        navigate: false
+        navigate: false,
       });
     }
   }
@@ -165,8 +164,8 @@ export default class GroundMapView extends React.Component {
   render() {
     const latitude = this.state.latitude;
     const longitude = this.state.longitude;
-    if(this.state.navigate===true) {
-      return(
+    if (this.state.navigate===true) {
+      return (
         <View style={StyleSheet.absoluteFillObject}>
           <RoundButton
             style={[styles.focusButton]}
@@ -188,7 +187,7 @@ export default class GroundMapView extends React.Component {
               coordinates={this.state.navigateList.getJSONList()}
               strokeColor={'#AA0022'}
               strokeWidth={6}
-              style={{ zIndex: 100000 }}
+              style={{zIndex: 100000}}
             />
             <MapView.Marker
               coordinate={{
@@ -249,8 +248,6 @@ export default class GroundMapView extends React.Component {
           </MapView>
         </View>);
     }
-
-
   }
 }
 
