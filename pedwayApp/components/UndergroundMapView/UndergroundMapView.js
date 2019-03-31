@@ -4,7 +4,8 @@ import MapView, {MAP_TYPES, UrlTile, Callout} from 'react-native-maps';
 import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import RenderPedway from '../RenderPedway/RenderPedway';
 import MapStyle from './mapStyleDark';
-import PedwayData from '../../mock_data/export.json';
+import PedwayEntrances from '../../mock_data/export.json';
+import PedwaySections from '../../mock_data/sections';
 import circle from '../../media/pedwayEntranceMarker.png';
 import RoundButton from "../RoundButton/RoundButton";
 import RenderEntrance from '../RenderEntrance/RenderEntrance';
@@ -22,7 +23,6 @@ export default class GroundMapView extends React.Component {
             latitude: 41.881898,
             longitude: -87.623977,
             error: null,
-            pedwayData: PedwayData,
             updateGeoLocation: true,
             id: 0,
         };
@@ -89,7 +89,7 @@ export default class GroundMapView extends React.Component {
                     }}
                 >
                     <RenderEntrance
-                        JSONData={this.state.pedwayData}
+                        JSONData={PedwayEntrances}
                         callbackFunc={(input) => {
                             this.forwardSelectedEntrance(input);
                         }}/>
@@ -105,7 +105,7 @@ export default class GroundMapView extends React.Component {
                     />
 
 
-          <RenderPedway JSONData={PedwayData}/>
+          <RenderPedway JSONData={PedwaySections}/>
 
         </MapView>
       </View>
