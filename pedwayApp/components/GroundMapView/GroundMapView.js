@@ -29,7 +29,7 @@ export default class GroundMapView extends React.Component {
     super();
     this.state = {
       apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
-      latitude: 41.88189833333333,
+      latitude: 41.881898,
       longitude: -87.623977,
       error: null,
       pedwayData: PedwayData,
@@ -156,8 +156,8 @@ export default class GroundMapView extends React.Component {
     const region = {
       latitude: this.state.latitude,
       longitude: this.state.longitude,
-      latitudeDelta: 0.01,
-      longitudeDelta: 0.01,
+      latitudeDelta: 0.005,
+      longitudeDelta: 0.005,
     };
     this.map.animateToRegion(region, 1000);
   }
@@ -180,8 +180,8 @@ export default class GroundMapView extends React.Component {
             initialRegion={{
               latitude: latitude,
               longitude: longitude,
-              latitudeDelta: 0.01,
-              longitudeDelta: 0.01,
+              latitudeDelta: 0.02,
+              longitudeDelta: 0.02,
             }}
           >
             <Polyline
@@ -225,8 +225,8 @@ export default class GroundMapView extends React.Component {
             initialRegion={{
               latitude: latitude,
               longitude: longitude,
-              latitudeDelta: 0.01,
-              longitudeDelta: 0.01,
+              latitudeDelta: 0.02,
+              longitudeDelta: 0.02,
             }}
           >
 
