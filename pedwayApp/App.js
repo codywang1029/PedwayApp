@@ -20,7 +20,6 @@ import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import SideMenu from 'react-native-side-menu';
 import RoundButton from './components/RoundButton/RoundButton';
 import IconButton from './components/IconButton/IconButton';
-
 import GroundMapView from './components/GroundMapView/GroundMapView';
 import UndergroundMapView
   from './components/UndergroundMapView/UndergroundMapView';
