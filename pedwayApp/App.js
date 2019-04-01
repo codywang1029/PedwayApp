@@ -116,7 +116,6 @@ class MainView extends React.Component {
     this.toggleUndergroundMap = this.toggleUndergroundMap.bind(this);
     this.startNavigateCallback = this.startNavigateCallback.bind(this);
     this.setSearchData = this.setSearchData.bind(this);
-
   }
 
   toggleUndergroundMap() {

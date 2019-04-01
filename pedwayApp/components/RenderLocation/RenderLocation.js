@@ -62,16 +62,16 @@ export default class RenderLocation extends Component {
 
   render() {
     const retMarkerList = this.state.pedwayLocations.map((input, idx) => {
-        return (
-          <MapView.Marker
-            coordinate={input.getCoordinate().getJSON()}
-            key={idx}
-            onPress={()=>{
-              this.props.callbackFunc(this.state.pedwayLocations[idx]);
-            }}
-          />
-        );
-      },
+      return (
+        <MapView.Marker
+          coordinate={input.getCoordinate().getJSON()}
+          key={idx}
+          onPress={()=>{
+            this.props.callbackFunc(this.state.pedwayLocations[idx]);
+          }}
+        />
+      );
+    },
     );
     return (
       retMarkerList
