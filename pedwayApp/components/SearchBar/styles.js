@@ -4,15 +4,14 @@ export default StyleSheet.create({
   searchBox: {
     position: 'absolute',
     top: 25,
-    left: 80,
     height: 50,
-    width: 300,
+    width: 380,
     backgroundColor: '#FFFFFF',
     color: '#CCCCCC',
     textAlignVertical: 'center',
-    paddingLeft: 5,
     marginLeft: 20,
     borderRadius: 10,
+    zIndex: -1,
   },
   floating: {
     shadowOffset: {width: 30, height: 30},
@@ -23,5 +22,13 @@ export default StyleSheet.create({
     alignItems: 'center',
     textAlignVertical: 'center',
     opacity: 0.95,
+  },
+  textInput: {
+    flex: 1,
+    fontSize: 18,
+    marginLeft: 80,
+    textAlign: 'left',
+    paddingTop: 12,
+    marginRight: 20,
   },
 });

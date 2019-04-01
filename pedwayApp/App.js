@@ -19,6 +19,8 @@ import {Button} from 'react-native';
 import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import SideMenu from 'react-native-side-menu';
 import RoundButton from './components/RoundButton/RoundButton';
+import IconButton from './components/IconButton/IconButton';
+
 import GroundMapView from './components/GroundMapView/GroundMapView';
 import UndergroundMapView
   from './components/UndergroundMapView/UndergroundMapView';
@@ -26,6 +28,7 @@ import SearchBar from './components/SearchBar/SearchBar';
 import SlidingUpDetailView
   from './components/SlidingUpDetailView/SlidingUpDetailView';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {Keyboard} from 'react-native';
 
 /**
  * HomeScreen that gets rendered first when everything is loaded
@@ -52,6 +55,7 @@ class HomeScreen extends React.Component {
 
   toggleSideBar() {
     this.setState({sideMenuIsOpen: !this.state.sideMenuIsOpen});
+    Keyboard.dismiss();
   };
 
 
@@ -87,10 +91,10 @@ class HomeScreen extends React.Component {
           this.setState({sideMenuDisableGesture: !openStatus});
         }}
       >
-        <RoundButton style={[positions.hamburgerButton]} icon={'bars'}
-          func={this.toggleSideBar} size={35}/>
-
         <MainView/>
+
+        <IconButton style={[positions.hamburgerButton]} icon={'bars'}
+          func={this.toggleSideBar} size={30}/>
       </SideMenu>
     );
   }
@@ -107,9 +111,12 @@ class MainView extends React.Component {
     this.state = {
       underground: false,
       selectedEntrance: null,
+      searchData: [],
     };
     this.toggleUndergroundMap = this.toggleUndergroundMap.bind(this);
     this.startNavigateCallback = this.startNavigateCallback.bind(this);
+    this.setSearchData = this.setSearchData.bind(this);
+
   }
 
   toggleUndergroundMap() {
@@ -118,6 +125,13 @@ class MainView extends React.Component {
       detailViewOpen: false,
     });
     this.updateSlidingDetailView = this.updateSlidingDetailView.bind(this);
+  }
+
+  setSearchData(data) {
+    console.log(data);
+    this.setState({
+      searchData: data,
+    });
   }
 
   updateSlidingDetailView(inputEntrance) {
@@ -137,7 +151,7 @@ class MainView extends React.Component {
 
   render() {
     return (
-      <View style={{flex: 1}}>
+      <View style={{flex: 1, zIndex: 0}}>
         {(this.state.underground) ?
           (<UndergroundMapView/>) :
           (<GroundMapView
@@ -146,13 +160,15 @@ class MainView extends React.Component {
             }}
             navigate={this.state.navigateGround}
             navigateTo={this.state.navigateTo}
+            searchData={this.state.searchData}
           />)}
         <SlidingUpDetailView
           open={this.state.detailViewOpen}
           entrance={this.state.selectedEntrance}
           startNavigate={this.startNavigateCallback}
+          hideStatusLabel={this.state.searchData.length!==0}
         />
-        <SearchBar/>
+        <SearchBar updateSearchData={this.setSearchData}/>
         <RoundButton
           style={[positions.undergroundButton]}
           icon={this.state.underground ? 'level-up' : 'level-down'}

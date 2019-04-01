@@ -9,6 +9,7 @@ import MapView, {
 } from 'react-native-maps';
 import RenderPedway from '../RenderPedway/RenderPedway';
 import RenderEntrance from '../RenderEntrance/RenderEntrance';
+import RenderLocation from '../RenderLocation/RenderLocation';
 import MapCallout from 'react-native-maps/lib/components/MapCallout';
 import circle from '../../media/pedwayEntranceMarker.png';
 import axios from 'axios';
@@ -17,6 +18,7 @@ import * as polyline from 'google-polyline';
 import PedwayData from '../../mock_data/export.json';
 import PedwayCoordinate from '../../model/PedwayCoordinate';
 import PedwaySection from '../../model/PedwaySection';
+import {Keyboard} from 'react-native';
 
 /**
  * Renders a MapView that display the ground level map
@@ -32,16 +34,18 @@ export default class GroundMapView extends React.Component {
       longitude: -87.623977,
       error: null,
       pedwayData: PedwayData,
-      updateGeoLocation: true,
+      updateGeoLocation: false,
       id: 0,
       navigate: false,
       navigateTo: null,
+      searchData: [],
     };
     this.forwardSelectedEntrance = this.forwardSelectedEntrance.bind(this);
     this.renderPath = this.renderPath.bind(this);
     this.requestEntranceData = this.requestEntranceData.bind(this);
     this.recenter = this.recenter.bind(this);
     this.getGeometry = this.getGeometry.bind(this);
+    this.setSearchData = this.setSearchData.bind(this);
   }
 
 
@@ -55,24 +59,28 @@ export default class GroundMapView extends React.Component {
     );
   }
 
+  setSearchData(data) {
+    this.setState({
+      searchData: data,
+    });
+  }
+
   componentDidMount() {
     if (this.state.updateGeoLocation) {
       let id = navigator.geolocation.watchPosition(
-        (position) => {
-          this.setState({
-            latitude: position.coords.latitude,
-            longitude: position.coords.longitude,
-            error: null,
-            pedwayData: PedwayData,
-            id: id,
+          (position) => {
+            this.setState({
+              latitude: position.coords.latitude,
+              longitude: position.coords.longitude,
+              error: null,
+              pedwayData: PedwayData,
+              id: id,
+            });
+            if (this.state.navigate && this.state.navigateTo) {
+              this.getGeometry([this.state.latitude, this.state.longitude],
+                  [this.state.navigateTo.getCoordinate().getLatitude(), this.state.navigateTo.getCoordinate().getLongitude()]);
+            }
           });
-          if (this.state.navigate && this.state.navigateTo){
-            console.log(this.state.navigateTo);
-            this.getGeometry([this.state.latitude,this.state.longitude],
-                [this.state.navigateTo.getCoordinate().getLatitude(),this.state.navigateTo.getCoordinate().getLongitude()]);
-          }
-        });
-
     }
   }
 
@@ -86,6 +94,8 @@ export default class GroundMapView extends React.Component {
   // this.requestEntranceData();
 
   componentWillReceiveProps(nextProps) {
+    this.setSearchData(nextProps.searchData);
+
     if (nextProps.navigate !== undefined) {
       this.setState({
         navigateTo: nextProps.navigateTo,
@@ -197,7 +207,7 @@ export default class GroundMapView extends React.Component {
               style={{zIndex: 10}}
               title={'You'}
               image={circle}
-              />
+            />
             <MapView.Marker
               coordinate={{
                 latitude: this.state.navigateTo.getCoordinate().getLatitude(),
@@ -205,7 +215,7 @@ export default class GroundMapView extends React.Component {
               }}
               style={{zIndex: 10}}
               pinColor={'#009e4c'}
-              />
+            />
           </MapView>
         </View>
       );
@@ -228,12 +238,18 @@ export default class GroundMapView extends React.Component {
               longitudeDelta: 0.02,
             }}
           >
-
-            <RenderEntrance
-              JSONData={this.state.pedwayData}
-              callbackFunc={(input) => {
-                this.forwardSelectedEntrance(input);
-              }}/>
+            {this.state.searchData.length===0?
+              <RenderEntrance
+                JSONData={this.state.pedwayData}
+                callbackFunc={(input) => {
+                  this.forwardSelectedEntrance(input);
+                }}/>:
+              <RenderLocation
+                JSONData={this.state.searchData}
+                callbackFunc={(input) => {
+                  this.forwardSelectedEntrance(input);
+                }}/>
+            }
             <MapView.Marker
               coordinate={{
                 latitude: latitude,
