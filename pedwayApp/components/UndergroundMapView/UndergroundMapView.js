@@ -4,9 +4,11 @@ import MapView, {MAP_TYPES, UrlTile, Callout} from 'react-native-maps';
 import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import RenderPedway from '../RenderPedway/RenderPedway';
 import MapStyle from './mapStyleDark';
-import PedwayData from '../../mock_data/sections';
+import PedwayEntrances from '../../mock_data/export.json';
+import PedwaySections from '../../mock_data/sections';
 import circle from '../../media/pedwayEntranceMarker.png';
-import RoundButton from '../RoundButton/RoundButton';
+import RoundButton from "../RoundButton/RoundButton";
+import RenderEntrance from '../RenderEntrance/RenderEntrance';
 
 /**
  * Renders a MapView that display the ground level map
@@ -15,22 +17,21 @@ import RoundButton from '../RoundButton/RoundButton';
  */
 export default class GroundMapView extends React.Component {
   constructor() {
-    super();
-    this.state = {
-      apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
-      latitude: 41.881899,
-      longitude: -87.623977,
-      error: null,
-      pedwayData: PedwayData,
-      updateGeoLocation: false,
-      id: 0,
-    };
-    this.recenter = this.recenter.bind(this);
-    this.handleOnPress = this.handleOnPress.bind(this);
-  }
+        super();
+        this.state = {
+            apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
+            latitude: 41.881898,
+            longitude: -87.623977,
+            error: null,
+            updateGeoLocation: true,
+            id: 0,
+        };
+        this.recenter = this.recenter.bind(this);
+        this.handleOnPress = this.handleOnPress.bind(this);
+    }
 
-  handleOnPress() {
-  }
+    handleOnPress() {
+    }
 
   componentDidMount() {
     if (this.state.updateGeoLocation) {
@@ -53,51 +54,58 @@ export default class GroundMapView extends React.Component {
     navigator.geolocation.clearWatch(this.state.id);
   }
 
-  recenter() {
-    const region = {
-      latitude: this.state.latitude,
-      longitude: this.state.longitude,
-      latitudeDelta: 0.01,
-      longitudeDelta: 0.01,
-    };
-    this.map.animateToRegion(region, 1000);
-  }
 
-  render() {
-    const latitude = this.state.latitude;
-    const longitude = this.state.longitude;
-    return (
-      <View style={StyleSheet.absoluteFillObject}>
-        <RoundButton
-          style={[styles.focusButton]}
-          icon={'crosshairs'}
-          func={this.recenter}/>
-        <MapView
-          ref={(mapView) => {
-            this.map = mapView;
-          }}
-          style={styles.mainMap}
-          customMapStyle={MapStyle}
-          // mapType={MAP_TYPES.NONE}
-          initialRegion={{
-            latitude: latitude,
-            longitude: longitude,
-            latitudeDelta: 0.012,
-            longitudeDelta: 0.012,
-          }}
-        >
-          {/* <UrlTile urlTemplate={this.state.apiServerURL}/>*/}
-          <MapView.Marker
-            coordinate={{
-              latitude: latitude,
-              longitude: longitude,
-            }}
-            pinColor={'#1198ff'}
-            title={'You'}
-            image={circle}
-          />
+    recenter() {
+        const region = {
+            latitude: this.state.latitude,
+            longitude: this.state.longitude,
+            latitudeDelta: 0.005,
+            longitudeDelta: 0.005,
+        };
+        this.map.animateToRegion(region, 1000);
+    }
 
-          <RenderPedway JSONData={PedwayData}/>
+    render() {
+        const latitude = this.state.latitude;
+        const longitude = this.state.longitude;
+        return (
+            <View style={StyleSheet.absoluteFillObject}>
+                <RoundButton
+                    style={[styles.focusButton]}
+                    icon={'crosshairs'}
+                    func={this.recenter}/>
+                <MapView
+                    ref={(mapView) => {
+                        this.map = mapView;
+                    }}
+                    style={styles.mainMap}
+                    customMapStyle={MapStyle}
+                    // mapType={MAP_TYPES.NONE}
+                    initialRegion={{
+                        latitude: latitude,
+                        longitude: longitude,
+                        latitudeDelta: 0.02,
+                        longitudeDelta: 0.02,
+                    }}
+                >
+                    <RenderEntrance
+                        JSONData={PedwayEntrances}
+                        callbackFunc={(input) => {
+                            this.forwardSelectedEntrance(input);
+                        }}/>
+                    {/*<UrlTile urlTemplate={this.state.apiServerURL}/>*/}
+                    <MapView.Marker
+                        coordinate={{
+                            latitude: latitude,
+                            longitude: longitude,
+                        }}
+                        pinColor={'#1198ff'}
+                        title={'You'}
+                        image={circle}
+                    />
+
+
+          <RenderPedway JSONData={PedwaySections}/>
 
         </MapView>
       </View>

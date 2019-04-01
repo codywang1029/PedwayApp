@@ -28,11 +28,11 @@ export default class GroundMapView extends React.Component {
     super();
     this.state = {
       apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
-      latitude: 41.88189833333333,
+      latitude: 41.881898,
       longitude: -87.623977,
       error: null,
       pedwayData: PedwayData,
-      updateGeoLocation: false,
+      updateGeoLocation: true,
       id: 0,
       navigate: false,
       navigateTo: null,
@@ -58,19 +58,21 @@ export default class GroundMapView extends React.Component {
   componentDidMount() {
     if (this.state.updateGeoLocation) {
       let id = navigator.geolocation.watchPosition(
-          (position) => {
-            this.setState({
-              latitude: position.coords.latitude,
-              longitude: position.coords.longitude,
-              error: null,
-              pedwayData: PedwayData,
-              updateGeoLocation: false,
-              id: 0,
-              navigate: false,
-              navigateList: null,
-              navigateTo: null,
-            });
+        (position) => {
+          this.setState({
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+            error: null,
+            pedwayData: PedwayData,
+            id: id,
           });
+          if (this.state.navigate && this.state.navigateTo){
+            console.log(this.state.navigateTo);
+            this.getGeometry([this.state.latitude,this.state.longitude],
+                [this.state.navigateTo.getCoordinate().getLatitude(),this.state.navigateTo.getCoordinate().getLongitude()]);
+          }
+        });
+
     }
   }
 
@@ -153,8 +155,8 @@ export default class GroundMapView extends React.Component {
     const region = {
       latitude: this.state.latitude,
       longitude: this.state.longitude,
-      latitudeDelta: 0.01,
-      longitudeDelta: 0.01,
+      latitudeDelta: 0.005,
+      longitudeDelta: 0.005,
     };
     this.map.animateToRegion(region, 1000);
   }
@@ -177,8 +179,8 @@ export default class GroundMapView extends React.Component {
             initialRegion={{
               latitude: latitude,
               longitude: longitude,
-              latitudeDelta: 0.01,
-              longitudeDelta: 0.01,
+              latitudeDelta: 0.02,
+              longitudeDelta: 0.02,
             }}
           >
             <Polyline
@@ -193,17 +195,17 @@ export default class GroundMapView extends React.Component {
                 longitude: longitude,
               }}
               style={{zIndex: 10}}
-              pinColor={'#1198ff'}
               title={'You'}
-              image={circle}/>
+              image={circle}
+              />
             <MapView.Marker
               coordinate={{
                 latitude: this.state.navigateTo.getCoordinate().getLatitude(),
                 longitude: this.state.navigateTo.getCoordinate().getLongitude(),
               }}
               style={{zIndex: 10}}
-              title={'You'}
-              image={circle}/>
+              pinColor={'#009e4c'}
+              />
           </MapView>
         </View>
       );
@@ -222,8 +224,8 @@ export default class GroundMapView extends React.Component {
             initialRegion={{
               latitude: latitude,
               longitude: longitude,
-              latitudeDelta: 0.01,
-              longitudeDelta: 0.01,
+              latitudeDelta: 0.02,
+              longitudeDelta: 0.02,
             }}
           >
 
