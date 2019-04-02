@@ -10,6 +10,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import PedwaySection from '../../model/PedwaySection';
 import PedwayCoordinate from '../../model/PedwayCoordinate';
+import {ORS_API_KEY} from 'react-native-dotenv';
 
 export default class SearchBar extends React.Component {
   constructor(props) {
