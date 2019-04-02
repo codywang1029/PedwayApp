@@ -10,6 +10,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import PedwaySection from '../../model/PedwaySection';
 import PedwayCoordinate from '../../model/PedwayCoordinate';
+import {ORS_API_KEY} from 'react-native-dotenv';
 
 export default class SearchBar extends React.Component {
   constructor(props) {
@@ -36,7 +37,8 @@ export default class SearchBar extends React.Component {
         searching: true,
       });
       axios.get('https://api.openrouteservice.org/geocode/autocomplete?' +
-        'api_key=5b3ce3597851110001cf6248ebf041e56b664536bee473272569b332' +
+        'api_key=' +
+        ORS_API_KEY +
         '&text=' +
         this.state.queryText +
         '&boundary.rect.min_lat=41.765683' +

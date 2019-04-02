@@ -11,7 +11,7 @@ $ npm install -g react-native-cli
 ```console
 $ react-native run-android
 ```
-
+- You can setup the environment variables by creating a .env file in the root directory
 # Trouble Shooting
 
 
