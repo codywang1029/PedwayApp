@@ -122,12 +122,11 @@ export default class SlidingUpDetailView extends Component {
     } else {
       return (
         <SlidingUpPanel
-          draggableRange={{top: 150, bottom: 0}}
-          showBackdrop={false}
-          ref={(thisView) => {
-            this.detailView = thisView;
-          }}
-        ></SlidingUpPanel>
+    draggableRange={{top: 150, bottom: 0}}
+    showBackdrop={false}
+    ref={(thisView) => {
+      this.detailView = thisView;
+    }}/>
       );
     }
   }
