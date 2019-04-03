@@ -34,7 +34,6 @@ export default class SearchBar extends React.Component {
       this.setState({
         searching: true,
       });
-      ORS_API_KEY = '5b3ce3597851110001cf6248aabb63cccbf147dc8dd420c9bc45a590';
       axios.get('https://api.openrouteservice.org/geocode/autocomplete?' +
           'api_key=' +
           ORS_API_KEY +
