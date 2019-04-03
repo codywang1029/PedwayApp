@@ -47,7 +47,7 @@
   "jest": {
     "preset": "react-native",
     "transformIgnorePatterns": [
-      "node_modules/(?!(jest-)?react-native|react-navigation|react-navigation-redux-helpers|react-native-maps)"
+      "node_modules/(?!(jest-)?react-native|@react-navigation/.*|react-navigation-stack|react-navigation-redux-helpers|react-native-maps)"
     ],
     "setupFiles": [
       "./jest-setup.js"
