@@ -34,17 +34,19 @@ export default class GroundMapView extends React.Component {
       longitude: -87.623977,
       error: null,
       pedwayData: PedwayData,
-      updateGeoLocation: false,
+      updateGeoLocation: true,
       id: 0,
       navigate: false,
       navigateTo: null,
       searchData: [],
+      navigateList: [],
     };
     this.forwardSelectedEntrance = this.forwardSelectedEntrance.bind(this);
     this.renderPath = this.renderPath.bind(this);
     this.requestEntranceData = this.requestEntranceData.bind(this);
     this.recenter = this.recenter.bind(this);
     this.getGeometry = this.getGeometry.bind(this);
+    this.renderMarkers =this.renderMarkers.bind(this);
     this.setSearchData = this.setSearchData.bind(this);
   }
 
@@ -146,7 +148,7 @@ export default class GroundMapView extends React.Component {
    * @param inputEntrance
    */
   renderPath(inputEntrance) {
-    if (this.state.navigate==false) {
+    if (this.state.navigate===false) {
       this.getGeometry([this.state.latitude, this.state.longitude],
           [inputEntrance.getCoordinate().getLatitude(), inputEntrance.getCoordinate().getLongitude()]);
     } else {
@@ -161,6 +163,23 @@ export default class GroundMapView extends React.Component {
   }
 
 
+  renderMarkers(){
+    if (this.state.searchData.length===0){
+      return (<RenderEntrance
+          JSONData={this.state.pedwayData}
+          callbackFunc={(input) => {
+            this.forwardSelectedEntrance(input);
+          }}/>);
+    }
+    else{
+      return (<RenderLocation
+          JSONData={this.state.searchData}
+          callbackFunc={(input) => {
+            this.forwardSelectedEntrance(input);
+          }}/>);
+    }
+  }
+
   recenter() {
     const region = {
       latitude: this.state.latitude,
@@ -174,7 +193,7 @@ export default class GroundMapView extends React.Component {
   render() {
     const latitude = this.state.latitude;
     const longitude = this.state.longitude;
-    if (this.state.navigate===true) {
+
       return (
         <View style={StyleSheet.absoluteFillObject}>
           <RoundButton
@@ -193,77 +212,44 @@ export default class GroundMapView extends React.Component {
               longitudeDelta: 0.02,
             }}
           >
-            <Polyline
-              coordinates={this.state.navigateList.getJSONList()}
-              strokeColor={'#AA0022'}
-              strokeWidth={6}
-              style={{zIndex: 100000}}
-            />
-            <MapView.Marker
-              coordinate={{
-                latitude: latitude,
-                longitude: longitude,
-              }}
-              style={{zIndex: 10}}
-              title={'You'}
-              image={circle}
-            />
-            <MapView.Marker
-              coordinate={{
-                latitude: this.state.navigateTo.getCoordinate().getLatitude(),
-                longitude: this.state.navigateTo.getCoordinate().getLongitude(),
-              }}
-              style={{zIndex: 10}}
-              pinColor={'#009e4c'}
-            />
-          </MapView>
-        </View>
-      );
-    } else {
-      return (
-        <View style={StyleSheet.absoluteFillObject}>
-          <RoundButton
-            style={[styles.focusButton]}
-            icon={'crosshairs'}
-            func={this.recenter}/>
-          <MapView
-            ref={(mapView) => {
-              this.map = mapView;
-            }}
-            style={styles.mainMap}
-            initialRegion={{
-              latitude: latitude,
-              longitude: longitude,
-              latitudeDelta: 0.02,
-              longitudeDelta: 0.02,
-            }}
-          >
-            {this.state.searchData.length===0?
-              <RenderEntrance
+            {this.state.navigate===true?<Polyline
+                coordinates={this.state.navigateList.getJSONList()}
+                strokeColor={'#AA0022'}
+                strokeWidth={6}
+                style={{zIndex: 100000}}
+            />:(this.state.searchData.length===0?<RenderEntrance
                 JSONData={this.state.pedwayData}
                 callbackFunc={(input) => {
                   this.forwardSelectedEntrance(input);
-                }}/>:
-              <RenderLocation
+                }}/>:<RenderLocation
                 JSONData={this.state.searchData}
                 callbackFunc={(input) => {
                   this.forwardSelectedEntrance(input);
-                }}/>
-            }
+                }}/> )}
+
             <MapView.Marker
               coordinate={{
                 latitude: latitude,
                 longitude: longitude,
               }}
               style={{zIndex: 10}}
-              pinColor={'#1198ff'}
               title={'You'}
-              image={circle}/>
-
-
+              pinColor={'#1198ff'}
+              image={circle}
+            />
+            {this.state.navigate===true &&
+            <MapView.Marker
+                coordinate={{
+                  latitude: this.state.navigateTo.getCoordinate().getLatitude(),
+                  longitude: this.state.navigateTo.getCoordinate().getLongitude(),
+                }}
+                style={{zIndex: 10}}
+                pinColor={'#009e4c'}
+            />
+            }
           </MapView>
-        </View>);
-    }
+        </View>)
+
   }
 }
 

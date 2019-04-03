@@ -8,8 +8,6 @@ import {
 } from 'react-native';
 import React, {Component} from 'react';
 import axios from 'axios';
-import PedwaySection from '../../model/PedwaySection';
-import PedwayCoordinate from '../../model/PedwayCoordinate';
 import {ORS_API_KEY} from 'react-native-dotenv';
 
 export default class SearchBar extends React.Component {
@@ -37,14 +35,14 @@ export default class SearchBar extends React.Component {
         searching: true,
       });
       axios.get('https://api.openrouteservice.org/geocode/autocomplete?' +
-        'api_key=' +
-        ORS_API_KEY +
-        '&text=' +
-        this.state.queryText +
-        '&boundary.rect.min_lat=41.765683' +
-        '&boundary.rect.max_lat=41.909595' +
-        '&boundary.rect.min_lon=-87.746445' +
-        '&boundary.rect.max_lon=-87.565921').then((res) => {
+          'api_key=' +
+          ORS_API_KEY +
+          '&text=' +
+          this.state.queryText +
+          '&boundary.rect.min_lat=41.765683' +
+          '&boundary.rect.max_lat=41.909595' +
+          '&boundary.rect.min_lon=-87.746445' +
+          '&boundary.rect.max_lon=-87.565921').then((res) => {
         this.setState({
           searching: false,
         });
@@ -53,6 +51,7 @@ export default class SearchBar extends React.Component {
       });
     }
   }
+
 
   searchBarEdit(textInput) {
     this.setState({
