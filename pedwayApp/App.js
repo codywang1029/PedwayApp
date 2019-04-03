@@ -26,7 +26,12 @@ import UndergroundMapView
 import SearchBar from './components/SearchBar/SearchBar';
 import SlidingUpDetailView
   from './components/SlidingUpDetailView/SlidingUpDetailView';
+import Directory
+  from './components/Directory/Directory';
+import PDFMap
+  from './components/PDFMap/PDFMap';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {createStackNavigator, createAppContainer} from 'react-navigation';
 import {Keyboard} from 'react-native';
 import NavigationSwipeView from './components/NavigationSwipeView/NavigationSwipeView';
 
@@ -37,6 +42,9 @@ import NavigationSwipeView from './components/NavigationSwipeView/NavigationSwip
  * Sidemenu/MainView
  */
 class HomeScreen extends React.Component {
+  static navigationOptions = {
+    title: 'Pedway App',
+  };
   constructor() {
     super();
     this.state = {
@@ -66,24 +74,40 @@ class HomeScreen extends React.Component {
   }
 
   render() {
+    const {navigate} = this.props.navigation;
     const MenuComponent = (
-      <View style={{flex: 1, backgroundColor: '#a9a9a9', padding: 30}}>
-        <Text style={styles.item}>
-          <Icon name="heart" style={styles.item}/>
-          Favorites
-        </Text>
-        <Text style={styles.item}>
-          <Icon name="bell" style={styles.item}/>
-          Updates
-        </Text>
-        <Text style={styles.item}>
-          <Icon name="users" style={styles.item}/>
-          Feedback
-        </Text>
-        <Text style={styles.item}>
-          <Icon name="gear" style={styles.item}/>
-          Settings
-        </Text>
+      <View style={{flex: 1, backgroundColor: '#a9a9a9', paddingTop: 30}}>
+        <TouchableOpacity
+          style={styles.sideButton}
+          onPress={() => navigate('Home')}>
+          <Text style={styles.item}>
+            <Icon name="home" style={styles.item}/>
+            Home
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.sideButton}
+          onPress={() => navigate('FoodDirectory')}>
+          <Text style={styles.item}>
+            <Icon name="info-circle" style={styles.item}/>
+            Directory
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.sideButton}
+          onPress={() => navigate('StaticMap')}>
+          <Text style={styles.item}>
+            <Icon name="map" style={styles.item}/>
+            Map
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.sideButton}>
+          <Text style={styles.item}>
+            <Icon name="gear" style={styles.item}/>
+            Settings
+          </Text>
+        </TouchableOpacity>
       </View>
     );
 
@@ -245,15 +269,31 @@ const positions = StyleSheet.create({
 const styles = StyleSheet.create({
   item: {
     fontSize: 30,
-    fontWeight: '300',
-    top: 30,
+    fontWeight: 'bold',
+    marginTop: 10,
+    marginLeft: 10,
+    textAlign: 'center',
+  },
+  sideButton: {
+    marginRight: 0,
+    marginLeft: 0,
+    marginTop: 10,
+    paddingTop: 10,
+    paddingBottom: 10,
+    backgroundColor: '#a9a9a9',
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#a9a9a9',
   },
 });
 
-export default class App extends React.Component {
-  render() {
-    return <HomeScreen/>;
-  }
-}
+const MainNavigator = createStackNavigator({
+  Home: {screen: HomeScreen},
+  FoodDirectory: {screen: Directory},
+  StaticMap: {screen: PDFMap},
+});
 
+const App = createAppContainer(MainNavigator);
+
+export default App;
 
