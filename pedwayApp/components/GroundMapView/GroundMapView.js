@@ -39,6 +39,7 @@ export default class GroundMapView extends React.Component {
       navigate: false,
       navigateTo: null,
       searchData: [],
+      navigateList: [],
     };
     this.forwardSelectedEntrance = this.forwardSelectedEntrance.bind(this);
     this.renderPath = this.renderPath.bind(this);
