@@ -74,7 +74,7 @@ describe('Conditional test using the ors endpoint', () => {
       'geocode information should be returned from the GET method on the geocode endpoint',
       (done) => {
         request(app)
-            .get('/api/ors/geocode/search?text=pedway&boundary.rect.min_lat=41.765683&boundary.rect.max_lat=41.909595&boundary.rect.min_lon=-87.746445&boundary.rect.max_lon=-87.565921')
+            .get('/api/ors/geocode/autocomplete?text=pedway&boundary.rect.min_lat=41.765683&boundary.rect.max_lat=41.909595&boundary.rect.min_lon=-87.746445&boundary.rect.max_lon=-87.565921')
             .then((response) => {
               expect(response.statusCode).toBe(200);
               expect(typeof response.body).toBe('object');
