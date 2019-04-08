@@ -8,6 +8,7 @@
     "start-dev": "nodemon src/server.js",
     "mongodb-dev": "docker run --name pedmongo --restart=always -d -p 27017:27017 mongo mongod",
     "lint": "gulp lint",
+    "lint-fix": "gulp lint-fix",
     "test": "jest --runInBand"
   },
   "repository": {
