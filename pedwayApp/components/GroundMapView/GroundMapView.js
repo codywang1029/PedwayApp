@@ -8,6 +8,7 @@ import MapView, {
   Polyline,
 } from 'react-native-maps';
 import RenderPedway from '../RenderPedway/RenderPedway';
+import MapStyle from './mapStyleDark';
 import RenderEntrance from '../RenderEntrance/RenderEntrance';
 import RenderLocation from '../RenderLocation/RenderLocation';
 import MapCallout from 'react-native-maps/lib/components/MapCallout';
@@ -19,6 +20,7 @@ import PedwayData from '../../mock_data/export.json';
 import PedwayCoordinate from '../../model/PedwayCoordinate';
 import PedwaySection from '../../model/PedwaySection';
 import {Keyboard} from 'react-native';
+import PedwaySections from "../../mock_data/sections";
 
 /**
  * Renders a MapView that display the ground level map
@@ -28,15 +30,14 @@ import {Keyboard} from 'react-native';
  * If greyscale is also true, grey scale color will be used for indexes < start index
  */
 export default class GroundMapView extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
       latitude: 41.881898,
       longitude: -87.623977,
       error: null,
       pedwayData: PedwayData,
-      updateGeoLocation: false,
       id: 0,
       navigate: false,
       navigateTo: null,
@@ -50,7 +51,7 @@ export default class GroundMapView extends React.Component {
       strokeColor: '#234ca0',
       highlightStrokeColor: '#4185F4',
       greyScaleStrokeColor: '#777',
-
+      underground: this.props.underground?false:this.props.underground
     };
     this.forwardSelectedEntrance = this.forwardSelectedEntrance.bind(this);
     this.renderPath = this.renderPath.bind(this);
@@ -79,7 +80,6 @@ export default class GroundMapView extends React.Component {
   }
 
   componentDidMount() {
-    if (this.state.updateGeoLocation) {
       let id = navigator.geolocation.watchPosition(
           (position) => {
             this.setState({
@@ -94,7 +94,6 @@ export default class GroundMapView extends React.Component {
                   [this.state.navigateTo.getCoordinate().getLatitude(), this.state.navigateTo.getCoordinate().getLongitude()]);
             }
           });
-    }
   }
 
 
@@ -109,7 +108,7 @@ export default class GroundMapView extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     this.setSearchData(nextProps.searchData);
-
+    this.setState({underground:nextProps.underground});
     if (nextProps.navigate !== undefined) {
       this.setState({
         navigateTo: nextProps.navigateTo,
@@ -213,7 +212,7 @@ export default class GroundMapView extends React.Component {
     return (
       <View style={StyleSheet.absoluteFillObject}>
         <RoundButton
-          style={[styles.focusButton]}
+          style={this.state.navigate?[styles.positionDown]:[styles.focusButton]}
           icon={'crosshairs'}
           func={this.recenter}/>
         <MapView
@@ -221,11 +220,13 @@ export default class GroundMapView extends React.Component {
             this.map = mapView;
           }}
           style={styles.mainMap}
+          key={this.state.underground}
+          customMapStyle={this.state.underground? MapStyle : null}
           initialRegion={{
             latitude: latitude,
             longitude: longitude,
-            latitudeDelta: 0.02,
-            longitudeDelta: 0.02,
+            latitudeDelta: 0.007,
+            longitudeDelta: 0.007,
           }}
         >
           {this.state.navigate===true?
@@ -277,6 +278,9 @@ export default class GroundMapView extends React.Component {
             style={{zIndex: 10}}
             pinColor={'#009e4c'}
           />
+          }
+          {this.state.underground &&
+          <RenderPedway JSONData={PedwaySections}/>
           }
         </MapView>
       </View>);

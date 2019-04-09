@@ -54,7 +54,7 @@ class HomeScreen extends React.Component {
       sideMenuIsOpen: false,
       sideMenuDisableGesture: true,
       apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
-      detailViewOpen: false,
+      detailViewOpen: true,
       navigateGround: false,
       navigateTo: null,
       hideHamburgerButton: false,
@@ -152,6 +152,7 @@ class MainView extends React.Component {
     this.toggleNavigateCallback = this.toggleNavigateCallback.bind(this);
     this.setSearchData = this.setSearchData.bind(this);
     this.updateNavigationDataCallback = this.updateNavigationDataCallback.bind(this);
+    this.updateSlidingDetailView = this.updateSlidingDetailView.bind(this);
     this.updateSegmentStartEndCallback = this.updateSegmentStartEndCallback.bind(this);
   }
 
@@ -164,10 +165,8 @@ class MainView extends React.Component {
 
   toggleUndergroundMap() {
     this.setState({
-      underground: !this.state.underground,
-      detailViewOpen: false,
+      underground: !this.state.underground
     });
-    this.updateSlidingDetailView = this.updateSlidingDetailView.bind(this);
   }
 
   setSearchData(data) {
@@ -179,7 +178,7 @@ class MainView extends React.Component {
   updateSlidingDetailView(inputEntrance) {
     this.setState({
       selectedEntrance: inputEntrance,
-      detailViewOpen: !this.state.underground,
+      detailViewOpen: true,
     });
   }
 
@@ -206,9 +205,8 @@ class MainView extends React.Component {
   render() {
     return (
       <View style={{flex: 1, zIndex: 0}}>
-        {(this.state.underground) ?
-          (<UndergroundMapView/>) :
-          (<GroundMapView
+
+          <GroundMapView
             selectedMarkerCallback={(input) => {
               this.updateSlidingDetailView(input);
             }}
@@ -218,7 +216,8 @@ class MainView extends React.Component {
             searchData={this.state.searchData}
             highlightSegmentStart={this.state.highlightSegmentStart}
             highlightSegmentEnd={this.state.highlightSegmentEnd}
-          />)}
+            underground={this.state.underground}
+          />
         <SlidingUpDetailView
           open={this.state.detailViewOpen}
           entrance={this.state.selectedEntrance}
@@ -228,12 +227,10 @@ class MainView extends React.Component {
         {this.state.navigateGround?
             null:
             <SearchBar updateSearchData={this.setSearchData}/>}
-        {this.state.navigateGround?
-            null:
             <RoundButton
-              style={[positions.undergroundButton]}
+              style={this.state.navigateGround?[positions.positionDown]:[positions.undergroundButton]}
               icon={this.state.underground ? 'level-up' : 'level-down'}
-              func={this.toggleUndergroundMap}/>}
+              func={this.toggleUndergroundMap}/>
         {this.state.navigateGround?
           <NavigationSwipeView
             navigationData={this.state.navigationData}
@@ -256,7 +253,14 @@ const positions = StyleSheet.create({
     width: 40,
     height: 40,
   },
-
+  positionDown: {
+    zIndex: 0,
+    position: 'absolute',
+    top: 160,
+    right: 20,
+    width: 40,
+    height: 40,
+  },
   hamburgerButton: {
     position: 'absolute',
     top: 20,
