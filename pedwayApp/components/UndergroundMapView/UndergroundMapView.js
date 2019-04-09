@@ -15,7 +15,7 @@ import Attractions from '../../mock_data/attractions';
 /**
  * Renders a MapView that displays the underground level map.
  * We are setting the provider to null and UrlTile to OpenStreetMap's
- * API to use OSM
+ * API to use OSM.
  */
 export default class GroundMapView extends React.Component {
   constructor() {
