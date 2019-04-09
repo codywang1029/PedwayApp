@@ -4,6 +4,7 @@ const ORS_BASE_URL = 'https://api.openrouteservice.org';
 const ORS_DIRECTION_URL = 'directions';
 const ORS_MAPSURFER_URL = 'mapsurfer/${zoom}/${x}/${y}.png';
 const ORS_POIS_URL = 'pois';
+const ORS_GEOCODE_URL = 'geocode/autocomplete';
 
 const request = require('request');
 const fillTemplate = require('es6-dynamic-template');
@@ -65,6 +66,24 @@ exports.pois = function(req, res) {
         qs: {
           'api_key': process.env.ORS_API_KEY,
         },
+      })
+      .pipe(res);
+};
+
+/**
+ * Handles the geocode endpoint, and forwards the request to ORS
+ *
+ * @param {Object} req the request object
+ * @param {Object} res the response object
+ */
+exports.geocode = function(req, res) {
+  request
+      .get({
+        baseUrl: ORS_BASE_URL,
+        url: fillTemplate(ORS_GEOCODE_URL, req.params),
+        qs: Object.assign({}, req.query, {
+          'api_key': process.env.ORS_API_KEY,
+        }),
       })
       .pipe(res);
 };

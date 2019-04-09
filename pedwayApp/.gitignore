@@ -58,3 +58,6 @@ buck-out/
 #jest-junit
 junit.xml
 style-junit.xml
+
+#dot-env
+.env

@@ -4,17 +4,31 @@ export default StyleSheet.create({
   backgroundView: {
     position: 'relative',
     flex: 1,
+    flexDirection: 'column',
     backgroundColor: 'white',
     // borderTopRightRadius: 10,
     // borderTopLeftRadius: 10,
     height: 150,
     zIndex: 100000,
   },
+  aboveFlexContainer: {
+    height: 80,
+    backgroundColor: 'white',
+  },
+  belowFlexContainer: {
+    height: 70,
+    backgroundColor: 'white',
+  },
+  belowFlex: {
+    flex: 1,
+    flexDirection: 'row',
+  },
   entranceLabel: {
     position: 'absolute',
     top: 20,
     left: 30,
     fontSize: 30,
+    width: 300,
     color: '#222',
   },
   routeButtonContainer: {
@@ -29,10 +43,9 @@ export default StyleSheet.create({
     fontSize: 40,
   },
   statusLabelContainer: {
-    position: 'absolute',
     borderRadius: 5,
-    top: 65,
-    left: 30,
+    marginLeft: 30,
+    height: 30,
   },
   statusLabelGreen: {
     backgroundColor: '#59b60f',
@@ -49,10 +62,8 @@ export default StyleSheet.create({
     color: '#fff',
   },
   coordinateText: {
-    position: 'absolute',
     color: '#999',
     fontSize: 13,
-    top: 70,
-    left: 100,
+    marginLeft: 30,
   },
 });

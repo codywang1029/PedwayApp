@@ -19,13 +19,22 @@ import {Button} from 'react-native';
 import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import SideMenu from 'react-native-side-menu';
 import RoundButton from './components/RoundButton/RoundButton';
+import IconButton from './components/IconButton/IconButton';
 import GroundMapView from './components/GroundMapView/GroundMapView';
 import UndergroundMapView
   from './components/UndergroundMapView/UndergroundMapView';
 import SearchBar from './components/SearchBar/SearchBar';
 import SlidingUpDetailView
   from './components/SlidingUpDetailView/SlidingUpDetailView';
+import Directory
+  from './components/Directory/Directory';
+import PDFMap
+  from './components/PDFMap/PDFMap';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {createStackNavigator, createAppContainer} from 'react-navigation';
+import {Keyboard} from 'react-native';
+import NavigationSwipeView from './components/NavigationSwipeView/NavigationSwipeView';
+
 
 /**
  * HomeScreen that gets rendered first when everything is loaded
@@ -33,6 +42,9 @@ import Icon from 'react-native-vector-icons/FontAwesome';
  * Sidemenu/MainView
  */
 class HomeScreen extends React.Component {
+  static navigationOptions = {
+    title: 'Pedway App',
+  };
   constructor() {
     super();
     this.state = {
@@ -45,35 +57,57 @@ class HomeScreen extends React.Component {
       detailViewOpen: false,
       navigateGround: false,
       navigateTo: null,
+      hideHamburgerButton: false,
     };
 
     this.toggleSideBar = this.toggleSideBar.bind(this);
+    this.shouldHideHamburgerButton = this.shouldHideHamburgerButton.bind(this);
   }
 
   toggleSideBar() {
     this.setState({sideMenuIsOpen: !this.state.sideMenuIsOpen});
-  };
+    Keyboard.dismiss();
+  }
 
+  shouldHideHamburgerButton(inputStatus) {
+    this.setState({hideHamburgerButton: inputStatus});
+  }
 
   render() {
+    const {navigate} = this.props.navigation;
     const MenuComponent = (
-      <View style={{flex: 1, backgroundColor: '#a9a9a9', padding: 30}}>
-        <Text style={styles.item}>
-          <Icon name="heart" style={styles.item}/>
-          Favorites
-        </Text>
-        <Text style={styles.item}>
-          <Icon name="bell" style={styles.item}/>
-          Updates
-        </Text>
-        <Text style={styles.item}>
-          <Icon name="users" style={styles.item}/>
-          Feedback
-        </Text>
-        <Text style={styles.item}>
-          <Icon name="gear" style={styles.item}/>
-          Settings
-        </Text>
+      <View style={{flex: 1, backgroundColor: '#a9a9a9', paddingTop: 30}}>
+        <TouchableOpacity
+          style={styles.sideButton}
+          onPress={() => navigate('Home')}>
+          <Text style={styles.item}>
+            <Icon name="home" style={styles.item}/>
+            Home
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.sideButton}
+          onPress={() => navigate('FoodDirectory')}>
+          <Text style={styles.item}>
+            <Icon name="info-circle" style={styles.item}/>
+            Directory
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.sideButton}
+          onPress={() => navigate('StaticMap')}>
+          <Text style={styles.item}>
+            <Icon name="map" style={styles.item}/>
+            Map
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.sideButton}>
+          <Text style={styles.item}>
+            <Icon name="gear" style={styles.item}/>
+            Settings
+          </Text>
+        </TouchableOpacity>
       </View>
     );
 
@@ -87,10 +121,11 @@ class HomeScreen extends React.Component {
           this.setState({sideMenuDisableGesture: !openStatus});
         }}
       >
-        <RoundButton style={[positions.hamburgerButton]} icon={'bars'}
-          func={this.toggleSideBar} size={35}/>
+        <MainView shouldHideHamburgerButton={this.shouldHideHamburgerButton}/>
 
-        <MainView/>
+        {this.state.hideHamburgerButton?
+          null:
+          <IconButton style={[positions.hamburgerButton]} icon={'bars'} func={this.toggleSideBar} size={30}/>}
       </SideMenu>
     );
   }
@@ -107,9 +142,24 @@ class MainView extends React.Component {
     this.state = {
       underground: false,
       selectedEntrance: null,
+      searchData: [],
+      navigationData: [],
+      navigationDataRequested: false,
+      highlightSegmentStart: 0,
+      highlightSegmentEnd: 0,
     };
     this.toggleUndergroundMap = this.toggleUndergroundMap.bind(this);
-    this.startNavigateCallback = this.startNavigateCallback.bind(this);
+    this.toggleNavigateCallback = this.toggleNavigateCallback.bind(this);
+    this.setSearchData = this.setSearchData.bind(this);
+    this.updateNavigationDataCallback = this.updateNavigationDataCallback.bind(this);
+    this.updateSegmentStartEndCallback = this.updateSegmentStartEndCallback.bind(this);
+  }
+
+  updateNavigationDataCallback(inputData) {
+    this.setState({
+      navigationData: inputData,
+      navigationDataRequested: true,
+    });
   }
 
   toggleUndergroundMap() {
@@ -120,6 +170,12 @@ class MainView extends React.Component {
     this.updateSlidingDetailView = this.updateSlidingDetailView.bind(this);
   }
 
+  setSearchData(data) {
+    this.setState({
+      searchData: data,
+    });
+  }
+
   updateSlidingDetailView(inputEntrance) {
     this.setState({
       selectedEntrance: inputEntrance,
@@ -127,36 +183,65 @@ class MainView extends React.Component {
     });
   }
 
-  startNavigateCallback(inputEntrance) {
-    // now we need to
+  updateSegmentStartEndCallback(start, end) {
     this.setState({
-      navigateGround: true,
-      navigateTo: inputEntrance,
+      highlightSegmentStart: start,
+      highlightSegmentEnd: end,
     });
+  }
+
+  toggleNavigateCallback(inputEntrance, inputStatus) {
+    // we also need to clear our current navigation data
+    this.setState({
+      navigateGround: inputStatus,
+      navigateTo: inputEntrance,
+      navigationData: [],
+      navigationDataRequested: false,
+      highlightSegmentStart: 1,
+      highlightSegmentEnd: 1,
+    });
+    this.props.shouldHideHamburgerButton(inputStatus);
   }
 
   render() {
     return (
-      <View style={{flex: 1}}>
+      <View style={{flex: 1, zIndex: 0}}>
         {(this.state.underground) ?
           (<UndergroundMapView/>) :
           (<GroundMapView
             selectedMarkerCallback={(input) => {
               this.updateSlidingDetailView(input);
             }}
+            updateNavigationDataCallback={this.updateNavigationDataCallback}
             navigate={this.state.navigateGround}
             navigateTo={this.state.navigateTo}
+            searchData={this.state.searchData}
+            highlightSegmentStart={this.state.highlightSegmentStart}
+            highlightSegmentEnd={this.state.highlightSegmentEnd}
           />)}
         <SlidingUpDetailView
           open={this.state.detailViewOpen}
           entrance={this.state.selectedEntrance}
-          startNavigate={this.startNavigateCallback}
+          toggleNavigate={this.toggleNavigateCallback}
+          hideStatusLabel={this.state.searchData.length!==0}
         />
-        <SearchBar/>
-        <RoundButton
-          style={[positions.undergroundButton]}
-          icon={this.state.underground ? 'level-up' : 'level-down'}
-          func={this.toggleUndergroundMap}/>
+        {this.state.navigateGround?
+            null:
+            <SearchBar updateSearchData={this.setSearchData}/>}
+        {this.state.navigateGround?
+            null:
+            <RoundButton
+              style={[positions.undergroundButton]}
+              icon={this.state.underground ? 'level-up' : 'level-down'}
+              func={this.toggleUndergroundMap}/>}
+        {this.state.navigateGround?
+          <NavigationSwipeView
+            navigationData={this.state.navigationData}
+            navigationDataRequested={this.state.navigationDataRequested}
+            updateSegmentStartEndCallback={this.updateSegmentStartEndCallback}
+          />:
+          null
+        }
       </View>
     );
   }
@@ -184,15 +269,36 @@ const positions = StyleSheet.create({
 const styles = StyleSheet.create({
   item: {
     fontSize: 30,
-    fontWeight: '300',
-    top: 30,
+    fontWeight: 'bold',
+    marginTop: 10,
+    marginLeft: 10,
+    textAlign: 'center',
+  },
+  sideButton: {
+    marginRight: 0,
+    marginLeft: 0,
+    marginTop: 10,
+    paddingTop: 10,
+    paddingBottom: 10,
+    backgroundColor: '#a9a9a9',
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#a9a9a9',
   },
 });
 
-export default class App extends React.Component {
-  render() {
-    return <HomeScreen/>;
-  }
-}
+const MainNavigator = createStackNavigator({
+  Home: {
+    screen: HomeScreen,
+    navigationOptions: {
+      header: null,
+    },
+  },
+  FoodDirectory: {screen: Directory},
+  StaticMap: {screen: PDFMap},
+});
 
+const App = createAppContainer(MainNavigator);
+
+export default App;
 

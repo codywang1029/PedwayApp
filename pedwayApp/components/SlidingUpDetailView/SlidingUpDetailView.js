@@ -64,13 +64,14 @@ export default class SlidingUpDetailView extends Component {
   }
 
   navigateButtonOnPress() {
-    this.props.startNavigate(this.state.entrance);
+    this.props.toggleNavigate(this.state.entrance, !this.state.navigate);
     this.setState({
       navigate: !this.state.navigate,
     });
   }
 
   render() {
+    let shouldHideStatusLabel = this.props.hideStatusLabel===true;
     if (this.state.entrance !== undefined && this.state.entrance !== null) {
       return (
         <SlidingUpPanel
@@ -80,8 +81,11 @@ export default class SlidingUpDetailView extends Component {
             this.detailView = thisView;
           }}
         >
-          <View style={styles.backgroundView}>
-            <Text style={styles.entranceLabel}>
+          <View style={styles.aboveFlexContainer}>
+            <Text
+              style={styles.entranceLabel}
+              numberOfLines={1}
+            >
               {this.state.entrance.getName()}
             </Text>
             <View style={styles.routeButtonContainer}>
@@ -97,12 +101,21 @@ export default class SlidingUpDetailView extends Component {
                 />
               </TouchableOpacity>
             </View>
-            <StatusLabel
-              text={this.state.entrance.getStatus() ? 'open' : 'closed'}/>
-            <Text style={styles.coordinateText}>
-              {this.state.entrance.getCoordinate().getLatitude() + ', '
-              + this.state.entrance.getCoordinate().getLongitude()}
-            </Text>
+          </View>
+          <View style={styles.backgroundView}>
+            <View style={styles.belowFlexContainer}>
+              <View style={styles.belowFlex}>
+                {shouldHideStatusLabel?
+                null:
+                <StatusLabel
+                  text={this.state.entrance.getStatus() ? 'open' : 'closed'}/>
+                }
+                <Text style={styles.coordinateText}>
+                  {this.state.entrance.getCoordinate().getLatitude() + ', '
+                  + this.state.entrance.getCoordinate().getLongitude()}
+                </Text>
+              </View>
+            </View>
           </View>
         </SlidingUpPanel>
       );
@@ -113,8 +126,7 @@ export default class SlidingUpDetailView extends Component {
           showBackdrop={false}
           ref={(thisView) => {
             this.detailView = thisView;
-          }}
-        ></SlidingUpPanel>
+          }}/>
       );
     }
   }

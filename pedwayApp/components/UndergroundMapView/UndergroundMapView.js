@@ -4,9 +4,11 @@ import MapView, {MAP_TYPES, UrlTile, Callout} from 'react-native-maps';
 import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import RenderPedway from '../RenderPedway/RenderPedway';
 import MapStyle from './mapStyleDark';
-import PedwayData from '../../mock_data/sections';
+import PedwayEntrances from '../../mock_data/export.json';
+import PedwaySections from '../../mock_data/sections';
 import circle from '../../media/pedwayEntranceMarker.png';
 import RoundButton from '../RoundButton/RoundButton';
+import RenderEntrance from '../RenderEntrance/RenderEntrance';
 
 /**
  * Renders a MapView that display the ground level map
@@ -18,10 +20,9 @@ export default class GroundMapView extends React.Component {
     super();
     this.state = {
       apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
-      latitude: 41.881899,
+      latitude: 41.881898,
       longitude: -87.623977,
       error: null,
-      pedwayData: PedwayData,
       updateGeoLocation: false,
       id: 0,
     };
@@ -53,12 +54,13 @@ export default class GroundMapView extends React.Component {
     navigator.geolocation.clearWatch(this.state.id);
   }
 
+
   recenter() {
     const region = {
       latitude: this.state.latitude,
       longitude: this.state.longitude,
-      latitudeDelta: 0.01,
-      longitudeDelta: 0.01,
+      latitudeDelta: 0.005,
+      longitudeDelta: 0.005,
     };
     this.map.animateToRegion(region, 1000);
   }
@@ -82,11 +84,15 @@ export default class GroundMapView extends React.Component {
           initialRegion={{
             latitude: latitude,
             longitude: longitude,
-            latitudeDelta: 0.012,
-            longitudeDelta: 0.012,
+            latitudeDelta: 0.02,
+            longitudeDelta: 0.02,
           }}
         >
-          {/* <UrlTile urlTemplate={this.state.apiServerURL}/>*/}
+          <RenderEntrance
+            JSONData={PedwayEntrances}
+            callbackFunc={(input) => {
+              this.forwardSelectedEntrance(input);
+            }}/>
           <MapView.Marker
             coordinate={{
               latitude: latitude,
@@ -97,7 +103,8 @@ export default class GroundMapView extends React.Component {
             image={circle}
           />
 
-          <RenderPedway JSONData={PedwayData}/>
+
+          <RenderPedway JSONData={PedwaySections}/>
 
         </MapView>
       </View>
