@@ -153,6 +153,8 @@ class MainView extends React.Component {
     this.setSearchData = this.setSearchData.bind(this);
     this.updateNavigationDataCallback = this.updateNavigationDataCallback.bind(this);
     this.updateSegmentStartEndCallback = this.updateSegmentStartEndCallback.bind(this);
+    this.updateSwiperViewIndex = this.updateSwiperViewIndex.bind(this);
+    this.setMapInFocus = this.setMapInFocus.bind(this);
   }
 
   updateNavigationDataCallback(inputData) {
@@ -190,6 +192,14 @@ class MainView extends React.Component {
     });
   }
 
+  updateSwiperViewIndex(idx) {
+    this.swiperView.updateSwiperViewIndex(idx);
+  }
+
+  setMapInFocus(input) {
+    this.map.setMapInFocus(input);
+  }
+
   toggleNavigateCallback(inputEntrance, inputStatus) {
     // we also need to clear our current navigation data
     this.setState({
@@ -212,12 +222,16 @@ class MainView extends React.Component {
             selectedMarkerCallback={(input) => {
               this.updateSlidingDetailView(input);
             }}
+            ref={(mapView) => {
+              this.map = mapView;
+            }}
             updateNavigationDataCallback={this.updateNavigationDataCallback}
             navigate={this.state.navigateGround}
             navigateTo={this.state.navigateTo}
             searchData={this.state.searchData}
             highlightSegmentStart={this.state.highlightSegmentStart}
             highlightSegmentEnd={this.state.highlightSegmentEnd}
+            updateSwiperViewIndex={this.updateSwiperViewIndex}
           />)}
         <SlidingUpDetailView
           open={this.state.detailViewOpen}
@@ -239,6 +253,10 @@ class MainView extends React.Component {
             navigationData={this.state.navigationData}
             navigationDataRequested={this.state.navigationDataRequested}
             updateSegmentStartEndCallback={this.updateSegmentStartEndCallback}
+            setMapInFocus={this.setMapInFocus}
+            ref={(navigationSwipeView) => {
+              this.swiperView = navigationSwipeView;
+            }}
           />:
           null
         }
