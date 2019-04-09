@@ -21,8 +21,6 @@ import SideMenu from 'react-native-side-menu';
 import RoundButton from './components/RoundButton/RoundButton';
 import IconButton from './components/IconButton/IconButton';
 import GroundMapView from './components/GroundMapView/GroundMapView';
-import UndergroundMapView
-  from './components/UndergroundMapView/UndergroundMapView';
 import SearchBar from './components/SearchBar/SearchBar';
 import SlidingUpDetailView
   from './components/SlidingUpDetailView/SlidingUpDetailView';

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styles from './styles';
-import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {Image, Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import MapView, {
   MAP_TYPES,
   UrlTile,
@@ -51,7 +51,8 @@ export default class GroundMapView extends React.Component {
       strokeColor: '#234ca0',
       highlightStrokeColor: '#4185F4',
       greyScaleStrokeColor: '#777',
-      underground: this.props.underground?false:this.props.underground
+      underground: this.props.underground?false:this.props.underground,
+      mapReady:false
     };
     this.forwardSelectedEntrance = this.forwardSelectedEntrance.bind(this);
     this.renderPath = this.renderPath.bind(this);
@@ -108,7 +109,7 @@ export default class GroundMapView extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     this.setSearchData(nextProps.searchData);
-    this.setState({underground:nextProps.underground});
+    this.setState({underground:nextProps.underground,mapReady:false});
     if (nextProps.navigate !== undefined) {
       this.setState({
         navigateTo: nextProps.navigateTo,
@@ -216,11 +217,15 @@ export default class GroundMapView extends React.Component {
           icon={'crosshairs'}
           func={this.recenter}/>
         <MapView
+
           ref={(mapView) => {
             this.map = mapView;
           }}
           style={styles.mainMap}
           key={this.state.underground}
+          onRegionChangeComplete={()=>{
+            this.setState({mapReady:true})
+          }}
           customMapStyle={this.state.underground? MapStyle : null}
           initialRegion={{
             latitude: latitude,
@@ -267,9 +272,11 @@ export default class GroundMapView extends React.Component {
             style={{zIndex: 10}}
             title={'You'}
             pinColor={'#1198ff'}
-            image={circle}
-          />
-          {this.state.navigate===true &&
+          >
+            <Image source={circle} style={{ width: 25, height: 25 }} />
+          </MapView.Marker>
+
+          {this.state.navigate &&
           <MapView.Marker
             coordinate={{
               latitude: this.state.navigateTo.getCoordinate().getLatitude(),
@@ -279,7 +286,7 @@ export default class GroundMapView extends React.Component {
             pinColor={'#009e4c'}
           />
           }
-          {this.state.underground &&
+          {(this.state.underground && this.state.mapReady) &&
           <RenderPedway JSONData={PedwaySections}/>
           }
         </MapView>
