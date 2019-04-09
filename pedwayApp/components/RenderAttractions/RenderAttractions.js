@@ -19,6 +19,7 @@ export default class RenderAttractions extends Component {
     this.parseJSONtoModel = this.parseJSONtoModel.bind(this);
   }
 
+  /* Parse provided JSON file to get coordinates of all attractions */
   parseJSONtoModel(inputJSON) {
     const attractions = inputJSON['features'].filter((item) => {
       try {
@@ -59,13 +60,14 @@ export default class RenderAttractions extends Component {
     this.forceUpdate();
   }
 
+  /* Render all obtained attractions on the map with a green pin marker */
   render() {
     const retMarkerList = this.state.pedwayAttractions.map((input, idx) => {
       return (
         <MapView.Marker
           coordinate={input.getCoordinate().getJSON()}
           key={idx}
-          pinColor={'#1198ff'}
+          pinColor='green'
         />
       );
     },

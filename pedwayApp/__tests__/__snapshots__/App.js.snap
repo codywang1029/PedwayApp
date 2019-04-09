@@ -822,7 +822,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "bottom": 0,
               "left": 0,
               "opacity": 1,
-              "paddingTop": 64,
               "position": "absolute",
               "right": 0,
               "top": 0,
@@ -2166,7 +2165,7 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
               "backgroundColor": "#FFF",
               "transform": Array [
                 Object {
-                  "translateX": 0,
+                  "translateX": -750,
                 },
               ],
             }
@@ -2194,56 +2193,7 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                   "flex": 1,
                 }
               }
-            >
-              <View
-                style={
-                  Object {
-                    "bottom": 0,
-                    "flexDirection": "row",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  }
-                }
-              >
-                <View
-                  pointerEvents="box-none"
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "backgroundColor": "transparent",
-                      "bottom": 0,
-                      "flexDirection": "row",
-                      "justifyContent": "center",
-                      "left": 0,
-                      "opacity": 1,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    }
-                  }
-                >
-                  <Text
-                    accessibilityTraits="header"
-                    allowFontScaling={true}
-                    numberOfLines={1}
-                    onLayout={[Function]}
-                    style={
-                      Object {
-                        "color": "rgba(0, 0, 0, .9)",
-                        "fontSize": 17,
-                        "fontWeight": "600",
-                        "marginHorizontal": 16,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    Pedway App
-                  </Text>
-                </View>
-              </View>
-            </View>
+            />
           </View>
         </View>
       </View>
@@ -2297,7 +2247,6 @@ exports[`Check if our MainView renders correctly 1`] = `
               "bottom": 0,
               "left": 0,
               "opacity": 1,
-              "paddingTop": 64,
               "position": "absolute",
               "right": 0,
               "top": 0,
@@ -3641,7 +3590,7 @@ exports[`Check if our MainView renders correctly 1`] = `
               "backgroundColor": "#FFF",
               "transform": Array [
                 Object {
-                  "translateX": 0,
+                  "translateX": -750,
                 },
               ],
             }
@@ -3669,56 +3618,7 @@ exports[`Check if our MainView renders correctly 1`] = `
                   "flex": 1,
                 }
               }
-            >
-              <View
-                style={
-                  Object {
-                    "bottom": 0,
-                    "flexDirection": "row",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  }
-                }
-              >
-                <View
-                  pointerEvents="box-none"
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "backgroundColor": "transparent",
-                      "bottom": 0,
-                      "flexDirection": "row",
-                      "justifyContent": "center",
-                      "left": 0,
-                      "opacity": 1,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    }
-                  }
-                >
-                  <Text
-                    accessibilityTraits="header"
-                    allowFontScaling={true}
-                    numberOfLines={1}
-                    onLayout={[Function]}
-                    style={
-                      Object {
-                        "color": "rgba(0, 0, 0, .9)",
-                        "fontSize": 17,
-                        "fontWeight": "600",
-                        "marginHorizontal": 16,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    Pedway App
-                  </Text>
-                </View>
-              </View>
-            </View>
+            />
           </View>
         </View>
       </View>
@@ -13427,6 +13327,141 @@ exports[`Check if our UndergroundScreen renders correctly 1`] = `
         }
       }
     />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.885442,
+          "longitude": -87.631727,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.885443,
+          "longitude": -87.631727,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.881911,
+          "longitude": -87.630065,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.881912,
+          "longitude": -87.630065,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.885665,
+          "longitude": -87.622715,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.885666,
+          "longitude": -87.622715,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.883764,
+          "longitude": -87.628262,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.886832,
+          "longitude": -87.623756,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.887926,
+          "longitude": -87.623541,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.885098,
+          "longitude": -87.624131,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.886672,
+          "longitude": -87.624099,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.886673,
+          "longitude": -87.624099,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.886312,
+          "longitude": -87.630376,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.886001,
+          "longitude": -87.630934,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.886496,
+          "longitude": -87.628477,
+        }
+      }
+      pinColor="green"
+    />
   </MapView>
 </View>
 `;
@@ -13476,7 +13511,6 @@ exports[`Check if our main app renders correctly 1`] = `
               "bottom": 0,
               "left": 0,
               "opacity": 1,
-              "paddingTop": 64,
               "position": "absolute",
               "right": 0,
               "top": 0,
@@ -14820,7 +14854,7 @@ exports[`Check if our main app renders correctly 1`] = `
               "backgroundColor": "#FFF",
               "transform": Array [
                 Object {
-                  "translateX": 0,
+                  "translateX": -750,
                 },
               ],
             }
@@ -14848,56 +14882,7 @@ exports[`Check if our main app renders correctly 1`] = `
                   "flex": 1,
                 }
               }
-            >
-              <View
-                style={
-                  Object {
-                    "bottom": 0,
-                    "flexDirection": "row",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  }
-                }
-              >
-                <View
-                  pointerEvents="box-none"
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "backgroundColor": "transparent",
-                      "bottom": 0,
-                      "flexDirection": "row",
-                      "justifyContent": "center",
-                      "left": 0,
-                      "opacity": 1,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    }
-                  }
-                >
-                  <Text
-                    accessibilityTraits="header"
-                    allowFontScaling={true}
-                    numberOfLines={1}
-                    onLayout={[Function]}
-                    style={
-                      Object {
-                        "color": "rgba(0, 0, 0, .9)",
-                        "fontSize": 17,
-                        "fontWeight": "600",
-                        "marginHorizontal": 16,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    Pedway App
-                  </Text>
-                </View>
-              </View>
-            </View>
+            />
           </View>
         </View>
       </View>

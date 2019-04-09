@@ -13,9 +13,9 @@ import RenderAttractions from '../RenderAttractions/RenderAttractions';
 import Attractions from '../../mock_data/attractions';
 
 /**
- * Renders a MapView that display the ground level map
- * we are setting provider to null and UrlTile to OpenStreetMap's API
- * to use OSM
+ * Renders a MapView that displays the underground level map
+ * We are setting the provider to null and UrlTile to OpenStreetMap's
+ * API to use OSM
  */
 export default class GroundMapView extends React.Component {
   constructor() {
