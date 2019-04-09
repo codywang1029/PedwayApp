@@ -1,0 +1,76 @@
+import React, {Component} from 'react';
+import PedwayCoordinate from '../../model/PedwayCoordinate';
+import PedwayAttraction from '../../model/PedwayAttraction';
+import MarkerImage from '../../media/pedwayEntranceMarker.png';
+import MapView, {
+  Polyline,
+  Marker,
+} from 'react-native-maps';
+
+/**
+ * Display all of the attractions located within the Pedway on the underground mapview
+ * */
+export default class RenderAttractions extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pedwayAttractions: [],
+    };
+    this.parseJSONtoModel = this.parseJSONtoModel.bind(this);
+  }
+
+  parseJSONtoModel(inputJSON) {
+    const attractions = inputJSON['features'].filter((item) => {
+      try {
+        if (item['properties']['attraction'] === 'yes' &&
+                    item['geometry']['type'] === 'Point') {
+          return true;
+        }
+        return false;
+      } catch (e) {
+        return false;
+      }
+    }).reduce((acc, item, idx) => {
+      const thisLongitude = item['geometry']['coordinates'][0];
+      const thisLatitude = item['geometry']['coordinates'][1];
+      return acc.concat(
+          new PedwayAttraction(new PedwayCoordinate(
+              thisLatitude,
+              thisLongitude),
+          true,
+          false,
+          'Attraction #'+idx.toString()));
+    }, []);
+    this.setState({
+      pedwayAttractions: attractions,
+    });
+  }
+
+  componentWillMount() {
+    if (this.props.JSONData!==undefined) {
+      this.parseJSONtoModel(this.props.JSONData);
+    }
+  }
+
+  componentWillReceiveProps(next) {
+    if (next.JSONData!==undefined) {
+      this.parseJSONtoModel(next.JSONData);
+    }
+    this.forceUpdate();
+  }
+
+  render() {
+    const retMarkerList = this.state.pedwayAttractions.map((input, idx) => {
+      return (
+        <MapView.Marker
+          coordinate={input.getCoordinate().getJSON()}
+          key={idx}
+        />
+      );
+    },
+    );
+    return (
+      retMarkerList
+    );
+  }
+}

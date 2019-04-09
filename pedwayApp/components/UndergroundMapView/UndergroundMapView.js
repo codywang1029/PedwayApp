@@ -9,6 +9,8 @@ import PedwaySections from '../../mock_data/sections';
 import circle from '../../media/pedwayEntranceMarker.png';
 import RoundButton from '../RoundButton/RoundButton';
 import RenderEntrance from '../RenderEntrance/RenderEntrance';
+import RenderAttractions from '../RenderAttractions/RenderAttractions';
+import Attractions from '../../mock_data/attractions';
 
 /**
  * Renders a MapView that display the ground level map
@@ -102,9 +104,8 @@ export default class GroundMapView extends React.Component {
             title={'You'}
             image={circle}
           />
-
-
           <RenderPedway JSONData={PedwaySections}/>
+          <RenderAttractions JSONData={Attractions}/>
 
         </MapView>
       </View>
