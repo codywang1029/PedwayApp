@@ -8,6 +8,9 @@
     "lint": "gulp lint"
   },
   "dependencies": {
+    "@turf/helpers": "^6.1.4",
+    "@turf/point-to-line-distance": "^6.0.0",
+    "@turf/turf": "^5.1.6",
     "appcenter": "1.12.0",
     "appcenter-analytics": "1.12.0",
     "appcenter-crashes": "1.12.0",

@@ -152,6 +152,8 @@ class MainView extends React.Component {
     this.updateNavigationDataCallback = this.updateNavigationDataCallback.bind(this);
     this.updateSlidingDetailView = this.updateSlidingDetailView.bind(this);
     this.updateSegmentStartEndCallback = this.updateSegmentStartEndCallback.bind(this);
+    this.updateSwiperViewIndex = this.updateSwiperViewIndex.bind(this);
+    this.setMapInFocus = this.setMapInFocus.bind(this);
   }
 
   updateNavigationDataCallback(inputData) {
@@ -187,6 +189,14 @@ class MainView extends React.Component {
     });
   }
 
+  updateSwiperViewIndex(idx) {
+    this.swiperView.updateSwiperViewIndex(idx);
+  }
+
+  setMapInFocus(input) {
+    this.map.setMapInFocus(input);
+  }
+
   toggleNavigateCallback(inputEntrance, inputStatus) {
     // we also need to clear our current navigation data
     this.setState({
@@ -204,18 +214,22 @@ class MainView extends React.Component {
     return (
       <View style={{flex: 1, zIndex: 0}}>
 
-          <GroundMapView
-            selectedMarkerCallback={(input) => {
-              this.updateSlidingDetailView(input);
-            }}
-            updateNavigationDataCallback={this.updateNavigationDataCallback}
-            navigate={this.state.navigateGround}
-            navigateTo={this.state.navigateTo}
-            searchData={this.state.searchData}
-            highlightSegmentStart={this.state.highlightSegmentStart}
-            highlightSegmentEnd={this.state.highlightSegmentEnd}
-            underground={this.state.underground}
-          />
+        <GroundMapView
+          selectedMarkerCallback={(input) => {
+            this.updateSlidingDetailView(input);
+          }}
+          ref={(mapView) => {
+            this.map = mapView;
+          }}
+          updateNavigationDataCallback={this.updateNavigationDataCallback}
+          navigate={this.state.navigateGround}
+          navigateTo={this.state.navigateTo}
+          searchData={this.state.searchData}
+          highlightSegmentStart={this.state.highlightSegmentStart}
+          highlightSegmentEnd={this.state.highlightSegmentEnd}
+          underground={this.state.underground}
+          updateSwiperViewIndex={this.updateSwiperViewIndex}
+        />
         <SlidingUpDetailView
           open={this.state.detailViewOpen}
           entrance={this.state.selectedEntrance}
@@ -225,15 +239,19 @@ class MainView extends React.Component {
         {this.state.navigateGround?
             null:
             <SearchBar updateSearchData={this.setSearchData}/>}
-            <RoundButton
-              style={this.state.navigateGround?[positions.positionDown]:[positions.undergroundButton]}
-              icon={this.state.underground ? 'level-up' : 'level-down'}
-              func={this.toggleUndergroundMap}/>
+        <RoundButton
+          style={this.state.navigateGround?[positions.positionDown]:[positions.undergroundButton]}
+          icon={this.state.underground ? 'level-up' : 'level-down'}
+          func={this.toggleUndergroundMap}/>
         {this.state.navigateGround?
           <NavigationSwipeView
             navigationData={this.state.navigationData}
             navigationDataRequested={this.state.navigationDataRequested}
             updateSegmentStartEndCallback={this.updateSegmentStartEndCallback}
+            setMapInFocus={this.setMapInFocus}
+            ref={(navigationSwipeView) => {
+              this.swiperView = navigationSwipeView;
+            }}
           />:
           null
         }
