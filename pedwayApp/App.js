@@ -241,7 +241,12 @@ const styles = StyleSheet.create({
 });
 
 const MainNavigator = createStackNavigator({
-  Home: {screen: HomeScreen},
+  Home: {
+    screen: HomeScreen,
+    navigationOptions: {
+      header: null,
+    },
+  },
   FoodDirectory: {screen: Directory},
   StaticMap: {screen: PDFMap},
 });

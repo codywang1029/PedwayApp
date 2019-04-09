@@ -65,6 +65,7 @@ export default class RenderAttractions extends Component {
         <MapView.Marker
           coordinate={input.getCoordinate().getJSON()}
           key={idx}
+          pinColor={'#1198ff'}
         />
       );
     },
