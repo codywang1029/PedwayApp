@@ -404,7 +404,7 @@ export default class GroundMapView extends React.Component {
             title={'You'}
             pinColor={'#1198ff'}
           >
-            <Image source={circle} style={{ width: 25, height: 25 }} />
+            <Image source={circle} style={{width: 25, height: 25}} />
           </MapView.Marker>
 
           {this.state.navigate &&

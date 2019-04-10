@@ -165,7 +165,7 @@ class MainView extends React.Component {
 
   toggleUndergroundMap() {
     this.setState({
-      underground: !this.state.underground
+      underground: !this.state.underground,
     });
   }
 
