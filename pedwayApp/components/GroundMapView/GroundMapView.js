@@ -61,7 +61,7 @@ export default class GroundMapView extends React.Component {
       highlightStrokeColor: '#4185F4',
       greyScaleStrokeColor: '#777',
       underground: this.props.underground?false:this.props.underground,
-      mapReady:false,
+      mapReady: false,
       mapInFocus: true,
 
     };
@@ -77,9 +77,12 @@ export default class GroundMapView extends React.Component {
     this.onRegionChangeComplete = this.onRegionChangeComplete.bind(this);
     this.mapOnPanDrag = this.mapOnPanDrag.bind(this);
     this.updateCurrentSegment = this.updateCurrentSegment.bind(this);
+    this.positionDidUpdateCallback = this.positionDidUpdateCallback.bind(this);
   }
 
-
+  /**
+   * Fetch the pedway entrance geoJSON data from the back end
+   */
   requestEntranceData() {
     axios.get('https://pedway.azurewebsites.net/api/pedway/entrance').then((res) => {
       this.setState({
@@ -102,36 +105,47 @@ export default class GroundMapView extends React.Component {
     });
   }
 
+  /**
+   * callBack function for refocusing the map and navigation whenever user position is updated
+   * @param position
+   * @param id reference for the listener (so we can unmount it)
+   */
+  positionDidUpdateCallback(position, id) {
+    this.setState({
+      latitude: position.coords.latitude,
+      longitude: position.coords.longitude,
+      error: null,
+      pedwayData: PedwayData,
+      id: id,
+    });
+    if (this.state.navigate) {
+      if (this.state.mapInFocus) {
+        const region = {
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+          latitudeDelta: this.state.longitudeDelta,
+          longitudeDelta: this.state.latitudeDelta,
+        };
+        // refocus
+        this.map.animateToRegion(region, 1000);
+        // update the current segment for the swiper view and navigation path while navigating
+        this.updateCurrentSegment(position.coords.longitude, position.coords.latitude);
+      }
+    }
+  }
+
   componentDidMount() {
     let id = navigator.geolocation.watchPosition(
         (position) => {
-
-          this.setState({
-            latitude: position.coords.latitude,
-            longitude: position.coords.longitude,
-            error: null,
-            pedwayData: PedwayData,
-            id: id,
-          });
-          if (this.state.navigate) {
-            // we need to detect if the user deviate from the path here, if so, request path
-            // this.getGeometry([this.state.latitude, this.state.longitude],
-            //     [this.state.navigateTo.getCoordinate().getLatitude(), this.state.navigateTo.getCoordinate().getLongitude()]);
-            // CODE HERE
-            if (this.state.mapInFocus) {
-              const region = {
-                latitude: position.coords.latitude,
-                longitude: position.coords.longitude,
-                latitudeDelta: this.state.longitudeDelta,
-                longitudeDelta: this.state.latitudeDelta,
-              };
-              this.map.animateToRegion(region, 1000);
-              this.updateCurrentSegment(position.coords.longitude, position.coords.latitude);
-            }
-          }
+          this.positionDidUpdateCallback(position, id);
         });
   }
 
+  /**
+   * this function is called when user is navigation. Update the user's current segment
+   * @param longitude
+   * @param latitude
+   */
   updateCurrentSegment(longitude, latitude) {
     // if the user is still in route, we just need to update his current section to the closest section
     if (this.state.navigateJSON!==undefined && this.state.navigateJSON!==null) {
@@ -147,6 +161,12 @@ export default class GroundMapView extends React.Component {
     }
   }
 
+  /**
+   * Helper for updateCurrentSegment, use turf to calculate the user's closest segment in navigation path
+   * @param longitude
+   * @param latitude
+   * @returns {*[]}
+   */
   getCurrentClosestSegment(longitude, latitude) {
     let segmentList = this.state.navigateJSON['data']['routes'][0]['segments'][0]['steps'];
     let closestSegmentIdx = 0;
@@ -188,11 +208,9 @@ export default class GroundMapView extends React.Component {
     }
   }
 
-  // this.requestEntranceData();
-
   componentWillReceiveProps(nextProps) {
     this.setSearchData(nextProps.searchData);
-    this.setState({underground:nextProps.underground,mapReady:false});
+    this.setState({underground: nextProps.underground, mapReady: false});
     if (nextProps.navigate !== undefined) {
       this.setState({
         navigateTo: nextProps.navigateTo,
@@ -215,11 +233,17 @@ export default class GroundMapView extends React.Component {
     }
   }
 
+  /**
+   * fetch the directions data if the user what to start navigate
+   * @param start
+   * @param end
+   * @returns {Promise<AxiosResponse<any> | never | void>}
+   */
   getGeometry(start, end) {
     // https://pedway.azurewebsites.net/api/ors/directions?coordinates=
     return axios.get(
         'https://api.openrouteservice.org/directions?' +
-      'api_key=apiKeyHere&coordinates='
+      'api_key=apiKeyPlaceHolder&coordinates='
       + start[1] + ',%20' + start[0] + '%7C' + end[1] + ',%20' + end[0] + '&profile=foot-walking')
         .then((json) => {
           this.props.updateNavigationDataCallback(json);
@@ -286,6 +310,10 @@ export default class GroundMapView extends React.Component {
   }
 
   onRegionChangeComplete() {
+    this.setState({
+      mapReady: true,
+    });
+
     if (isUserInitiatedRegionChange) {
       this.setState({
         mapInFocus: false,
@@ -327,9 +355,6 @@ export default class GroundMapView extends React.Component {
           }}
           style={styles.mainMap}
           key={this.state.underground}
-          onRegionChangeComplete={()=>{
-            this.setState({mapReady:true})
-          }}
           customMapStyle={this.state.underground? MapStyle : null}
           initialRegion={{
             latitude: latitude,
@@ -392,9 +417,8 @@ export default class GroundMapView extends React.Component {
             pinColor={'#009e4c'}
           />
           }
-          {(this.state.underground && this.state.mapReady) &&
-          <RenderPedway JSONData={PedwaySections}/>
-          }
+          {this.state.underground && this.state.mapReady?
+          <RenderPedway JSONData={PedwaySections}/>:null}
         </MapView>
       </View>);
   }
