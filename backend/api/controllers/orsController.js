@@ -4,7 +4,7 @@ const ORS_BASE_URL = 'https://api.openrouteservice.org';
 const ORS_DIRECTION_URL = 'directions';
 const ORS_MAPSURFER_URL = 'mapsurfer/${zoom}/${x}/${y}.png';
 const ORS_POIS_URL = 'pois';
-const ORS_GEOCODE_URL = "geocode/autocomplete"
+const ORS_GEOCODE_URL = 'geocode/autocomplete';
 
 const request = require('request');
 const fillTemplate = require('es6-dynamic-template');

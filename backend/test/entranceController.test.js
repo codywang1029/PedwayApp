@@ -1,15 +1,12 @@
 const request = require('supertest');
-const {MongoMemoryServer} = require('mongodb-memory-server');
 const mongoose = require('mongoose');
 
-let mongoServer;
 let app;
 let EntranceSchema;
 
 beforeAll(async () => {
-  mongoServer = new MongoMemoryServer();
   process.env['APP_DEPLOYMENT_MODE'] = 'testing';
-  process.env['MONGODB_HOST'] = await mongoServer.getConnectionString();
+  process.env['MONGODB_HOST'] = global.__MONGODB_HOST__;
   ({app, disconnect} = require('../src/app'));
   EntranceSchema = mongoose.model('entrance');
 });
@@ -20,7 +17,6 @@ beforeEach(async () => {
 
 afterAll(async () => {
   disconnect();
-  mongoServer.stop();
 });
 
 describe('Test the root of the entrance api', () => {
