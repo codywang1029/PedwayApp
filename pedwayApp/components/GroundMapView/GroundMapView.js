@@ -26,6 +26,9 @@ import distance from '@turf/distance';
 import pointToLineDistance from '@turf/point-to-line-distance';
 
 
+const AZURE_API = 'https://pedway.azurewebsites.net/api/pedway';
+const ORS_API = 'https://api.openrouteservice.org';
+
 let isUserInitiatedRegionChange = false;
 
 /**
@@ -84,7 +87,7 @@ export default class GroundMapView extends React.Component {
    * Fetch the pedway entrance geoJSON data from the back end
    */
   requestEntranceData() {
-    axios.get('https://pedway.azurewebsites.net/api/pedway/entrance').then((res) => {
+    axios.get(AZURE_API + '/api/pedway/entrance').then((res) => {
       this.setState({
         pedwayData: res,
       });
@@ -246,7 +249,7 @@ export default class GroundMapView extends React.Component {
   getGeometry(start, end) {
     // https://pedway.azurewebsites.net/api/ors/directions?coordinates=
     return axios.get(
-        'https://api.openrouteservice.org/directions?' +
+        ORS_API + '/directions?' +
       'api_key=apiKeyPlaceHolder='
       + start[1] + ',%20' + start[0] + '%7C' + end[1] + ',%20' + end[0] + '&profile=foot-walking')
         .then((json) => {
