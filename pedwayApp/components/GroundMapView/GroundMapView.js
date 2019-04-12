@@ -29,6 +29,11 @@ import pointToLineDistance from '@turf/point-to-line-distance';
 const AZURE_API = 'https://pedway.azurewebsites.net/api/pedway';
 const ORS_API = 'https://api.openrouteservice.org';
 
+const INITIAL_LATITUDE = 41.881898;
+const INITIAL_LONGITUDE = -87.623977;
+const INITIAL_DELTA = 0.007;
+const RECENTER_DELTA = 0.005;
+
 let isUserInitiatedRegionChange = false;
 
 /**
@@ -37,15 +42,16 @@ let isUserInitiatedRegionChange = false;
  * to use OSM
  * If highlight segment is true, highlight color used for indexes within start and end
  * If greyscale is also true, grey scale color will be used for indexes < start index
+ * The initial highlight segment is 0 to 1, only highlighting the first line in a route
  */
 export default class GroundMapView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      latitude: 41.881898,
-      longitude: -87.623977,
-      latitudeDelta: 0.005,
-      longitudeDelta: 0.005,
+      latitude: INITIAL_LATITUDE,
+      longitude: INITIAL_LONGITUDE,
+      latitudeDelta: RECENTER_DELTA,
+      longitudeDelta: RECENTER_DELTA,
       error: null,
       pedwayData: PedwayData,
       updateGeoLocation: true,
@@ -166,6 +172,11 @@ export default class GroundMapView extends React.Component {
 
   /**
    * Helper for updateCurrentSegment, use turf to calculate the user's closest segment in navigation path
+   * Take in user's current location and parses the user's current route from geoJSON representation into
+   * turf data structure.
+   * Then we can use the pointToLineDistance() method from turf to find out what step is the user currently
+   * on in his/her route
+   * We then return that closest segment and the index of that segment in the list
    * @param longitude
    * @param latitude
    * @returns {*[]}
@@ -274,6 +285,7 @@ export default class GroundMapView extends React.Component {
   /**
    * request the API and render a path from this.state.latitude/longitude
    * to destinationCoordinate's coordinate
+   * the latitdueDelta is the difference between max/min latitdue within a view frame
    * @param destinationCoordinate
    */
   renderPath(destinationCoordinate) {
@@ -306,8 +318,8 @@ export default class GroundMapView extends React.Component {
     const region = {
       latitude: this.state.latitude,
       longitude: this.state.longitude,
-      latitudeDelta: 0.005,
-      longitudeDelta: 0.005,
+      latitudeDelta: RECENTER_DELTA,
+      longitudeDelta: RECENTER_DELTA,
     };
     this.setState({
       mapInFocus: true,
@@ -343,6 +355,7 @@ export default class GroundMapView extends React.Component {
    * this function gets called whenever user drags the map
    * we use this function together with onRegionChangeComplete() to determine if
    * the region change is done by the user or not
+   * the latitdueDelta is the difference between max/min latitdue within a view frame
    */
   mapOnPanDrag() {
     isUserInitiatedRegionChange = true;
@@ -364,6 +377,7 @@ export default class GroundMapView extends React.Component {
         pathToGo = pathToGo.slice(this.state.highlightSegmentEnd);
       }
     }
+
     return (
       <View style={StyleSheet.absoluteFillObject}>
         <RoundButton
@@ -381,8 +395,8 @@ export default class GroundMapView extends React.Component {
           initialRegion={{
             latitude: latitude,
             longitude: longitude,
-            latitudeDelta: 0.007,
-            longitudeDelta: 0.007,
+            latitudeDelta: INITIAL_DELTA,
+            longitudeDelta: INITIAL_DELTA,
           }}
           onRegionChangeComplete={this.onRegionChangeComplete}
           onPanDrag={this.mapOnPanDrag}

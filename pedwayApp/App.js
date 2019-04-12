@@ -32,7 +32,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 import {Keyboard} from 'react-native';
 import NavigationSwipeView from './components/NavigationSwipeView/NavigationSwipeView';
-
+import {positions, styles} from './styles';
 
 /**
  * HomeScreen that gets rendered first when everything is loaded
@@ -272,51 +272,4 @@ const MainNavigator = createStackNavigator({
 const App = createAppContainer(MainNavigator);
 
 export default App;
-
-const positions = StyleSheet.create({
-  undergroundButton: {
-    zIndex: 0,
-    position: 'absolute',
-    top: 100,
-    right: 20,
-    width: 40,
-    height: 40,
-  },
-  positionDown: {
-    zIndex: 0,
-    position: 'absolute',
-    top: 160,
-    right: 20,
-    width: 40,
-    height: 40,
-  },
-  hamburgerButton: {
-    position: 'absolute',
-    top: 20,
-    left: 20,
-    width: 60,
-    height: 60,
-  },
-});
-
-const styles = StyleSheet.create({
-  item: {
-    fontSize: 30,
-    fontWeight: 'bold',
-    marginTop: 10,
-    marginLeft: 10,
-    textAlign: 'center',
-  },
-  sideButton: {
-    marginRight: 0,
-    marginLeft: 0,
-    marginTop: 10,
-    paddingTop: 10,
-    paddingBottom: 10,
-    backgroundColor: '#a9a9a9',
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: '#a9a9a9',
-  },
-});
 
