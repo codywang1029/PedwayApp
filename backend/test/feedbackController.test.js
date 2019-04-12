@@ -33,7 +33,7 @@ describe('Test the root of the feedback api', () => {
         .send({
           message: 'My Feedback',
           reported_status: 'open',
-          entranceId: 101,
+          entranceId: '303',
           type: 'feedback',
         })
         .then((response) => {
@@ -49,7 +49,7 @@ describe('Test the root of the feedback api', () => {
                 expect(typeof response.body[0]).toBe('object');
                 expect(response.body[0]['message']).toBe('My Feedback');
                 expect(response.body[0]['reported_status']).toBe('open');
-                expect(response.body[0]['entranceId']).toBe(101);
+                expect(response.body[0]['entranceId']).toBe('303');
                 expect(response.body[0]['type']).toBe('feedback');
                 expect(response.body[0]).toHaveProperty('_id');
                 done();
@@ -60,30 +60,30 @@ describe('Test the root of the feedback api', () => {
   test.each([{
     message: 'My Feedback1',
     reported_status: 'open',
-    entranceId: 101,
+    entranceId: '101',
     type: 'status',
   }, {
     message: 'My Feedback2',
     reported_status: 'dirty',
-    entranceId: 101,
+    entranceId: '101',
     type: 'status',
   }, {
     message: 'My Feedback3',
     reported_status: 'open',
-    entranceId: 101,
+    entranceId: '101',
     type: 'status',
   }, {
     message: 'Sometimes tests fail',
-    entranceId: 101,
+    entranceId: '101',
     type: 'bug',
   }, {
     message: 'Ewww, I see a bug',
     reported_status: 'dirty',
-    entranceId: 101,
+    entranceId: '101',
     type: 'bug',
   }, {
     message: 'Great App!',
-    entranceId: 101,
+    entranceId: '101',
     type: 'feedback',
   }])('Adding a single feedback via POST', (feedback, done) => {
     request(app)
@@ -133,7 +133,7 @@ describe('Testing specific feedback entries in the feedback api', () => {
           .send({
             message: 'My best feedback',
             reported_status: 'open',
-            entranceId: 909,
+            entranceId: '909',
             type: 'status',
           })
           .then((response) => {
@@ -153,7 +153,7 @@ describe('Testing specific feedback entries in the feedback api', () => {
           expect(response.body['_id']).toBe(id);
           expect(response.body['message']).toBe('My best feedback');
           expect(response.body['reported_status']).toBe('open');
-          expect(response.body['entranceId']).toBe(909);
+          expect(response.body['entranceId']).toBe('909');
           expect(response.body['type']).toBe('status');
           done();
         });
@@ -166,7 +166,7 @@ describe('Testing specific feedback entries in the feedback api', () => {
         .send({
           message: 'My better feedback',
           reported_status: 'closed',
-          entranceId: 919,
+          entranceId: '919',
         })
         .then((response) => {
           expect(response.statusCode).toBe(200);
@@ -179,7 +179,7 @@ describe('Testing specific feedback entries in the feedback api', () => {
                 expect(response.body[0]['_id']).toBe(id);
                 expect(response.body[0]['message']).toBe('My better feedback');
                 expect(response.body[0]['reported_status']).toBe('closed');
-                expect(response.body[0]['entranceId']).toBe(919);
+                expect(response.body[0]['entranceId']).toBe('919');
 
                 // Check if the database has been updated
                 request(app)
@@ -191,7 +191,7 @@ describe('Testing specific feedback entries in the feedback api', () => {
                       expect(response.body['_id']).toBe(id);
                       expect(response.body['message']).toBe('My better feedback');
                       expect(response.body['reported_status']).toBe('closed');
-                      expect(response.body['entranceId']).toBe(919);
+                      expect(response.body['entranceId']).toBe('919');
                       done();
                     });
               });
