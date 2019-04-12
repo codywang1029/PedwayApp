@@ -59,8 +59,10 @@ export default class NavigationSwipeView extends React.Component {
    * @param idx
    */
   updateSwiperViewIndex(idx) {
-    isProgrammaticallyUpdatingIndex = true;
-    this.swiper.scrollBy(idx - this.state.currentIndex, true);
+    if (this.state.navigationDataRequested) {
+      isProgrammaticallyUpdatingIndex = true;
+      this.swiper.scrollBy(idx - this.state.currentIndex, true);
+    }
   }
 
   /**

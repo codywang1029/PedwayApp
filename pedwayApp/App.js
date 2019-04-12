@@ -151,6 +151,7 @@ class MainView extends React.Component {
     this.updateSegmentStartEndCallback = this.updateSegmentStartEndCallback.bind(this);
     this.updateSwiperViewIndex = this.updateSwiperViewIndex.bind(this);
     this.setMapInFocus = this.setMapInFocus.bind(this);
+    this.clearNavigationData = this.clearNavigationData.bind(this);
   }
 
   updateNavigationDataCallback(inputData) {
@@ -194,6 +195,10 @@ class MainView extends React.Component {
     this.map.setMapInFocus(input);
   }
 
+  clearNavigationData() {
+    this.setState({navigationDataRequested: false});
+  }
+
   toggleNavigateCallback(inputEntrance, inputStatus) {
     // use setState to clear the existing navigation data
     this.setState({
@@ -226,6 +231,7 @@ class MainView extends React.Component {
           highlightSegmentEnd={this.state.highlightSegmentEnd}
           underground={this.state.underground}
           updateSwiperViewIndex={this.updateSwiperViewIndex}
+          clearNavigationData={this.clearNavigationData}
         />
         <SlidingUpDetailView
           open={this.state.detailViewOpen}
