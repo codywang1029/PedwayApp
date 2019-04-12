@@ -45,4 +45,8 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#a9a9a9',
   },
+  fillView: {
+    flex: 1,
+    zIndex: 0,
+  },
 });

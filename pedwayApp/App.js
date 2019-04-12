@@ -209,7 +209,7 @@ class MainView extends React.Component {
 
   render() {
     return (
-      <View style={{flex: 1, zIndex: 0}}>
+      <View style={styles.fillView}>
 
         <GroundMapView
           selectedMarkerCallback={(input) => {
