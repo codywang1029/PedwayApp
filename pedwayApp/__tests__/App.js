@@ -12,7 +12,6 @@ import App from '../App.js';
 import HomeScreen from '../App.js';
 import MainView from '../App.js';
 import GroundMapView from '../components/GroundMapView/GroundMapView';
-import UndergroundScreen from '../components/UndergroundMapView/UndergroundMapView';
 
 test('Check if our main app renders correctly', () => {
   const treeRendered = testRenderer.create(<App />).toJSON();
@@ -34,7 +33,3 @@ test('Check if our GroundMapView renders correctly', () => {
   expect(treeRendered).toMatchSnapshot();
 });
 
-test('Check if our UndergroundScreen renders correctly', () => {
-  const treeRendered = testRenderer.create(<UndergroundScreen />).toJSON();
-  expect(treeRendered).toMatchSnapshot();
-});

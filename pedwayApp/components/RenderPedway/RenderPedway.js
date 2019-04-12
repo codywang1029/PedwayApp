@@ -18,8 +18,8 @@ export default class RenderPedway extends Component {
       new PedwayCoordinate(40.116329, -88.224462)]);
     this.state = {
       pedwaySections: [],
-      strokeColor: '#42b0f4',
-      strokeWidth: 3,
+      strokeColor: '#FFEF8C',
+      strokeWidth: 8,
       zIndex: 1,
 
     };
