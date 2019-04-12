@@ -46,9 +46,6 @@ class HomeScreen extends React.Component {
   constructor() {
     super();
     this.state = {
-      mainStatusText: 'Requesting from backend...',
-      entrance1StatusText: '',
-      macysStatusText: '',
       sideMenuIsOpen: false,
       sideMenuDisableGesture: true,
       apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
@@ -260,6 +257,22 @@ class MainView extends React.Component {
   }
 }
 
+
+const MainNavigator = createStackNavigator({
+  Home: {
+    screen: HomeScreen,
+    navigationOptions: {
+      header: null,
+    },
+  },
+  FoodDirectory: {screen: Directory},
+  StaticMap: {screen: PDFMap},
+});
+
+const App = createAppContainer(MainNavigator);
+
+export default App;
+
 const positions = StyleSheet.create({
   undergroundButton: {
     zIndex: 0,
@@ -306,19 +319,4 @@ const styles = StyleSheet.create({
     borderColor: '#a9a9a9',
   },
 });
-
-const MainNavigator = createStackNavigator({
-  Home: {
-    screen: HomeScreen,
-    navigationOptions: {
-      header: null,
-    },
-  },
-  FoodDirectory: {screen: Directory},
-  StaticMap: {screen: PDFMap},
-});
-
-const App = createAppContainer(MainNavigator);
-
-export default App;
 

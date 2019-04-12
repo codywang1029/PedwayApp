@@ -210,7 +210,10 @@ export default class GroundMapView extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     this.setSearchData(nextProps.searchData);
-    this.setState({underground: nextProps.underground, mapReady: false});
+    if (nextProps.underground !== this.state.underground && nextProps.underground) {
+      this.setState({mapReady: false});
+    }
+    this.setState({underground: nextProps.underground});
     if (nextProps.navigate !== undefined) {
       this.setState({
         navigateTo: nextProps.navigateTo,
@@ -243,7 +246,7 @@ export default class GroundMapView extends React.Component {
     // https://pedway.azurewebsites.net/api/ors/directions?coordinates=
     return axios.get(
         'https://api.openrouteservice.org/directions?' +
-      'api_key=apiKeyPlaceHolder&coordinates='
+      'api_key=apiKeyPlaceHolder='
       + start[1] + ',%20' + start[0] + '%7C' + end[1] + ',%20' + end[0] + '&profile=foot-walking')
         .then((json) => {
           this.props.updateNavigationDataCallback(json);
@@ -310,9 +313,11 @@ export default class GroundMapView extends React.Component {
   }
 
   onRegionChangeComplete() {
-    this.setState({
-      mapReady: true,
-    });
+    if (!this.state.mapReady) {
+      this.setState({
+        mapReady: true,
+      });
+    }
 
     if (isUserInitiatedRegionChange) {
       this.setState({
