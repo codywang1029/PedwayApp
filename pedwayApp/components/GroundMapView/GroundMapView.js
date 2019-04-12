@@ -316,6 +316,14 @@ export default class GroundMapView extends React.Component {
     this.updateCurrentSegment(this.state.longitude, this.state.latitude);
   }
 
+  /**
+   * callback function that is trigger whenever the map completes a region change
+   * if the map is uninitialized, the initial location is (0,0)
+   * only after the inital region change is completely, we can set mapReady to true
+   * and render the components on the map
+   * We also use this function together with mapOnPanDrag() to determine if a region
+   * change is trigger by the user or done programmatically
+   */
   onRegionChangeComplete() {
     if (!this.state.mapReady) {
       this.setState({
@@ -331,6 +339,11 @@ export default class GroundMapView extends React.Component {
     isUserInitiatedRegionChange = false;
   }
 
+  /**
+   * this function gets called whenever user drags the map
+   * we use this function together with onRegionChangeComplete() to determine if
+   * the region change is done by the user or not
+   */
   mapOnPanDrag() {
     isUserInitiatedRegionChange = true;
   }

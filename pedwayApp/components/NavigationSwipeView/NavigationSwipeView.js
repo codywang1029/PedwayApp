@@ -54,17 +54,27 @@ export default class NavigationSwipeView extends React.Component {
     });
   }
 
+  /**
+   * Takes in a 0 indexed index variable, and update the swiper view's index to that variable
+   * @param idx
+   */
   updateSwiperViewIndex(idx) {
     isProgrammaticallyUpdatingIndex = true;
     this.swiper.scrollBy(idx - this.state.currentIndex, true);
   }
 
+  /**
+   * callBack function that is triggered whenever the swiper view's index changes
+   * this function also calls the corresponding function to update the highlighted segment on the mapView
+   * @param inputIndex
+   */
   onIndexChanged(inputIndex) {
     try {
       this.setState({
         currentIndex: inputIndex,
       });
-      let wayPoint = this.state.navigationData['data']['routes'][0]['segments'][0]['steps'][inputIndex]['way_points'];
+      let route = this.state.navigationData['data']['routes'][0];
+      let wayPoint = route['segments'][0]['steps'][inputIndex]['way_points'];
       this.props.updateSegmentStartEndCallback(wayPoint[0], wayPoint[1]);
     } catch (e) {
     }
