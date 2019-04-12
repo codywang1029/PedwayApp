@@ -105,8 +105,6 @@ export default class GroundMapView extends React.Component {
     }
   }
 
-  // this.requestEntranceData();
-
   componentWillReceiveProps(nextProps) {
     this.setSearchData(nextProps.searchData);
     this.setState({underground:nextProps.underground,mapReady:false});
