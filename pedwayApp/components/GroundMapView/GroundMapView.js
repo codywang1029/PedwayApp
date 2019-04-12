@@ -126,7 +126,7 @@ export default class GroundMapView extends React.Component {
           latitudeDelta: this.state.longitudeDelta,
           longitudeDelta: this.state.latitudeDelta,
         };
-        // refocus
+
         this.map.animateToRegion(region, 1000);
         // update the current segment for the swiper view and navigation path while navigating
         this.updateCurrentSegment(position.coords.longitude, position.coords.latitude);
@@ -168,7 +168,8 @@ export default class GroundMapView extends React.Component {
    * @returns {*[]}
    */
   getCurrentClosestSegment(longitude, latitude) {
-    let segmentList = this.state.navigateJSON['data']['routes'][0]['segments'][0]['steps'];
+    let navigateRoute = this.state.navigateJSON['data']['routes'][0];
+    let segmentList = navigateRoute['segments'][0]['steps'];
     let closestSegmentIdx = 0;
     let closestDistanceOverall = Number.MAX_VALUE;
     segmentList.forEach((item, idx) => {

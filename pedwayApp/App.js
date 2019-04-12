@@ -195,7 +195,7 @@ class MainView extends React.Component {
   }
 
   toggleNavigateCallback(inputEntrance, inputStatus) {
-    // we also need to clear our current navigation data
+    // use setState to clear the existing navigation data
     this.setState({
       navigateGround: inputStatus,
       navigateTo: inputEntrance,
