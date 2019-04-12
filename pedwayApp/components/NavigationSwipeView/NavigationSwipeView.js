@@ -23,16 +23,20 @@ let vectorIconDisplayList = [
   'long-arrow-right',
 ];
 
+let isProgrammaticallyUpdatingIndex = false;
+
 export default class NavigationSwipeView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       navigationData: [],
-      currentSegment: 0,
+      currentIndex: 0,
       dataRequested: false,
     };
     this.updateState = this.updateState.bind(this);
     this.onIndexChanged = this.onIndexChanged.bind(this);
+    this.updateSwiperViewIndex = this.updateSwiperViewIndex.bind(this);
+    this.onMomentumScrollEnd = this.onMomentumScrollEnd.bind(this);
   }
 
   componentDidMount() {
@@ -50,12 +54,38 @@ export default class NavigationSwipeView extends React.Component {
     });
   }
 
+  /**
+   * Takes in a 0 indexed index variable, and update the swiper view's index to that variable
+   * @param idx
+   */
+  updateSwiperViewIndex(idx) {
+    isProgrammaticallyUpdatingIndex = true;
+    this.swiper.scrollBy(idx - this.state.currentIndex, true);
+  }
+
+  /**
+   * callBack function that is triggered whenever the swiper view's index changes
+   * this function also calls the corresponding function to update the highlighted segment on the mapView
+   * @param inputIndex
+   */
   onIndexChanged(inputIndex) {
     try {
-      let wayPoint = this.state.navigationData['data']['routes'][0]['segments'][0]['steps'][inputIndex]['way_points'];
+      this.setState({
+        currentIndex: inputIndex,
+      });
+      let route = this.state.navigationData['data']['routes'][0];
+      let wayPoint = route['segments'][0]['steps'][inputIndex]['way_points'];
       this.props.updateSegmentStartEndCallback(wayPoint[0], wayPoint[1]);
     } catch (e) {
     }
+  }
+
+  onMomentumScrollEnd() {
+    // if user is scrolling it, we need to unlock the mapView to let it not in focus
+    if (!isProgrammaticallyUpdatingIndex) {
+      this.props.setMapInFocus(false);
+    }
+    isProgrammaticallyUpdatingIndex = false;
   }
 
   render() {
@@ -99,7 +129,15 @@ export default class NavigationSwipeView extends React.Component {
       return (
         <View style={styles.outerContainer}>
           <View style={styles.innerContainer}>
-            <Swiper loop={false} showsButton={true} showsPagination={false} onIndexChanged={this.onIndexChanged}>
+            <Swiper
+              loop={false}
+              showsButton={true}
+              showsPagination={false}
+              onIndexChanged={this.onIndexChanged}
+              onMomentumScrollEnd={this.onMomentumScrollEnd}
+              ref={(swiper) => {
+                this.swiper = swiper;
+              }}>
               { swiperViewData }
             </Swiper>
           </View>

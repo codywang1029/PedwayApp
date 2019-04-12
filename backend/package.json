@@ -8,6 +8,7 @@
     "start-dev": "nodemon src/server.js",
     "mongodb-dev": "docker run --name pedmongo --restart=always -d -p 27017:27017 mongo mongod",
     "lint": "gulp lint",
+    "lint-fix": "gulp lint-fix",
     "test": "jest --runInBand"
   },
   "repository": {
@@ -41,6 +42,7 @@
     "gulp": "^4.0.0",
     "gulp-eslint": "^5.0.0",
     "jest": "^24.1.0",
+    "jest-environment-node": "^24.6.0",
     "jest-image-snapshot": "^2.8.1",
     "jest-junit": "^6.3.0",
     "mongodb-memory-server": "^4.0.1",
