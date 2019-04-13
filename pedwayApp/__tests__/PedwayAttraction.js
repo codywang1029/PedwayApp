@@ -1,18 +1,8 @@
 import PedwayAttraction from '../model/PedwayAttraction';
 import PedwayCoordinate from '../model/PedwayCoordinate';
 
-test('Check Attraction Constructor', () => {
-  const testCoord = new PedwayCoordinate(-70.20232, 42.353523);
-  expect(testCoord !== null);
-  let testAttraction = new PedwayAttraction(testCoord);
-  expect(testAttraction !== null);
-  testAttraction = new PedwayAttraction(testCoord, 'attraction1');
-  expect(testAttraction !== null);
-});
-
 test('Check Coordinate Getter', () => {
   const testCoord = new PedwayCoordinate(-70.20232, 42.353523);
-  expect(testCoord !== null);
   const testAttraction = new PedwayAttraction(testCoord);
   expect(testCoord).toEqual(testAttraction.getCoordinate());
 });
@@ -28,7 +18,15 @@ test('Check Coordinate Setter', () => {
   expect(testCoord2).toEqual(testAttraction.getCoordinate());
 });
 
-test('Check Name Getter and Setter', () => {
+test('Check Name Getter', () => {
+  const testCoord = new PedwayCoordinate(-70.20232, 42.353523);
+  const testAttraction1 = new PedwayAttraction(testCoord);
+  expect(testAttraction1.getName()).toBe('');
+  const testAttraction2 = new PedwayAttraction(testCoord, 'Attraction 2');
+  expect(testAttraction2.getName()).toBe('Attraction 2');
+});
+
+test('Check Name Setter', () => {
   const testCoord = new PedwayCoordinate(-70.20232, 42.353523);
   let testAttraction = new PedwayAttraction(testCoord);
   testAttraction.setName('Attraction 1');

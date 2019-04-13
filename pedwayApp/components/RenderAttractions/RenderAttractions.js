@@ -19,7 +19,11 @@ export default class RenderAttractions extends Component {
     this.parseJSONtoModel = this.parseJSONtoModel.bind(this);
   }
 
-  /* Parse provided JSON file to get coordinates of all attractions */
+  /**
+   * Parse provided JSON file to get coordinates of all attractions.
+   * The filter step finds all JSON objects labeled as an 'attraction', which are of type 'point',
+   * and then the reduce step is used to create a new PedwayAttraction using the corresponding coordinates.
+   * */
   parseJSONtoModel(inputJSON) {
     const attractions = inputJSON['features'].filter((item) => {
       try {

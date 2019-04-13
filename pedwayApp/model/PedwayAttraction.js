@@ -21,7 +21,7 @@ export default class PedwayAttraction {
   }
 
   /**
-     * Get an array of coordinates in JSON format
+     * Get coordinate JSON data
      * @return {JSON}
      */
   getJSON() {
