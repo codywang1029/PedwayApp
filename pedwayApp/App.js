@@ -21,8 +21,6 @@ import SideMenu from 'react-native-side-menu';
 import RoundButton from './components/RoundButton/RoundButton';
 import IconButton from './components/IconButton/IconButton';
 import GroundMapView from './components/GroundMapView/GroundMapView';
-import UndergroundMapView
-  from './components/UndergroundMapView/UndergroundMapView';
 import SearchBar from './components/SearchBar/SearchBar';
 import SlidingUpDetailView
   from './components/SlidingUpDetailView/SlidingUpDetailView';
@@ -34,7 +32,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 import {Keyboard} from 'react-native';
 import NavigationSwipeView from './components/NavigationSwipeView/NavigationSwipeView';
-
+import {positions, styles} from './styles';
 
 /**
  * HomeScreen that gets rendered first when everything is loaded
@@ -48,13 +46,10 @@ class HomeScreen extends React.Component {
   constructor() {
     super();
     this.state = {
-      mainStatusText: 'Requesting from backend...',
-      entrance1StatusText: '',
-      macysStatusText: '',
       sideMenuIsOpen: false,
       sideMenuDisableGesture: true,
       apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
-      detailViewOpen: false,
+      detailViewOpen: true,
       navigateGround: false,
       navigateTo: null,
       hideHamburgerButton: false,
@@ -152,7 +147,10 @@ class MainView extends React.Component {
     this.toggleNavigateCallback = this.toggleNavigateCallback.bind(this);
     this.setSearchData = this.setSearchData.bind(this);
     this.updateNavigationDataCallback = this.updateNavigationDataCallback.bind(this);
+    this.updateSlidingDetailView = this.updateSlidingDetailView.bind(this);
     this.updateSegmentStartEndCallback = this.updateSegmentStartEndCallback.bind(this);
+    this.updateSwiperViewIndex = this.updateSwiperViewIndex.bind(this);
+    this.setMapInFocus = this.setMapInFocus.bind(this);
   }
 
   updateNavigationDataCallback(inputData) {
@@ -165,9 +163,7 @@ class MainView extends React.Component {
   toggleUndergroundMap() {
     this.setState({
       underground: !this.state.underground,
-      detailViewOpen: false,
     });
-    this.updateSlidingDetailView = this.updateSlidingDetailView.bind(this);
   }
 
   setSearchData(data) {
@@ -179,7 +175,7 @@ class MainView extends React.Component {
   updateSlidingDetailView(inputEntrance) {
     this.setState({
       selectedEntrance: inputEntrance,
-      detailViewOpen: !this.state.underground,
+      detailViewOpen: true,
     });
   }
 
@@ -190,8 +186,16 @@ class MainView extends React.Component {
     });
   }
 
+  updateSwiperViewIndex(idx) {
+    this.swiperView.updateSwiperViewIndex(idx);
+  }
+
+  setMapInFocus(input) {
+    this.map.setMapInFocus(input);
+  }
+
   toggleNavigateCallback(inputEntrance, inputStatus) {
-    // we also need to clear our current navigation data
+    // use setState to clear the existing navigation data
     this.setState({
       navigateGround: inputStatus,
       navigateTo: inputEntrance,
@@ -205,20 +209,24 @@ class MainView extends React.Component {
 
   render() {
     return (
-      <View style={{flex: 1, zIndex: 0}}>
-        {(this.state.underground) ?
-          (<UndergroundMapView/>) :
-          (<GroundMapView
-            selectedMarkerCallback={(input) => {
-              this.updateSlidingDetailView(input);
-            }}
-            updateNavigationDataCallback={this.updateNavigationDataCallback}
-            navigate={this.state.navigateGround}
-            navigateTo={this.state.navigateTo}
-            searchData={this.state.searchData}
-            highlightSegmentStart={this.state.highlightSegmentStart}
-            highlightSegmentEnd={this.state.highlightSegmentEnd}
-          />)}
+      <View style={styles.fillView}>
+
+        <GroundMapView
+          selectedMarkerCallback={(input) => {
+            this.updateSlidingDetailView(input);
+          }}
+          ref={(mapView) => {
+            this.map = mapView;
+          }}
+          updateNavigationDataCallback={this.updateNavigationDataCallback}
+          navigate={this.state.navigateGround}
+          navigateTo={this.state.navigateTo}
+          searchData={this.state.searchData}
+          highlightSegmentStart={this.state.highlightSegmentStart}
+          highlightSegmentEnd={this.state.highlightSegmentEnd}
+          underground={this.state.underground}
+          updateSwiperViewIndex={this.updateSwiperViewIndex}
+        />
         <SlidingUpDetailView
           open={this.state.detailViewOpen}
           entrance={this.state.selectedEntrance}
@@ -228,17 +236,19 @@ class MainView extends React.Component {
         {this.state.navigateGround?
             null:
             <SearchBar updateSearchData={this.setSearchData}/>}
-        {this.state.navigateGround?
-            null:
-            <RoundButton
-              style={[positions.undergroundButton]}
-              icon={this.state.underground ? 'level-up' : 'level-down'}
-              func={this.toggleUndergroundMap}/>}
+        <RoundButton
+          style={this.state.navigateGround?[positions.positionDown]:[positions.undergroundButton]}
+          icon={this.state.underground ? 'level-up' : 'level-down'}
+          func={this.toggleUndergroundMap}/>
         {this.state.navigateGround?
           <NavigationSwipeView
             navigationData={this.state.navigationData}
             navigationDataRequested={this.state.navigationDataRequested}
             updateSegmentStartEndCallback={this.updateSegmentStartEndCallback}
+            setMapInFocus={this.setMapInFocus}
+            ref={(navigationSwipeView) => {
+              this.swiperView = navigationSwipeView;
+            }}
           />:
           null
         }
@@ -247,45 +257,6 @@ class MainView extends React.Component {
   }
 }
 
-const positions = StyleSheet.create({
-  undergroundButton: {
-    zIndex: 0,
-    position: 'absolute',
-    top: 100,
-    right: 20,
-    width: 40,
-    height: 40,
-  },
-
-  hamburgerButton: {
-    position: 'absolute',
-    top: 20,
-    left: 20,
-    width: 60,
-    height: 60,
-  },
-});
-
-const styles = StyleSheet.create({
-  item: {
-    fontSize: 30,
-    fontWeight: 'bold',
-    marginTop: 10,
-    marginLeft: 10,
-    textAlign: 'center',
-  },
-  sideButton: {
-    marginRight: 0,
-    marginLeft: 0,
-    marginTop: 10,
-    paddingTop: 10,
-    paddingBottom: 10,
-    backgroundColor: '#a9a9a9',
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: '#a9a9a9',
-  },
-});
 
 const MainNavigator = createStackNavigator({
   Home: {

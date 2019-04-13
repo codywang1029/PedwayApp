@@ -21,7 +21,7 @@ exports.listFeedback = function(req, res) {
         res.json(feedback);
       }
     });
-  });
+  }).catch((err)=>res.status(401).send(String(err))); ;
 };
 
 /**
@@ -54,7 +54,7 @@ exports.readFeedback = function(req, res) {
         res.json(feedback);
       }
     });
-  });
+  }).catch((err)=>res.status(401).send(String(err)));
 };
 
 /**
@@ -72,7 +72,7 @@ exports.readFeedbackByEntranceId = function(req, res) {
         res.json(feedback);
       }
     });
-  });
+  }).catch((err)=>res.status(401).send(String(err)));
 };
 
 /**
@@ -89,7 +89,7 @@ exports.readFeedbackByType = function(req, res) {
         res.json(feedback);
       }
     });
-  });
+  }).catch((err)=>res.status(401).send(String(err)));
 };
 
 /**
@@ -108,7 +108,7 @@ exports.updateFeedback = function(req, res) {
             res.json(feedback);
           }
         });
-  });
+  }).catch((err)=>res.status(401).send(String(err)));
 };
 
 /**
@@ -125,5 +125,5 @@ exports.deleteFeedback = function(req, res) {
         res.json({message: 'Feedback successfully deleted'});
       }
     });
-  });
+  }).catch((err)=>res.status(401).send(String(err)));
 };
