@@ -21,24 +21,17 @@ export default class RenderEntrance extends Component {
   }
 
   parseJSONtoModel(inputJSON) {
-    const entrances = inputJSON['features'].filter((item) => {
-      try {
-        if (item['properties']['entrance'] === 'yes' &&
-          item['geometry']['type'] === 'Point') {
-          return true;
-        }
-        return false;
-      } catch (e) {
-        return false;
-      }
-    }).reduce((acc, item, idx) => {
+    if (inputJSON === undefined) {
+      return;
+    }
+    const entrances = inputJSON['data'].reduce((acc, item, idx) => {
       const thisLongitude = item['geometry']['coordinates'][0];
       const thisLatitude = item['geometry']['coordinates'][1];
+      const thisStatus = item['status'];
       return acc.concat(
           new PedwayEntrance(new PedwayCoordinate(
               thisLatitude,
-              thisLongitude),
-          true,
+              thisLongitude), thisStatus,
           false,
           'Entrance #'+idx.toString()));
     }, []);

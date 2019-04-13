@@ -16,7 +16,6 @@ import circle from '../../media/pedwayEntranceMarker.png';
 import axios from 'axios';
 import RoundButton from '../RoundButton/RoundButton';
 import * as polyline from 'google-polyline';
-import PedwayData from '../../mock_data/export.json';
 import PedwayCoordinate from '../../model/PedwayCoordinate';
 import PedwaySection from '../../model/PedwaySection';
 import {Keyboard} from 'react-native';
@@ -53,7 +52,7 @@ export default class GroundMapView extends React.Component {
       latitudeDelta: RECENTER_DELTA,
       longitudeDelta: RECENTER_DELTA,
       error: null,
-      pedwayData: PedwayData,
+      pedwayData: undefined,
       updateGeoLocation: true,
       id: 0,
       navigate: false,
@@ -94,7 +93,7 @@ export default class GroundMapView extends React.Component {
    * Fetch the pedway entrance geoJSON data from the back end
    */
   requestEntranceData() {
-    axios.get(AZURE_API + '/api/pedway/entrance').then((res) => {
+    axios.get(AZURE_API + '/entrance').then((res) => {
       this.setState({
         pedwayData: res,
       });
@@ -125,7 +124,6 @@ export default class GroundMapView extends React.Component {
       latitude: position.coords.latitude,
       longitude: position.coords.longitude,
       error: null,
-      pedwayData: PedwayData,
       id: id,
     });
     if (this.state.navigate) {
@@ -152,6 +150,7 @@ export default class GroundMapView extends React.Component {
         (position) => {
           this.positionDidUpdateCallback(position, id);
         });
+    this.requestEntranceData();
   }
 
   /**
@@ -288,7 +287,6 @@ export default class GroundMapView extends React.Component {
         ORS_API + '/directions?coordinates='
       + start[1] + ',%20' + start[0] + '%7C' + end[1] + ',%20' + end[0] + '&profile=foot-walking')
         .then((json) => {
-          console.log(json);
           this.props.updateNavigationDataCallback(json);
           this.state.navigateJSON = json;
           const geometry = json.data.routes[0].geometry;
