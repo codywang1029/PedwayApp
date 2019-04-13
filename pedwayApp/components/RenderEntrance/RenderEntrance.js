@@ -21,7 +21,7 @@ export default class RenderEntrance extends Component {
   }
 
   parseJSONtoModel(inputJSON) {
-    if (inputJSON === undefined) {
+    if (inputJSON === undefined || inputJSON['data'] === undefined) {
       return;
     }
     const entrances = inputJSON['data'].reduce((acc, item, idx) => {
