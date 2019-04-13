@@ -31,6 +31,8 @@ const INITIAL_LATITUDE = 41.881898;
 const INITIAL_LONGITUDE = -87.623977;
 const INITIAL_DELTA = 0.007;
 const RECENTER_DELTA = 0.005;
+const MAXIMUM_OFFSET_DISTANCE = 0.1;
+
 
 let isUserInitiatedRegionChange = false;
 
@@ -219,7 +221,7 @@ export default class GroundMapView extends React.Component {
     });
 
     // check if user deviated more than 100 meters from the path
-    if (closestDistanceOverall > 0.1) {
+    if (closestDistanceOverall > MAXIMUM_OFFSET_DISTANCE) {
       this.recalculatePath(longitude, latitude);
     }
 

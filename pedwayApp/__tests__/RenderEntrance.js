@@ -11,8 +11,9 @@ test('Check if our RenderPedway renders correctly', () => {
 
 
 test('test JSON helpers', ()=>{
+  const totalEntranceAmount = 77;
   const treeRendered = testRenderer.create(<RenderEntrance
     JSONData={PedwayMockData}/>).toJSON();
-  expect(treeRendered.length).toBe(77);
+  expect(treeRendered.length).toBe(totalEntranceAmount);
 });
 
