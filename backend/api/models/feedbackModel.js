@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const FeedbackSchema = new Schema({
   entranceId: {
-    type: Number,
+    type: String,
   },
   message: {
     type: String,

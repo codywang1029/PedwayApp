@@ -210,7 +210,6 @@ exports.deleteAll = function(callback) {
   if (process.env.JEST_WORKER_ID === undefined) {
     throw new Error('Must not run this function outside of tests');
   }
-  // console.warn('This function should only be called for testing purposes')
   Session.deleteMany({}, callback);
 };
 
