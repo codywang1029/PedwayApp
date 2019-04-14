@@ -55,9 +55,9 @@ export default class NavigationSwipeView extends React.Component {
   }
 
   /**
-     * Takes in a 0 indexed index variable, and update the swiper view's index to that variable
-     * @param idx
-     */
+   * Takes in a 0 indexed index variable, and update the swiper view's index to that variable
+   * @param idx
+   */
   updateSwiperViewIndex(idx) {
     if (this.state.navigationDataRequested) {
       isProgrammaticallyUpdatingIndex = true;
@@ -66,10 +66,10 @@ export default class NavigationSwipeView extends React.Component {
   }
 
   /**
-     * callBack function that is triggered whenever the swiper view's index changes
-     * this function also calls the corresponding function to update the highlighted segment on the mapView
-     * @param inputIndex
-     */
+   * callBack function that is triggered whenever the swiper view's index changes
+   * this function also calls the corresponding function to update the highlighted segment on the mapView
+   * @param inputIndex
+   */
   onIndexChanged(inputIndex) {
     try {
       this.setState({
@@ -122,8 +122,8 @@ export default class NavigationSwipeView extends React.Component {
             <View style={styles.colFlexContainer}>
               <Text style={styles.instructionLabel} numberOfLines={3}>{item['instruction']}</Text>
               <Text style={styles.distanceLabel}>{ + (idx + 1) + '/' +
-                            this.state.navigationData['data']['routes'][0]['segments'][0]['steps'].length +
-                            '  ' + item['distance'] + 'm'}</Text>
+              this.state.navigationData['data']['routes'][0]['segments'][0]['steps'].length +
+              '  ' + item['distance'] + 'm'}</Text>
             </View>
           </View>
         );

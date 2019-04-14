@@ -119,8 +119,8 @@ class HomeScreen extends React.Component {
         <MainView shouldHideHamburgerButton={this.shouldHideHamburgerButton}/>
 
         {this.state.hideHamburgerButton?
-              null:
-              <IconButton style={[positions.hamburgerButton]} icon={'bars'} func={this.toggleSideBar} size={30}/>}
+          null:
+          <IconButton style={[positions.hamburgerButton]} icon={'bars'} func={this.toggleSideBar} size={30}/>}
       </SideMenu>
     );
   }
@@ -240,23 +240,23 @@ class MainView extends React.Component {
           hideStatusLabel={this.state.searchData.length!==0}
         />
         {this.state.navigateGround?
-              null:
-              <SearchBar updateSearchData={this.setSearchData}/>}
+            null:
+            <SearchBar updateSearchData={this.setSearchData}/>}
         <RoundButton
           style={this.state.navigateGround?[positions.positionDown]:[positions.undergroundButton]}
           icon={this.state.underground ? 'level-up' : 'level-down'}
           func={this.toggleUndergroundMap}/>
         {this.state.navigateGround?
-              <NavigationSwipeView
-                navigationData={this.state.navigationData}
-                navigationDataRequested={this.state.navigationDataRequested}
-                updateSegmentStartEndCallback={this.updateSegmentStartEndCallback}
-                setMapInFocus={this.setMapInFocus}
-                ref={(navigationSwipeView) => {
-                  this.swiperView = navigationSwipeView;
-                }}
-              />:
-              null
+          <NavigationSwipeView
+            navigationData={this.state.navigationData}
+            navigationDataRequested={this.state.navigationDataRequested}
+            updateSegmentStartEndCallback={this.updateSegmentStartEndCallback}
+            setMapInFocus={this.setMapInFocus}
+            ref={(navigationSwipeView) => {
+              this.swiperView = navigationSwipeView;
+            }}
+          />:
+          null
         }
       </View>
     );

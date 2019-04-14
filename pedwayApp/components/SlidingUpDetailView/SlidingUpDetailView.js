@@ -64,7 +64,7 @@ export default class SlidingUpDetailView extends Component {
   }
 
   navigateButtonOnPress() {
-    this.props.startNavigate(this.state.entrance);
+    this.props.toggleNavigate(this.state.entrance, !this.state.navigate);
     this.setState({
       navigate: !this.state.navigate,
     });
@@ -108,7 +108,7 @@ export default class SlidingUpDetailView extends Component {
                 {shouldHideStatusLabel?
                 null:
                 <StatusLabel
-                  text={this.state.entrance.getStatus() ? 'open' : 'closed'}/>
+                  text={this.state.entrance.getStatus()}/>
                 }
                 <Text style={styles.coordinateText}>
                   {this.state.entrance.getCoordinate().getLatitude() + ', '
@@ -122,11 +122,11 @@ export default class SlidingUpDetailView extends Component {
     } else {
       return (
         <SlidingUpPanel
-    draggableRange={{top: 150, bottom: 0}}
-    showBackdrop={false}
-    ref={(thisView) => {
-      this.detailView = thisView;
-    }}/>
+          draggableRange={{top: 150, bottom: 0}}
+          showBackdrop={false}
+          ref={(thisView) => {
+            this.detailView = thisView;
+          }}/>
       );
     }
   }

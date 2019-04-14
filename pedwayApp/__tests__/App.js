@@ -32,3 +32,4 @@ test('Check if our GroundMapView renders correctly', () => {
   const treeRendered = testRenderer.create(<GroundMapView />).toJSON();
   expect(treeRendered).toMatchSnapshot();
 });
+

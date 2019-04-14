@@ -11,6 +11,9 @@ const roles = require('../../src/roles');
 // Set timeout 1 day from now
 const timeout = 1*24*60*60*1000;
 
+// test session, must only be used for testing
+let testSession = null;
+
 /**
  * @return {string} a secure session token
  */
@@ -19,6 +22,7 @@ function generateKey() {
   // This is by far the most important part of our security strategy
   return uuidv4();
 }
+
 /**
 * @description This function returns a promise
 *    that returns the userId of this session
@@ -30,6 +34,15 @@ function generateKey() {
 exports.auth = function(req, level=roles.NONE) {
   return new Promise(function(resolve, reject) {
     const sessionId = req.cookies.sessionId;
+
+    // If we are in a testing mode
+    if (process.env.JEST_WORKER_ID !== undefined) {
+      if (testSession === sessionId) {
+        // This must ONLY RUN in testing
+        resolve(testSession);
+        return;
+      }
+    }
 
     if (sessionId == null || sessionId == undefined) {
       reject(Error('No sessionId provided'));
@@ -193,6 +206,22 @@ exports.invalidateSession = function(req, res) {
 * @param {response} res is the response object
 */
 exports.deleteAll = function(callback) {
-  // console.warn('This function should only be called for testing purposes')
+  // We must be running in a test:
+  if (process.env.JEST_WORKER_ID === undefined) {
+    throw new Error('Must not run this function outside of tests');
+  }
   Session.deleteMany({}, callback);
+};
+
+
+/**
+* @description sets a test session for testing purposes
+* @param {sessionId} sessionId to be used for testing
+*/
+exports.setTestSession = function(sessionId) {
+  // We must be running in a test:
+  if (process.env.JEST_WORKER_ID === undefined) {
+    throw new Error('Must not run this function outside of tests');
+  }
+  testSession = sessionId;
 };
