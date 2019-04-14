@@ -257,6 +257,7 @@ export default class GroundMapView extends React.Component {
     if (nextProps.navigate !== undefined) {
       this.setState({
         navigateTo: nextProps.navigateTo,
+        navigateDataRequested: false,
       });
 
       if (nextProps.navigate === false) {
@@ -269,9 +270,8 @@ export default class GroundMapView extends React.Component {
           highlightSegmentEnd: nextProps.highlightSegmentEnd,
           navigate: true,
         });
-        if (nextProps.navigateTo !== this.state.navigateTo) {
-          this.renderPath(nextProps.navigateTo);
-        }
+
+        this.renderPath(nextProps.navigateTo);
       }
     }
   }
@@ -283,6 +283,7 @@ export default class GroundMapView extends React.Component {
    * @returns {Promise<AxiosResponse<any> | never | void>}
    */
   getGeometry(start, end) {
+    console.log('getGeo!')
     return axios.get(
         AZURE_API + '/ors/directions?coordinates='
       + start[1] + ',%20' + start[0] + '%7C' + end[1] + ',%20' + end[0] + '&profile=foot-walking')

@@ -188,7 +188,9 @@ class MainView extends React.Component {
   }
 
   updateSwiperViewIndex(idx) {
-    this.swiperView.updateSwiperViewIndex(idx);
+    if (this.swiperView !== null) {
+      this.swiperView.updateSwiperViewIndex(idx);
+    }
   }
 
   setMapInFocus(input) {
