@@ -19,6 +19,7 @@ import {Keyboard} from 'react-native';
 import PedwaySections from '../../mock_data/sections';
 import {point, lineString} from '@turf/helpers';
 import pointToLineDistance from '@turf/point-to-line-distance';
+import distance from '@turf/distance';
 
 
 const AZURE_API = 'https://pedway.azurewebsites.net/api';
@@ -91,6 +92,7 @@ export default class GroundMapView extends React.Component {
     this.recalculatePath = this.recalculatePath.bind(this);
     this.updateNavigationState = this.updateNavigationState.bind(this);
     this.updateHighlightSegment = this.updateHighlightSegment.bind(this);
+    this.onReachedDestination = this.onReachedDestination.bind(this);
   }
 
   /**
@@ -161,9 +163,11 @@ export default class GroundMapView extends React.Component {
     let id = navigator.geolocation.watchPosition(
         (position) => {
           this.positionDidUpdateCallback(position, id);
-        },(error)=>{
-          this.setState({dialogTitle:"GPS Error",dialogVisibility:true,dialogContent:"Oops, we lose you on the map. Please enable GPS access to the app. If you are underground, the GPS service may be unstable."});
-        },{enableHighAccuracy:true});
+        }, (error)=>{
+          this.setState({dialogTitle: 'GPS Error',
+            dialogVisibility: true,
+            dialogContent: 'Oops, we lose you on the map. Please enable GPS access to the app. If you are underground, the GPS service may be unstable.'});
+        }, {enableHighAccuracy: true, distanceFilter: 1});
     this.requestEntranceData();
   }
 
@@ -173,7 +177,6 @@ export default class GroundMapView extends React.Component {
    * @param latitude
    */
   updateCurrentSegment(longitude, latitude) {
-
     // if the user is still in route, we just need to update his current section to the closest section
     if (this.state.navigateJSON!==undefined && this.state.navigateJSON!==null) {
       // here we need to check which of the line section is the user currently closest to
@@ -207,36 +210,54 @@ export default class GroundMapView extends React.Component {
     let closestSegmentIdx = 0;
     let closestDistanceOverall = Number.MAX_VALUE;
     segmentList.forEach((item, idx) => {
-      if (item['way_points'][0]===item['way_points'][1]) {
-        return;
-      }
-
       let thisItemClosestDisance = Number.MAX_VALUE;
-      let thisLineSection = this.state.navigateList['coordinates'].slice(item['way_points'][0], item['way_points'][1] + 1);
+      // we have to consider that the destination is a point
+      if (item['way_points'][0] !== item['way_points'][1]) {
+        let thisLineSection = this.state.navigateList['coordinates'].slice(item['way_points'][0], item['way_points'][1] + 1);
 
-      let currentLineArray = thisLineSection.map((item) => {
-        return [item['longitude'], item['latitude']];
-      }).reduce((acc, item) => {
-        return acc.concat([item]);
-      }, []);
+        let currentLineArray = thisLineSection.map((item) => {
+          return [item['longitude'], item['latitude']];
+        }).reduce((acc, item) => {
+          return acc.concat([item]);
+        }, []);
 
-      let currentLine = lineString(currentLineArray);
-      let currentPoint = point([longitude, latitude]);
-      let currentDistance = pointToLineDistance(currentPoint, currentLine);
+        let currentLine = lineString(currentLineArray);
+        let currentPoint = point([longitude, latitude]);
+        let currentDistance = pointToLineDistance(currentPoint, currentLine);
 
-      if (currentDistance < thisItemClosestDisance) {
-        thisItemClosestDisance = currentDistance;
-      }
+        if (currentDistance < thisItemClosestDisance) {
+          thisItemClosestDisance = currentDistance;
+        }
 
-      if (thisItemClosestDisance < closestDistanceOverall) {
-        closestDistanceOverall = thisItemClosestDisance;
-        closestSegmentIdx = idx;
+        if (thisItemClosestDisance < closestDistanceOverall) {
+          closestDistanceOverall = thisItemClosestDisance;
+          closestSegmentIdx = idx;
+        }
+      } else {
+        let currentPoint = point([longitude, latitude]);
+        let destinationCoordinate = this.state.navigateList['coordinates'][item['way_points'][0]];
+        let destinationPoint = point([destinationCoordinate['longitude'], destinationCoordinate['latitude']]);
+        let currentDistance = distance(currentPoint, destinationPoint);
+        // if user is within 5 meters range, we should consider end navigation
+        currentDistance -= 0.005;
+
+        if (currentDistance < thisItemClosestDisance) {
+          thisItemClosestDisance = currentDistance;
+        }
+
+        if (thisItemClosestDisance < closestDistanceOverall) {
+          closestDistanceOverall = thisItemClosestDisance;
+          closestSegmentIdx = idx;
+        }
       }
     });
 
     // check if user deviated more than 100 meters from the path
     if (closestDistanceOverall > MAXIMUM_OFFSET_DISTANCE) {
       this.recalculatePath(longitude, latitude);
+    } else if (closestSegmentIdx === segmentList.length - 1) {
+      // user reached the destination, we need to end navigation
+      this.onReachedDestination();
     }
 
     return [segmentList[closestSegmentIdx], closestSegmentIdx];
@@ -339,6 +360,7 @@ export default class GroundMapView extends React.Component {
         [destinationCoordinate.getCoordinate().getLatitude(), destinationCoordinate.getCoordinate().getLongitude()]);
   }
 
+
   componentWillUnmount() {
     navigator.geolocation.clearWatch(this.state.id);
   }
@@ -412,6 +434,16 @@ export default class GroundMapView extends React.Component {
    */
   mapOnPanDrag() {
     isUserInitiatedRegionChange = true;
+  }
+
+
+  /**
+   * this function is called when the user reached the destination
+   * after a delay of 3 second, display a dialog stating the user have completed navigation
+   * when user clicked 'ok', end this navigation
+   */
+  onReachedDestination() {
+
   }
 
   render() {
