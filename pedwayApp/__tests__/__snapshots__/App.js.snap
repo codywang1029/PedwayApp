@@ -128,6 +128,141 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         }
       />
     </Marker>
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.885442,
+          "longitude": -87.631727,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.885443,
+          "longitude": -87.631727,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.881911,
+          "longitude": -87.630065,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.881912,
+          "longitude": -87.630065,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.885665,
+          "longitude": -87.622715,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.885666,
+          "longitude": -87.622715,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.883764,
+          "longitude": -87.628262,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.886832,
+          "longitude": -87.623756,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.887926,
+          "longitude": -87.623541,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.885098,
+          "longitude": -87.624131,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.886672,
+          "longitude": -87.624099,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.886673,
+          "longitude": -87.624099,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.886312,
+          "longitude": -87.630376,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.886001,
+          "longitude": -87.630934,
+        }
+      }
+      pinColor="green"
+    />
+    <Marker
+      coordinate={
+        Object {
+          "latitude": 41.886496,
+          "longitude": -87.628477,
+        }
+      }
+      pinColor="green"
+    />
   </MapView>
 </View>
 `;
@@ -662,6 +797,141 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                           }
                         />
                       </Marker>
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.885442,
+                            "longitude": -87.631727,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.885443,
+                            "longitude": -87.631727,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.881911,
+                            "longitude": -87.630065,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.881912,
+                            "longitude": -87.630065,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.885665,
+                            "longitude": -87.622715,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.885666,
+                            "longitude": -87.622715,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.883764,
+                            "longitude": -87.628262,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.886832,
+                            "longitude": -87.623756,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.887926,
+                            "longitude": -87.623541,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.885098,
+                            "longitude": -87.624131,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.886672,
+                            "longitude": -87.624099,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.886673,
+                            "longitude": -87.624099,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.886312,
+                            "longitude": -87.630376,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.886001,
+                            "longitude": -87.630934,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.886496,
+                            "longitude": -87.628477,
+                          }
+                        }
+                        pinColor="green"
+                      />
                     </MapView>
                   </View>
                   <SlidingUpPanel
@@ -1442,6 +1712,141 @@ exports[`Check if our MainView renders correctly 1`] = `
                           }
                         />
                       </Marker>
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.885442,
+                            "longitude": -87.631727,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.885443,
+                            "longitude": -87.631727,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.881911,
+                            "longitude": -87.630065,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.881912,
+                            "longitude": -87.630065,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.885665,
+                            "longitude": -87.622715,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.885666,
+                            "longitude": -87.622715,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.883764,
+                            "longitude": -87.628262,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.886832,
+                            "longitude": -87.623756,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.887926,
+                            "longitude": -87.623541,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.885098,
+                            "longitude": -87.624131,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.886672,
+                            "longitude": -87.624099,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.886673,
+                            "longitude": -87.624099,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.886312,
+                            "longitude": -87.630376,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.886001,
+                            "longitude": -87.630934,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.886496,
+                            "longitude": -87.628477,
+                          }
+                        }
+                        pinColor="green"
+                      />
                     </MapView>
                   </View>
                   <SlidingUpPanel
@@ -2222,6 +2627,141 @@ exports[`Check if our main app renders correctly 1`] = `
                           }
                         />
                       </Marker>
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.885442,
+                            "longitude": -87.631727,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.885443,
+                            "longitude": -87.631727,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.881911,
+                            "longitude": -87.630065,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.881912,
+                            "longitude": -87.630065,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.885665,
+                            "longitude": -87.622715,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.885666,
+                            "longitude": -87.622715,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.883764,
+                            "longitude": -87.628262,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.886832,
+                            "longitude": -87.623756,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.887926,
+                            "longitude": -87.623541,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.885098,
+                            "longitude": -87.624131,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.886672,
+                            "longitude": -87.624099,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.886673,
+                            "longitude": -87.624099,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.886312,
+                            "longitude": -87.630376,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.886001,
+                            "longitude": -87.630934,
+                          }
+                        }
+                        pinColor="green"
+                      />
+                      <Marker
+                        coordinate={
+                          Object {
+                            "latitude": 41.886496,
+                            "longitude": -87.628477,
+                          }
+                        }
+                        pinColor="green"
+                      />
                     </MapView>
                   </View>
                   <SlidingUpPanel
