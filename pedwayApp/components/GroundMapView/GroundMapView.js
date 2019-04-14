@@ -348,7 +348,11 @@ export default class GroundMapView extends React.Component {
             navigateList: retSection,
           });
         })
-        .catch((error) => console.log(error));
+        .catch(() => {
+          this.setState({dialogTitle: 'Network Error',
+            dialogVisibility: true,
+            dialogContent: 'There is no network connection. Get back online and try again.'});
+        });
   }
 
 
