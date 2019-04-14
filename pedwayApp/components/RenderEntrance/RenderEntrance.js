@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
+import {Image} from 'react-native';
 import PedwayCoordinate from '../../model/PedwayCoordinate';
 import PedwayEntrance from '../../model/PedwayEntrance';
-import MarkerImage from '../../media/pedwayEntranceMarker.png';
+import entrance from '../../media/entrances.png';
 import MapView, {
   Polyline,
   Marker,
 } from 'react-native-maps';
-
 /**
  * The current pedway sections are hard coded place holders
  * In the future we are gonna to get those values from the API
@@ -63,7 +63,9 @@ export default class RenderEntrance extends Component {
           onPress={()=>{
             this.props.callbackFunc(this.state.pedwayEntrances[idx]);
           }}
-        />
+        >
+          <Image source={entrance} style={{width: 30, height: 30}} />
+        </MapView.Marker>
       );
     },
     );
