@@ -108,7 +108,7 @@ export default class SlidingUpDetailView extends Component {
                 {shouldHideStatusLabel?
                 null:
                 <StatusLabel
-                  text={this.state.entrance.getStatus() ? 'open' : 'closed'}/>
+                  text={this.state.entrance.getStatus()}/>
                 }
                 <Text style={styles.coordinateText}>
                   {this.state.entrance.getCoordinate().getLatitude() + ', '
