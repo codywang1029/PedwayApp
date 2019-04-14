@@ -133,13 +133,6 @@ export default class SlidingUpDetailView extends Component {
 }
 
 class StatusLabel extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      labelText: 'open',
-    };
-  }
-
   render() {
     if (this.props.text === 'open') {
       return (
