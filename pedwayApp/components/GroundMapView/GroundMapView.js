@@ -4,7 +4,7 @@ import {Image, Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-n
 import MapView, {
   Polyline,
 } from 'react-native-maps';
-import Dialog, { DialogContent, SlideAnimation,DialogTitle,DialogFooter,DialogButton } from 'react-native-popup-dialog';
+import Dialog, {DialogContent, SlideAnimation, DialogTitle, DialogFooter, DialogButton} from 'react-native-popup-dialog';
 import RenderPedway from '../RenderPedway/RenderPedway';
 import MapStyle from './mapStyleDark';
 import RenderEntrance from '../RenderEntrance/RenderEntrance';

@@ -40,9 +40,6 @@ import {positions, styles} from './styles';
  * Sidemenu/MainView
  */
 class HomeScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Pedway App',
-  };
   constructor() {
     super();
     this.state = {
