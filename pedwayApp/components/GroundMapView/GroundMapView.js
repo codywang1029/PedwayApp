@@ -72,7 +72,8 @@ export default class GroundMapView extends React.Component {
       mapReady: false,
       mapInFocus: true,
       dialogVisibility: false,
-      dialogContent:''
+      dialogContent:'',
+      dialogTitle:''
     };
     this.forwardSelectedEntrance = this.forwardSelectedEntrance.bind(this);
     this.renderPath = this.renderPath.bind(this);
@@ -161,7 +162,7 @@ export default class GroundMapView extends React.Component {
         (position) => {
           this.positionDidUpdateCallback(position, id);
         },(error)=>{
-          this.setState({dialogVisibility:true,dialogContent:"Oops, we lose you on the map. Please enable GPS access to the app. If you are underground, the GPS service may be unstable."});
+          this.setState({dialogTitle:"GPS Error",dialogVisibility:true,dialogContent:"Oops, we lose you on the map. Please enable GPS access to the app. If you are underground, the GPS service may be unstable."});
         },{enableHighAccuracy:true});
     this.requestEntranceData();
   }
@@ -433,7 +434,7 @@ export default class GroundMapView extends React.Component {
         <Dialog
             visible={this.state.dialogVisibility}
             width={0.7}
-            dialogTitle={<DialogTitle title="GPS Error" />}
+            dialogTitle={<DialogTitle title={this.state.dialogTitle}/>}
             dialogAnimation={new SlideAnimation({
               slideFrom: 'bottom',
             })}
