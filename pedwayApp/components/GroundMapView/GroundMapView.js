@@ -464,26 +464,28 @@ export default class GroundMapView extends React.Component {
     return (
       <View style={StyleSheet.absoluteFillObject}>
         <Dialog
-            visible={this.state.dialogVisibility}
-            width={0.7}
-            dialogTitle={<DialogTitle title={this.state.dialogTitle}/>}
-            dialogAnimation={new SlideAnimation({
-              slideFrom: 'bottom',
-            })}
-            footer={
-              <DialogFooter>
-                <DialogButton
-                    text="Dismiss"
-                    onPress={()=>{this.setState({ dialogVisibility: false })}}
-                />
-              </DialogFooter>
-            }
-            onTouchOutside={() => {
-              this.setState({ dialogVisibility: false });
-            }}
+          visible={this.state.dialogVisibility}
+          width={0.7}
+          dialogTitle={<DialogTitle title={this.state.dialogTitle}/>}
+          dialogAnimation={new SlideAnimation({
+            slideFrom: 'bottom',
+          })}
+          footer={
+            <DialogFooter>
+              <DialogButton
+                text="Dismiss"
+                onPress={()=>{
+                  this.setState({dialogVisibility: false});
+                }}
+              />
+            </DialogFooter>
+          }
+          onTouchOutside={() => {
+            this.setState({dialogVisibility: false});
+          }}
         ><DialogContent>
-          <Text>{this.state.dialogContent}</Text>
-        </DialogContent>
+            <Text>{this.state.dialogContent}</Text>
+          </DialogContent>
         </Dialog>
         <RoundButton
           style={this.state.navigate?[styles.positionDown]:[styles.focusButton]}
