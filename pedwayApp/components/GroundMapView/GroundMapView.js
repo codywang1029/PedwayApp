@@ -94,6 +94,7 @@ export default class GroundMapView extends React.Component {
     this.updateNavigationState = this.updateNavigationState.bind(this);
     this.updateHighlightSegment = this.updateHighlightSegment.bind(this);
     this.onReachedDestination = this.onReachedDestination.bind(this);
+    this.networkErrorHandler = this.networkErrorHandler.bind(this);
   }
 
   /**
@@ -348,11 +349,14 @@ export default class GroundMapView extends React.Component {
             navigateList: retSection,
           });
         })
-        .catch(() => {
-          this.setState({dialogTitle: 'Network Error',
-            dialogVisibility: true,
-            dialogContent: 'There is no network connection. Get back online and try again.'});
-        });
+        .catch(this.networkErrorHandler);
+  }
+
+  networkErrorHandler(){
+    this.setState({dialogTitle: 'Network Error',
+      dialogVisibility: true,
+      dialogButtonText:'Dismiss',
+      dialogContent: 'There is no network connection. Get back online and try again.'});
   }
 
 
@@ -494,6 +498,9 @@ export default class GroundMapView extends React.Component {
                   this.setState({dialogVisibility: false});
                   if (this.state.dialogTitle === 'You have arrived at the destination') {
                     // we need to end navigation
+                    this.props.endNavigateCallback();
+                  }
+                  if (this.state.dialogTitle === 'Network Error') {
                     this.props.endNavigateCallback();
                   }
                 }}
