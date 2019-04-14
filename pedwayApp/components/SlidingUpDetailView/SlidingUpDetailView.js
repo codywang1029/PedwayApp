@@ -108,7 +108,7 @@ export default class SlidingUpDetailView extends Component {
                 {shouldHideStatusLabel?
                 null:
                 <StatusLabel
-                  text={this.state.entrance.getStatus() ? 'open' : 'closed'}/>
+                  text={this.state.entrance.getStatus()}/>
                 }
                 <Text style={styles.coordinateText}>
                   {this.state.entrance.getCoordinate().getLatitude() + ', '
@@ -133,13 +133,6 @@ export default class SlidingUpDetailView extends Component {
 }
 
 class StatusLabel extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      labelText: 'open',
-    };
-  }
-
   render() {
     if (this.props.text === 'open') {
       return (

@@ -12,6 +12,7 @@ const SectionSchema = new Schema({
         validator: Number.isInteger,
         message: '{VALUE} is not an integer value',
       },
+      unique: true,
     },
     PED_ROUTE: {type: String, required: true},
     SHAPE_LEN: {type: Number, required: true},

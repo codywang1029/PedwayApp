@@ -140,8 +140,6 @@ class MainView extends React.Component {
       searchData: [],
       navigationData: [],
       navigationDataRequested: false,
-      highlightSegmentStart: 0,
-      highlightSegmentEnd: 0,
     };
     this.toggleUndergroundMap = this.toggleUndergroundMap.bind(this);
     this.toggleNavigateCallback = this.toggleNavigateCallback.bind(this);
@@ -151,6 +149,7 @@ class MainView extends React.Component {
     this.updateSegmentStartEndCallback = this.updateSegmentStartEndCallback.bind(this);
     this.updateSwiperViewIndex = this.updateSwiperViewIndex.bind(this);
     this.setMapInFocus = this.setMapInFocus.bind(this);
+    this.clearNavigationData = this.clearNavigationData.bind(this);
   }
 
   updateNavigationDataCallback(inputData) {
@@ -180,18 +179,23 @@ class MainView extends React.Component {
   }
 
   updateSegmentStartEndCallback(start, end) {
-    this.setState({
-      highlightSegmentStart: start,
-      highlightSegmentEnd: end,
-    });
+    if (this.map !== null) {
+      this.map.updateHighlightSegment(start, end);
+    }
   }
 
   updateSwiperViewIndex(idx) {
-    this.swiperView.updateSwiperViewIndex(idx);
+    if (this.swiperView !== null) {
+      this.swiperView.updateSwiperViewIndex(idx);
+    }
   }
 
   setMapInFocus(input) {
     this.map.setMapInFocus(input);
+  }
+
+  clearNavigationData() {
+    this.setState({navigationDataRequested: false});
   }
 
   toggleNavigateCallback(inputEntrance, inputStatus) {
@@ -201,10 +205,12 @@ class MainView extends React.Component {
       navigateTo: inputEntrance,
       navigationData: [],
       navigationDataRequested: false,
-      highlightSegmentStart: 1,
-      highlightSegmentEnd: 1,
     });
     this.props.shouldHideHamburgerButton(inputStatus);
+
+    if (this.map !== null) {
+      this.map.updateNavigationState(inputStatus, inputEntrance, 0, 1);
+    }
   }
 
   render() {
@@ -219,13 +225,10 @@ class MainView extends React.Component {
             this.map = mapView;
           }}
           updateNavigationDataCallback={this.updateNavigationDataCallback}
-          navigate={this.state.navigateGround}
-          navigateTo={this.state.navigateTo}
           searchData={this.state.searchData}
-          highlightSegmentStart={this.state.highlightSegmentStart}
-          highlightSegmentEnd={this.state.highlightSegmentEnd}
           underground={this.state.underground}
           updateSwiperViewIndex={this.updateSwiperViewIndex}
+          clearNavigationData={this.clearNavigationData}
         />
         <SlidingUpDetailView
           open={this.state.detailViewOpen}

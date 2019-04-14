@@ -16,7 +16,6 @@ import circle from '../../media/pedwayEntranceMarker.png';
 import axios from 'axios';
 import RoundButton from '../RoundButton/RoundButton';
 import * as polyline from 'google-polyline';
-import PedwayData from '../../mock_data/export.json';
 import PedwayCoordinate from '../../model/PedwayCoordinate';
 import PedwaySection from '../../model/PedwaySection';
 import {Keyboard} from 'react-native';
@@ -26,15 +25,17 @@ import distance from '@turf/distance';
 import pointToLineDistance from '@turf/point-to-line-distance';
 
 
-const AZURE_API = 'https://pedway.azurewebsites.net/api/pedway';
-const ORS_API = 'https://api.openrouteservice.org';
+const AZURE_API = 'https://pedway.azurewebsites.net/api';
 
 const INITIAL_LATITUDE = 41.881898;
 const INITIAL_LONGITUDE = -87.623977;
 const INITIAL_DELTA = 0.007;
 const RECENTER_DELTA = 0.005;
+const MAXIMUM_OFFSET_DISTANCE = 0.1;
+
 
 let isUserInitiatedRegionChange = false;
+let appInitiated = false;
 
 /**
  * Renders a MapView that display the ground level map
@@ -52,8 +53,10 @@ export default class GroundMapView extends React.Component {
       longitude: INITIAL_LONGITUDE,
       latitudeDelta: RECENTER_DELTA,
       longitudeDelta: RECENTER_DELTA,
+      userLatitude: INITIAL_LATITUDE,
+      userLongitude: INITIAL_LONGITUDE,
       error: null,
-      pedwayData: PedwayData,
+      pedwayData: undefined,
       updateGeoLocation: true,
       id: 0,
       navigate: false,
@@ -87,13 +90,16 @@ export default class GroundMapView extends React.Component {
     this.mapOnPanDrag = this.mapOnPanDrag.bind(this);
     this.updateCurrentSegment = this.updateCurrentSegment.bind(this);
     this.positionDidUpdateCallback = this.positionDidUpdateCallback.bind(this);
+    this.recalculatePath = this.recalculatePath.bind(this);
+    this.updateNavigationState = this.updateNavigationState.bind(this);
+    this.updateHighlightSegment = this.updateHighlightSegment.bind(this);
   }
 
   /**
    * Fetch the pedway entrance geoJSON data from the back end
    */
   requestEntranceData() {
-    axios.get(AZURE_API + '/api/pedway/entrance').then((res) => {
+    axios.get(AZURE_API + '/pedway/entrance').then((res) => {
       this.setState({
         pedwayData: res,
       });
@@ -120,11 +126,18 @@ export default class GroundMapView extends React.Component {
    * @param id reference for the listener (so we can unmount it)
    */
   positionDidUpdateCallback(position, id) {
+    // also center during app init
+    if (!appInitiated) {
+      appInitiated = true;
+      this.setState({
+        Latitude: position.coords.latitude,
+        Longitude: position.coords.longitude,
+      });
+    }
     this.setState({
-      latitude: position.coords.latitude,
-      longitude: position.coords.longitude,
+      userLatitude: position.coords.latitude,
+      userLongitude: position.coords.longitude,
       error: null,
-      pedwayData: PedwayData,
       id: id,
     });
     if (this.state.navigate) {
@@ -132,13 +145,16 @@ export default class GroundMapView extends React.Component {
         const region = {
           latitude: position.coords.latitude,
           longitude: position.coords.longitude,
-          latitudeDelta: this.state.longitudeDelta,
-          longitudeDelta: this.state.latitudeDelta,
+          latitudeDelta: INITIAL_DELTA,
+          longitudeDelta: INITIAL_DELTA,
         };
 
         this.map.animateToRegion(region, 1000);
         // update the current segment for the swiper view and navigation path while navigating
         this.updateCurrentSegment(position.coords.longitude, position.coords.latitude);
+      } else {
+        // although map is not in focus, we still need to check for recalculation
+        this.getCurrentClosestSegment(position.coords.longitude, position.coords.latitude);
       }
     }
   }
@@ -148,6 +164,7 @@ export default class GroundMapView extends React.Component {
         (position) => {
           this.positionDidUpdateCallback(position, id);
         });
+    this.requestEntranceData();
   }
 
   /**
@@ -156,6 +173,7 @@ export default class GroundMapView extends React.Component {
    * @param latitude
    */
   updateCurrentSegment(longitude, latitude) {
+
     // if the user is still in route, we just need to update his current section to the closest section
     if (this.state.navigateJSON!==undefined && this.state.navigateJSON!==null) {
       // here we need to check which of the line section is the user currently closest to
@@ -177,6 +195,8 @@ export default class GroundMapView extends React.Component {
    * Then we can use the pointToLineDistance() method from turf to find out what step is the user currently
    * on in his/her route
    * We then return that closest segment and the index of that segment in the list
+   * If this function finds the users is away from the closest section more than 50 meter,
+   * it will call recalculatePath() to recalculate
    * @param longitude
    * @param latitude
    * @returns {*[]}
@@ -213,6 +233,12 @@ export default class GroundMapView extends React.Component {
         closestSegmentIdx = idx;
       }
     });
+
+    // check if user deviated more than 100 meters from the path
+    if (closestDistanceOverall > MAXIMUM_OFFSET_DISTANCE) {
+      this.recalculatePath(longitude, latitude);
+    }
+
     return [segmentList[closestSegmentIdx], closestSegmentIdx];
   }
 
@@ -223,31 +249,54 @@ export default class GroundMapView extends React.Component {
     }
   }
 
+  /**
+   * This function is called whenever the user deviates from the path,
+   * request a new path based on the location, and reset the UI for navigation
+   * @param newLongitude
+   * @param newLatitude
+   */
+  recalculatePath(newLongitude, newLatitude) {
+    let destination = this.state.navigateTo;
+    this.props.clearNavigationData();
+    this.getGeometry([newLatitude, newLongitude],
+        [destination.getCoordinate().getLatitude(), destination.getCoordinate().getLongitude()]);
+  }
+
   componentWillReceiveProps(nextProps) {
     this.setSearchData(nextProps.searchData);
     if (nextProps.underground !== this.state.underground && nextProps.underground) {
       this.setState({mapReady: false});
     }
     this.setState({underground: nextProps.underground});
-    if (nextProps.navigate !== undefined) {
+  }
+
+  updateHighlightSegment(highlightSegmentStart, highlightSegmentEnd) {
+    if (this.state.navigate === true) {
       this.setState({
-        navigateTo: nextProps.navigateTo,
+        highlightSegmentStart: highlightSegmentStart,
+        highlightSegmentEnd: highlightSegmentEnd,
+      });
+    }
+  }
+
+  updateNavigationState(navigate, navigateTo, highlightSegmentStart, highlightSegmentEnd) {
+    this.setState({
+      navigateTo: navigateTo,
+      navigateDataRequested: false,
+    });
+
+    if (navigate === false) {
+      this.setState({
+        navigate: false,
+      });
+    } else {
+      this.setState({
+        highlightSegmentStart: highlightSegmentStart,
+        highlightSegmentEnd: highlightSegmentEnd,
+        navigate: true,
       });
 
-      if (nextProps.navigate === false) {
-        this.setState({
-          navigate: false,
-        });
-      } else {
-        this.setState({
-          highlightSegmentStart: nextProps.highlightSegmentStart,
-          highlightSegmentEnd: nextProps.highlightSegmentEnd,
-          navigate: true,
-        });
-        if (nextProps.navigateTo !== this.state.navigateTo) {
-          this.renderPath(nextProps.navigateTo);
-        }
-      }
+      this.renderPath(navigateTo);
     }
   }
 
@@ -258,10 +307,8 @@ export default class GroundMapView extends React.Component {
    * @returns {Promise<AxiosResponse<any> | never | void>}
    */
   getGeometry(start, end) {
-    // https://pedway.azurewebsites.net/api/ors/directions?coordinates=
     return axios.get(
-        ORS_API + '/directions?' +
-      'api_key=apiKeyPlaceHolder='
+        AZURE_API + '/ors/directions?coordinates='
       + start[1] + ',%20' + start[0] + '%7C' + end[1] + ',%20' + end[0] + '&profile=foot-walking')
         .then((json) => {
           this.props.updateNavigationDataCallback(json);
@@ -289,7 +336,7 @@ export default class GroundMapView extends React.Component {
    * @param destinationCoordinate
    */
   renderPath(destinationCoordinate) {
-    this.getGeometry([this.state.latitude, this.state.longitude],
+    this.getGeometry([this.state.userLatitude, this.state.userLongitude],
         [destinationCoordinate.getCoordinate().getLatitude(), destinationCoordinate.getCoordinate().getLongitude()]);
   }
 
@@ -316,8 +363,8 @@ export default class GroundMapView extends React.Component {
 
   recenter() {
     const region = {
-      latitude: this.state.latitude,
-      longitude: this.state.longitude,
+      latitude: this.state.userLatitude,
+      longitude: this.state.userLongitude,
       latitudeDelta: RECENTER_DELTA,
       longitudeDelta: RECENTER_DELTA,
     };
@@ -325,7 +372,7 @@ export default class GroundMapView extends React.Component {
       mapInFocus: true,
     });
     this.map.animateToRegion(region, 1000);
-    this.updateCurrentSegment(this.state.longitude, this.state.latitude);
+    this.updateCurrentSegment(this.state.userLongitude, this.state.userLatitude);
   }
 
   /**
@@ -335,8 +382,15 @@ export default class GroundMapView extends React.Component {
    * and render the components on the map
    * We also use this function together with mapOnPanDrag() to determine if a region
    * change is trigger by the user or done programmatically
+   * @param regionChangedTo
    */
-  onRegionChangeComplete() {
+  onRegionChangeComplete(regionChangedTo) {
+    this.setState({
+      latitude: regionChangedTo.latitude,
+      longitude: regionChangedTo.longitude,
+      latitudeDelta: regionChangedTo.latitudeDelta,
+      longitudeDelta: regionChangedTo.longitudeDelta,
+    });
     if (!this.state.mapReady) {
       this.setState({
         mapReady: true,
@@ -362,8 +416,6 @@ export default class GroundMapView extends React.Component {
   }
 
   render() {
-    const latitude = this.state.latitude;
-    const longitude = this.state.longitude;
     let pathToGo = [];
     let pathHighlight = [];
     let pathGreyScale = [];
@@ -393,10 +445,10 @@ export default class GroundMapView extends React.Component {
           key={this.state.underground}
           customMapStyle={this.state.underground? MapStyle : null}
           initialRegion={{
-            latitude: latitude,
-            longitude: longitude,
-            latitudeDelta: INITIAL_DELTA,
-            longitudeDelta: INITIAL_DELTA,
+            latitude: this.state.latitude,
+            longitude: this.state.longitude,
+            latitudeDelta: this.state.latitudeDelta,
+            longitudeDelta: this.state.longitudeDelta,
           }}
           onRegionChangeComplete={this.onRegionChangeComplete}
           onPanDrag={this.mapOnPanDrag}
@@ -433,8 +485,8 @@ export default class GroundMapView extends React.Component {
 
           <MapView.Marker
             coordinate={{
-              latitude: latitude,
-              longitude: longitude,
+              latitude: this.state.userLatitude,
+              longitude: this.state.userLongitude,
             }}
             style={{zIndex: 10}}
             title={'You'}

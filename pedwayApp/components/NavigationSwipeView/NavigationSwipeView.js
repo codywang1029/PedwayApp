@@ -48,10 +48,20 @@ export default class NavigationSwipeView extends React.Component {
   }
 
   updateState(inputProps) {
+
     this.setState({
       navigationData: inputProps.navigationData,
       dataRequested: inputProps.navigationDataRequested,
     });
+
+    try {
+
+      let route = inputProps.navigationData['data']['routes'][0];
+      let wayPoint = route['segments'][0]['steps'][0]['way_points'];
+      this.props.updateSegmentStartEndCallback(wayPoint[0], wayPoint[1]);
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   /**
@@ -59,8 +69,10 @@ export default class NavigationSwipeView extends React.Component {
    * @param idx
    */
   updateSwiperViewIndex(idx) {
-    isProgrammaticallyUpdatingIndex = true;
-    this.swiper.scrollBy(idx - this.state.currentIndex, true);
+    if (this.state.dataRequested) {
+      isProgrammaticallyUpdatingIndex = true;
+      this.swiper.scrollBy(idx - this.state.currentIndex, true);
+    }
   }
 
   /**
