@@ -2,16 +2,13 @@ import React, {Component} from 'react';
 import styles from './styles';
 import {Image, Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import MapView, {
-  MAP_TYPES,
-  UrlTile,
-  Callout,
   Polyline,
 } from 'react-native-maps';
+import Dialog, { DialogContent } from 'react-native-popup-dialog';
 import RenderPedway from '../RenderPedway/RenderPedway';
 import MapStyle from './mapStyleDark';
 import RenderEntrance from '../RenderEntrance/RenderEntrance';
 import RenderLocation from '../RenderLocation/RenderLocation';
-import MapCallout from 'react-native-maps/lib/components/MapCallout';
 import circle from '../../media/pedwayEntranceMarker.png';
 import axios from 'axios';
 import RoundButton from '../RoundButton/RoundButton';
@@ -21,7 +18,6 @@ import PedwaySection from '../../model/PedwaySection';
 import {Keyboard} from 'react-native';
 import PedwaySections from '../../mock_data/sections';
 import {point, lineString} from '@turf/helpers';
-import distance from '@turf/distance';
 import pointToLineDistance from '@turf/point-to-line-distance';
 
 
@@ -75,7 +71,8 @@ export default class GroundMapView extends React.Component {
       underground: this.props.underground?false:this.props.underground,
       mapReady: false,
       mapInFocus: true,
-
+      dialogVisibility: false,
+      dialogContent:''
     };
     this.forwardSelectedEntrance = this.forwardSelectedEntrance.bind(this);
     this.renderPath = this.renderPath.bind(this);
@@ -163,7 +160,9 @@ export default class GroundMapView extends React.Component {
     let id = navigator.geolocation.watchPosition(
         (position) => {
           this.positionDidUpdateCallback(position, id);
-        });
+        },()=>{
+          this.setState({dialogVisibility:true},{dialogContent:"No GPS signal."})
+        },{enableHighAccuracy:true});
     this.requestEntranceData();
   }
 
@@ -295,7 +294,6 @@ export default class GroundMapView extends React.Component {
         highlightSegmentEnd: highlightSegmentEnd,
         navigate: true,
       });
-
       this.renderPath(navigateTo);
     }
   }
@@ -432,12 +430,20 @@ export default class GroundMapView extends React.Component {
 
     return (
       <View style={StyleSheet.absoluteFillObject}>
+        <Dialog
+            visible={this.state.dialogVisibility}
+            onTouchOutside={() => {
+              this.setState({ visible: false });
+            }}
+        ><DialogContent>
+            Hello world.
+        </DialogContent>
+        </Dialog>
         <RoundButton
           style={this.state.navigate?[styles.positionDown]:[styles.focusButton]}
           icon={'crosshairs'}
           func={this.recenter}/>
         <MapView
-
           ref={(mapView) => {
             this.map = mapView;
           }}
