@@ -4,7 +4,7 @@ import {Image, Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-n
 import MapView, {
   Polyline,
 } from 'react-native-maps';
-import Dialog, { DialogContent } from 'react-native-popup-dialog';
+import Dialog, { DialogContent, SlideAnimation,DialogTitle,DialogFooter,DialogButton } from 'react-native-popup-dialog';
 import RenderPedway from '../RenderPedway/RenderPedway';
 import MapStyle from './mapStyleDark';
 import RenderEntrance from '../RenderEntrance/RenderEntrance';
@@ -160,8 +160,8 @@ export default class GroundMapView extends React.Component {
     let id = navigator.geolocation.watchPosition(
         (position) => {
           this.positionDidUpdateCallback(position, id);
-        },()=>{
-          this.setState({dialogVisibility:true},{dialogContent:"No GPS signal."})
+        },(error)=>{
+          this.setState({dialogVisibility:true,dialogContent:"Oops, we lose you on the map. Please enable GPS access to the app. If you are underground, the GPS service may be unstable."});
         },{enableHighAccuracy:true});
     this.requestEntranceData();
   }
@@ -432,11 +432,24 @@ export default class GroundMapView extends React.Component {
       <View style={StyleSheet.absoluteFillObject}>
         <Dialog
             visible={this.state.dialogVisibility}
+            width={0.7}
+            dialogTitle={<DialogTitle title="GPS Error" />}
+            dialogAnimation={new SlideAnimation({
+              slideFrom: 'bottom',
+            })}
+            footer={
+              <DialogFooter>
+                <DialogButton
+                    text="Dismiss"
+                    onPress={()=>{this.setState({ dialogVisibility: false })}}
+                />
+              </DialogFooter>
+            }
             onTouchOutside={() => {
-              this.setState({ visible: false });
+              this.setState({ dialogVisibility: false });
             }}
         ><DialogContent>
-            Hello world.
+          <Text>{this.state.dialogContent}</Text>
         </DialogContent>
         </Dialog>
         <RoundButton
