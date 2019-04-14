@@ -35,6 +35,7 @@ const MAXIMUM_OFFSET_DISTANCE = 0.1;
 
 
 let isUserInitiatedRegionChange = false;
+let appInitiated = false;
 
 /**
  * Renders a MapView that display the ground level map
@@ -52,6 +53,8 @@ export default class GroundMapView extends React.Component {
       longitude: INITIAL_LONGITUDE,
       latitudeDelta: RECENTER_DELTA,
       longitudeDelta: RECENTER_DELTA,
+      userLatitude: INITIAL_LATITUDE,
+      userLongitude: INITIAL_LONGITUDE,
       error: null,
       pedwayData: undefined,
       updateGeoLocation: true,
@@ -88,6 +91,8 @@ export default class GroundMapView extends React.Component {
     this.updateCurrentSegment = this.updateCurrentSegment.bind(this);
     this.positionDidUpdateCallback = this.positionDidUpdateCallback.bind(this);
     this.recalculatePath = this.recalculatePath.bind(this);
+    this.updateNavigationState = this.updateNavigationState.bind(this);
+    this.updateHighlightSegment = this.updateHighlightSegment.bind(this);
   }
 
   /**
@@ -121,9 +126,17 @@ export default class GroundMapView extends React.Component {
    * @param id reference for the listener (so we can unmount it)
    */
   positionDidUpdateCallback(position, id) {
+    // also center during app init
+    if (!appInitiated) {
+      appInitiated = true;
+      this.setState({
+        Latitude: position.coords.latitude,
+        Longitude: position.coords.longitude,
+      });
+    }
     this.setState({
-      latitude: position.coords.latitude,
-      longitude: position.coords.longitude,
+      userLatitude: position.coords.latitude,
+      userLongitude: position.coords.longitude,
       error: null,
       id: id,
     });
@@ -132,8 +145,8 @@ export default class GroundMapView extends React.Component {
         const region = {
           latitude: position.coords.latitude,
           longitude: position.coords.longitude,
-          latitudeDelta: this.state.longitudeDelta,
-          longitudeDelta: this.state.latitudeDelta,
+          latitudeDelta: INITIAL_DELTA,
+          longitudeDelta: INITIAL_DELTA,
         };
 
         this.map.animateToRegion(region, 1000);
@@ -160,6 +173,7 @@ export default class GroundMapView extends React.Component {
    * @param latitude
    */
   updateCurrentSegment(longitude, latitude) {
+
     // if the user is still in route, we just need to update his current section to the closest section
     if (this.state.navigateJSON!==undefined && this.state.navigateJSON!==null) {
       // here we need to check which of the line section is the user currently closest to
@@ -254,25 +268,35 @@ export default class GroundMapView extends React.Component {
       this.setState({mapReady: false});
     }
     this.setState({underground: nextProps.underground});
-    if (nextProps.navigate !== undefined) {
+  }
+
+  updateHighlightSegment(highlightSegmentStart, highlightSegmentEnd) {
+    if (this.state.navigate === true) {
       this.setState({
-        navigateTo: nextProps.navigateTo,
-        navigateDataRequested: false,
+        highlightSegmentStart: highlightSegmentStart,
+        highlightSegmentEnd: highlightSegmentEnd,
+      });
+    }
+  }
+
+  updateNavigationState(navigate, navigateTo, highlightSegmentStart, highlightSegmentEnd) {
+    this.setState({
+      navigateTo: navigateTo,
+      navigateDataRequested: false,
+    });
+
+    if (navigate === false) {
+      this.setState({
+        navigate: false,
+      });
+    } else {
+      this.setState({
+        highlightSegmentStart: highlightSegmentStart,
+        highlightSegmentEnd: highlightSegmentEnd,
+        navigate: true,
       });
 
-      if (nextProps.navigate === false) {
-        this.setState({
-          navigate: false,
-        });
-      } else {
-        this.setState({
-          highlightSegmentStart: nextProps.highlightSegmentStart,
-          highlightSegmentEnd: nextProps.highlightSegmentEnd,
-          navigate: true,
-        });
-
-        this.renderPath(nextProps.navigateTo);
-      }
+      this.renderPath(navigateTo);
     }
   }
 
@@ -283,7 +307,6 @@ export default class GroundMapView extends React.Component {
    * @returns {Promise<AxiosResponse<any> | never | void>}
    */
   getGeometry(start, end) {
-    console.log('getGeo!')
     return axios.get(
         AZURE_API + '/ors/directions?coordinates='
       + start[1] + ',%20' + start[0] + '%7C' + end[1] + ',%20' + end[0] + '&profile=foot-walking')
@@ -313,7 +336,7 @@ export default class GroundMapView extends React.Component {
    * @param destinationCoordinate
    */
   renderPath(destinationCoordinate) {
-    this.getGeometry([this.state.latitude, this.state.longitude],
+    this.getGeometry([this.state.userLatitude, this.state.userLongitude],
         [destinationCoordinate.getCoordinate().getLatitude(), destinationCoordinate.getCoordinate().getLongitude()]);
   }
 
@@ -340,8 +363,8 @@ export default class GroundMapView extends React.Component {
 
   recenter() {
     const region = {
-      latitude: this.state.latitude,
-      longitude: this.state.longitude,
+      latitude: this.state.userLatitude,
+      longitude: this.state.userLongitude,
       latitudeDelta: RECENTER_DELTA,
       longitudeDelta: RECENTER_DELTA,
     };
@@ -349,7 +372,7 @@ export default class GroundMapView extends React.Component {
       mapInFocus: true,
     });
     this.map.animateToRegion(region, 1000);
-    this.updateCurrentSegment(this.state.longitude, this.state.latitude);
+    this.updateCurrentSegment(this.state.userLongitude, this.state.userLatitude);
   }
 
   /**
@@ -359,8 +382,15 @@ export default class GroundMapView extends React.Component {
    * and render the components on the map
    * We also use this function together with mapOnPanDrag() to determine if a region
    * change is trigger by the user or done programmatically
+   * @param regionChangedTo
    */
-  onRegionChangeComplete() {
+  onRegionChangeComplete(regionChangedTo) {
+    this.setState({
+      latitude: regionChangedTo.latitude,
+      longitude: regionChangedTo.longitude,
+      latitudeDelta: regionChangedTo.latitudeDelta,
+      longitudeDelta: regionChangedTo.longitudeDelta,
+    });
     if (!this.state.mapReady) {
       this.setState({
         mapReady: true,
@@ -386,8 +416,6 @@ export default class GroundMapView extends React.Component {
   }
 
   render() {
-    const latitude = this.state.latitude;
-    const longitude = this.state.longitude;
     let pathToGo = [];
     let pathHighlight = [];
     let pathGreyScale = [];
@@ -417,10 +445,10 @@ export default class GroundMapView extends React.Component {
           key={this.state.underground}
           customMapStyle={this.state.underground? MapStyle : null}
           initialRegion={{
-            latitude: latitude,
-            longitude: longitude,
-            latitudeDelta: INITIAL_DELTA,
-            longitudeDelta: INITIAL_DELTA,
+            latitude: this.state.latitude,
+            longitude: this.state.longitude,
+            latitudeDelta: this.state.latitudeDelta,
+            longitudeDelta: this.state.longitudeDelta,
           }}
           onRegionChangeComplete={this.onRegionChangeComplete}
           onPanDrag={this.mapOnPanDrag}
@@ -457,8 +485,8 @@ export default class GroundMapView extends React.Component {
 
           <MapView.Marker
             coordinate={{
-              latitude: latitude,
-              longitude: longitude,
+              latitude: this.state.userLatitude,
+              longitude: this.state.userLongitude,
             }}
             style={{zIndex: 10}}
             title={'You'}
