@@ -55,6 +55,7 @@ class HomeScreen extends React.Component {
       hideHamburgerButton: false,
     };
 
+
     this.toggleSideBar = this.toggleSideBar.bind(this);
     this.shouldHideHamburgerButton = this.shouldHideHamburgerButton.bind(this);
   }
@@ -62,6 +63,10 @@ class HomeScreen extends React.Component {
   toggleSideBar() {
     this.setState({sideMenuIsOpen: !this.state.sideMenuIsOpen});
     Keyboard.dismiss();
+  }
+
+  componentDidMount() {
+    console.disableYellowBox = true;
   }
 
   shouldHideHamburgerButton(inputStatus) {
@@ -150,6 +155,7 @@ class MainView extends React.Component {
     this.updateSwiperViewIndex = this.updateSwiperViewIndex.bind(this);
     this.setMapInFocus = this.setMapInFocus.bind(this);
     this.clearNavigationData = this.clearNavigationData.bind(this);
+    this.endNavigateCallback = this.endNavigateCallback.bind(this);
   }
 
   updateNavigationDataCallback(inputData) {
@@ -213,6 +219,19 @@ class MainView extends React.Component {
     }
   }
 
+  endNavigateCallback() {
+    this.props.shouldHideHamburgerButton(false);
+    this.setState({
+      navigateGround: false,
+    });
+    if (this.map !== null) {
+      this.map.updateNavigationState(false, undefined, 0, 1);
+    }
+    if (this.slidingUpView !== null) {
+      this.slidingUpView.setNavigate(false);
+    }
+  }
+
   render() {
     return (
       <View style={styles.fillView}>
@@ -229,12 +248,16 @@ class MainView extends React.Component {
           underground={this.state.underground}
           updateSwiperViewIndex={this.updateSwiperViewIndex}
           clearNavigationData={this.clearNavigationData}
+          endNavigateCallback={this.endNavigateCallback}
         />
         <SlidingUpDetailView
           open={this.state.detailViewOpen}
           entrance={this.state.selectedEntrance}
           toggleNavigate={this.toggleNavigateCallback}
           hideStatusLabel={this.state.searchData.length!==0}
+          ref={(slidingUpView) => {
+            this.slidingUpView = slidingUpView;
+          }}
         />
         {this.state.navigateGround?
             null:

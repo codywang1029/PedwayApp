@@ -73,8 +73,9 @@ export default class GroundMapView extends React.Component {
       mapReady: false,
       mapInFocus: true,
       dialogVisibility: false,
-      dialogContent:'',
-      dialogTitle:''
+      dialogContent: '',
+      dialogTitle: '',
+      dialogButtonText: '',
     };
     this.forwardSelectedEntrance = this.forwardSelectedEntrance.bind(this);
     this.renderPath = this.renderPath.bind(this);
@@ -166,7 +167,9 @@ export default class GroundMapView extends React.Component {
         }, (error)=>{
           this.setState({dialogTitle: 'GPS Error',
             dialogVisibility: true,
-            dialogContent: 'Oops, we lose you on the map. Please enable GPS access to the app. If you are underground, the GPS service may be unstable.'});
+            dialogContent: 'Oops, we lose you on the map. Please enable GPS access to the app. If you are underground, the GPS service may be unstable.',
+            dialogButtonText: 'Dismiss',
+          });
         }, {enableHighAccuracy: true, distanceFilter: 1});
     this.requestEntranceData();
   }
@@ -447,7 +450,16 @@ export default class GroundMapView extends React.Component {
    * when user clicked 'ok', end this navigation
    */
   onReachedDestination() {
-
+    setTimeout(
+        () => {
+          this.setState({
+            dialogVisibility: true,
+            dialogContent: '',
+            dialogTitle: 'You have arrived at the destination',
+            dialogButtonText: 'OK',
+          });
+        },
+        2000);
   }
 
   render() {
@@ -477,9 +489,13 @@ export default class GroundMapView extends React.Component {
           footer={
             <DialogFooter>
               <DialogButton
-                text="Dismiss"
+                text={this.state.dialogButtonText}
                 onPress={()=>{
                   this.setState({dialogVisibility: false});
+                  if (this.state.dialogTitle === 'You have arrived at the destination') {
+                    // we need to end navigation
+                    this.props.endNavigateCallback();
+                  }
                 }}
               />
             </DialogFooter>
@@ -487,9 +503,10 @@ export default class GroundMapView extends React.Component {
           onTouchOutside={() => {
             this.setState({dialogVisibility: false});
           }}
-        ><DialogContent>
+        >{this.state.dialogContent===''?null:
+          <DialogContent>
             <Text>{this.state.dialogContent}</Text>
-          </DialogContent>
+          </DialogContent>}
         </Dialog>
         <RoundButton
           style={this.state.navigate?[styles.positionDown]:[styles.focusButton]}
