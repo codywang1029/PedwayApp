@@ -21,8 +21,6 @@ import SideMenu from 'react-native-side-menu';
 import RoundButton from './components/RoundButton/RoundButton';
 import IconButton from './components/IconButton/IconButton';
 import GroundMapView from './components/GroundMapView/GroundMapView';
-import UndergroundMapView
-  from './components/UndergroundMapView/UndergroundMapView';
 import SearchBar from './components/SearchBar/SearchBar';
 import SlidingUpDetailView
   from './components/SlidingUpDetailView/SlidingUpDetailView';
@@ -33,6 +31,8 @@ import PDFMap
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 import {Keyboard} from 'react-native';
+import NavigationSwipeView from './components/NavigationSwipeView/NavigationSwipeView';
+import {positions, styles} from './styles';
 
 /**
  * HomeScreen that gets rendered first when everything is loaded
@@ -46,25 +46,27 @@ class HomeScreen extends React.Component {
   constructor() {
     super();
     this.state = {
-      mainStatusText: 'Requesting from backend...',
-      entrance1StatusText: '',
-      macysStatusText: '',
       sideMenuIsOpen: false,
       sideMenuDisableGesture: true,
       apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
-      detailViewOpen: false,
+      detailViewOpen: true,
       navigateGround: false,
       navigateTo: null,
+      hideHamburgerButton: false,
     };
 
     this.toggleSideBar = this.toggleSideBar.bind(this);
+    this.shouldHideHamburgerButton = this.shouldHideHamburgerButton.bind(this);
   }
 
   toggleSideBar() {
     this.setState({sideMenuIsOpen: !this.state.sideMenuIsOpen});
     Keyboard.dismiss();
-  };
+  }
 
+  shouldHideHamburgerButton(inputStatus) {
+    this.setState({hideHamburgerButton: inputStatus});
+  }
 
   render() {
     const {navigate} = this.props.navigation;
@@ -75,7 +77,7 @@ class HomeScreen extends React.Component {
           onPress={() => navigate('Home')}>
           <Text style={styles.item}>
             <Icon name="home" style={styles.item}/>
-            Home
+              Home
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -83,7 +85,7 @@ class HomeScreen extends React.Component {
           onPress={() => navigate('FoodDirectory')}>
           <Text style={styles.item}>
             <Icon name="info-circle" style={styles.item}/>
-            Directory
+              Directory
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -91,14 +93,14 @@ class HomeScreen extends React.Component {
           onPress={() => navigate('StaticMap')}>
           <Text style={styles.item}>
             <Icon name="map" style={styles.item}/>
-            Map
+              Map
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.sideButton}>
           <Text style={styles.item}>
             <Icon name="gear" style={styles.item}/>
-            Settings
+              Settings
           </Text>
         </TouchableOpacity>
       </View>
@@ -114,10 +116,11 @@ class HomeScreen extends React.Component {
           this.setState({sideMenuDisableGesture: !openStatus});
         }}
       >
-        <MainView/>
+        <MainView shouldHideHamburgerButton={this.shouldHideHamburgerButton}/>
 
-        <IconButton style={[positions.hamburgerButton]} icon={'bars'}
-          func={this.toggleSideBar} size={30}/>
+        {this.state.hideHamburgerButton?
+              null:
+              <IconButton style={[positions.hamburgerButton]} icon={'bars'} func={this.toggleSideBar} size={30}/>}
       </SideMenu>
     );
   }
@@ -135,22 +138,36 @@ class MainView extends React.Component {
       underground: false,
       selectedEntrance: null,
       searchData: [],
+      navigationData: [],
+      navigationDataRequested: false,
+      highlightSegmentStart: 0,
+      highlightSegmentEnd: 0,
     };
     this.toggleUndergroundMap = this.toggleUndergroundMap.bind(this);
-    this.startNavigateCallback = this.startNavigateCallback.bind(this);
+    this.toggleNavigateCallback = this.toggleNavigateCallback.bind(this);
     this.setSearchData = this.setSearchData.bind(this);
+    this.updateNavigationDataCallback = this.updateNavigationDataCallback.bind(this);
+    this.updateSlidingDetailView = this.updateSlidingDetailView.bind(this);
+    this.updateSegmentStartEndCallback = this.updateSegmentStartEndCallback.bind(this);
+    this.updateSwiperViewIndex = this.updateSwiperViewIndex.bind(this);
+    this.setMapInFocus = this.setMapInFocus.bind(this);
+    this.clearNavigationData = this.clearNavigationData.bind(this);
+  }
+
+  updateNavigationDataCallback(inputData) {
+    this.setState({
+      navigationData: inputData,
+      navigationDataRequested: true,
+    });
   }
 
   toggleUndergroundMap() {
     this.setState({
       underground: !this.state.underground,
-      detailViewOpen: false,
     });
-    this.updateSlidingDetailView = this.updateSlidingDetailView.bind(this);
   }
 
   setSearchData(data) {
-    console.log(data);
     this.setState({
       searchData: data,
     });
@@ -159,86 +176,93 @@ class MainView extends React.Component {
   updateSlidingDetailView(inputEntrance) {
     this.setState({
       selectedEntrance: inputEntrance,
-      detailViewOpen: !this.state.underground,
+      detailViewOpen: true,
     });
   }
 
-  startNavigateCallback(inputEntrance) {
-    // now we need to
+  updateSegmentStartEndCallback(start, end) {
     this.setState({
-      navigateGround: true,
-      navigateTo: inputEntrance,
+      highlightSegmentStart: start,
+      highlightSegmentEnd: end,
     });
+  }
+
+  updateSwiperViewIndex(idx) {
+    this.swiperView.updateSwiperViewIndex(idx);
+  }
+
+  setMapInFocus(input) {
+    this.map.setMapInFocus(input);
+  }
+
+  clearNavigationData() {
+    this.setState({navigationDataRequested: false});
+  }
+
+  toggleNavigateCallback(inputEntrance, inputStatus) {
+    // use setState to clear the existing navigation data
+    this.setState({
+      navigateGround: inputStatus,
+      navigateTo: inputEntrance,
+      navigationData: [],
+      navigationDataRequested: false,
+      highlightSegmentStart: 1,
+      highlightSegmentEnd: 1,
+    });
+    this.props.shouldHideHamburgerButton(inputStatus);
   }
 
   render() {
     return (
-      <View style={{flex: 1, zIndex: 0}}>
-        {(this.state.underground) ?
-          (<UndergroundMapView/>) :
-          (<GroundMapView
-            selectedMarkerCallback={(input) => {
-              this.updateSlidingDetailView(input);
-            }}
-            navigate={this.state.navigateGround}
-            navigateTo={this.state.navigateTo}
-            searchData={this.state.searchData}
-          />)}
+      <View style={styles.fillView}>
+
+        <GroundMapView
+          selectedMarkerCallback={(input) => {
+            this.updateSlidingDetailView(input);
+          }}
+          ref={(mapView) => {
+            this.map = mapView;
+          }}
+          updateNavigationDataCallback={this.updateNavigationDataCallback}
+          navigate={this.state.navigateGround}
+          navigateTo={this.state.navigateTo}
+          searchData={this.state.searchData}
+          highlightSegmentStart={this.state.highlightSegmentStart}
+          highlightSegmentEnd={this.state.highlightSegmentEnd}
+          underground={this.state.underground}
+          updateSwiperViewIndex={this.updateSwiperViewIndex}
+          clearNavigationData={this.clearNavigationData}
+        />
         <SlidingUpDetailView
           open={this.state.detailViewOpen}
           entrance={this.state.selectedEntrance}
-          startNavigate={this.startNavigateCallback}
+          toggleNavigate={this.toggleNavigateCallback}
           hideStatusLabel={this.state.searchData.length!==0}
         />
-        <SearchBar updateSearchData={this.setSearchData}/>
+        {this.state.navigateGround?
+              null:
+              <SearchBar updateSearchData={this.setSearchData}/>}
         <RoundButton
-          style={[positions.undergroundButton]}
+          style={this.state.navigateGround?[positions.positionDown]:[positions.undergroundButton]}
           icon={this.state.underground ? 'level-up' : 'level-down'}
           func={this.toggleUndergroundMap}/>
+        {this.state.navigateGround?
+              <NavigationSwipeView
+                navigationData={this.state.navigationData}
+                navigationDataRequested={this.state.navigationDataRequested}
+                updateSegmentStartEndCallback={this.updateSegmentStartEndCallback}
+                setMapInFocus={this.setMapInFocus}
+                ref={(navigationSwipeView) => {
+                  this.swiperView = navigationSwipeView;
+                }}
+              />:
+              null
+        }
       </View>
     );
   }
 }
 
-const positions = StyleSheet.create({
-  undergroundButton: {
-    zIndex: 0,
-    position: 'absolute',
-    top: 100,
-    right: 20,
-    width: 40,
-    height: 40,
-  },
-
-  hamburgerButton: {
-    position: 'absolute',
-    top: 20,
-    left: 20,
-    width: 60,
-    height: 60,
-  },
-});
-
-const styles = StyleSheet.create({
-  item: {
-    fontSize: 30,
-    fontWeight: 'bold',
-    marginTop: 10,
-    marginLeft: 10,
-    textAlign: 'center',
-  },
-  sideButton: {
-    marginRight: 0,
-    marginLeft: 0,
-    marginTop: 10,
-    paddingTop: 10,
-    paddingBottom: 10,
-    backgroundColor: '#a9a9a9',
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: '#a9a9a9',
-  },
-});
 
 const MainNavigator = createStackNavigator({
   Home: {
@@ -254,4 +278,5 @@ const MainNavigator = createStackNavigator({
 const App = createAppContainer(MainNavigator);
 
 export default App;
+
 
