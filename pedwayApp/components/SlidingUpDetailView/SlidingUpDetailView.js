@@ -25,6 +25,7 @@ export default class SlidingUpDetailView extends Component {
     this.openView = this.openView.bind(this);
     this.closeView = this.closeView.bind(this);
     this.navigateButtonOnPress = this.navigateButtonOnPress.bind(this);
+    this.setNavigate = this.setNavigate.bind(this);
   }
 
   updateState(inputProps) {
@@ -68,6 +69,17 @@ export default class SlidingUpDetailView extends Component {
     this.setState({
       navigate: !this.state.navigate,
     });
+  }
+
+  setNavigate(state) {
+    this.setState({
+      navigate: state,
+      open: state,
+
+    });
+    if (!state) {
+      this.closeView();
+    }
   }
 
   render() {
