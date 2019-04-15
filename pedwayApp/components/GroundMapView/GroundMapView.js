@@ -33,6 +33,7 @@ const MAXIMUM_OFFSET_DISTANCE = 0.1;
 
 let isUserInitiatedRegionChange = false;
 let appInitiated = false;
+let nextMapState = undefined;
 
 /**
  * Renders a MapView that display the ground level map
@@ -94,6 +95,9 @@ export default class GroundMapView extends React.Component {
     this.updateNavigationState = this.updateNavigationState.bind(this);
     this.updateHighlightSegment = this.updateHighlightSegment.bind(this);
     this.onReachedDestination = this.onReachedDestination.bind(this);
+    this.updateMapMode = this.updateMapMode.bind(this);
+    this.findOntoString = this.findOntoString.bind(this);
+
   }
 
   /**
@@ -212,8 +216,10 @@ export default class GroundMapView extends React.Component {
     let segmentList = navigateRoute['segments'][0]['steps'];
     let closestSegmentIdx = 0;
     let closestDistanceOverall = Number.MAX_VALUE;
+
+
     segmentList.forEach((item, idx) => {
-      let thisItemClosestDisance = Number.MAX_VALUE;
+      let currentDistance = Number.MAX_VALUE;
       // we have to consider that the destination is a point
       if (item['way_points'][0] !== item['way_points'][1]) {
         let thisLineSection = this.state.navigateList['coordinates'].slice(item['way_points'][0], item['way_points'][1] + 1);
@@ -226,34 +232,42 @@ export default class GroundMapView extends React.Component {
 
         let currentLine = lineString(currentLineArray);
         let currentPoint = point([longitude, latitude]);
-        let currentDistance = pointToLineDistance(currentPoint, currentLine);
+        currentDistance = pointToLineDistance(currentPoint, currentLine);
+      }
 
-        if (currentDistance < thisItemClosestDisance) {
-          thisItemClosestDisance = currentDistance;
-        }
-
-        if (thisItemClosestDisance < closestDistanceOverall) {
-          closestDistanceOverall = thisItemClosestDisance;
-          closestSegmentIdx = idx;
-        }
-      } else {
-        let currentPoint = point([longitude, latitude]);
-        let destinationCoordinate = this.state.navigateList['coordinates'][item['way_points'][0]];
-        let destinationPoint = point([destinationCoordinate['longitude'], destinationCoordinate['latitude']]);
-        let currentDistance = distance(currentPoint, destinationPoint);
-        // if user is within 5 meters range, we should consider end navigation
-        currentDistance -= 0.005;
-
-        if (currentDistance < thisItemClosestDisance) {
-          thisItemClosestDisance = currentDistance;
-        }
-
-        if (thisItemClosestDisance < closestDistanceOverall) {
-          closestDistanceOverall = thisItemClosestDisance;
-          closestSegmentIdx = idx;
-        }
+      if (currentDistance < closestDistanceOverall) {
+        closestDistanceOverall = currentDistance;
+        closestSegmentIdx = idx;
       }
     });
+
+    // now we need to check, if the next index is within 10 meters of the current index,
+    // if so, we need to update it ahead of time
+    let nextSegment = segmentList[closestSegmentIdx + 1];
+    let currentDistance = 0;
+    if (nextSegment['way_points'][0] !== nextSegment['way_points'][1]) {
+      let thisLineSection = this.state.navigateList['coordinates'].slice(nextSegment['way_points'][0], nextSegment['way_points'][1] + 1);
+
+      let currentLineArray = thisLineSection.map((item) => {
+        return [item['longitude'], item['latitude']];
+      }).reduce((acc, item) => {
+        return acc.concat([item]);
+      }, []);
+
+      let currentLine = lineString(currentLineArray);
+      let currentPoint = point([longitude, latitude]);
+      currentDistance = pointToLineDistance(currentPoint, currentLine);
+    } else {
+      let currentPoint = point([longitude, latitude]);
+      let destinationCoordinate = this.state.navigateList['coordinates'][nextSegment['way_points'][0]];
+      let destinationPoint = point([destinationCoordinate['longitude'], destinationCoordinate['latitude']]);
+      currentDistance = distance(currentPoint, destinationPoint);
+    }
+
+    if (currentDistance - 0.01 < closestDistanceOverall) {
+      closestSegmentIdx += 1;
+      closestDistanceOverall = currentDistance;
+    }
 
     // check if user deviated more than 100 meters from the path
     if (closestDistanceOverall > MAXIMUM_OFFSET_DISTANCE) {
@@ -263,7 +277,43 @@ export default class GroundMapView extends React.Component {
       this.onReachedDestination();
     }
 
+    this.updateMapMode(closestSegmentIdx);
+
     return [segmentList[closestSegmentIdx], closestSegmentIdx];
+  }
+
+
+  updateMapMode(idx) {
+    let route = this.state.navigateJSON['data']['routes'][0];
+    let nextInstruction = route['segments'][0]['steps'][idx]['instruction'];
+    this.findOntoString(nextInstruction, idx);
+  }
+
+  findOntoString(instruction, idx) {
+    let ontoIndex = instruction.indexOf('onto');
+    let roadString = '';
+    if (ontoIndex === -1) {
+      let onIndex = instruction.indexOf('on');
+      if (onIndex !== -1) {
+        roadString = instruction.slice(onIndex + 3);
+      } else {
+        if (idx === 0) {
+          if (!this.state.mapInFocus) {
+            this.props.setUnderground(false);
+          } else {
+            nextMapState = (false);
+          }
+        }
+        return;
+      }
+    } else {
+      roadString = instruction.slice(ontoIndex + 5);
+    }
+    if (!this.state.mapInFocus) {
+      this.props.setUnderground((roadString === 'Pedway'));
+    } else {
+      nextMapState = (roadString === 'Pedway');
+    }
   }
 
   forwardSelectedEntrance(inputEntrance) {
@@ -430,6 +480,14 @@ export default class GroundMapView extends React.Component {
         mapInFocus: false,
       });
     }
+
+    if (nextMapState !== undefined) {
+      let stateSave = nextMapState;
+      nextMapState = undefined;
+      this.props.setUnderground(stateSave);
+
+    }
+
     isUserInitiatedRegionChange = false;
   }
 
@@ -455,7 +513,7 @@ export default class GroundMapView extends React.Component {
           this.setState({
             dialogVisibility: true,
             dialogContent: '',
-            dialogTitle: 'You have arrived at the destination',
+            dialogTitle: 'Navigation Completed',
             dialogButtonText: 'OK',
           });
         },
@@ -492,7 +550,7 @@ export default class GroundMapView extends React.Component {
                 text={this.state.dialogButtonText}
                 onPress={()=>{
                   this.setState({dialogVisibility: false});
-                  if (this.state.dialogTitle === 'You have arrived at the destination') {
+                  if (this.state.dialogTitle === 'Navigation Completed') {
                     // we need to end navigation
                     this.props.endNavigateCallback();
                   }

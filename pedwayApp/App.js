@@ -153,6 +153,7 @@ class MainView extends React.Component {
     this.setMapInFocus = this.setMapInFocus.bind(this);
     this.clearNavigationData = this.clearNavigationData.bind(this);
     this.endNavigateCallback = this.endNavigateCallback.bind(this);
+    this.setUnderground = this.setUnderground.bind(this);
   }
 
   updateNavigationDataCallback(inputData) {
@@ -179,6 +180,10 @@ class MainView extends React.Component {
       selectedEntrance: inputEntrance,
       detailViewOpen: true,
     });
+  }
+
+  setUnderground(state) {
+    this.setState({underground: state});
   }
 
   updateSegmentStartEndCallback(start, end) {
@@ -246,6 +251,7 @@ class MainView extends React.Component {
           updateSwiperViewIndex={this.updateSwiperViewIndex}
           clearNavigationData={this.clearNavigationData}
           endNavigateCallback={this.endNavigateCallback}
+          setUnderground={this.setUnderground}
         />
         <SlidingUpDetailView
           open={this.state.detailViewOpen}
@@ -269,6 +275,7 @@ class MainView extends React.Component {
             navigationDataRequested={this.state.navigationDataRequested}
             updateSegmentStartEndCallback={this.updateSegmentStartEndCallback}
             setMapInFocus={this.setMapInFocus}
+            setUnderground={this.setUnderground}
             ref={(navigationSwipeView) => {
               this.swiperView = navigationSwipeView;
             }}
