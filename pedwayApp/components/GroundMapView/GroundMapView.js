@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styles from './styles';
-import {Image, Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {Image, Platform, StyleSheet, Text, View, TouchableOpacity, ToastAndroid} from 'react-native';
 import MapView, {
   Polyline,
 } from 'react-native-maps';
@@ -38,6 +38,8 @@ const MAXIMUM_OFFSET_DISTANCE = 0.1;
 let isUserInitiatedRegionChange = false;
 let appInitiated = false;
 let nextMapState = undefined;
+
+let currentSegmentIndex = -1;
 
 /**
  * Renders a MapView that display the ground level map
@@ -102,6 +104,7 @@ export default class GroundMapView extends React.Component {
     this.updateMapMode = this.updateMapMode.bind(this);
     this.findOntoString = this.findOntoString.bind(this);
     this.networkErrorHandler = this.networkErrorHandler.bind(this);
+    this.showSuggestionToast = this.showSuggestionToast.bind(this);
   }
 
   /**
@@ -284,7 +287,11 @@ export default class GroundMapView extends React.Component {
       this.onReachedDestination();
     }
 
-    this.updateMapMode(closestSegmentIdx);
+    // this.updateMapMode(closestSegmentIdx);
+    if (closestSegmentIdx !== currentSegmentIndex) {
+      currentSegmentIndex = closestSegmentIdx;
+      this.updateMapMode(closestSegmentIdx);
+    }
 
     return [segmentList[closestSegmentIdx], closestSegmentIdx];
   }
@@ -304,29 +311,25 @@ export default class GroundMapView extends React.Component {
       if (onIndex !== -1) {
         roadString = instruction.slice(onIndex + 3);
       } else {
-        if (idx === 0) {
-          if (!this.state.mapInFocus) {
-            this.props.setUnderground(false);
-          } else {
-            nextMapState = (false);
-          }
-        }
         return;
       }
     } else {
       roadString = instruction.slice(ontoIndex + 5);
     }
-    if (!this.state.mapInFocus) {
-      this.props.setUnderground((roadString === 'Pedway'));
-    } else {
-      nextMapState = (roadString === 'Pedway');
+
+    if (this.state.underground && roadString === 'Pedway') {
+      this.showSuggestionToast();
     }
   }
 
-  forwardSelectedEntrance(inputEntrance) {
+  showSuggestionToast() {
+    ToastAndroid.showWithGravityAndOffset('Switch to underground mode to view the Pedway', ToastAndroid.LONG, ToastAndroid.BOTTOM, 0, 350);
+  }
+
+  forwardSelectedEntrance(inputEntrance, isEntrance) {
     Keyboard.dismiss();
     if (this.props.selectedMarkerCallback !== undefined) {
-      this.props.selectedMarkerCallback(inputEntrance);
+      this.props.selectedMarkerCallback(inputEntrance, isEntrance);
     }
   }
 
@@ -388,6 +391,7 @@ export default class GroundMapView extends React.Component {
    */
   getGeometry(start, end) {
     // https://pedway.azurewebsites.net/api/ors/directions?coordinates=
+    currentSegmentIndex = -1;
     return axios.get(
         AZURE_API + '/ors/directions?coordinates='
       + start[1] + ',%20' + start[0] + '%7C' + end[1] + ',%20' + end[0] + '&profile=foot-walking')
@@ -446,14 +450,16 @@ export default class GroundMapView extends React.Component {
     if (this.state.searchData.length===0) {
       return (<RenderEntrance
         JSONData={this.state.pedwayData}
-        callbackFunc={(input) => {
-          this.forwardSelectedEntrance(input);
-        }}/>);
+        callbackFunc={(input, isEntrance) => {
+          this.forwardSelectedEntrance(input, isEntrance);
+        }}/> +
+        <RenderAttraction JSONData={Attractions}/>
+      );
     } else {
       return (<RenderLocation
         JSONData={this.state.searchData}
-        callbackFunc={(input) => {
-          this.forwardSelectedEntrance(input);
+        callbackFunc={(input, isEntrance) => {
+          this.forwardSelectedEntrance(input, isEntrance);
         }}/>);
     }
   }
@@ -630,14 +636,25 @@ export default class GroundMapView extends React.Component {
                 strokeWidth={5}
                 style={{zIndex: 100000}}
               />
-            </View>:(this.state.searchData.length===0?<RenderEntrance
-              JSONData={this.state.pedwayData}
-              callbackFunc={(input) => {
-                this.forwardSelectedEntrance(input);
-              }}/>:<RenderLocation
+            </View>:
+            (this.state.searchData.length===0?
+              <View>
+                <RenderEntrance
+                  JSONData={this.state.pedwayData}
+                  callbackFunc={(input, isEntrance) => {
+                    this.forwardSelectedEntrance(input, isEntrance);
+                  }}/>
+                <RenderAttraction
+                  JSONData={Attractions}
+                  callbackFunc={(input, isEntrance) => {
+                    this.forwardSelectedEntrance(input, isEntrance);
+                  }}
+                />
+              </View>:
+              <RenderLocation
                 JSONData={this.state.searchData}
-                callbackFunc={(input) => {
-                  this.forwardSelectedEntrance(input);
+                callbackFunc={(input, isEntrance) => {
+                  this.forwardSelectedEntrance(input, isEntrance);
                 }}/> )}
 
           <MapView.Marker
@@ -664,7 +681,6 @@ export default class GroundMapView extends React.Component {
           }
           {this.state.underground && this.state.mapReady?
           <RenderPedway JSONData={PedwaySections}/>:null}
-          <RenderAttraction JSONData={Attractions}/>
         </MapView>
       </View>);
   }

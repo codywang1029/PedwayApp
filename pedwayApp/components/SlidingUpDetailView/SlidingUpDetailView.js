@@ -5,6 +5,7 @@ import RoundButton from '../RoundButton/RoundButton';
 import SlidingUpPanel from 'rn-sliding-up-panel';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import PedwayEntrance from '../../model/PedwayEntrance';
+import PedwayAttraction from '../../model/PedwayAttraction';
 
 
 /**
@@ -20,6 +21,7 @@ export default class SlidingUpDetailView extends Component {
       entrance: null,
       navigateFunctor: null,
       navigate: false,
+      isEntrance: true,
     };
     this.updateState = this.updateState.bind(this);
     this.openView = this.openView.bind(this);
@@ -32,6 +34,7 @@ export default class SlidingUpDetailView extends Component {
     if (inputProps.entrance !== undefined && inputProps.entrance !== null) {
       this.setState({
         entrance: inputProps.entrance,
+        isEntrance: inputProps.isEntrance,
       });
     }
     if (inputProps.open === true) {
@@ -83,7 +86,6 @@ export default class SlidingUpDetailView extends Component {
   }
 
   render() {
-    let shouldHideStatusLabel = this.props.hideStatusLabel===true;
     if (this.state.entrance !== undefined && this.state.entrance !== null) {
       return (
         <SlidingUpPanel
@@ -117,7 +119,7 @@ export default class SlidingUpDetailView extends Component {
           <View style={styles.backgroundView}>
             <View style={styles.belowFlexContainer}>
               <View style={styles.belowFlex}>
-                {shouldHideStatusLabel?
+                {!this.state.isEntrance?
                 null:
                 <StatusLabel
                   text={this.state.entrance.getStatus()}/>

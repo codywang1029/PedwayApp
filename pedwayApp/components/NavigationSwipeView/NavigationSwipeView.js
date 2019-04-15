@@ -87,8 +87,6 @@ export default class NavigationSwipeView extends React.Component {
 
       let route = this.state.navigationData['data']['routes'][0];
       let wayPoint = route['segments'][0]['steps'][inputIndex]['way_points'];
-      let nextInstruction = route['segments'][0]['steps'][inputIndex]['instruction'];
-      console.log(nextInstruction);
       this.props.updateSegmentStartEndCallback(wayPoint[0], wayPoint[1]);
     } catch (e) {
     }
@@ -96,12 +94,17 @@ export default class NavigationSwipeView extends React.Component {
 
   findOntoString(instruction) {
     let ontoIndex = instruction.indexOf('onto');
-    console.log(ontoIndex);
+    let roadString = '';
     if (ontoIndex === -1) {
-      return;
+      let onIndex = instruction.indexOf('on');
+      if (onIndex !== -1) {
+        roadString = instruction.slice(onIndex + 3);
+      } else {
+        return;
+      }
+    } else {
+      roadString = instruction.slice(ontoIndex + 5);
     }
-    let roadString = instruction.slice(ontoIndex + 5);
-    console.log(roadString);
     this.props.setUnderground((roadString === 'Pedway'));
   }
 

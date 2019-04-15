@@ -142,6 +142,7 @@ class MainView extends React.Component {
       searchData: [],
       navigationData: [],
       navigationDataRequested: false,
+      isEntrance: true,
     };
     this.toggleUndergroundMap = this.toggleUndergroundMap.bind(this);
     this.toggleNavigateCallback = this.toggleNavigateCallback.bind(this);
@@ -176,9 +177,10 @@ class MainView extends React.Component {
     });
   }
 
-  updateSlidingDetailView(inputEntrance) {
+  updateSlidingDetailView(inputEntrance, isEntrance) {
     this.setState({
       selectedEntrance: inputEntrance,
+      isEntrance: isEntrance,
       detailViewOpen: true,
     });
   }
@@ -246,8 +248,8 @@ class MainView extends React.Component {
       <View style={styles.fillView}>
 
         <GroundMapView
-          selectedMarkerCallback={(input) => {
-            this.updateSlidingDetailView(input);
+          selectedMarkerCallback={(input, isEntrance) => {
+            this.updateSlidingDetailView(input, isEntrance);
           }}
           ref={(mapView) => {
             this.map = mapView;
@@ -263,8 +265,8 @@ class MainView extends React.Component {
         <SlidingUpDetailView
           open={this.state.detailViewOpen}
           entrance={this.state.selectedEntrance}
+          isEntrance={this.state.isEntrance}
           toggleNavigate={this.toggleNavigateCallback}
-          hideStatusLabel={this.state.searchData.length!==0}
           ref={(slidingUpView) => {
             this.slidingUpView = slidingUpView;
           }}

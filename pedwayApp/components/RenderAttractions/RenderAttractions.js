@@ -41,10 +41,7 @@ export default class RenderAttractions extends Component {
       return acc.concat(
           new PedwayAttraction(new PedwayCoordinate(
               thisLatitude,
-              thisLongitude),
-          true,
-          false,
-          'Attraction #'+idx.toString()));
+              thisLongitude), item['properties']['@id']));
     }, []);
     this.setState({
       pedwayAttractions: attractions,
@@ -72,6 +69,9 @@ export default class RenderAttractions extends Component {
           coordinate={input.getCoordinate().getJSON()}
           key={idx}
           pinColor='green'
+          onPress={()=>{
+            this.props.callbackFunc(this.state.pedwayAttractions[idx], false);
+          }}
         />
       );
     },

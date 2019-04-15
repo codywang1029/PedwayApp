@@ -67,7 +67,7 @@ export default class RenderLocation extends Component {
           coordinate={input.getCoordinate().getJSON()}
           key={idx}
           onPress={()=>{
-            this.props.callbackFunc(this.state.pedwayLocations[idx]);
+            this.props.callbackFunc(this.state.pedwayLocations[idx], false);
           }}
         />
       );
