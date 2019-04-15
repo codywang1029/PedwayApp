@@ -9,6 +9,8 @@ import RenderPedway from '../RenderPedway/RenderPedway';
 import MapStyle from './mapStyleDark';
 import RenderEntrance from '../RenderEntrance/RenderEntrance';
 import RenderLocation from '../RenderLocation/RenderLocation';
+import RenderAttraction from '../RenderAttractions/RenderAttractions';
+import MapCallout from 'react-native-maps/lib/components/MapCallout';
 import circle from '../../media/pedwayEntranceMarker.png';
 import axios from 'axios';
 import RoundButton from '../RoundButton/RoundButton';
@@ -20,9 +22,11 @@ import PedwaySections from '../../mock_data/sections';
 import {point, lineString} from '@turf/helpers';
 import pointToLineDistance from '@turf/point-to-line-distance';
 import distance from '@turf/distance';
+import Attractions from '../../mock_data/attractions';
 
 
-const AZURE_API = 'https://pedway.azurewebsites.net/api';
+const AZURE_API = 'https://pedway.azurewebsites.net/api/pedway';
+const ORS_API = 'https://api.openrouteservice.org';
 
 const INITIAL_LATITUDE = 41.881898;
 const INITIAL_LONGITUDE = -87.623977;
@@ -383,6 +387,7 @@ export default class GroundMapView extends React.Component {
    * @returns {Promise<AxiosResponse<any> | never | void>}
    */
   getGeometry(start, end) {
+    // https://pedway.azurewebsites.net/api/ors/directions?coordinates=
     return axios.get(
         AZURE_API + '/ors/directions?coordinates='
       + start[1] + ',%20' + start[0] + '%7C' + end[1] + ',%20' + end[0] + '&profile=foot-walking')
@@ -659,9 +664,9 @@ export default class GroundMapView extends React.Component {
           }
           {this.state.underground && this.state.mapReady?
           <RenderPedway JSONData={PedwaySections}/>:null}
+          <RenderAttraction JSONData={Attractions}/>
         </MapView>
       </View>);
   }
 }
-
 

@@ -79,7 +79,7 @@ class HomeScreen extends React.Component {
           onPress={() => navigate('Home')}>
           <Text style={styles.item}>
             <Icon name="home" style={styles.item}/>
-            Home
+              Home
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -87,7 +87,7 @@ class HomeScreen extends React.Component {
           onPress={() => navigate('FoodDirectory')}>
           <Text style={styles.item}>
             <Icon name="info-circle" style={styles.item}/>
-            Directory
+              Directory
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -95,14 +95,14 @@ class HomeScreen extends React.Component {
           onPress={() => navigate('StaticMap')}>
           <Text style={styles.item}>
             <Icon name="map" style={styles.item}/>
-            Map
+              Map
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.sideButton}>
           <Text style={styles.item}>
             <Icon name="gear" style={styles.item}/>
-            Settings
+              Settings
           </Text>
         </TouchableOpacity>
       </View>
@@ -312,4 +312,5 @@ const MainNavigator = createStackNavigator({
 const App = createAppContainer(MainNavigator);
 
 export default App;
+
 
