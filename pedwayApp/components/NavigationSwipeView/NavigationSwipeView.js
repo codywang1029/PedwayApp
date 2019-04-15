@@ -32,6 +32,7 @@ export default class NavigationSwipeView extends React.Component {
       navigationData: [],
       currentIndex: 0,
       dataRequested: false,
+      previousIndex: 0,
     };
     this.updateState = this.updateState.bind(this);
     this.onIndexChanged = this.onIndexChanged.bind(this);
@@ -45,14 +46,20 @@ export default class NavigationSwipeView extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.updateState(nextProps);
+    if (nextProps.navigationData !== this.state.navigationData) {
+      this.updateState(nextProps);
+    }
   }
 
   updateState(inputProps) {
+    this.updateSwiperViewIndex(0);
     this.setState({
       navigationData: inputProps.navigationData,
       dataRequested: inputProps.navigationDataRequested,
+      previousIndex: this.state.currentIndex,
+      currentIndex: 0,
     });
+
 
     try {
       let route = inputProps.navigationData['data']['routes'][0];
@@ -70,7 +77,7 @@ export default class NavigationSwipeView extends React.Component {
   updateSwiperViewIndex(idx) {
     if (this.state.dataRequested) {
       isProgrammaticallyUpdatingIndex = true;
-      this.swiper.scrollBy(idx - this.state.currentIndex, true);
+      this.swiper.scrollBy(idx - this.state.currentIndex + this.state.previousIndex, true);
     }
   }
 
@@ -86,9 +93,8 @@ export default class NavigationSwipeView extends React.Component {
       });
 
       let route = this.state.navigationData['data']['routes'][0];
-      let wayPoint = route['segments'][0]['steps'][inputIndex]['way_points'];
-      let nextInstruction = route['segments'][0]['steps'][inputIndex]['instruction'];
-      console.log(nextInstruction);
+      let acutalIndex = inputIndex + this.state.previousIndex;
+      let wayPoint = route['segments'][0]['steps'][acutalIndex]['way_points'];
       this.props.updateSegmentStartEndCallback(wayPoint[0], wayPoint[1]);
     } catch (e) {
     }
@@ -96,12 +102,17 @@ export default class NavigationSwipeView extends React.Component {
 
   findOntoString(instruction) {
     let ontoIndex = instruction.indexOf('onto');
-    console.log(ontoIndex);
+    let roadString = '';
     if (ontoIndex === -1) {
-      return;
+      let onIndex = instruction.indexOf('on');
+      if (onIndex !== -1) {
+        roadString = instruction.slice(onIndex + 3);
+      } else {
+        return;
+      }
+    } else {
+      roadString = instruction.slice(ontoIndex + 5);
     }
-    let roadString = instruction.slice(ontoIndex + 5);
-    console.log(roadString);
     this.props.setUnderground((roadString === 'Pedway'));
   }
 

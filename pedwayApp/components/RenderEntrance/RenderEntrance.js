@@ -61,7 +61,7 @@ export default class RenderEntrance extends Component {
           // image={require('../../media/pedwayEntranceMarker.png')}
           key={idx}
           onPress={()=>{
-            this.props.callbackFunc(this.state.pedwayEntrances[idx]);
+            this.props.callbackFunc(this.state.pedwayEntrances[idx], true);
           }}
         >
           <Image source={entrance} style={{width: 30, height: 30}} />

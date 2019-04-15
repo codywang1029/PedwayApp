@@ -73,6 +73,9 @@ export default class RenderAttractions extends Component {
           coordinate={input.getCoordinate().getJSON()}
           key={idx}
           pinColor='green'
+          onPress={()=>{
+            this.props.callbackFunc(this.state.pedwayAttractions[idx], false);
+          }}
           title={input.getName()}
           description={input.getHours()}
         />
