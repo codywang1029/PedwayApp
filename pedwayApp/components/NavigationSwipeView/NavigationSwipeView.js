@@ -45,7 +45,9 @@ export default class NavigationSwipeView extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.updateState(nextProps);
+    if (nextProps.navigationData !== this.state.navigationData) {
+      this.updateState(nextProps);
+    }
   }
 
   updateState(inputProps) {
