@@ -317,7 +317,7 @@ export default class GroundMapView extends React.Component {
       roadString = instruction.slice(ontoIndex + 5);
     }
 
-    if (this.state.underground && roadString === 'Pedway') {
+    if (!this.state.underground && roadString === 'Pedway') {
       this.showSuggestionToast();
     }
   }
