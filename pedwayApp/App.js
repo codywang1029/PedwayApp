@@ -154,6 +154,7 @@ class MainView extends React.Component {
     this.clearNavigationData = this.clearNavigationData.bind(this);
     this.endNavigateCallback = this.endNavigateCallback.bind(this);
     this.setUnderground = this.setUnderground.bind(this);
+    this.mapViewNetworkErrorHandler = this.mapViewNetworkErrorHandler.bind(this);
   }
 
   updateNavigationDataCallback(inputData) {
@@ -189,6 +190,12 @@ class MainView extends React.Component {
   updateSegmentStartEndCallback(start, end) {
     if (this.map !== null) {
       this.map.updateHighlightSegment(start, end);
+    }
+  }
+
+  mapViewNetworkErrorHandler() {
+    if (this.map !== null) {
+      this.map.networkErrorHandler();
     }
   }
 
@@ -264,7 +271,10 @@ class MainView extends React.Component {
         />
         {this.state.navigateGround?
             null:
-            <SearchBar updateSearchData={this.setSearchData}/>}
+            <SearchBar
+              updateSearchData={this.setSearchData}
+              networkErrorHandler={this.mapViewNetworkErrorHandler}
+            />}
         <RoundButton
           style={this.state.navigateGround?[positions.positionDown]:[positions.undergroundButton]}
           icon={this.state.underground ? 'level-up' : 'level-down'}
