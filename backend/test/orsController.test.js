@@ -1,13 +1,32 @@
 const request = require('supertest');
-const {app, disconnect} = require('../src/app');
 const {toMatchImageSnapshot} = require('jest-image-snapshot');
 expect.extend({toMatchImageSnapshot});
+const mongoose = require('mongoose');
+const turf = require('@turf/turf');
 
-afterAll(disconnect);
+let app;
+let EntranceSchema;
+let setTestSession;
+
+beforeAll(async () => {
+  process.env['APP_DEPLOYMENT_MODE'] = 'testing';
+  process.env['MONGODB_HOST'] = global.__MONGODB_HOST__;
+  ({app, disconnect} = require('../src/app'));
+  EntranceSchema = mongoose.model('entrance');
+
+  ({setTestSession} = require('../api/controllers/authController'));
+  setTestSession('1000');
+});
+
+afterAll(async () => {
+  disconnect();
+});
 
 describe('Conditional test using the ors endpoint', () => {
+  require('dotenv').config();
   const testIfORSAPIKeyAvailable =
       process.env.ORS_API_KEY === undefined ? test.skip : test;
+
   testIfORSAPIKeyAvailable(
       'it should respond to the GET method on the directions endpoint',
       (done) => {
@@ -24,6 +43,59 @@ describe('Conditional test using the ors endpoint', () => {
               done();
             });
       });
+
+  describe('Test avoiding closed entrances', () => {
+    beforeEach(async () => {
+      await EntranceSchema.deleteMany({});
+      await (new EntranceSchema({
+        'type': 'Feature',
+        'geometry':
+                   {'type': 'Point', 'coordinates': [-87.6281675, 41.8858832]},
+        'id': 'node/1583441295',
+      })
+          .save());
+    });
+
+    testIfORSAPIKeyAvailable(
+        'closing a entrance on the route should increase the length of the route',
+        async () => {
+          // Ensure the entrance is open
+          await EntranceSchema
+              .findOneAndUpdate({id: 'node/1583441295'}, {status: 'open'})
+              .exec();
+
+          // Compute the length of the initial route
+          const initialLength =
+              await request(app)
+                  .get(
+                      '/api/ors/directions?coordinates=-87.631019,%2041.886248%7C-87.623788,%2041.883051&profile=foot-walking&geometry_format=polyline')
+                  .then((response) => {
+                    const route = turf.lineString(response.body['routes'][0]['geometry']);
+                    const nearestPoint = turf.nearestPointOnLine(route, turf.point([-87.6281675, 41.8858832]), {units: 'kilometers'});
+                    expect(nearestPoint.properties.dist).toBeLessThan(0.005);
+                    return response.body['routes'][0]['summary']['distance'];
+                  });
+
+          // Close the entrance that lies on the initial route
+          await EntranceSchema
+              .findOneAndUpdate({id: 'node/1583441295'}, {status: 'closed'})
+              .exec();
+
+          // Compute the length of the new route
+          const newLength =
+              await request(app)
+                  .get(
+                      '/api/ors/directions?coordinates=-87.631019,%2041.886248%7C-87.623788,%2041.883051&profile=foot-walking&geometry_format=polyline')
+                  .then((response) => {
+                    const route = turf.lineString(response.body['routes'][0]['geometry']);
+                    const nearestPoint = turf.nearestPointOnLine(route, turf.point([-87.6281675, 41.8858832]), {units: 'kilometers'});
+                    expect(nearestPoint.properties.dist).toBeGreaterThan(0.005);
+                    return response.body['routes'][0]['summary']['distance'];
+                  });
+
+          expect(newLength).toBeGreaterThan(initialLength);
+        });
+  });
 
   testIfORSAPIKeyAvailable(
       'a tile PNG should be returned from the GET method on the mapsurfer endpoint',

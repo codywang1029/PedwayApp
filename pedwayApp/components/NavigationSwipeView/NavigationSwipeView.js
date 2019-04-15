@@ -32,11 +32,13 @@ export default class NavigationSwipeView extends React.Component {
       navigationData: [],
       currentIndex: 0,
       dataRequested: false,
+      previousIndex: 0,
     };
     this.updateState = this.updateState.bind(this);
     this.onIndexChanged = this.onIndexChanged.bind(this);
     this.updateSwiperViewIndex = this.updateSwiperViewIndex.bind(this);
     this.onMomentumScrollEnd = this.onMomentumScrollEnd.bind(this);
+    this.findOntoString = this.findOntoString.bind(this);
   }
 
   componentDidMount() {
@@ -44,14 +46,28 @@ export default class NavigationSwipeView extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.updateState(nextProps);
+    if (nextProps.navigationData !== this.state.navigationData) {
+      this.updateState(nextProps);
+    }
   }
 
   updateState(inputProps) {
+    this.updateSwiperViewIndex(0);
     this.setState({
       navigationData: inputProps.navigationData,
       dataRequested: inputProps.navigationDataRequested,
+      previousIndex: this.state.currentIndex,
+      currentIndex: 0,
     });
+
+
+    try {
+      let route = inputProps.navigationData['data']['routes'][0];
+      let wayPoint = route['segments'][0]['steps'][0]['way_points'];
+      this.props.updateSegmentStartEndCallback(wayPoint[0], wayPoint[1]);
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   /**
@@ -59,8 +75,10 @@ export default class NavigationSwipeView extends React.Component {
    * @param idx
    */
   updateSwiperViewIndex(idx) {
-    isProgrammaticallyUpdatingIndex = true;
-    this.swiper.scrollBy(idx - this.state.currentIndex, true);
+    if (this.state.dataRequested) {
+      isProgrammaticallyUpdatingIndex = true;
+      this.swiper.scrollBy(idx - this.state.currentIndex + this.state.previousIndex, true);
+    }
   }
 
   /**
@@ -73,11 +91,29 @@ export default class NavigationSwipeView extends React.Component {
       this.setState({
         currentIndex: inputIndex,
       });
+
       let route = this.state.navigationData['data']['routes'][0];
-      let wayPoint = route['segments'][0]['steps'][inputIndex]['way_points'];
+      let acutalIndex = inputIndex + this.state.previousIndex;
+      let wayPoint = route['segments'][0]['steps'][acutalIndex]['way_points'];
       this.props.updateSegmentStartEndCallback(wayPoint[0], wayPoint[1]);
     } catch (e) {
     }
+  }
+
+  findOntoString(instruction) {
+    let ontoIndex = instruction.indexOf('onto');
+    let roadString = '';
+    if (ontoIndex === -1) {
+      let onIndex = instruction.indexOf('on');
+      if (onIndex !== -1) {
+        roadString = instruction.slice(onIndex + 3);
+      } else {
+        return;
+      }
+    } else {
+      roadString = instruction.slice(ontoIndex + 5);
+    }
+    this.props.setUnderground((roadString === 'Pedway'));
   }
 
   onMomentumScrollEnd() {

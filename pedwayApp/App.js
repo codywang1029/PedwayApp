@@ -40,9 +40,6 @@ import {positions, styles} from './styles';
  * Sidemenu/MainView
  */
 class HomeScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Pedway App',
-  };
   constructor() {
     super();
     this.state = {
@@ -55,6 +52,7 @@ class HomeScreen extends React.Component {
       hideHamburgerButton: false,
     };
 
+
     this.toggleSideBar = this.toggleSideBar.bind(this);
     this.shouldHideHamburgerButton = this.shouldHideHamburgerButton.bind(this);
   }
@@ -64,6 +62,10 @@ class HomeScreen extends React.Component {
     Keyboard.dismiss();
   }
 
+  componentDidMount() {
+    console.disableYellowBox = true;
+  }
+
   shouldHideHamburgerButton(inputStatus) {
     this.setState({hideHamburgerButton: inputStatus});
   }
@@ -71,21 +73,16 @@ class HomeScreen extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     const MenuComponent = (
-      <View style={{flex: 1, backgroundColor: '#a9a9a9', paddingTop: 30}}>
-        <TouchableOpacity
-          style={styles.sideButton}
-          onPress={() => navigate('Home')}>
-          <Text style={styles.item}>
-            <Icon name="home" style={styles.item}/>
-            Home
-          </Text>
-        </TouchableOpacity>
+      <View style={{flex: 1, backgroundColor: '#a9a9a9', paddingTop: 50, alignItems: 'center'}}>
+        <Icon style={{fontSize: 85}}
+          name = 'home'
+        />
         <TouchableOpacity
           style={styles.sideButton}
           onPress={() => navigate('FoodDirectory')}>
           <Text style={styles.item}>
             <Icon name="info-circle" style={styles.item}/>
-            Directory
+              Directory
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -93,14 +90,7 @@ class HomeScreen extends React.Component {
           onPress={() => navigate('StaticMap')}>
           <Text style={styles.item}>
             <Icon name="map" style={styles.item}/>
-            Map
-          </Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.sideButton}>
-          <Text style={styles.item}>
-            <Icon name="gear" style={styles.item}/>
-            Settings
+              Map
           </Text>
         </TouchableOpacity>
       </View>
@@ -140,8 +130,7 @@ class MainView extends React.Component {
       searchData: [],
       navigationData: [],
       navigationDataRequested: false,
-      highlightSegmentStart: 0,
-      highlightSegmentEnd: 0,
+      isEntrance: true,
     };
     this.toggleUndergroundMap = this.toggleUndergroundMap.bind(this);
     this.toggleNavigateCallback = this.toggleNavigateCallback.bind(this);
@@ -151,6 +140,10 @@ class MainView extends React.Component {
     this.updateSegmentStartEndCallback = this.updateSegmentStartEndCallback.bind(this);
     this.updateSwiperViewIndex = this.updateSwiperViewIndex.bind(this);
     this.setMapInFocus = this.setMapInFocus.bind(this);
+    this.clearNavigationData = this.clearNavigationData.bind(this);
+    this.endNavigateCallback = this.endNavigateCallback.bind(this);
+    this.setUnderground = this.setUnderground.bind(this);
+    this.mapViewNetworkErrorHandler = this.mapViewNetworkErrorHandler.bind(this);
   }
 
   updateNavigationDataCallback(inputData) {
@@ -172,26 +165,42 @@ class MainView extends React.Component {
     });
   }
 
-  updateSlidingDetailView(inputEntrance) {
+  updateSlidingDetailView(inputEntrance, isEntrance) {
     this.setState({
       selectedEntrance: inputEntrance,
+      isEntrance: isEntrance,
       detailViewOpen: true,
     });
   }
 
+  setUnderground(state) {
+    this.setState({underground: state});
+  }
+
   updateSegmentStartEndCallback(start, end) {
-    this.setState({
-      highlightSegmentStart: start,
-      highlightSegmentEnd: end,
-    });
+    if (this.map !== null) {
+      this.map.updateHighlightSegment(start, end);
+    }
+  }
+
+  mapViewNetworkErrorHandler() {
+    if (this.map !== null) {
+      this.map.networkErrorHandler();
+    }
   }
 
   updateSwiperViewIndex(idx) {
-    this.swiperView.updateSwiperViewIndex(idx);
+    if (this.swiperView !== null) {
+      this.swiperView.updateSwiperViewIndex(idx);
+    }
   }
 
   setMapInFocus(input) {
     this.map.setMapInFocus(input);
+  }
+
+  clearNavigationData() {
+    this.setState({navigationDataRequested: false});
   }
 
   toggleNavigateCallback(inputEntrance, inputStatus) {
@@ -201,10 +210,25 @@ class MainView extends React.Component {
       navigateTo: inputEntrance,
       navigationData: [],
       navigationDataRequested: false,
-      highlightSegmentStart: 1,
-      highlightSegmentEnd: 1,
     });
     this.props.shouldHideHamburgerButton(inputStatus);
+
+    if (this.map !== null) {
+      this.map.updateNavigationState(inputStatus, inputEntrance, 0, 1);
+    }
+  }
+
+  endNavigateCallback() {
+    this.props.shouldHideHamburgerButton(false);
+    this.setState({
+      navigateGround: false,
+    });
+    if (this.map !== null) {
+      this.map.updateNavigationState(false, undefined, 0, 1);
+    }
+    if (this.slidingUpView !== null) {
+      this.slidingUpView.setNavigate(false);
+    }
   }
 
   render() {
@@ -212,30 +236,35 @@ class MainView extends React.Component {
       <View style={styles.fillView}>
 
         <GroundMapView
-          selectedMarkerCallback={(input) => {
-            this.updateSlidingDetailView(input);
+          selectedMarkerCallback={(input, isEntrance) => {
+            this.updateSlidingDetailView(input, isEntrance);
           }}
           ref={(mapView) => {
             this.map = mapView;
           }}
           updateNavigationDataCallback={this.updateNavigationDataCallback}
-          navigate={this.state.navigateGround}
-          navigateTo={this.state.navigateTo}
           searchData={this.state.searchData}
-          highlightSegmentStart={this.state.highlightSegmentStart}
-          highlightSegmentEnd={this.state.highlightSegmentEnd}
           underground={this.state.underground}
           updateSwiperViewIndex={this.updateSwiperViewIndex}
+          clearNavigationData={this.clearNavigationData}
+          endNavigateCallback={this.endNavigateCallback}
+          setUnderground={this.setUnderground}
         />
         <SlidingUpDetailView
           open={this.state.detailViewOpen}
           entrance={this.state.selectedEntrance}
+          isEntrance={this.state.isEntrance}
           toggleNavigate={this.toggleNavigateCallback}
-          hideStatusLabel={this.state.searchData.length!==0}
+          ref={(slidingUpView) => {
+            this.slidingUpView = slidingUpView;
+          }}
         />
         {this.state.navigateGround?
             null:
-            <SearchBar updateSearchData={this.setSearchData}/>}
+            <SearchBar
+              updateSearchData={this.setSearchData}
+              networkErrorHandler={this.mapViewNetworkErrorHandler}
+            />}
         <RoundButton
           style={this.state.navigateGround?[positions.positionDown]:[positions.undergroundButton]}
           icon={this.state.underground ? 'level-up' : 'level-down'}
@@ -246,6 +275,7 @@ class MainView extends React.Component {
             navigationDataRequested={this.state.navigationDataRequested}
             updateSegmentStartEndCallback={this.updateSegmentStartEndCallback}
             setMapInFocus={this.setMapInFocus}
+            setUnderground={this.setUnderground}
             ref={(navigationSwipeView) => {
               this.swiperView = navigationSwipeView;
             }}
@@ -272,4 +302,5 @@ const MainNavigator = createStackNavigator({
 const App = createAppContainer(MainNavigator);
 
 export default App;
+
 

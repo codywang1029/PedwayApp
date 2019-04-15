@@ -81,9 +81,9 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
     initialRegion={
       Object {
         "latitude": 41.881898,
-        "latitudeDelta": 0.007,
+        "latitudeDelta": 0.005,
         "longitude": -87.623977,
-        "longitudeDelta": 0.007,
+        "longitudeDelta": 0.005,
       }
     }
     onPanDrag={[Function]}
@@ -99,663 +99,188 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
       }
     }
   >
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8862637,
-          "longitude": -87.6306729,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8859675,
-          "longitude": -87.6308302,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8863129,
-          "longitude": -87.6306746,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.885963,
-          "longitude": -87.6311264,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8858832,
-          "longitude": -87.6281675,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8833266,
-          "longitude": -87.626503,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8831073,
-          "longitude": -87.6264962,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8883616,
-          "longitude": -87.6364478,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8883325,
-          "longitude": -87.6369002,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8848508,
-          "longitude": -87.631341,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8838464,
-          "longitude": -87.6310922,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8836083,
-          "longitude": -87.6326252,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8836132,
-          "longitude": -87.6322178,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8863955,
-          "longitude": -87.6293223,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8866922,
-          "longitude": -87.6290591,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8867157,
-          "longitude": -87.6306371,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.883854,
-          "longitude": -87.6280557,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.883855,
-          "longitude": -87.6276585,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8848386,
-          "longitude": -87.6238166,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8854002,
-          "longitude": -87.6229453,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8854601,
-          "longitude": -87.6218723,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8855495,
-          "longitude": -87.621512,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8851112,
-          "longitude": -87.6218641,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8871541,
-          "longitude": -87.6209853,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8881075,
-          "longitude": -87.6235577,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8763932,
-          "longitude": -87.6318076,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8763826,
-          "longitude": -87.6326191,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8821493,
-          "longitude": -87.6398754,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8821541,
-          "longitude": -87.6394836,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8821589,
-          "longitude": -87.6387431,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8880688,
-          "longitude": -87.6378628,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8888128,
-          "longitude": -87.6370858,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8887065,
-          "longitude": -87.6341584,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8884629,
-          "longitude": -87.6341473,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.88418,
-          "longitude": -87.6223802,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8841742,
-          "longitude": -87.6252636,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8841717,
-          "longitude": -87.6247064,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.88462,
-          "longitude": -87.6248016,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8843321,
-          "longitude": -87.6246246,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8841105,
-          "longitude": -87.624521,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8838448,
-          "longitude": -87.6289736,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8841318,
-          "longitude": -87.6244735,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8828138,
-          "longitude": -87.6245449,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8811955,
-          "longitude": -87.6245151,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8827041,
-          "longitude": -87.6245182,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8840305,
-          "longitude": -87.6245532,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8843728,
-          "longitude": -87.6242429,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.884254,
-          "longitude": -87.623797,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8842327,
-          "longitude": -87.6232655,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8770782,
-          "longitude": -87.6244202,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8841758,
-          "longitude": -87.6218876,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8842002,
-          "longitude": -87.6188103,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8841793,
-          "longitude": -87.6226846,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8841777,
-          "longitude": -87.6233237,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8784329,
-          "longitude": -87.6239591,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8812086,
-          "longitude": -87.630338,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8850343,
-          "longitude": -87.621859,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8850138,
-          "longitude": -87.6215013,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8865979,
-          "longitude": -87.619237,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8869896,
-          "longitude": -87.6238213,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8841792,
-          "longitude": -87.6263683,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8871889,
-          "longitude": -87.6201,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8871167,
-          "longitude": -87.6200488,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8872455,
-          "longitude": -87.6205933,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8770101,
-          "longitude": -87.6232587,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8770105,
-          "longitude": -87.6230833,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8861344,
-          "longitude": -87.6220432,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8876134,
-          "longitude": -87.6213563,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8864427,
-          "longitude": -87.6215568,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8864438,
-          "longitude": -87.6219347,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8866351,
-          "longitude": -87.6236493,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8858755,
-          "longitude": -87.629274,
-        }
-      }
-      onPress={[Function]}
-    />
-    <Marker
-      coordinate={
-        Object {
-          "latitude": 41.8859325,
-          "longitude": -87.6293521,
-        }
-      }
-      onPress={[Function]}
-    />
+    <View>
+      <Marker
+        coordinate={
+          Object {
+            "latitude": 41.885442,
+            "longitude": -87.631727,
+          }
+        }
+        description="Hours Open: Mon - Fri 6:30am - 6:00pm"
+        onPress={[Function]}
+        pinColor="green"
+        title="M Burger"
+      />
+      <Marker
+        coordinate={
+          Object {
+            "latitude": 41.885443,
+            "longitude": -87.631727,
+          }
+        }
+        description="Hours Open: Mon - Fri 8:00am - 3:00pm"
+        onPress={[Function]}
+        pinColor="green"
+        title="Pita Express"
+      />
+      <Marker
+        coordinate={
+          Object {
+            "latitude": 41.881911,
+            "longitude": -87.630065,
+          }
+        }
+        description="Hours Open: Mon - Fri 7:00am - 2:00pm"
+        onPress={[Function]}
+        pinColor="green"
+        title="Big Easy"
+      />
+      <Marker
+        coordinate={
+          Object {
+            "latitude": 41.881912,
+            "longitude": -87.630065,
+          }
+        }
+        description="Hours Open: Mon - Fri 7:00am - 2:00pm"
+        onPress={[Function]}
+        pinColor="green"
+        title="Tortas Frontera"
+      />
+      <Marker
+        coordinate={
+          Object {
+            "latitude": 41.885665,
+            "longitude": -87.622715,
+          }
+        }
+        description="Hours Open: Mon - Fri 6:30am - 4:00pm"
+        onPress={[Function]}
+        pinColor="green"
+        title="Caffe RoM"
+      />
+      <Marker
+        coordinate={
+          Object {
+            "latitude": 41.885666,
+            "longitude": -87.622715,
+          }
+        }
+        description="Hours Open: Mon - Fri 7:00am - 3:30pm"
+        onPress={[Function]}
+        pinColor="green"
+        title="Snarf's"
+      />
+      <Marker
+        coordinate={
+          Object {
+            "latitude": 41.883764,
+            "longitude": -87.628262,
+          }
+        }
+        description="Hours Open: Sun - Sat 5:00am - 8:00pm"
+        onPress={[Function]}
+        pinColor="green"
+        title="Which Wich"
+      />
+      <Marker
+        coordinate={
+          Object {
+            "latitude": 41.886832,
+            "longitude": -87.623756,
+          }
+        }
+        description="Hours Open: Mon - Fri 7:00am - 3:30pm"
+        onPress={[Function]}
+        pinColor="green"
+        title="Hannah's Bretzel"
+      />
+      <Marker
+        coordinate={
+          Object {
+            "latitude": 41.887926,
+            "longitude": -87.623541,
+          }
+        }
+        description="Hours Open: Mon - Fri 6:30am - 7:00pm"
+        onPress={[Function]}
+        pinColor="green"
+        title="Potbelly"
+      />
+      <Marker
+        coordinate={
+          Object {
+            "latitude": 41.885098,
+            "longitude": -87.624131,
+          }
+        }
+        description="Hours Open: Mon - Fri 10:00am - 5:00pm"
+        onPress={[Function]}
+        pinColor="green"
+        title="Armand's Pizzeria"
+      />
+      <Marker
+        coordinate={
+          Object {
+            "latitude": 41.886672,
+            "longitude": -87.624099,
+          }
+        }
+        description="Hours Open: Mon - Fri 7:00am - 6:00pm"
+        onPress={[Function]}
+        pinColor="green"
+        title="Mezza Mediterranean Grill"
+      />
+      <Marker
+        coordinate={
+          Object {
+            "latitude": 41.886673,
+            "longitude": -87.624099,
+          }
+        }
+        description="Hours Open: Mon - Fri 6:00am - 7:00pm"
+        onPress={[Function]}
+        pinColor="green"
+        title="Pret a Manger"
+      />
+      <Marker
+        coordinate={
+          Object {
+            "latitude": 41.886312,
+            "longitude": -87.630376,
+          }
+        }
+        description="Hours Open: Sun - Sat 10:30am - 9:00pm"
+        onPress={[Function]}
+        pinColor="green"
+        title="Olive Mediterranean Grill"
+      />
+      <Marker
+        coordinate={
+          Object {
+            "latitude": 41.886001,
+            "longitude": -87.630934,
+          }
+        }
+        description="Hours Open: Sun - Sat 7:00am - 8:00pm"
+        onPress={[Function]}
+        pinColor="green"
+        title="Protein Bar"
+      />
+      <Marker
+        coordinate={
+          Object {
+            "latitude": 41.886496,
+            "longitude": -87.628477,
+          }
+        }
+        description="Hours Open: Mon - Fri 7:00am - 6:00pm"
+        onPress={[Function]}
+        pinColor="green"
+        title="Wow Bao"
+      />
+    </View>
     <Marker
       coordinate={
         Object {
@@ -889,76 +414,35 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                 <View
                   style={
                     Object {
+                      "alignItems": "center",
                       "backgroundColor": "#a9a9a9",
                       "flex": 1,
-                      "paddingTop": 30,
+                      "paddingTop": 50,
                     }
                   }
                 >
-                  <View
-                    accessible={true}
-                    isTVSelectable={true}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
+                  <Text
+                    allowFontScaling={false}
                     style={
-                      Object {
-                        "backgroundColor": "#a9a9a9",
-                        "borderColor": "#a9a9a9",
-                        "borderRadius": 10,
-                        "borderWidth": 1,
-                        "marginLeft": 0,
-                        "marginRight": 0,
-                        "marginTop": 10,
-                        "opacity": 1,
-                        "paddingBottom": 10,
-                        "paddingTop": 10,
-                      }
+                      Array [
+                        Object {
+                          "color": undefined,
+                          "fontSize": 12,
+                        },
+                        Object {
+                          "fontSize": 85,
+                        },
+                        Object {
+                          "fontFamily": "FontAwesome",
+                          "fontStyle": "normal",
+                          "fontWeight": "normal",
+                        },
+                        Object {},
+                      ]
                     }
                   >
-                    <Text
-                      style={
-                        Object {
-                          "fontSize": 30,
-                          "fontWeight": "bold",
-                          "marginLeft": 10,
-                          "marginTop": 10,
-                          "textAlign": "center",
-                        }
-                      }
-                    >
-                      <Text
-                        allowFontScaling={false}
-                        style={
-                          Array [
-                            Object {
-                              "color": undefined,
-                              "fontSize": 12,
-                            },
-                            Object {
-                              "fontSize": 30,
-                              "fontWeight": "bold",
-                              "marginLeft": 10,
-                              "marginTop": 10,
-                              "textAlign": "center",
-                            },
-                            Object {
-                              "fontFamily": "FontAwesome",
-                              "fontStyle": "normal",
-                              "fontWeight": "normal",
-                            },
-                            Object {},
-                          ]
-                        }
-                      >
-                        
-                      </Text>
-                      Home
-                    </Text>
-                  </View>
+                    
+                  </Text>
                   <View
                     accessible={true}
                     isTVSelectable={true}
@@ -1087,70 +571,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                       Map
                     </Text>
                   </View>
-                  <View
-                    accessible={true}
-                    isTVSelectable={true}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
-                    style={
-                      Object {
-                        "backgroundColor": "#a9a9a9",
-                        "borderColor": "#a9a9a9",
-                        "borderRadius": 10,
-                        "borderWidth": 1,
-                        "marginLeft": 0,
-                        "marginRight": 0,
-                        "marginTop": 10,
-                        "opacity": 1,
-                        "paddingBottom": 10,
-                        "paddingTop": 10,
-                      }
-                    }
-                  >
-                    <Text
-                      style={
-                        Object {
-                          "fontSize": 30,
-                          "fontWeight": "bold",
-                          "marginLeft": 10,
-                          "marginTop": 10,
-                          "textAlign": "center",
-                        }
-                      }
-                    >
-                      <Text
-                        allowFontScaling={false}
-                        style={
-                          Array [
-                            Object {
-                              "color": undefined,
-                              "fontSize": 12,
-                            },
-                            Object {
-                              "fontSize": 30,
-                              "fontWeight": "bold",
-                              "marginLeft": 10,
-                              "marginTop": 10,
-                              "textAlign": "center",
-                            },
-                            Object {
-                              "fontFamily": "FontAwesome",
-                              "fontStyle": "normal",
-                              "fontWeight": "normal",
-                            },
-                            Object {},
-                          ]
-                        }
-                      >
-                        
-                      </Text>
-                      Settings
-                    </Text>
-                  </View>
                 </View>
               </View>
               <View
@@ -1272,9 +692,9 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                       initialRegion={
                         Object {
                           "latitude": 41.881898,
-                          "latitudeDelta": 0.007,
+                          "latitudeDelta": 0.005,
                           "longitude": -87.623977,
-                          "longitudeDelta": 0.007,
+                          "longitudeDelta": 0.005,
                         }
                       }
                       onPanDrag={[Function]}
@@ -1290,663 +710,188 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                         }
                       }
                     >
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8862637,
-                            "longitude": -87.6306729,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8859675,
-                            "longitude": -87.6308302,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8863129,
-                            "longitude": -87.6306746,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.885963,
-                            "longitude": -87.6311264,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8858832,
-                            "longitude": -87.6281675,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8833266,
-                            "longitude": -87.626503,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8831073,
-                            "longitude": -87.6264962,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8883616,
-                            "longitude": -87.6364478,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8883325,
-                            "longitude": -87.6369002,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8848508,
-                            "longitude": -87.631341,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8838464,
-                            "longitude": -87.6310922,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8836083,
-                            "longitude": -87.6326252,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8836132,
-                            "longitude": -87.6322178,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8863955,
-                            "longitude": -87.6293223,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8866922,
-                            "longitude": -87.6290591,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8867157,
-                            "longitude": -87.6306371,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.883854,
-                            "longitude": -87.6280557,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.883855,
-                            "longitude": -87.6276585,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8848386,
-                            "longitude": -87.6238166,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8854002,
-                            "longitude": -87.6229453,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8854601,
-                            "longitude": -87.6218723,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8855495,
-                            "longitude": -87.621512,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8851112,
-                            "longitude": -87.6218641,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8871541,
-                            "longitude": -87.6209853,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8881075,
-                            "longitude": -87.6235577,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8763932,
-                            "longitude": -87.6318076,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8763826,
-                            "longitude": -87.6326191,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8821493,
-                            "longitude": -87.6398754,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8821541,
-                            "longitude": -87.6394836,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8821589,
-                            "longitude": -87.6387431,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8880688,
-                            "longitude": -87.6378628,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8888128,
-                            "longitude": -87.6370858,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8887065,
-                            "longitude": -87.6341584,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8884629,
-                            "longitude": -87.6341473,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.88418,
-                            "longitude": -87.6223802,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8841742,
-                            "longitude": -87.6252636,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8841717,
-                            "longitude": -87.6247064,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.88462,
-                            "longitude": -87.6248016,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8843321,
-                            "longitude": -87.6246246,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8841105,
-                            "longitude": -87.624521,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8838448,
-                            "longitude": -87.6289736,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8841318,
-                            "longitude": -87.6244735,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8828138,
-                            "longitude": -87.6245449,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8811955,
-                            "longitude": -87.6245151,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8827041,
-                            "longitude": -87.6245182,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8840305,
-                            "longitude": -87.6245532,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8843728,
-                            "longitude": -87.6242429,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.884254,
-                            "longitude": -87.623797,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8842327,
-                            "longitude": -87.6232655,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8770782,
-                            "longitude": -87.6244202,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8841758,
-                            "longitude": -87.6218876,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8842002,
-                            "longitude": -87.6188103,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8841793,
-                            "longitude": -87.6226846,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8841777,
-                            "longitude": -87.6233237,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8784329,
-                            "longitude": -87.6239591,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8812086,
-                            "longitude": -87.630338,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8850343,
-                            "longitude": -87.621859,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8850138,
-                            "longitude": -87.6215013,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8865979,
-                            "longitude": -87.619237,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8869896,
-                            "longitude": -87.6238213,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8841792,
-                            "longitude": -87.6263683,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8871889,
-                            "longitude": -87.6201,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8871167,
-                            "longitude": -87.6200488,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8872455,
-                            "longitude": -87.6205933,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8770101,
-                            "longitude": -87.6232587,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8770105,
-                            "longitude": -87.6230833,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8861344,
-                            "longitude": -87.6220432,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8876134,
-                            "longitude": -87.6213563,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8864427,
-                            "longitude": -87.6215568,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8864438,
-                            "longitude": -87.6219347,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8866351,
-                            "longitude": -87.6236493,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8858755,
-                            "longitude": -87.629274,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8859325,
-                            "longitude": -87.6293521,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
+                      <View>
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.885442,
+                              "longitude": -87.631727,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 6:30am - 6:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="M Burger"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.885443,
+                              "longitude": -87.631727,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 8:00am - 3:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Pita Express"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.881911,
+                              "longitude": -87.630065,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 7:00am - 2:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Big Easy"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.881912,
+                              "longitude": -87.630065,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 7:00am - 2:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Tortas Frontera"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.885665,
+                              "longitude": -87.622715,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 6:30am - 4:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Caffe RoM"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.885666,
+                              "longitude": -87.622715,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 7:00am - 3:30pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Snarf's"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.883764,
+                              "longitude": -87.628262,
+                            }
+                          }
+                          description="Hours Open: Sun - Sat 5:00am - 8:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Which Wich"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.886832,
+                              "longitude": -87.623756,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 7:00am - 3:30pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Hannah's Bretzel"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.887926,
+                              "longitude": -87.623541,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 6:30am - 7:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Potbelly"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.885098,
+                              "longitude": -87.624131,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 10:00am - 5:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Armand's Pizzeria"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.886672,
+                              "longitude": -87.624099,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 7:00am - 6:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Mezza Mediterranean Grill"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.886673,
+                              "longitude": -87.624099,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 6:00am - 7:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Pret a Manger"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.886312,
+                              "longitude": -87.630376,
+                            }
+                          }
+                          description="Hours Open: Sun - Sat 10:30am - 9:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Olive Mediterranean Grill"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.886001,
+                              "longitude": -87.630934,
+                            }
+                          }
+                          description="Hours Open: Sun - Sat 7:00am - 8:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Protein Bar"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.886496,
+                              "longitude": -87.628477,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 7:00am - 6:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Wow Bao"
+                        />
+                      </View>
                       <Marker
                         coordinate={
                           Object {
@@ -2326,76 +1271,35 @@ exports[`Check if our MainView renders correctly 1`] = `
                 <View
                   style={
                     Object {
+                      "alignItems": "center",
                       "backgroundColor": "#a9a9a9",
                       "flex": 1,
-                      "paddingTop": 30,
+                      "paddingTop": 50,
                     }
                   }
                 >
-                  <View
-                    accessible={true}
-                    isTVSelectable={true}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
+                  <Text
+                    allowFontScaling={false}
                     style={
-                      Object {
-                        "backgroundColor": "#a9a9a9",
-                        "borderColor": "#a9a9a9",
-                        "borderRadius": 10,
-                        "borderWidth": 1,
-                        "marginLeft": 0,
-                        "marginRight": 0,
-                        "marginTop": 10,
-                        "opacity": 1,
-                        "paddingBottom": 10,
-                        "paddingTop": 10,
-                      }
+                      Array [
+                        Object {
+                          "color": undefined,
+                          "fontSize": 12,
+                        },
+                        Object {
+                          "fontSize": 85,
+                        },
+                        Object {
+                          "fontFamily": "FontAwesome",
+                          "fontStyle": "normal",
+                          "fontWeight": "normal",
+                        },
+                        Object {},
+                      ]
                     }
                   >
-                    <Text
-                      style={
-                        Object {
-                          "fontSize": 30,
-                          "fontWeight": "bold",
-                          "marginLeft": 10,
-                          "marginTop": 10,
-                          "textAlign": "center",
-                        }
-                      }
-                    >
-                      <Text
-                        allowFontScaling={false}
-                        style={
-                          Array [
-                            Object {
-                              "color": undefined,
-                              "fontSize": 12,
-                            },
-                            Object {
-                              "fontSize": 30,
-                              "fontWeight": "bold",
-                              "marginLeft": 10,
-                              "marginTop": 10,
-                              "textAlign": "center",
-                            },
-                            Object {
-                              "fontFamily": "FontAwesome",
-                              "fontStyle": "normal",
-                              "fontWeight": "normal",
-                            },
-                            Object {},
-                          ]
-                        }
-                      >
-                        
-                      </Text>
-                      Home
-                    </Text>
-                  </View>
+                    
+                  </Text>
                   <View
                     accessible={true}
                     isTVSelectable={true}
@@ -2524,70 +1428,6 @@ exports[`Check if our MainView renders correctly 1`] = `
                       Map
                     </Text>
                   </View>
-                  <View
-                    accessible={true}
-                    isTVSelectable={true}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
-                    style={
-                      Object {
-                        "backgroundColor": "#a9a9a9",
-                        "borderColor": "#a9a9a9",
-                        "borderRadius": 10,
-                        "borderWidth": 1,
-                        "marginLeft": 0,
-                        "marginRight": 0,
-                        "marginTop": 10,
-                        "opacity": 1,
-                        "paddingBottom": 10,
-                        "paddingTop": 10,
-                      }
-                    }
-                  >
-                    <Text
-                      style={
-                        Object {
-                          "fontSize": 30,
-                          "fontWeight": "bold",
-                          "marginLeft": 10,
-                          "marginTop": 10,
-                          "textAlign": "center",
-                        }
-                      }
-                    >
-                      <Text
-                        allowFontScaling={false}
-                        style={
-                          Array [
-                            Object {
-                              "color": undefined,
-                              "fontSize": 12,
-                            },
-                            Object {
-                              "fontSize": 30,
-                              "fontWeight": "bold",
-                              "marginLeft": 10,
-                              "marginTop": 10,
-                              "textAlign": "center",
-                            },
-                            Object {
-                              "fontFamily": "FontAwesome",
-                              "fontStyle": "normal",
-                              "fontWeight": "normal",
-                            },
-                            Object {},
-                          ]
-                        }
-                      >
-                        
-                      </Text>
-                      Settings
-                    </Text>
-                  </View>
                 </View>
               </View>
               <View
@@ -2709,9 +1549,9 @@ exports[`Check if our MainView renders correctly 1`] = `
                       initialRegion={
                         Object {
                           "latitude": 41.881898,
-                          "latitudeDelta": 0.007,
+                          "latitudeDelta": 0.005,
                           "longitude": -87.623977,
-                          "longitudeDelta": 0.007,
+                          "longitudeDelta": 0.005,
                         }
                       }
                       onPanDrag={[Function]}
@@ -2727,663 +1567,188 @@ exports[`Check if our MainView renders correctly 1`] = `
                         }
                       }
                     >
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8862637,
-                            "longitude": -87.6306729,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8859675,
-                            "longitude": -87.6308302,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8863129,
-                            "longitude": -87.6306746,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.885963,
-                            "longitude": -87.6311264,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8858832,
-                            "longitude": -87.6281675,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8833266,
-                            "longitude": -87.626503,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8831073,
-                            "longitude": -87.6264962,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8883616,
-                            "longitude": -87.6364478,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8883325,
-                            "longitude": -87.6369002,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8848508,
-                            "longitude": -87.631341,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8838464,
-                            "longitude": -87.6310922,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8836083,
-                            "longitude": -87.6326252,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8836132,
-                            "longitude": -87.6322178,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8863955,
-                            "longitude": -87.6293223,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8866922,
-                            "longitude": -87.6290591,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8867157,
-                            "longitude": -87.6306371,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.883854,
-                            "longitude": -87.6280557,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.883855,
-                            "longitude": -87.6276585,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8848386,
-                            "longitude": -87.6238166,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8854002,
-                            "longitude": -87.6229453,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8854601,
-                            "longitude": -87.6218723,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8855495,
-                            "longitude": -87.621512,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8851112,
-                            "longitude": -87.6218641,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8871541,
-                            "longitude": -87.6209853,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8881075,
-                            "longitude": -87.6235577,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8763932,
-                            "longitude": -87.6318076,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8763826,
-                            "longitude": -87.6326191,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8821493,
-                            "longitude": -87.6398754,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8821541,
-                            "longitude": -87.6394836,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8821589,
-                            "longitude": -87.6387431,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8880688,
-                            "longitude": -87.6378628,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8888128,
-                            "longitude": -87.6370858,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8887065,
-                            "longitude": -87.6341584,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8884629,
-                            "longitude": -87.6341473,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.88418,
-                            "longitude": -87.6223802,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8841742,
-                            "longitude": -87.6252636,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8841717,
-                            "longitude": -87.6247064,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.88462,
-                            "longitude": -87.6248016,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8843321,
-                            "longitude": -87.6246246,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8841105,
-                            "longitude": -87.624521,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8838448,
-                            "longitude": -87.6289736,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8841318,
-                            "longitude": -87.6244735,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8828138,
-                            "longitude": -87.6245449,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8811955,
-                            "longitude": -87.6245151,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8827041,
-                            "longitude": -87.6245182,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8840305,
-                            "longitude": -87.6245532,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8843728,
-                            "longitude": -87.6242429,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.884254,
-                            "longitude": -87.623797,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8842327,
-                            "longitude": -87.6232655,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8770782,
-                            "longitude": -87.6244202,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8841758,
-                            "longitude": -87.6218876,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8842002,
-                            "longitude": -87.6188103,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8841793,
-                            "longitude": -87.6226846,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8841777,
-                            "longitude": -87.6233237,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8784329,
-                            "longitude": -87.6239591,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8812086,
-                            "longitude": -87.630338,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8850343,
-                            "longitude": -87.621859,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8850138,
-                            "longitude": -87.6215013,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8865979,
-                            "longitude": -87.619237,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8869896,
-                            "longitude": -87.6238213,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8841792,
-                            "longitude": -87.6263683,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8871889,
-                            "longitude": -87.6201,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8871167,
-                            "longitude": -87.6200488,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8872455,
-                            "longitude": -87.6205933,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8770101,
-                            "longitude": -87.6232587,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8770105,
-                            "longitude": -87.6230833,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8861344,
-                            "longitude": -87.6220432,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8876134,
-                            "longitude": -87.6213563,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8864427,
-                            "longitude": -87.6215568,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8864438,
-                            "longitude": -87.6219347,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8866351,
-                            "longitude": -87.6236493,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8858755,
-                            "longitude": -87.629274,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8859325,
-                            "longitude": -87.6293521,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
+                      <View>
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.885442,
+                              "longitude": -87.631727,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 6:30am - 6:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="M Burger"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.885443,
+                              "longitude": -87.631727,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 8:00am - 3:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Pita Express"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.881911,
+                              "longitude": -87.630065,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 7:00am - 2:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Big Easy"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.881912,
+                              "longitude": -87.630065,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 7:00am - 2:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Tortas Frontera"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.885665,
+                              "longitude": -87.622715,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 6:30am - 4:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Caffe RoM"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.885666,
+                              "longitude": -87.622715,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 7:00am - 3:30pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Snarf's"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.883764,
+                              "longitude": -87.628262,
+                            }
+                          }
+                          description="Hours Open: Sun - Sat 5:00am - 8:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Which Wich"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.886832,
+                              "longitude": -87.623756,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 7:00am - 3:30pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Hannah's Bretzel"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.887926,
+                              "longitude": -87.623541,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 6:30am - 7:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Potbelly"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.885098,
+                              "longitude": -87.624131,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 10:00am - 5:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Armand's Pizzeria"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.886672,
+                              "longitude": -87.624099,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 7:00am - 6:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Mezza Mediterranean Grill"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.886673,
+                              "longitude": -87.624099,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 6:00am - 7:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Pret a Manger"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.886312,
+                              "longitude": -87.630376,
+                            }
+                          }
+                          description="Hours Open: Sun - Sat 10:30am - 9:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Olive Mediterranean Grill"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.886001,
+                              "longitude": -87.630934,
+                            }
+                          }
+                          description="Hours Open: Sun - Sat 7:00am - 8:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Protein Bar"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.886496,
+                              "longitude": -87.628477,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 7:00am - 6:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Wow Bao"
+                        />
+                      </View>
                       <Marker
                         coordinate={
                           Object {
@@ -3763,76 +2128,35 @@ exports[`Check if our main app renders correctly 1`] = `
                 <View
                   style={
                     Object {
+                      "alignItems": "center",
                       "backgroundColor": "#a9a9a9",
                       "flex": 1,
-                      "paddingTop": 30,
+                      "paddingTop": 50,
                     }
                   }
                 >
-                  <View
-                    accessible={true}
-                    isTVSelectable={true}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
+                  <Text
+                    allowFontScaling={false}
                     style={
-                      Object {
-                        "backgroundColor": "#a9a9a9",
-                        "borderColor": "#a9a9a9",
-                        "borderRadius": 10,
-                        "borderWidth": 1,
-                        "marginLeft": 0,
-                        "marginRight": 0,
-                        "marginTop": 10,
-                        "opacity": 1,
-                        "paddingBottom": 10,
-                        "paddingTop": 10,
-                      }
+                      Array [
+                        Object {
+                          "color": undefined,
+                          "fontSize": 12,
+                        },
+                        Object {
+                          "fontSize": 85,
+                        },
+                        Object {
+                          "fontFamily": "FontAwesome",
+                          "fontStyle": "normal",
+                          "fontWeight": "normal",
+                        },
+                        Object {},
+                      ]
                     }
                   >
-                    <Text
-                      style={
-                        Object {
-                          "fontSize": 30,
-                          "fontWeight": "bold",
-                          "marginLeft": 10,
-                          "marginTop": 10,
-                          "textAlign": "center",
-                        }
-                      }
-                    >
-                      <Text
-                        allowFontScaling={false}
-                        style={
-                          Array [
-                            Object {
-                              "color": undefined,
-                              "fontSize": 12,
-                            },
-                            Object {
-                              "fontSize": 30,
-                              "fontWeight": "bold",
-                              "marginLeft": 10,
-                              "marginTop": 10,
-                              "textAlign": "center",
-                            },
-                            Object {
-                              "fontFamily": "FontAwesome",
-                              "fontStyle": "normal",
-                              "fontWeight": "normal",
-                            },
-                            Object {},
-                          ]
-                        }
-                      >
-                        
-                      </Text>
-                      Home
-                    </Text>
-                  </View>
+                    
+                  </Text>
                   <View
                     accessible={true}
                     isTVSelectable={true}
@@ -3961,70 +2285,6 @@ exports[`Check if our main app renders correctly 1`] = `
                       Map
                     </Text>
                   </View>
-                  <View
-                    accessible={true}
-                    isTVSelectable={true}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
-                    style={
-                      Object {
-                        "backgroundColor": "#a9a9a9",
-                        "borderColor": "#a9a9a9",
-                        "borderRadius": 10,
-                        "borderWidth": 1,
-                        "marginLeft": 0,
-                        "marginRight": 0,
-                        "marginTop": 10,
-                        "opacity": 1,
-                        "paddingBottom": 10,
-                        "paddingTop": 10,
-                      }
-                    }
-                  >
-                    <Text
-                      style={
-                        Object {
-                          "fontSize": 30,
-                          "fontWeight": "bold",
-                          "marginLeft": 10,
-                          "marginTop": 10,
-                          "textAlign": "center",
-                        }
-                      }
-                    >
-                      <Text
-                        allowFontScaling={false}
-                        style={
-                          Array [
-                            Object {
-                              "color": undefined,
-                              "fontSize": 12,
-                            },
-                            Object {
-                              "fontSize": 30,
-                              "fontWeight": "bold",
-                              "marginLeft": 10,
-                              "marginTop": 10,
-                              "textAlign": "center",
-                            },
-                            Object {
-                              "fontFamily": "FontAwesome",
-                              "fontStyle": "normal",
-                              "fontWeight": "normal",
-                            },
-                            Object {},
-                          ]
-                        }
-                      >
-                        
-                      </Text>
-                      Settings
-                    </Text>
-                  </View>
                 </View>
               </View>
               <View
@@ -4146,9 +2406,9 @@ exports[`Check if our main app renders correctly 1`] = `
                       initialRegion={
                         Object {
                           "latitude": 41.881898,
-                          "latitudeDelta": 0.007,
+                          "latitudeDelta": 0.005,
                           "longitude": -87.623977,
-                          "longitudeDelta": 0.007,
+                          "longitudeDelta": 0.005,
                         }
                       }
                       onPanDrag={[Function]}
@@ -4164,663 +2424,188 @@ exports[`Check if our main app renders correctly 1`] = `
                         }
                       }
                     >
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8862637,
-                            "longitude": -87.6306729,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8859675,
-                            "longitude": -87.6308302,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8863129,
-                            "longitude": -87.6306746,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.885963,
-                            "longitude": -87.6311264,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8858832,
-                            "longitude": -87.6281675,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8833266,
-                            "longitude": -87.626503,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8831073,
-                            "longitude": -87.6264962,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8883616,
-                            "longitude": -87.6364478,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8883325,
-                            "longitude": -87.6369002,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8848508,
-                            "longitude": -87.631341,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8838464,
-                            "longitude": -87.6310922,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8836083,
-                            "longitude": -87.6326252,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8836132,
-                            "longitude": -87.6322178,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8863955,
-                            "longitude": -87.6293223,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8866922,
-                            "longitude": -87.6290591,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8867157,
-                            "longitude": -87.6306371,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.883854,
-                            "longitude": -87.6280557,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.883855,
-                            "longitude": -87.6276585,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8848386,
-                            "longitude": -87.6238166,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8854002,
-                            "longitude": -87.6229453,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8854601,
-                            "longitude": -87.6218723,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8855495,
-                            "longitude": -87.621512,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8851112,
-                            "longitude": -87.6218641,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8871541,
-                            "longitude": -87.6209853,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8881075,
-                            "longitude": -87.6235577,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8763932,
-                            "longitude": -87.6318076,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8763826,
-                            "longitude": -87.6326191,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8821493,
-                            "longitude": -87.6398754,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8821541,
-                            "longitude": -87.6394836,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8821589,
-                            "longitude": -87.6387431,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8880688,
-                            "longitude": -87.6378628,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8888128,
-                            "longitude": -87.6370858,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8887065,
-                            "longitude": -87.6341584,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8884629,
-                            "longitude": -87.6341473,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.88418,
-                            "longitude": -87.6223802,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8841742,
-                            "longitude": -87.6252636,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8841717,
-                            "longitude": -87.6247064,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.88462,
-                            "longitude": -87.6248016,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8843321,
-                            "longitude": -87.6246246,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8841105,
-                            "longitude": -87.624521,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8838448,
-                            "longitude": -87.6289736,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8841318,
-                            "longitude": -87.6244735,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8828138,
-                            "longitude": -87.6245449,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8811955,
-                            "longitude": -87.6245151,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8827041,
-                            "longitude": -87.6245182,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8840305,
-                            "longitude": -87.6245532,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8843728,
-                            "longitude": -87.6242429,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.884254,
-                            "longitude": -87.623797,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8842327,
-                            "longitude": -87.6232655,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8770782,
-                            "longitude": -87.6244202,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8841758,
-                            "longitude": -87.6218876,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8842002,
-                            "longitude": -87.6188103,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8841793,
-                            "longitude": -87.6226846,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8841777,
-                            "longitude": -87.6233237,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8784329,
-                            "longitude": -87.6239591,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8812086,
-                            "longitude": -87.630338,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8850343,
-                            "longitude": -87.621859,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8850138,
-                            "longitude": -87.6215013,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8865979,
-                            "longitude": -87.619237,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8869896,
-                            "longitude": -87.6238213,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8841792,
-                            "longitude": -87.6263683,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8871889,
-                            "longitude": -87.6201,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8871167,
-                            "longitude": -87.6200488,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8872455,
-                            "longitude": -87.6205933,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8770101,
-                            "longitude": -87.6232587,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8770105,
-                            "longitude": -87.6230833,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8861344,
-                            "longitude": -87.6220432,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8876134,
-                            "longitude": -87.6213563,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8864427,
-                            "longitude": -87.6215568,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8864438,
-                            "longitude": -87.6219347,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8866351,
-                            "longitude": -87.6236493,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8858755,
-                            "longitude": -87.629274,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
-                      <Marker
-                        coordinate={
-                          Object {
-                            "latitude": 41.8859325,
-                            "longitude": -87.6293521,
-                          }
-                        }
-                        onPress={[Function]}
-                      />
+                      <View>
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.885442,
+                              "longitude": -87.631727,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 6:30am - 6:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="M Burger"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.885443,
+                              "longitude": -87.631727,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 8:00am - 3:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Pita Express"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.881911,
+                              "longitude": -87.630065,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 7:00am - 2:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Big Easy"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.881912,
+                              "longitude": -87.630065,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 7:00am - 2:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Tortas Frontera"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.885665,
+                              "longitude": -87.622715,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 6:30am - 4:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Caffe RoM"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.885666,
+                              "longitude": -87.622715,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 7:00am - 3:30pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Snarf's"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.883764,
+                              "longitude": -87.628262,
+                            }
+                          }
+                          description="Hours Open: Sun - Sat 5:00am - 8:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Which Wich"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.886832,
+                              "longitude": -87.623756,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 7:00am - 3:30pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Hannah's Bretzel"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.887926,
+                              "longitude": -87.623541,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 6:30am - 7:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Potbelly"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.885098,
+                              "longitude": -87.624131,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 10:00am - 5:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Armand's Pizzeria"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.886672,
+                              "longitude": -87.624099,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 7:00am - 6:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Mezza Mediterranean Grill"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.886673,
+                              "longitude": -87.624099,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 6:00am - 7:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Pret a Manger"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.886312,
+                              "longitude": -87.630376,
+                            }
+                          }
+                          description="Hours Open: Sun - Sat 10:30am - 9:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Olive Mediterranean Grill"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.886001,
+                              "longitude": -87.630934,
+                            }
+                          }
+                          description="Hours Open: Sun - Sat 7:00am - 8:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Protein Bar"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.886496,
+                              "longitude": -87.628477,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 7:00am - 6:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Wow Bao"
+                        />
+                      </View>
                       <Marker
                         coordinate={
                           Object {

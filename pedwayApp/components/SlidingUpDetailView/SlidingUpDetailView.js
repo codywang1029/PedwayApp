@@ -5,6 +5,7 @@ import RoundButton from '../RoundButton/RoundButton';
 import SlidingUpPanel from 'rn-sliding-up-panel';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import PedwayEntrance from '../../model/PedwayEntrance';
+import PedwayAttraction from '../../model/PedwayAttraction';
 
 
 /**
@@ -20,17 +21,20 @@ export default class SlidingUpDetailView extends Component {
       entrance: null,
       navigateFunctor: null,
       navigate: false,
+      isEntrance: true,
     };
     this.updateState = this.updateState.bind(this);
     this.openView = this.openView.bind(this);
     this.closeView = this.closeView.bind(this);
     this.navigateButtonOnPress = this.navigateButtonOnPress.bind(this);
+    this.setNavigate = this.setNavigate.bind(this);
   }
 
   updateState(inputProps) {
     if (inputProps.entrance !== undefined && inputProps.entrance !== null) {
       this.setState({
         entrance: inputProps.entrance,
+        isEntrance: inputProps.isEntrance,
       });
     }
     if (inputProps.open === true) {
@@ -70,8 +74,18 @@ export default class SlidingUpDetailView extends Component {
     });
   }
 
+  setNavigate(state) {
+    this.setState({
+      navigate: state,
+      open: state,
+
+    });
+    if (!state) {
+      this.closeView();
+    }
+  }
+
   render() {
-    let shouldHideStatusLabel = this.props.hideStatusLabel===true;
     if (this.state.entrance !== undefined && this.state.entrance !== null) {
       return (
         <SlidingUpPanel
@@ -105,10 +119,10 @@ export default class SlidingUpDetailView extends Component {
           <View style={styles.backgroundView}>
             <View style={styles.belowFlexContainer}>
               <View style={styles.belowFlex}>
-                {shouldHideStatusLabel?
+                {!this.state.isEntrance?
                 null:
                 <StatusLabel
-                  text={this.state.entrance.getStatus() ? 'open' : 'closed'}/>
+                  text={this.state.entrance.getStatus()}/>
                 }
                 <Text style={styles.coordinateText}>
                   {this.state.entrance.getCoordinate().getLatitude() + ', '
@@ -133,13 +147,6 @@ export default class SlidingUpDetailView extends Component {
 }
 
 class StatusLabel extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      labelText: 'open',
-    };
-  }
-
   render() {
     if (this.props.text === 'open') {
       return (

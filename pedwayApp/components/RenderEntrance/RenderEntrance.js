@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
+import {Image} from 'react-native';
 import PedwayCoordinate from '../../model/PedwayCoordinate';
 import PedwayEntrance from '../../model/PedwayEntrance';
-import MarkerImage from '../../media/pedwayEntranceMarker.png';
+import entrance from '../../media/entrances.png';
 import MapView, {
   Polyline,
   Marker,
 } from 'react-native-maps';
-
 /**
  * The current pedway sections are hard coded place holders
  * In the future we are gonna to get those values from the API
@@ -21,24 +21,17 @@ export default class RenderEntrance extends Component {
   }
 
   parseJSONtoModel(inputJSON) {
-    const entrances = inputJSON['features'].filter((item) => {
-      try {
-        if (item['properties']['entrance'] === 'yes' &&
-          item['geometry']['type'] === 'Point') {
-          return true;
-        }
-        return false;
-      } catch (e) {
-        return false;
-      }
-    }).reduce((acc, item, idx) => {
+    if (inputJSON === undefined || inputJSON['data'] === undefined) {
+      return;
+    }
+    const entrances = inputJSON['data'].reduce((acc, item, idx) => {
       const thisLongitude = item['geometry']['coordinates'][0];
       const thisLatitude = item['geometry']['coordinates'][1];
+      const thisStatus = item['status'];
       return acc.concat(
           new PedwayEntrance(new PedwayCoordinate(
               thisLatitude,
-              thisLongitude),
-          true,
+              thisLongitude), thisStatus,
           false,
           'Entrance #'+idx.toString()));
     }, []);
@@ -68,9 +61,11 @@ export default class RenderEntrance extends Component {
           // image={require('../../media/pedwayEntranceMarker.png')}
           key={idx}
           onPress={()=>{
-            this.props.callbackFunc(this.state.pedwayEntrances[idx]);
+            this.props.callbackFunc(this.state.pedwayEntrances[idx], true);
           }}
-        />
+        >
+          <Image source={entrance} style={{width: 30, height: 30}} />
+        </MapView.Marker>
       );
     },
     );

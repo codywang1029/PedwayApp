@@ -10,6 +10,9 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import {ORS_API_KEY} from 'react-native-dotenv';
 
+const AZURE_API = 'https://pedway.azurewebsites.net';
+
+
 export default class SearchBar extends React.Component {
   constructor(props) {
     super(props);
@@ -34,10 +37,10 @@ export default class SearchBar extends React.Component {
       this.setState({
         searching: true,
       });
-      axios.get('https://api.openrouteservice.org/geocode/autocomplete?' +
-          'api_key=' +
-          ORS_API_KEY +
-          '&text=' +
+
+      axios.get(AZURE_API +
+          '/api/ors/geocode/autocomplete' +
+          '?text=' +
           this.state.queryText +
           '&boundary.rect.min_lat=41.765683' +
           '&boundary.rect.max_lat=41.909595' +
@@ -48,6 +51,9 @@ export default class SearchBar extends React.Component {
         });
         this.props.updateSearchData(res['data']['features']);
         // now we can forward this result to our main map view
+      }).catch(()=>{
+        this.props.networkErrorHandler();
+        this.setState({searching: false});
       });
     }
   }
