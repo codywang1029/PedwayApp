@@ -14,7 +14,7 @@ const PedwayEntrance = mongoose.model('entrance');
 exports.getAll = function(req, res) {
   PedwayEntrance.find({}, function(err, entrances) {
     if (err) {
-      res.send(err);
+      res.status(400).send(err);
     } else {
       res.json(entrances);
     }
@@ -32,7 +32,7 @@ exports.create = function(req, res) {
     const entrance = new PedwayEntrance(req.body);
     entrance.save(function(err, entrance) {
       if (err) {
-        res.send(err);
+        res.status(400).send(err);
       } else {
         res.json(entrance);
       }
@@ -53,7 +53,7 @@ exports.getById = function(req, res) {
       {'id': req.params.entranceId},
       function(err, entrance) {
         if (err) {
-          res.send(err);
+          res.status(400).send(err);
         } else {
           res.json(entrance);
         }
@@ -72,7 +72,7 @@ exports.update = function(req, res) {
         {'id': req.params.entranceId}, req.body,
         {new: true}, function(err, entrance) {
           if (err) {
-            res.send(err);
+            res.status(400).send(err);
           } else {
             res.json(entrance);
           }
