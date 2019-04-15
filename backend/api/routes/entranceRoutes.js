@@ -6,7 +6,7 @@ module.exports = function(app) {
       .get(entranceController.getAll)
       .post(entranceController.create);
 
-  app.route('/api/pedway/entrance/:entranceId')
+  app.route('/api/pedway/entrance/node/:entranceId')
       .get(entranceController.getById)
       .post(entranceController.update);
 };
