@@ -53,7 +53,7 @@ export default class SearchBar extends React.Component {
         // now we can forward this result to our main map view
       }).catch(()=>{
         this.props.networkErrorHandler();
-        this.setState({searching:false});
+        this.setState({searching: false});
       });
     }
   }
