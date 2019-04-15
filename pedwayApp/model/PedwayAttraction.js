@@ -7,9 +7,10 @@ export default class PedwayAttraction {
      * @param {PedwayCoordinate} inputCoordinate
      * @param {string} name
      */
-  constructor(inputCoordinate, name = '') {
+  constructor(inputCoordinate, name = '', hours = '') {
     this.coordinate = inputCoordinate;
     this.name = name;
+    this.hours = hours;
   }
 
   /**
@@ -52,6 +53,22 @@ export default class PedwayAttraction {
      */
   getName() {
     return this.name;
+  }
+
+  /**
+   * Setter for the hours of the attraction
+   * @param {string} hours
+   */
+  setHours(hours) {
+    this.hours = hours;
+  }
+
+  /**
+   * Getter for the hours of the attraction
+   * @return {string} hours
+   */
+  getHours() {
+    return this.hours;
   }
 }
 

@@ -135,7 +135,9 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
           "longitude": -87.631727,
         }
       }
+      description="Hours Open: Mon - Fri 6:30am - 6:00pm"
       pinColor="green"
+      title="M Burger"
     />
     <Marker
       coordinate={
@@ -144,7 +146,9 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
           "longitude": -87.631727,
         }
       }
+      description="Hours Open: Mon - Fri 8:00am - 3:00pm"
       pinColor="green"
+      title="Pita Express"
     />
     <Marker
       coordinate={
@@ -153,7 +157,9 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
           "longitude": -87.630065,
         }
       }
+      description="Hours Open: Mon - Fri 7:00am - 2:00pm"
       pinColor="green"
+      title="Big Easy"
     />
     <Marker
       coordinate={
@@ -162,7 +168,9 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
           "longitude": -87.630065,
         }
       }
+      description="Hours Open: Mon - Fri 7:00am - 2:00pm"
       pinColor="green"
+      title="Tortas Frontera"
     />
     <Marker
       coordinate={
@@ -171,7 +179,9 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
           "longitude": -87.622715,
         }
       }
+      description="Hours Open: Mon - Fri 6:30am - 4:00pm"
       pinColor="green"
+      title="Caffe RoM"
     />
     <Marker
       coordinate={
@@ -180,7 +190,9 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
           "longitude": -87.622715,
         }
       }
+      description="Hours Open: Mon - Fri 7:00am - 3:30pm"
       pinColor="green"
+      title="Snarf's"
     />
     <Marker
       coordinate={
@@ -189,7 +201,9 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
           "longitude": -87.628262,
         }
       }
+      description="Hours Open: Sun - Sat 5:00am - 8:00pm"
       pinColor="green"
+      title="Which Wich"
     />
     <Marker
       coordinate={
@@ -198,7 +212,9 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
           "longitude": -87.623756,
         }
       }
+      description="Hours Open: Mon - Fri 7:00am - 3:30pm"
       pinColor="green"
+      title="Hannah's Bretzel"
     />
     <Marker
       coordinate={
@@ -207,7 +223,9 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
           "longitude": -87.623541,
         }
       }
+      description="Hours Open: Mon - Fri 6:30am - 7:00pm"
       pinColor="green"
+      title="Potbelly"
     />
     <Marker
       coordinate={
@@ -216,7 +234,9 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
           "longitude": -87.624131,
         }
       }
+      description="Hours Open: Mon - Fri 10:00am - 5:00pm"
       pinColor="green"
+      title="Armand's Pizzeria"
     />
     <Marker
       coordinate={
@@ -225,7 +245,9 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
           "longitude": -87.624099,
         }
       }
+      description="Hours Open: Mon - Fri 7:00am - 6:00pm"
       pinColor="green"
+      title="Mezza Mediterranean Grill"
     />
     <Marker
       coordinate={
@@ -234,7 +256,9 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
           "longitude": -87.624099,
         }
       }
+      description="Hours Open: Mon - Fri 6:00am - 7:00pm"
       pinColor="green"
+      title="Pret a Manger"
     />
     <Marker
       coordinate={
@@ -243,7 +267,9 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
           "longitude": -87.630376,
         }
       }
+      description="Hours Open: Sun - Sat 10:30am - 9:00pm"
       pinColor="green"
+      title="Olive Mediterranean Grill"
     />
     <Marker
       coordinate={
@@ -252,7 +278,9 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
           "longitude": -87.630934,
         }
       }
+      description="Hours Open: Sun - Sat 7:00am - 8:00pm"
       pinColor="green"
+      title="Protein Bar"
     />
     <Marker
       coordinate={
@@ -261,7 +289,9 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
           "longitude": -87.628477,
         }
       }
+      description="Hours Open: Mon - Fri 7:00am - 6:00pm"
       pinColor="green"
+      title="Wow Bao"
     />
   </MapView>
 </View>
@@ -367,76 +397,35 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                 <View
                   style={
                     Object {
+                      "alignItems": "center",
                       "backgroundColor": "#a9a9a9",
                       "flex": 1,
-                      "paddingTop": 30,
+                      "paddingTop": 50,
                     }
                   }
                 >
-                  <View
-                    accessible={true}
-                    isTVSelectable={true}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
+                  <Text
+                    allowFontScaling={false}
                     style={
-                      Object {
-                        "backgroundColor": "#a9a9a9",
-                        "borderColor": "#a9a9a9",
-                        "borderRadius": 10,
-                        "borderWidth": 1,
-                        "marginLeft": 0,
-                        "marginRight": 0,
-                        "marginTop": 10,
-                        "opacity": 1,
-                        "paddingBottom": 10,
-                        "paddingTop": 10,
-                      }
+                      Array [
+                        Object {
+                          "color": undefined,
+                          "fontSize": 12,
+                        },
+                        Object {
+                          "fontSize": 85,
+                        },
+                        Object {
+                          "fontFamily": "FontAwesome",
+                          "fontStyle": "normal",
+                          "fontWeight": "normal",
+                        },
+                        Object {},
+                      ]
                     }
                   >
-                    <Text
-                      style={
-                        Object {
-                          "fontSize": 30,
-                          "fontWeight": "bold",
-                          "marginLeft": 10,
-                          "marginTop": 10,
-                          "textAlign": "center",
-                        }
-                      }
-                    >
-                      <Text
-                        allowFontScaling={false}
-                        style={
-                          Array [
-                            Object {
-                              "color": undefined,
-                              "fontSize": 12,
-                            },
-                            Object {
-                              "fontSize": 30,
-                              "fontWeight": "bold",
-                              "marginLeft": 10,
-                              "marginTop": 10,
-                              "textAlign": "center",
-                            },
-                            Object {
-                              "fontFamily": "FontAwesome",
-                              "fontStyle": "normal",
-                              "fontWeight": "normal",
-                            },
-                            Object {},
-                          ]
-                        }
-                      >
-                        
-                      </Text>
-                      Home
-                    </Text>
-                  </View>
+                    
+                  </Text>
                   <View
                     accessible={true}
                     isTVSelectable={true}
@@ -563,70 +552,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                         
                       </Text>
                       Map
-                    </Text>
-                  </View>
-                  <View
-                    accessible={true}
-                    isTVSelectable={true}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
-                    style={
-                      Object {
-                        "backgroundColor": "#a9a9a9",
-                        "borderColor": "#a9a9a9",
-                        "borderRadius": 10,
-                        "borderWidth": 1,
-                        "marginLeft": 0,
-                        "marginRight": 0,
-                        "marginTop": 10,
-                        "opacity": 1,
-                        "paddingBottom": 10,
-                        "paddingTop": 10,
-                      }
-                    }
-                  >
-                    <Text
-                      style={
-                        Object {
-                          "fontSize": 30,
-                          "fontWeight": "bold",
-                          "marginLeft": 10,
-                          "marginTop": 10,
-                          "textAlign": "center",
-                        }
-                      }
-                    >
-                      <Text
-                        allowFontScaling={false}
-                        style={
-                          Array [
-                            Object {
-                              "color": undefined,
-                              "fontSize": 12,
-                            },
-                            Object {
-                              "fontSize": 30,
-                              "fontWeight": "bold",
-                              "marginLeft": 10,
-                              "marginTop": 10,
-                              "textAlign": "center",
-                            },
-                            Object {
-                              "fontFamily": "FontAwesome",
-                              "fontStyle": "normal",
-                              "fontWeight": "normal",
-                            },
-                            Object {},
-                          ]
-                        }
-                      >
-                        
-                      </Text>
-                      Settings
                     </Text>
                   </View>
                 </View>
@@ -804,7 +729,9 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                             "longitude": -87.631727,
                           }
                         }
+                        description="Hours Open: Mon - Fri 6:30am - 6:00pm"
                         pinColor="green"
+                        title="M Burger"
                       />
                       <Marker
                         coordinate={
@@ -813,7 +740,9 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                             "longitude": -87.631727,
                           }
                         }
+                        description="Hours Open: Mon - Fri 8:00am - 3:00pm"
                         pinColor="green"
+                        title="Pita Express"
                       />
                       <Marker
                         coordinate={
@@ -822,7 +751,9 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                             "longitude": -87.630065,
                           }
                         }
+                        description="Hours Open: Mon - Fri 7:00am - 2:00pm"
                         pinColor="green"
+                        title="Big Easy"
                       />
                       <Marker
                         coordinate={
@@ -831,7 +762,9 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                             "longitude": -87.630065,
                           }
                         }
+                        description="Hours Open: Mon - Fri 7:00am - 2:00pm"
                         pinColor="green"
+                        title="Tortas Frontera"
                       />
                       <Marker
                         coordinate={
@@ -840,7 +773,9 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                             "longitude": -87.622715,
                           }
                         }
+                        description="Hours Open: Mon - Fri 6:30am - 4:00pm"
                         pinColor="green"
+                        title="Caffe RoM"
                       />
                       <Marker
                         coordinate={
@@ -849,7 +784,9 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                             "longitude": -87.622715,
                           }
                         }
+                        description="Hours Open: Mon - Fri 7:00am - 3:30pm"
                         pinColor="green"
+                        title="Snarf's"
                       />
                       <Marker
                         coordinate={
@@ -858,7 +795,9 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                             "longitude": -87.628262,
                           }
                         }
+                        description="Hours Open: Sun - Sat 5:00am - 8:00pm"
                         pinColor="green"
+                        title="Which Wich"
                       />
                       <Marker
                         coordinate={
@@ -867,7 +806,9 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                             "longitude": -87.623756,
                           }
                         }
+                        description="Hours Open: Mon - Fri 7:00am - 3:30pm"
                         pinColor="green"
+                        title="Hannah's Bretzel"
                       />
                       <Marker
                         coordinate={
@@ -876,7 +817,9 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                             "longitude": -87.623541,
                           }
                         }
+                        description="Hours Open: Mon - Fri 6:30am - 7:00pm"
                         pinColor="green"
+                        title="Potbelly"
                       />
                       <Marker
                         coordinate={
@@ -885,7 +828,9 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                             "longitude": -87.624131,
                           }
                         }
+                        description="Hours Open: Mon - Fri 10:00am - 5:00pm"
                         pinColor="green"
+                        title="Armand's Pizzeria"
                       />
                       <Marker
                         coordinate={
@@ -894,7 +839,9 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                             "longitude": -87.624099,
                           }
                         }
+                        description="Hours Open: Mon - Fri 7:00am - 6:00pm"
                         pinColor="green"
+                        title="Mezza Mediterranean Grill"
                       />
                       <Marker
                         coordinate={
@@ -903,7 +850,9 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                             "longitude": -87.624099,
                           }
                         }
+                        description="Hours Open: Mon - Fri 6:00am - 7:00pm"
                         pinColor="green"
+                        title="Pret a Manger"
                       />
                       <Marker
                         coordinate={
@@ -912,7 +861,9 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                             "longitude": -87.630376,
                           }
                         }
+                        description="Hours Open: Sun - Sat 10:30am - 9:00pm"
                         pinColor="green"
+                        title="Olive Mediterranean Grill"
                       />
                       <Marker
                         coordinate={
@@ -921,7 +872,9 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                             "longitude": -87.630934,
                           }
                         }
+                        description="Hours Open: Sun - Sat 7:00am - 8:00pm"
                         pinColor="green"
+                        title="Protein Bar"
                       />
                       <Marker
                         coordinate={
@@ -930,7 +883,9 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                             "longitude": -87.628477,
                           }
                         }
+                        description="Hours Open: Mon - Fri 7:00am - 6:00pm"
                         pinColor="green"
+                        title="Wow Bao"
                       />
                     </MapView>
                   </View>
@@ -1282,76 +1237,35 @@ exports[`Check if our MainView renders correctly 1`] = `
                 <View
                   style={
                     Object {
+                      "alignItems": "center",
                       "backgroundColor": "#a9a9a9",
                       "flex": 1,
-                      "paddingTop": 30,
+                      "paddingTop": 50,
                     }
                   }
                 >
-                  <View
-                    accessible={true}
-                    isTVSelectable={true}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
+                  <Text
+                    allowFontScaling={false}
                     style={
-                      Object {
-                        "backgroundColor": "#a9a9a9",
-                        "borderColor": "#a9a9a9",
-                        "borderRadius": 10,
-                        "borderWidth": 1,
-                        "marginLeft": 0,
-                        "marginRight": 0,
-                        "marginTop": 10,
-                        "opacity": 1,
-                        "paddingBottom": 10,
-                        "paddingTop": 10,
-                      }
+                      Array [
+                        Object {
+                          "color": undefined,
+                          "fontSize": 12,
+                        },
+                        Object {
+                          "fontSize": 85,
+                        },
+                        Object {
+                          "fontFamily": "FontAwesome",
+                          "fontStyle": "normal",
+                          "fontWeight": "normal",
+                        },
+                        Object {},
+                      ]
                     }
                   >
-                    <Text
-                      style={
-                        Object {
-                          "fontSize": 30,
-                          "fontWeight": "bold",
-                          "marginLeft": 10,
-                          "marginTop": 10,
-                          "textAlign": "center",
-                        }
-                      }
-                    >
-                      <Text
-                        allowFontScaling={false}
-                        style={
-                          Array [
-                            Object {
-                              "color": undefined,
-                              "fontSize": 12,
-                            },
-                            Object {
-                              "fontSize": 30,
-                              "fontWeight": "bold",
-                              "marginLeft": 10,
-                              "marginTop": 10,
-                              "textAlign": "center",
-                            },
-                            Object {
-                              "fontFamily": "FontAwesome",
-                              "fontStyle": "normal",
-                              "fontWeight": "normal",
-                            },
-                            Object {},
-                          ]
-                        }
-                      >
-                        
-                      </Text>
-                      Home
-                    </Text>
-                  </View>
+                    
+                  </Text>
                   <View
                     accessible={true}
                     isTVSelectable={true}
@@ -1478,70 +1392,6 @@ exports[`Check if our MainView renders correctly 1`] = `
                         
                       </Text>
                       Map
-                    </Text>
-                  </View>
-                  <View
-                    accessible={true}
-                    isTVSelectable={true}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
-                    style={
-                      Object {
-                        "backgroundColor": "#a9a9a9",
-                        "borderColor": "#a9a9a9",
-                        "borderRadius": 10,
-                        "borderWidth": 1,
-                        "marginLeft": 0,
-                        "marginRight": 0,
-                        "marginTop": 10,
-                        "opacity": 1,
-                        "paddingBottom": 10,
-                        "paddingTop": 10,
-                      }
-                    }
-                  >
-                    <Text
-                      style={
-                        Object {
-                          "fontSize": 30,
-                          "fontWeight": "bold",
-                          "marginLeft": 10,
-                          "marginTop": 10,
-                          "textAlign": "center",
-                        }
-                      }
-                    >
-                      <Text
-                        allowFontScaling={false}
-                        style={
-                          Array [
-                            Object {
-                              "color": undefined,
-                              "fontSize": 12,
-                            },
-                            Object {
-                              "fontSize": 30,
-                              "fontWeight": "bold",
-                              "marginLeft": 10,
-                              "marginTop": 10,
-                              "textAlign": "center",
-                            },
-                            Object {
-                              "fontFamily": "FontAwesome",
-                              "fontStyle": "normal",
-                              "fontWeight": "normal",
-                            },
-                            Object {},
-                          ]
-                        }
-                      >
-                        
-                      </Text>
-                      Settings
                     </Text>
                   </View>
                 </View>
@@ -1719,7 +1569,9 @@ exports[`Check if our MainView renders correctly 1`] = `
                             "longitude": -87.631727,
                           }
                         }
+                        description="Hours Open: Mon - Fri 6:30am - 6:00pm"
                         pinColor="green"
+                        title="M Burger"
                       />
                       <Marker
                         coordinate={
@@ -1728,7 +1580,9 @@ exports[`Check if our MainView renders correctly 1`] = `
                             "longitude": -87.631727,
                           }
                         }
+                        description="Hours Open: Mon - Fri 8:00am - 3:00pm"
                         pinColor="green"
+                        title="Pita Express"
                       />
                       <Marker
                         coordinate={
@@ -1737,7 +1591,9 @@ exports[`Check if our MainView renders correctly 1`] = `
                             "longitude": -87.630065,
                           }
                         }
+                        description="Hours Open: Mon - Fri 7:00am - 2:00pm"
                         pinColor="green"
+                        title="Big Easy"
                       />
                       <Marker
                         coordinate={
@@ -1746,7 +1602,9 @@ exports[`Check if our MainView renders correctly 1`] = `
                             "longitude": -87.630065,
                           }
                         }
+                        description="Hours Open: Mon - Fri 7:00am - 2:00pm"
                         pinColor="green"
+                        title="Tortas Frontera"
                       />
                       <Marker
                         coordinate={
@@ -1755,7 +1613,9 @@ exports[`Check if our MainView renders correctly 1`] = `
                             "longitude": -87.622715,
                           }
                         }
+                        description="Hours Open: Mon - Fri 6:30am - 4:00pm"
                         pinColor="green"
+                        title="Caffe RoM"
                       />
                       <Marker
                         coordinate={
@@ -1764,7 +1624,9 @@ exports[`Check if our MainView renders correctly 1`] = `
                             "longitude": -87.622715,
                           }
                         }
+                        description="Hours Open: Mon - Fri 7:00am - 3:30pm"
                         pinColor="green"
+                        title="Snarf's"
                       />
                       <Marker
                         coordinate={
@@ -1773,7 +1635,9 @@ exports[`Check if our MainView renders correctly 1`] = `
                             "longitude": -87.628262,
                           }
                         }
+                        description="Hours Open: Sun - Sat 5:00am - 8:00pm"
                         pinColor="green"
+                        title="Which Wich"
                       />
                       <Marker
                         coordinate={
@@ -1782,7 +1646,9 @@ exports[`Check if our MainView renders correctly 1`] = `
                             "longitude": -87.623756,
                           }
                         }
+                        description="Hours Open: Mon - Fri 7:00am - 3:30pm"
                         pinColor="green"
+                        title="Hannah's Bretzel"
                       />
                       <Marker
                         coordinate={
@@ -1791,7 +1657,9 @@ exports[`Check if our MainView renders correctly 1`] = `
                             "longitude": -87.623541,
                           }
                         }
+                        description="Hours Open: Mon - Fri 6:30am - 7:00pm"
                         pinColor="green"
+                        title="Potbelly"
                       />
                       <Marker
                         coordinate={
@@ -1800,7 +1668,9 @@ exports[`Check if our MainView renders correctly 1`] = `
                             "longitude": -87.624131,
                           }
                         }
+                        description="Hours Open: Mon - Fri 10:00am - 5:00pm"
                         pinColor="green"
+                        title="Armand's Pizzeria"
                       />
                       <Marker
                         coordinate={
@@ -1809,7 +1679,9 @@ exports[`Check if our MainView renders correctly 1`] = `
                             "longitude": -87.624099,
                           }
                         }
+                        description="Hours Open: Mon - Fri 7:00am - 6:00pm"
                         pinColor="green"
+                        title="Mezza Mediterranean Grill"
                       />
                       <Marker
                         coordinate={
@@ -1818,7 +1690,9 @@ exports[`Check if our MainView renders correctly 1`] = `
                             "longitude": -87.624099,
                           }
                         }
+                        description="Hours Open: Mon - Fri 6:00am - 7:00pm"
                         pinColor="green"
+                        title="Pret a Manger"
                       />
                       <Marker
                         coordinate={
@@ -1827,7 +1701,9 @@ exports[`Check if our MainView renders correctly 1`] = `
                             "longitude": -87.630376,
                           }
                         }
+                        description="Hours Open: Sun - Sat 10:30am - 9:00pm"
                         pinColor="green"
+                        title="Olive Mediterranean Grill"
                       />
                       <Marker
                         coordinate={
@@ -1836,7 +1712,9 @@ exports[`Check if our MainView renders correctly 1`] = `
                             "longitude": -87.630934,
                           }
                         }
+                        description="Hours Open: Sun - Sat 7:00am - 8:00pm"
                         pinColor="green"
+                        title="Protein Bar"
                       />
                       <Marker
                         coordinate={
@@ -1845,7 +1723,9 @@ exports[`Check if our MainView renders correctly 1`] = `
                             "longitude": -87.628477,
                           }
                         }
+                        description="Hours Open: Mon - Fri 7:00am - 6:00pm"
                         pinColor="green"
+                        title="Wow Bao"
                       />
                     </MapView>
                   </View>
@@ -2197,76 +2077,35 @@ exports[`Check if our main app renders correctly 1`] = `
                 <View
                   style={
                     Object {
+                      "alignItems": "center",
                       "backgroundColor": "#a9a9a9",
                       "flex": 1,
-                      "paddingTop": 30,
+                      "paddingTop": 50,
                     }
                   }
                 >
-                  <View
-                    accessible={true}
-                    isTVSelectable={true}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
+                  <Text
+                    allowFontScaling={false}
                     style={
-                      Object {
-                        "backgroundColor": "#a9a9a9",
-                        "borderColor": "#a9a9a9",
-                        "borderRadius": 10,
-                        "borderWidth": 1,
-                        "marginLeft": 0,
-                        "marginRight": 0,
-                        "marginTop": 10,
-                        "opacity": 1,
-                        "paddingBottom": 10,
-                        "paddingTop": 10,
-                      }
+                      Array [
+                        Object {
+                          "color": undefined,
+                          "fontSize": 12,
+                        },
+                        Object {
+                          "fontSize": 85,
+                        },
+                        Object {
+                          "fontFamily": "FontAwesome",
+                          "fontStyle": "normal",
+                          "fontWeight": "normal",
+                        },
+                        Object {},
+                      ]
                     }
                   >
-                    <Text
-                      style={
-                        Object {
-                          "fontSize": 30,
-                          "fontWeight": "bold",
-                          "marginLeft": 10,
-                          "marginTop": 10,
-                          "textAlign": "center",
-                        }
-                      }
-                    >
-                      <Text
-                        allowFontScaling={false}
-                        style={
-                          Array [
-                            Object {
-                              "color": undefined,
-                              "fontSize": 12,
-                            },
-                            Object {
-                              "fontSize": 30,
-                              "fontWeight": "bold",
-                              "marginLeft": 10,
-                              "marginTop": 10,
-                              "textAlign": "center",
-                            },
-                            Object {
-                              "fontFamily": "FontAwesome",
-                              "fontStyle": "normal",
-                              "fontWeight": "normal",
-                            },
-                            Object {},
-                          ]
-                        }
-                      >
-                        
-                      </Text>
-                      Home
-                    </Text>
-                  </View>
+                    
+                  </Text>
                   <View
                     accessible={true}
                     isTVSelectable={true}
@@ -2393,70 +2232,6 @@ exports[`Check if our main app renders correctly 1`] = `
                         
                       </Text>
                       Map
-                    </Text>
-                  </View>
-                  <View
-                    accessible={true}
-                    isTVSelectable={true}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
-                    style={
-                      Object {
-                        "backgroundColor": "#a9a9a9",
-                        "borderColor": "#a9a9a9",
-                        "borderRadius": 10,
-                        "borderWidth": 1,
-                        "marginLeft": 0,
-                        "marginRight": 0,
-                        "marginTop": 10,
-                        "opacity": 1,
-                        "paddingBottom": 10,
-                        "paddingTop": 10,
-                      }
-                    }
-                  >
-                    <Text
-                      style={
-                        Object {
-                          "fontSize": 30,
-                          "fontWeight": "bold",
-                          "marginLeft": 10,
-                          "marginTop": 10,
-                          "textAlign": "center",
-                        }
-                      }
-                    >
-                      <Text
-                        allowFontScaling={false}
-                        style={
-                          Array [
-                            Object {
-                              "color": undefined,
-                              "fontSize": 12,
-                            },
-                            Object {
-                              "fontSize": 30,
-                              "fontWeight": "bold",
-                              "marginLeft": 10,
-                              "marginTop": 10,
-                              "textAlign": "center",
-                            },
-                            Object {
-                              "fontFamily": "FontAwesome",
-                              "fontStyle": "normal",
-                              "fontWeight": "normal",
-                            },
-                            Object {},
-                          ]
-                        }
-                      >
-                        
-                      </Text>
-                      Settings
                     </Text>
                   </View>
                 </View>
@@ -2634,7 +2409,9 @@ exports[`Check if our main app renders correctly 1`] = `
                             "longitude": -87.631727,
                           }
                         }
+                        description="Hours Open: Mon - Fri 6:30am - 6:00pm"
                         pinColor="green"
+                        title="M Burger"
                       />
                       <Marker
                         coordinate={
@@ -2643,7 +2420,9 @@ exports[`Check if our main app renders correctly 1`] = `
                             "longitude": -87.631727,
                           }
                         }
+                        description="Hours Open: Mon - Fri 8:00am - 3:00pm"
                         pinColor="green"
+                        title="Pita Express"
                       />
                       <Marker
                         coordinate={
@@ -2652,7 +2431,9 @@ exports[`Check if our main app renders correctly 1`] = `
                             "longitude": -87.630065,
                           }
                         }
+                        description="Hours Open: Mon - Fri 7:00am - 2:00pm"
                         pinColor="green"
+                        title="Big Easy"
                       />
                       <Marker
                         coordinate={
@@ -2661,7 +2442,9 @@ exports[`Check if our main app renders correctly 1`] = `
                             "longitude": -87.630065,
                           }
                         }
+                        description="Hours Open: Mon - Fri 7:00am - 2:00pm"
                         pinColor="green"
+                        title="Tortas Frontera"
                       />
                       <Marker
                         coordinate={
@@ -2670,7 +2453,9 @@ exports[`Check if our main app renders correctly 1`] = `
                             "longitude": -87.622715,
                           }
                         }
+                        description="Hours Open: Mon - Fri 6:30am - 4:00pm"
                         pinColor="green"
+                        title="Caffe RoM"
                       />
                       <Marker
                         coordinate={
@@ -2679,7 +2464,9 @@ exports[`Check if our main app renders correctly 1`] = `
                             "longitude": -87.622715,
                           }
                         }
+                        description="Hours Open: Mon - Fri 7:00am - 3:30pm"
                         pinColor="green"
+                        title="Snarf's"
                       />
                       <Marker
                         coordinate={
@@ -2688,7 +2475,9 @@ exports[`Check if our main app renders correctly 1`] = `
                             "longitude": -87.628262,
                           }
                         }
+                        description="Hours Open: Sun - Sat 5:00am - 8:00pm"
                         pinColor="green"
+                        title="Which Wich"
                       />
                       <Marker
                         coordinate={
@@ -2697,7 +2486,9 @@ exports[`Check if our main app renders correctly 1`] = `
                             "longitude": -87.623756,
                           }
                         }
+                        description="Hours Open: Mon - Fri 7:00am - 3:30pm"
                         pinColor="green"
+                        title="Hannah's Bretzel"
                       />
                       <Marker
                         coordinate={
@@ -2706,7 +2497,9 @@ exports[`Check if our main app renders correctly 1`] = `
                             "longitude": -87.623541,
                           }
                         }
+                        description="Hours Open: Mon - Fri 6:30am - 7:00pm"
                         pinColor="green"
+                        title="Potbelly"
                       />
                       <Marker
                         coordinate={
@@ -2715,7 +2508,9 @@ exports[`Check if our main app renders correctly 1`] = `
                             "longitude": -87.624131,
                           }
                         }
+                        description="Hours Open: Mon - Fri 10:00am - 5:00pm"
                         pinColor="green"
+                        title="Armand's Pizzeria"
                       />
                       <Marker
                         coordinate={
@@ -2724,7 +2519,9 @@ exports[`Check if our main app renders correctly 1`] = `
                             "longitude": -87.624099,
                           }
                         }
+                        description="Hours Open: Mon - Fri 7:00am - 6:00pm"
                         pinColor="green"
+                        title="Mezza Mediterranean Grill"
                       />
                       <Marker
                         coordinate={
@@ -2733,7 +2530,9 @@ exports[`Check if our main app renders correctly 1`] = `
                             "longitude": -87.624099,
                           }
                         }
+                        description="Hours Open: Mon - Fri 6:00am - 7:00pm"
                         pinColor="green"
+                        title="Pret a Manger"
                       />
                       <Marker
                         coordinate={
@@ -2742,7 +2541,9 @@ exports[`Check if our main app renders correctly 1`] = `
                             "longitude": -87.630376,
                           }
                         }
+                        description="Hours Open: Sun - Sat 10:30am - 9:00pm"
                         pinColor="green"
+                        title="Olive Mediterranean Grill"
                       />
                       <Marker
                         coordinate={
@@ -2751,7 +2552,9 @@ exports[`Check if our main app renders correctly 1`] = `
                             "longitude": -87.630934,
                           }
                         }
+                        description="Hours Open: Sun - Sat 7:00am - 8:00pm"
                         pinColor="green"
+                        title="Protein Bar"
                       />
                       <Marker
                         coordinate={
@@ -2760,7 +2563,9 @@ exports[`Check if our main app renders correctly 1`] = `
                             "longitude": -87.628477,
                           }
                         }
+                        description="Hours Open: Mon - Fri 7:00am - 6:00pm"
                         pinColor="green"
+                        title="Wow Bao"
                       />
                     </MapView>
                   </View>

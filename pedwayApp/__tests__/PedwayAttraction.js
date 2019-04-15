@@ -41,3 +41,25 @@ test('Check Name Setter', () => {
   testAttraction.setName('Attraction 25');
   expect(testAttraction.getName()).toBe('Attraction 25');
 });
+
+test('Check Hours Getter', () => {
+  const testCoord = new PedwayCoordinate(-70.20232, 42.353523);
+  const testAttraction1 = new PedwayAttraction(testCoord);
+  expect(testAttraction1.getHours()).toBe('');
+  const testAttraction2 = new PedwayAttraction(testCoord, 'Attraction 2', 'Hours Open: Mon - Fri 7:00am - 2:00pm');
+  expect(testAttraction2.getHours()).toBe('Hours Open: Mon - Fri 7:00am - 2:00pm');
+});
+
+test('Check Hours Setter', () => {
+  const testCoord = new PedwayCoordinate(-70.20232, 42.353523);
+  let testAttraction = new PedwayAttraction(testCoord);
+  testAttraction.setHours('Hours Open: Mon - Fri 7:00am - 2:00pm');
+  expect(testAttraction.getHours()).toBe('Hours Open: Mon - Fri 7:00am - 2:00pm');
+
+  testAttraction = new PedwayAttraction(testCoord, 'Attraction 2', 'Hours Open: Mon - Fri 7:00am - 2:00pm');
+  testAttraction.setHours('Hours Open: Mon - Fri 9:00am - 5:00pm');
+  expect(testAttraction.getHours()).toBe('Hours Open: Mon - Fri 9:00am - 5:00pm');
+
+  testAttraction.setHours('');
+  expect(testAttraction.getHours()).toBe('');
+});

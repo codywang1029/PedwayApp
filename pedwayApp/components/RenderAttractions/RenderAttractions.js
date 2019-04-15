@@ -4,8 +4,9 @@ import PedwayAttraction from '../../model/PedwayAttraction';
 import MarkerImage from '../../media/pedwayEntranceMarker.png';
 import MapView, {
   Polyline,
-  Marker,
+  Marker, Callout,
 } from 'react-native-maps';
+import {Text, View} from '../GroundMapView/GroundMapView';
 
 /**
  * Display all of the attractions located within the Pedway on the underground mapview
@@ -42,9 +43,9 @@ export default class RenderAttractions extends Component {
           new PedwayAttraction(new PedwayCoordinate(
               thisLatitude,
               thisLongitude),
-          true,
-          false,
-          'Attraction #'+idx.toString()));
+          item['id'],
+          item['properties']['hours']
+          ));
     }, []);
     this.setState({
       pedwayAttractions: attractions,
@@ -72,6 +73,8 @@ export default class RenderAttractions extends Component {
           coordinate={input.getCoordinate().getJSON()}
           key={idx}
           pinColor='green'
+          title={input.getName()}
+          description={input.getHours()}
         />
       );
     },
