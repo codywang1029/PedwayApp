@@ -161,6 +161,9 @@ export default class GroundMapView extends React.Component {
     }
   }
 
+  /**
+   * watch user's real time location and update the map accordingly.
+   */
   componentDidMount() {
     let id = navigator.geolocation.watchPosition(
         (position) => {
@@ -352,6 +355,9 @@ export default class GroundMapView extends React.Component {
         .catch(this.networkErrorHandler);
   }
 
+  /**
+   * Handle no network error. Open up a dialog telling the user that he/she loses connection.
+   */
   networkErrorHandler(){
     this.setState({dialogTitle: 'Network Error',
       dialogVisibility: true,
@@ -371,12 +377,17 @@ export default class GroundMapView extends React.Component {
         [destinationCoordinate.getCoordinate().getLatitude(), destinationCoordinate.getCoordinate().getLongitude()]);
   }
 
-
+  /**
+   * clear the geolocation watch
+   */
   componentWillUnmount() {
     navigator.geolocation.clearWatch(this.state.id);
   }
 
-
+  /**
+   * retrun the map makers representing the pedway entrances.
+   * @returns a view that contains all the pedway entrances.
+   */
   renderMarkers() {
     if (this.state.searchData.length===0) {
       return (<RenderEntrance
@@ -393,6 +404,9 @@ export default class GroundMapView extends React.Component {
     }
   }
 
+  /**
+   * Use animation to recenter the camera to the user's current position.
+   */
   recenter() {
     const region = {
       latitude: this.state.userLatitude,
