@@ -24,7 +24,6 @@ import pointToLineDistance from '@turf/point-to-line-distance';
 import distance from '@turf/distance';
 import Attractions from '../../mock_data/attractions';
 
-
 const AZURE_API = 'https://pedway.azurewebsites.net/api';
 const ORS_API = 'https://api.openrouteservice.org';
 
