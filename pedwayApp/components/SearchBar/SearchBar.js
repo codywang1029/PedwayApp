@@ -51,6 +51,9 @@ export default class SearchBar extends React.Component {
         });
         this.props.updateSearchData(res['data']['features']);
         // now we can forward this result to our main map view
+      }).catch(()=>{
+        this.props.networkErrorHandler();
+        this.setState({searching: false});
       });
     }
   }

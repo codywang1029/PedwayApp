@@ -81,9 +81,9 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
     initialRegion={
       Object {
         "latitude": 41.881898,
-        "latitudeDelta": 0.007,
+        "latitudeDelta": 0.005,
         "longitude": -87.623977,
-        "longitudeDelta": 0.007,
+        "longitudeDelta": 0.005,
       }
     }
     onPanDrag={[Function]}
@@ -750,9 +750,9 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                       initialRegion={
                         Object {
                           "latitude": 41.881898,
-                          "latitudeDelta": 0.007,
+                          "latitudeDelta": 0.005,
                           "longitude": -87.623977,
-                          "longitudeDelta": 0.007,
+                          "longitudeDelta": 0.005,
                         }
                       }
                       onPanDrag={[Function]}
@@ -1665,9 +1665,9 @@ exports[`Check if our MainView renders correctly 1`] = `
                       initialRegion={
                         Object {
                           "latitude": 41.881898,
-                          "latitudeDelta": 0.007,
+                          "latitudeDelta": 0.005,
                           "longitude": -87.623977,
-                          "longitudeDelta": 0.007,
+                          "longitudeDelta": 0.005,
                         }
                       }
                       onPanDrag={[Function]}
@@ -2580,9 +2580,9 @@ exports[`Check if our main app renders correctly 1`] = `
                       initialRegion={
                         Object {
                           "latitude": 41.881898,
-                          "latitudeDelta": 0.007,
+                          "latitudeDelta": 0.005,
                           "longitude": -87.623977,
-                          "longitudeDelta": 0.007,
+                          "longitudeDelta": 0.005,
                         }
                       }
                       onPanDrag={[Function]}

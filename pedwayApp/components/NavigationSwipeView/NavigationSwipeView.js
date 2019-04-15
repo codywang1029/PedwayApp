@@ -37,6 +37,7 @@ export default class NavigationSwipeView extends React.Component {
     this.onIndexChanged = this.onIndexChanged.bind(this);
     this.updateSwiperViewIndex = this.updateSwiperViewIndex.bind(this);
     this.onMomentumScrollEnd = this.onMomentumScrollEnd.bind(this);
+    this.findOntoString = this.findOntoString.bind(this);
   }
 
   componentDidMount() {
@@ -52,6 +53,14 @@ export default class NavigationSwipeView extends React.Component {
       navigationData: inputProps.navigationData,
       dataRequested: inputProps.navigationDataRequested,
     });
+
+    try {
+      let route = inputProps.navigationData['data']['routes'][0];
+      let wayPoint = route['segments'][0]['steps'][0]['way_points'];
+      this.props.updateSegmentStartEndCallback(wayPoint[0], wayPoint[1]);
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   /**
@@ -59,7 +68,7 @@ export default class NavigationSwipeView extends React.Component {
    * @param idx
    */
   updateSwiperViewIndex(idx) {
-    if (this.state.navigationDataRequested) {
+    if (this.state.dataRequested) {
       isProgrammaticallyUpdatingIndex = true;
       this.swiper.scrollBy(idx - this.state.currentIndex, true);
     }
@@ -75,11 +84,25 @@ export default class NavigationSwipeView extends React.Component {
       this.setState({
         currentIndex: inputIndex,
       });
+
       let route = this.state.navigationData['data']['routes'][0];
       let wayPoint = route['segments'][0]['steps'][inputIndex]['way_points'];
+      let nextInstruction = route['segments'][0]['steps'][inputIndex]['instruction'];
+      console.log(nextInstruction);
       this.props.updateSegmentStartEndCallback(wayPoint[0], wayPoint[1]);
     } catch (e) {
     }
+  }
+
+  findOntoString(instruction) {
+    let ontoIndex = instruction.indexOf('onto');
+    console.log(ontoIndex);
+    if (ontoIndex === -1) {
+      return;
+    }
+    let roadString = instruction.slice(ontoIndex + 5);
+    console.log(roadString);
+    this.props.setUnderground((roadString === 'Pedway'));
   }
 
   onMomentumScrollEnd() {

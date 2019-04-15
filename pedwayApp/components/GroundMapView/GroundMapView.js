@@ -2,11 +2,9 @@ import React, {Component} from 'react';
 import styles from './styles';
 import {Image, Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import MapView, {
-  MAP_TYPES,
-  UrlTile,
-  Callout,
   Polyline,
 } from 'react-native-maps';
+import Dialog, {DialogContent, SlideAnimation, DialogTitle, DialogFooter, DialogButton} from 'react-native-popup-dialog';
 import RenderPedway from '../RenderPedway/RenderPedway';
 import MapStyle from './mapStyleDark';
 import RenderEntrance from '../RenderEntrance/RenderEntrance';
@@ -22,12 +20,12 @@ import PedwaySection from '../../model/PedwaySection';
 import {Keyboard} from 'react-native';
 import PedwaySections from '../../mock_data/sections';
 import {point, lineString} from '@turf/helpers';
-import distance from '@turf/distance';
 import pointToLineDistance from '@turf/point-to-line-distance';
+import distance from '@turf/distance';
 import Attractions from '../../mock_data/attractions';
 
 
-const AZURE_API = 'https://pedway.azurewebsites.net/api/pedway';
+const AZURE_API = 'https://pedway.azurewebsites.net/api';
 const ORS_API = 'https://api.openrouteservice.org';
 
 const INITIAL_LATITUDE = 41.881898;
@@ -38,6 +36,8 @@ const MAXIMUM_OFFSET_DISTANCE = 0.1;
 
 
 let isUserInitiatedRegionChange = false;
+let appInitiated = false;
+let nextMapState = undefined;
 
 /**
  * Renders a MapView that display the ground level map
@@ -55,6 +55,8 @@ export default class GroundMapView extends React.Component {
       longitude: INITIAL_LONGITUDE,
       latitudeDelta: RECENTER_DELTA,
       longitudeDelta: RECENTER_DELTA,
+      userLatitude: INITIAL_LATITUDE,
+      userLongitude: INITIAL_LONGITUDE,
       error: null,
       pedwayData: undefined,
       updateGeoLocation: true,
@@ -75,7 +77,10 @@ export default class GroundMapView extends React.Component {
       underground: this.props.underground?false:this.props.underground,
       mapReady: false,
       mapInFocus: true,
-
+      dialogVisibility: false,
+      dialogContent: '',
+      dialogTitle: '',
+      dialogButtonText: '',
     };
     this.forwardSelectedEntrance = this.forwardSelectedEntrance.bind(this);
     this.renderPath = this.renderPath.bind(this);
@@ -91,6 +96,12 @@ export default class GroundMapView extends React.Component {
     this.updateCurrentSegment = this.updateCurrentSegment.bind(this);
     this.positionDidUpdateCallback = this.positionDidUpdateCallback.bind(this);
     this.recalculatePath = this.recalculatePath.bind(this);
+    this.updateNavigationState = this.updateNavigationState.bind(this);
+    this.updateHighlightSegment = this.updateHighlightSegment.bind(this);
+    this.onReachedDestination = this.onReachedDestination.bind(this);
+    this.updateMapMode = this.updateMapMode.bind(this);
+    this.findOntoString = this.findOntoString.bind(this);
+    this.networkErrorHandler = this.networkErrorHandler.bind(this);
   }
 
   /**
@@ -124,9 +135,17 @@ export default class GroundMapView extends React.Component {
    * @param id reference for the listener (so we can unmount it)
    */
   positionDidUpdateCallback(position, id) {
+    // also center during app init
+    if (!appInitiated) {
+      appInitiated = true;
+      this.setState({
+        Latitude: position.coords.latitude,
+        Longitude: position.coords.longitude,
+      });
+    }
     this.setState({
-      latitude: position.coords.latitude,
-      longitude: position.coords.longitude,
+      userLatitude: position.coords.latitude,
+      userLongitude: position.coords.longitude,
       error: null,
       id: id,
     });
@@ -135,8 +154,8 @@ export default class GroundMapView extends React.Component {
         const region = {
           latitude: position.coords.latitude,
           longitude: position.coords.longitude,
-          latitudeDelta: this.state.longitudeDelta,
-          longitudeDelta: this.state.latitudeDelta,
+          latitudeDelta: INITIAL_DELTA,
+          longitudeDelta: INITIAL_DELTA,
         };
 
         this.map.animateToRegion(region, 1000);
@@ -149,11 +168,20 @@ export default class GroundMapView extends React.Component {
     }
   }
 
+  /**
+   * watch user's real time location and update the map accordingly.
+   */
   componentDidMount() {
     let id = navigator.geolocation.watchPosition(
         (position) => {
           this.positionDidUpdateCallback(position, id);
-        });
+        }, (error)=>{
+          this.setState({dialogTitle: 'GPS Error',
+            dialogVisibility: true,
+            dialogContent: 'Oops, we lose you on the map. Please enable GPS access to the app. If you are underground, the GPS service may be unstable.',
+            dialogButtonText: 'Dismiss',
+          });
+        }, {enableHighAccuracy: true, distanceFilter: 1});
     this.requestEntranceData();
   }
 
@@ -195,13 +223,37 @@ export default class GroundMapView extends React.Component {
     let segmentList = navigateRoute['segments'][0]['steps'];
     let closestSegmentIdx = 0;
     let closestDistanceOverall = Number.MAX_VALUE;
+
+
     segmentList.forEach((item, idx) => {
-      if (item['way_points'][0]===item['way_points'][1]) {
-        return;
+      let currentDistance = Number.MAX_VALUE;
+      // we have to consider that the destination is a point
+      if (item['way_points'][0] !== item['way_points'][1]) {
+        let thisLineSection = this.state.navigateList['coordinates'].slice(item['way_points'][0], item['way_points'][1] + 1);
+
+        let currentLineArray = thisLineSection.map((item) => {
+          return [item['longitude'], item['latitude']];
+        }).reduce((acc, item) => {
+          return acc.concat([item]);
+        }, []);
+
+        let currentLine = lineString(currentLineArray);
+        let currentPoint = point([longitude, latitude]);
+        currentDistance = pointToLineDistance(currentPoint, currentLine);
       }
 
-      let thisItemClosestDisance = Number.MAX_VALUE;
-      let thisLineSection = this.state.navigateList['coordinates'].slice(item['way_points'][0], item['way_points'][1] + 1);
+      if (currentDistance < closestDistanceOverall) {
+        closestDistanceOverall = currentDistance;
+        closestSegmentIdx = idx;
+      }
+    });
+
+    // now we need to check, if the next index is within 10 meters of the current index,
+    // if so, we need to update it ahead of time
+    let nextSegment = segmentList[closestSegmentIdx + 1];
+    let currentDistance = 0;
+    if (nextSegment['way_points'][0] !== nextSegment['way_points'][1]) {
+      let thisLineSection = this.state.navigateList['coordinates'].slice(nextSegment['way_points'][0], nextSegment['way_points'][1] + 1);
 
       let currentLineArray = thisLineSection.map((item) => {
         return [item['longitude'], item['latitude']];
@@ -211,24 +263,64 @@ export default class GroundMapView extends React.Component {
 
       let currentLine = lineString(currentLineArray);
       let currentPoint = point([longitude, latitude]);
-      let currentDistance = pointToLineDistance(currentPoint, currentLine);
+      currentDistance = pointToLineDistance(currentPoint, currentLine);
+    } else {
+      let currentPoint = point([longitude, latitude]);
+      let destinationCoordinate = this.state.navigateList['coordinates'][nextSegment['way_points'][0]];
+      let destinationPoint = point([destinationCoordinate['longitude'], destinationCoordinate['latitude']]);
+      currentDistance = distance(currentPoint, destinationPoint);
+    }
 
-      if (currentDistance < thisItemClosestDisance) {
-        thisItemClosestDisance = currentDistance;
-      }
-
-      if (thisItemClosestDisance < closestDistanceOverall) {
-        closestDistanceOverall = thisItemClosestDisance;
-        closestSegmentIdx = idx;
-      }
-    });
+    if (currentDistance - 0.01 < closestDistanceOverall) {
+      closestSegmentIdx += 1;
+      closestDistanceOverall = currentDistance;
+    }
 
     // check if user deviated more than 100 meters from the path
     if (closestDistanceOverall > MAXIMUM_OFFSET_DISTANCE) {
       this.recalculatePath(longitude, latitude);
+    } else if (closestSegmentIdx === segmentList.length - 1) {
+      // user reached the destination, we need to end navigation
+      this.onReachedDestination();
     }
 
+    this.updateMapMode(closestSegmentIdx);
+
     return [segmentList[closestSegmentIdx], closestSegmentIdx];
+  }
+
+
+  updateMapMode(idx) {
+    let route = this.state.navigateJSON['data']['routes'][0];
+    let nextInstruction = route['segments'][0]['steps'][idx]['instruction'];
+    this.findOntoString(nextInstruction, idx);
+  }
+
+  findOntoString(instruction, idx) {
+    let ontoIndex = instruction.indexOf('onto');
+    let roadString = '';
+    if (ontoIndex === -1) {
+      let onIndex = instruction.indexOf('on');
+      if (onIndex !== -1) {
+        roadString = instruction.slice(onIndex + 3);
+      } else {
+        if (idx === 0) {
+          if (!this.state.mapInFocus) {
+            this.props.setUnderground(false);
+          } else {
+            nextMapState = (false);
+          }
+        }
+        return;
+      }
+    } else {
+      roadString = instruction.slice(ontoIndex + 5);
+    }
+    if (!this.state.mapInFocus) {
+      this.props.setUnderground((roadString === 'Pedway'));
+    } else {
+      nextMapState = (roadString === 'Pedway');
+    }
   }
 
   forwardSelectedEntrance(inputEntrance) {
@@ -257,25 +349,34 @@ export default class GroundMapView extends React.Component {
       this.setState({mapReady: false});
     }
     this.setState({underground: nextProps.underground});
-    if (nextProps.navigate !== undefined) {
-      this.setState({
-        navigateTo: nextProps.navigateTo,
-      });
+  }
 
-      if (nextProps.navigate === false) {
-        this.setState({
-          navigate: false,
-        });
-      } else {
-        this.setState({
-          highlightSegmentStart: nextProps.highlightSegmentStart,
-          highlightSegmentEnd: nextProps.highlightSegmentEnd,
-          navigate: true,
-        });
-        if (nextProps.navigateTo !== this.state.navigateTo) {
-          this.renderPath(nextProps.navigateTo);
-        }
-      }
+  updateHighlightSegment(highlightSegmentStart, highlightSegmentEnd) {
+    if (this.state.navigate === true) {
+      this.setState({
+        highlightSegmentStart: highlightSegmentStart,
+        highlightSegmentEnd: highlightSegmentEnd,
+      });
+    }
+  }
+
+  updateNavigationState(navigate, navigateTo, highlightSegmentStart, highlightSegmentEnd) {
+    this.setState({
+      navigateTo: navigateTo,
+      navigateDataRequested: false,
+    });
+
+    if (navigate === false) {
+      this.setState({
+        navigate: false,
+      });
+    } else {
+      this.setState({
+        highlightSegmentStart: highlightSegmentStart,
+        highlightSegmentEnd: highlightSegmentEnd,
+        navigate: true,
+      });
+      this.renderPath(navigateTo);
     }
   }
 
@@ -305,7 +406,17 @@ export default class GroundMapView extends React.Component {
             navigateList: retSection,
           });
         })
-        .catch((error) => console.log(error));
+        .catch(this.networkErrorHandler);
+  }
+
+  /**
+   * Handle no network error. Open up a dialog telling the user that he/she loses connection.
+   */
+  networkErrorHandler() {
+    this.setState({dialogTitle: 'Network Error',
+      dialogVisibility: true,
+      dialogButtonText: 'Dismiss',
+      dialogContent: 'There is no network connection. Get back online and try again.'});
   }
 
 
@@ -316,15 +427,21 @@ export default class GroundMapView extends React.Component {
    * @param destinationCoordinate
    */
   renderPath(destinationCoordinate) {
-    this.getGeometry([this.state.latitude, this.state.longitude],
+    this.getGeometry([this.state.userLatitude, this.state.userLongitude],
         [destinationCoordinate.getCoordinate().getLatitude(), destinationCoordinate.getCoordinate().getLongitude()]);
   }
 
+  /**
+   * clear the geolocation watch
+   */
   componentWillUnmount() {
     navigator.geolocation.clearWatch(this.state.id);
   }
 
-
+  /**
+   * retrun the map makers representing the pedway entrances.
+   * @returns a view that contains all the pedway entrances.
+   */
   renderMarkers() {
     if (this.state.searchData.length===0) {
       return (<RenderEntrance
@@ -341,10 +458,13 @@ export default class GroundMapView extends React.Component {
     }
   }
 
+  /**
+   * Use animation to recenter the camera to the user's current position.
+   */
   recenter() {
     const region = {
-      latitude: this.state.latitude,
-      longitude: this.state.longitude,
+      latitude: this.state.userLatitude,
+      longitude: this.state.userLongitude,
       latitudeDelta: RECENTER_DELTA,
       longitudeDelta: RECENTER_DELTA,
     };
@@ -352,7 +472,7 @@ export default class GroundMapView extends React.Component {
       mapInFocus: true,
     });
     this.map.animateToRegion(region, 1000);
-    this.updateCurrentSegment(this.state.longitude, this.state.latitude);
+    this.updateCurrentSegment(this.state.userLongitude, this.state.userLatitude);
   }
 
   /**
@@ -362,8 +482,15 @@ export default class GroundMapView extends React.Component {
    * and render the components on the map
    * We also use this function together with mapOnPanDrag() to determine if a region
    * change is trigger by the user or done programmatically
+   * @param regionChangedTo
    */
-  onRegionChangeComplete() {
+  onRegionChangeComplete(regionChangedTo) {
+    this.setState({
+      latitude: regionChangedTo.latitude,
+      longitude: regionChangedTo.longitude,
+      latitudeDelta: regionChangedTo.latitudeDelta,
+      longitudeDelta: regionChangedTo.longitudeDelta,
+    });
     if (!this.state.mapReady) {
       this.setState({
         mapReady: true,
@@ -375,6 +502,13 @@ export default class GroundMapView extends React.Component {
         mapInFocus: false,
       });
     }
+
+    if (nextMapState !== undefined) {
+      let stateSave = nextMapState;
+      nextMapState = undefined;
+      this.props.setUnderground(stateSave);
+    }
+
     isUserInitiatedRegionChange = false;
   }
 
@@ -388,9 +522,26 @@ export default class GroundMapView extends React.Component {
     isUserInitiatedRegionChange = true;
   }
 
+
+  /**
+   * this function is called when the user reached the destination
+   * after a delay of 3 second, display a dialog stating the user have completed navigation
+   * when user clicked 'ok', end this navigation
+   */
+  onReachedDestination() {
+    setTimeout(
+        () => {
+          this.setState({
+            dialogVisibility: true,
+            dialogContent: '',
+            dialogTitle: 'Navigation Completed',
+            dialogButtonText: 'OK',
+          });
+        },
+        2000);
+  }
+
   render() {
-    const latitude = this.state.latitude;
-    const longitude = this.state.longitude;
     let pathToGo = [];
     let pathHighlight = [];
     let pathGreyScale = [];
@@ -407,12 +558,43 @@ export default class GroundMapView extends React.Component {
 
     return (
       <View style={StyleSheet.absoluteFillObject}>
+        <Dialog
+          visible={this.state.dialogVisibility}
+          width={0.7}
+          dialogTitle={<DialogTitle title={this.state.dialogTitle}/>}
+          dialogAnimation={new SlideAnimation({
+            slideFrom: 'bottom',
+          })}
+          footer={
+            <DialogFooter>
+              <DialogButton
+                text={this.state.dialogButtonText}
+                onPress={()=>{
+                  this.setState({dialogVisibility: false});
+                  if (this.state.dialogTitle === 'Navigation Completed') {
+                    // we need to end navigation
+                    this.props.endNavigateCallback();
+                  }
+                  if (this.state.dialogTitle === 'Network Error') {
+                    this.props.endNavigateCallback();
+                  }
+                }}
+              />
+            </DialogFooter>
+          }
+          onTouchOutside={() => {
+            this.setState({dialogVisibility: false});
+          }}
+        >{this.state.dialogContent===''?null:
+          <DialogContent>
+            <Text>{this.state.dialogContent}</Text>
+          </DialogContent>}
+        </Dialog>
         <RoundButton
           style={this.state.navigate?[styles.positionDown]:[styles.focusButton]}
           icon={'crosshairs'}
           func={this.recenter}/>
         <MapView
-
           ref={(mapView) => {
             this.map = mapView;
           }}
@@ -420,10 +602,10 @@ export default class GroundMapView extends React.Component {
           key={this.state.underground}
           customMapStyle={this.state.underground? MapStyle : null}
           initialRegion={{
-            latitude: latitude,
-            longitude: longitude,
-            latitudeDelta: INITIAL_DELTA,
-            longitudeDelta: INITIAL_DELTA,
+            latitude: this.state.latitude,
+            longitude: this.state.longitude,
+            latitudeDelta: this.state.latitudeDelta,
+            longitudeDelta: this.state.longitudeDelta,
           }}
           onRegionChangeComplete={this.onRegionChangeComplete}
           onPanDrag={this.mapOnPanDrag}
@@ -460,8 +642,8 @@ export default class GroundMapView extends React.Component {
 
           <MapView.Marker
             coordinate={{
-              latitude: latitude,
-              longitude: longitude,
+              latitude: this.state.userLatitude,
+              longitude: this.state.userLongitude,
             }}
             style={{zIndex: 10}}
             title={'You'}
