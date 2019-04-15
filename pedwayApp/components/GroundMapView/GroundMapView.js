@@ -25,7 +25,7 @@ import distance from '@turf/distance';
 import Attractions from '../../mock_data/attractions';
 
 
-const AZURE_API = 'https://pedway.azurewebsites.net/api/pedway';
+const AZURE_API = 'https://pedway.azurewebsites.net/api';
 const ORS_API = 'https://api.openrouteservice.org';
 
 const INITIAL_LATITUDE = 41.881898;
