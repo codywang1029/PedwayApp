@@ -73,15 +73,10 @@ class HomeScreen extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     const MenuComponent = (
-      <View style={{flex: 1, backgroundColor: '#a9a9a9', paddingTop: 30}}>
-        <TouchableOpacity
-          style={styles.sideButton}
-          onPress={() => navigate('Home')}>
-          <Text style={styles.item}>
-            <Icon name="home" style={styles.item}/>
-              Home
-          </Text>
-        </TouchableOpacity>
+      <View style={{flex: 1, backgroundColor: '#a9a9a9', paddingTop: 50, alignItems: 'center'}}>
+        <Icon style={{fontSize: 85}}
+          name = 'home'
+        />
         <TouchableOpacity
           style={styles.sideButton}
           onPress={() => navigate('FoodDirectory')}>
@@ -96,13 +91,6 @@ class HomeScreen extends React.Component {
           <Text style={styles.item}>
             <Icon name="map" style={styles.item}/>
               Map
-          </Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.sideButton}>
-          <Text style={styles.item}>
-            <Icon name="gear" style={styles.item}/>
-              Settings
           </Text>
         </TouchableOpacity>
       </View>
