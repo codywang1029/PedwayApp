@@ -426,6 +426,17 @@ export default class GroundMapView extends React.Component {
             navigateDataRequested: true,
             navigateList: retSection,
           });
+          try {
+            let estimateSecond = json.data.routes[0].summary.duration;
+            let estimateMinute = Math.ceil(estimateSecond/60);
+            let warningString = '';
+            if (estimateMinute > 60) {
+              warningString = ' You are too faraway from your destination, are you sure to take this path?'
+            }
+            ToastAndroid.showWithGravityAndOffset('Estimate Time: ' + String(estimateMinute) + 'min' + warningString,
+                ToastAndroid.LONG, ToastAndroid.BOTTOM, 0, 350);
+          } catch (e) {
+          }
         })
         .catch(this.networkErrorHandler);
   }
