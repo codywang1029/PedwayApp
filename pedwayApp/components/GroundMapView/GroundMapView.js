@@ -431,7 +431,7 @@ export default class GroundMapView extends React.Component {
             let estimateMinute = Math.ceil(estimateSecond/60);
             let warningString = '';
             if (estimateMinute > 60) {
-              warningString = ' You are too far away from your destination, are you sure to take this path?'
+              warningString = ' You are too far away from your destination, are you sure to take this path?';
             }
             ToastAndroid.showWithGravityAndOffset('Estimate Time: ' + String(estimateMinute) + 'min' + warningString,
                 ToastAndroid.LONG, ToastAndroid.BOTTOM, 0, 350);
