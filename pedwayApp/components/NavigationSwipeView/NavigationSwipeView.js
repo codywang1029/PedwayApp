@@ -46,9 +46,13 @@ export default class NavigationSwipeView extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.navigationData !== this.state.navigationData) {
-      this.updateState(nextProps);
-    }
+    this.setState({
+      previousIndex: this.state.currentIndex,
+    }, () => {
+      if (nextProps.navigationData !== this.state.navigationData) {
+        this.updateState(nextProps);
+      }
+    });
   }
 
   updateState(inputProps) {
@@ -56,7 +60,6 @@ export default class NavigationSwipeView extends React.Component {
     this.setState({
       navigationData: inputProps.navigationData,
       dataRequested: inputProps.navigationDataRequested,
-      previousIndex: this.state.currentIndex,
       currentIndex: 0,
     });
 
@@ -77,7 +80,7 @@ export default class NavigationSwipeView extends React.Component {
   updateSwiperViewIndex(idx) {
     if (this.state.dataRequested) {
       isProgrammaticallyUpdatingIndex = true;
-      this.swiper.scrollBy(idx - this.state.currentIndex - this.state.previousIndex, true);
+      this.swiper.scrollBy(idx - this.state.currentIndex + this.state.previousIndex, true);
     }
   }
 
@@ -87,13 +90,13 @@ export default class NavigationSwipeView extends React.Component {
    * @param inputIndex
    */
   onIndexChanged(inputIndex) {
+    let acutalIndex = inputIndex + this.state.previousIndex;
     try {
       this.setState({
-        currentIndex: inputIndex,
+        currentIndex: acutalIndex,
       });
 
       let route = this.state.navigationData['data']['routes'][0];
-      let acutalIndex = inputIndex + this.state.previousIndex;
       let wayPoint = route['segments'][0]['steps'][acutalIndex]['way_points'];
       this.props.updateSegmentStartEndCallback(wayPoint[0], wayPoint[1]);
     } catch (e) {
