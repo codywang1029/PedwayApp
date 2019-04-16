@@ -686,7 +686,6 @@ export default class GroundMapView extends React.Component {
             }}
             style={{zIndex: 10}}
             title={'You'}
-            pinColor={'#1198ff'}
           >
             <Image source={circle} style={{width: 25, height: 25}} />
           </MapView.Marker>
@@ -698,7 +697,7 @@ export default class GroundMapView extends React.Component {
               longitude: this.state.navigateTo.getCoordinate().getLongitude(),
             }}
             style={{zIndex: 10}}
-            pinColor={'#009e4c'}
+            pinColor={'#dc143c'}
           />
           }
           {this.state.underground && this.state.mapReady?
