@@ -2,6 +2,7 @@
 
 const {auth} = require('./authController');
 const roles = require('../../src/roles');
+const util = require('./util');
 
 const mongoose = require('mongoose');
 const Feedback = mongoose.model('feedback');
@@ -13,15 +14,9 @@ const Feedback = mongoose.model('feedback');
 * @param {res} res is the response object for making responses
 */
 exports.listFeedback = function(req, res) {
-  auth(req, roles.ADMIN).then((userId)=>{
-    Feedback.find({}, function(err, feedback) {
-      if (err) {
-        res.send(err);
-      } else {
-        res.json(feedback);
-      }
-    });
-  }).catch((err)=>res.status(401).send(String(err))); ;
+  auth(req, roles.ADMIN).then(()=>{
+    util.getAllData(Feedback)(req, res);
+  });
 };
 
 /**
@@ -29,16 +24,7 @@ exports.listFeedback = function(req, res) {
 * @param {request} req is the request received
 * @param {res} res is the response object for making responses
 */
-exports.createFeedback = function(req, res) {
-  const newFeedback = new Feedback(req.body);
-  newFeedback.save(function(err, feedback) {
-    if (err) {
-      res.send(err);
-    } else {
-      res.json(feedback);
-    }
-  });
-};
+exports.createFeedback = util.createData(Feedback);
 
 /**
 * @description allows the reading of an individual feedback entry
@@ -54,7 +40,7 @@ exports.readFeedback = function(req, res) {
         res.json(feedback);
       }
     });
-  }).catch((err)=>res.status(401).send(String(err)));
+  });
 };
 
 /**
@@ -72,7 +58,7 @@ exports.readFeedbackByEntranceId = function(req, res) {
         res.json(feedback);
       }
     });
-  }).catch((err)=>res.status(401).send(String(err)));
+  });
 };
 
 /**
@@ -89,7 +75,7 @@ exports.readFeedbackByType = function(req, res) {
         res.json(feedback);
       }
     });
-  }).catch((err)=>res.status(401).send(String(err)));
+  });
 };
 
 /**
@@ -108,7 +94,7 @@ exports.updateFeedback = function(req, res) {
             res.json(feedback);
           }
         });
-  }).catch((err)=>res.status(401).send(String(err)));
+  });
 };
 
 /**
@@ -125,5 +111,5 @@ exports.deleteFeedback = function(req, res) {
         res.json({message: 'Feedback successfully deleted'});
       }
     });
-  }).catch((err)=>res.status(401).send(String(err)));
+  });
 };

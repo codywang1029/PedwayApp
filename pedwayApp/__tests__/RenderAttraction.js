@@ -13,5 +13,5 @@ test('Check if our RenderAttractions renders correctly', () => {
 test('test JSON helpers', ()=>{
   const treeRendered = testRenderer.create(<RenderAttraction
     JSONData={PedwayMockData}/>).toJSON();
-  expect(treeRendered.length).toBe(15);
+  expect(treeRendered.length).toBe(16);
 });

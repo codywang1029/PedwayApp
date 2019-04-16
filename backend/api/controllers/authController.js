@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 const User = mongoose.model('user');
 const Session = mongoose.model('session');
 const roles = require('../../src/roles');
+const util = require('./util');
 
 // Set timeout 1 day from now
 const timeout = 1*24*60*60*1000;
@@ -96,10 +97,7 @@ exports.auth = function(req, level=roles.NONE) {
 */
 exports.listSessions = function(req, res) {
   exports.auth(req, roles.ADMIN).then((userId)=>{
-    Session.find({}, function(err, status) {
-      if (err) res.send(err);
-      res.json(status);
-    });
+    util.getAllData(Session)(req, res);
   }).catch((err)=>res.status(401).send(err));
 };
 

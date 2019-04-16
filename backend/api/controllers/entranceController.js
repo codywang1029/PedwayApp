@@ -4,6 +4,7 @@ const roles = require('../../src/roles');
 
 const mongoose = require('mongoose');
 const PedwayEntrance = mongoose.model('entrance');
+const util = require('./util');
 
 /**
  * Returns all pedway entrances
@@ -11,15 +12,7 @@ const PedwayEntrance = mongoose.model('entrance');
  * @param {Object} req the request object
  * @param {Object} res the response object
  */
-exports.getAll = function(req, res) {
-  PedwayEntrance.find({}, function(err, entrances) {
-    if (err) {
-      res.status(400).send(err);
-    } else {
-      res.json(entrances);
-    }
-  });
-};
+exports.getAll = util.getAllData(PedwayEntrance);
 
 /**
  * Creates a pedway entrance
@@ -50,7 +43,7 @@ exports.create = function(req, res) {
  */
 exports.getById = function(req, res) {
   PedwayEntrance.findOne(
-      {'id': req.params.entranceId},
+      {'id':  "node/"+req.params.entranceId},
       function(err, entrance) {
         if (err) {
           res.status(400).send(err);
@@ -69,7 +62,7 @@ exports.getById = function(req, res) {
 exports.update = function(req, res) {
   auth(req, roles.ADMIN).then(() => {
     PedwayEntrance.findOneAndUpdate(
-        {'id': req.params.entranceId}, req.body,
+        {'id' : "node/"+req.params.entranceId}, req.body,
         {new: true}, function(err, entrance) {
           if (err) {
             res.status(400).send(err);

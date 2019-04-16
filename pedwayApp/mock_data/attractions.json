@@ -241,6 +241,22 @@
         ]
       },
       "id": "Wow Bao"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "Starbucks",
+        "attraction": "yes",
+        "hours": "Hours Open: Mon - Fri 7:00am - 6:00pm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.631685,
+          41.88386
+        ]
+      },
+      "id": "Starbucks"
     }
   ]
 }

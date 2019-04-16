@@ -4,6 +4,7 @@ const roles = require('../../src/roles');
 
 const mongoose = require('mongoose');
 const PedwaySection = mongoose.model('section');
+const util = require('./util');
 
 /**
  * Returns all pedway sections
@@ -11,15 +12,7 @@ const PedwaySection = mongoose.model('section');
  * @param {Object} req the request object
  * @param {Object} res the response object
  */
-exports.getAll = function(req, res) {
-  PedwaySection.find({}, function(err, sections) {
-    if (err) {
-      res.send(err);
-    } else {
-      res.json(sections);
-    }
-  });
-};
+exports.getAll = util.getAllData(PedwaySection);
 
 /**
  * Creates a pedway section
