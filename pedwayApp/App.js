@@ -46,7 +46,6 @@ class HomeScreen extends React.Component {
       sideMenuIsOpen: false,
       sideMenuDisableGesture: true,
       apiServerURL: 'http://a.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
-      detailViewOpen: true,
       navigateGround: false,
       navigateTo: null,
       hideHamburgerButton: false,
@@ -168,8 +167,8 @@ class MainView extends React.Component {
     this.setState({
       selectedEntrance: inputEntrance,
       isEntrance: isEntrance,
-      detailViewOpen: true,
     });
+    this.slidingUpView.setIsOpen(true);
   }
 
   setUnderground(state) {
@@ -180,6 +179,7 @@ class MainView extends React.Component {
     if (this.map !== null) {
       this.map.updateHighlightSegment(start, end);
     }
+    this.slidingUpView.setIsOpen(true);
   }
 
   mapViewNetworkErrorHandler() {
@@ -255,7 +255,6 @@ class MainView extends React.Component {
           setUnderground={this.setUnderground}
         />
         <SlidingUpDetailView
-          open={this.state.detailViewOpen}
           entrance={this.state.selectedEntrance}
           isEntrance={this.state.isEntrance}
           toggleNavigate={this.toggleNavigateCallback}
