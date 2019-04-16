@@ -3,14 +3,11 @@ const User = mongoose.model('user');
 
 const {auth} = require('./authController');
 const roles = require('../../src/roles');
-
+const util = require('./util');
 
 exports.listUsers = function(req, res) {
   auth(req, roles.ADMIN).then((userId)=>{
-    User.find({}, function(err, status) {
-      if (err) res.send(err);
-      res.json(status);
-    });
+    util.getAllData(User)(req, res);
   }).catch((err)=>res.status(401).send(err));
 };
 
