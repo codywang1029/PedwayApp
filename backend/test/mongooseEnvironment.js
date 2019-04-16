@@ -1,4 +1,4 @@
-const NodeEnvironment = require('jest-environment-node');
+const PuppeteerEnvironment = require('jest-environment-puppeteer');
 
 const {MongoMemoryServer} = require('mongodb-memory-server');
 
@@ -8,7 +8,7 @@ let mongoServer;
  * Custom subclass of the Node Environment to setup and teardown an in-memory
  * Mongo Server.
  */
-class MongooseEnvironment extends NodeEnvironment {
+class MongooseEnvironment extends PuppeteerEnvironment {
   /**
    * Sets up the Mongo Server and exports its info into a global variable
    * @return {Promise<void>}
