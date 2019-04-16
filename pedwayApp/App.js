@@ -144,6 +144,7 @@ class MainView extends React.Component {
     this.endNavigateCallback = this.endNavigateCallback.bind(this);
     this.setUnderground = this.setUnderground.bind(this);
     this.mapViewNetworkErrorHandler = this.mapViewNetworkErrorHandler.bind(this);
+    this.displayFeedbackWindow = this.displayFeedbackWindow.bind(this);
   }
 
   updateNavigationDataCallback(inputData) {
@@ -197,6 +198,12 @@ class MainView extends React.Component {
 
   setMapInFocus(input) {
     this.map.setMapInFocus(input);
+  }
+
+  displayFeedbackWindow(idx) {
+    if (this.map !== undefined && this.map !== null) {
+      this.map.displayFeedbackWindow(idx);
+    }
   }
 
   clearNavigationData() {
@@ -255,6 +262,7 @@ class MainView extends React.Component {
           entrance={this.state.selectedEntrance}
           isEntrance={this.state.isEntrance}
           toggleNavigate={this.toggleNavigateCallback}
+          displayFeedbackWindow={this.displayFeedbackWindow}
           ref={(slidingUpView) => {
             this.slidingUpView = slidingUpView;
           }}

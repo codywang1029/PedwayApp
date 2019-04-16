@@ -42,6 +42,13 @@ export default StyleSheet.create({
   routeButton: {
     fontSize: 40,
   },
+  feedbackBackgroundContainer: {
+    top: 0,
+    marginRight: 50,
+  },
+  feedbackButton: {
+    fontSize: 20,
+  },
   statusLabelContainer: {
     borderRadius: 5,
     marginLeft: 30,

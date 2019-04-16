@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styles from './styles';
-import {Image, Platform, StyleSheet, Text, View, TouchableOpacity, ToastAndroid} from 'react-native';
+import {Image, Platform, StyleSheet, Text, View, TouchableOpacity, ToastAndroid, Picker} from 'react-native';
 import MapView, {
   Polyline,
 } from 'react-native-maps';
@@ -23,9 +23,9 @@ import {point, lineString} from '@turf/helpers';
 import pointToLineDistance from '@turf/point-to-line-distance';
 import distance from '@turf/distance';
 import Attractions from '../../mock_data/attractions';
+import FeedbackView from '../FeedbackView/FeedbackView';
 
 const AZURE_API = 'https://pedway.azurewebsites.net/api';
-const ORS_API = 'https://api.openrouteservice.org';
 
 const INITIAL_LATITUDE = 41.881898;
 const INITIAL_LONGITUDE = -87.623977;
@@ -104,6 +104,7 @@ export default class GroundMapView extends React.Component {
     this.findOntoString = this.findOntoString.bind(this);
     this.networkErrorHandler = this.networkErrorHandler.bind(this);
     this.showSuggestionToast = this.showSuggestionToast.bind(this);
+    this.displayFeedbackWindow = this.displayFeedbackWindow.bind(this);
   }
 
   /**
@@ -167,6 +168,20 @@ export default class GroundMapView extends React.Component {
         // although map is not in focus, we still need to check for recalculation
         this.getCurrentClosestSegment(position.coords.longitude, position.coords.latitude);
       }
+    }
+  }
+
+  /**
+   * get the /node id of the entrance, and make the api request
+   * @param index
+   */
+  displayFeedbackWindow(index) {
+    try {
+      let nodeID = this.state.pedwayData['data'][index]['properties']['@id'];
+      if (this.feedbackView !== null) {
+        this.feedbackView.showDialog(nodeID);
+      }
+    } catch {
     }
   }
 
@@ -566,6 +581,11 @@ export default class GroundMapView extends React.Component {
 
     return (
       <View style={StyleSheet.absoluteFillObject}>
+        <FeedbackView
+          ref={(feedbackView) => {
+            this.feedbackView = feedbackView;
+          }}
+        />
         <Dialog
           visible={this.state.dialogVisibility}
           width={0.7}
