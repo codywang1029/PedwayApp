@@ -159,7 +159,7 @@ describe('Test the of the entrance api by id', () => {
   });
 
   test('Getting an entrance', async () => {
-    await request(app).get('/api/pedway/entrance/node%2F1469254509').then((response) => {
+    await request(app).get('/api/pedway/entrance/node/1469254509').then((response) => {
       expect(response.statusCode).toBe(200);
       expect(typeof response.body).toBe('object');
       const entrance = response.body;
@@ -170,7 +170,7 @@ describe('Test the of the entrance api by id', () => {
   });
 
   test('Getting an entrance that doesn\'t exist', async () => {
-    await request(app).get('/api/pedway/entrance/nodetest').then((response) => {
+    await request(app).get('/api/pedway/entrance/node/test').then((response) => {
       expect(response.statusCode).toBe(200);
       expect(typeof response.body).toBe('object');
       expect(response.body).toBe(null);
@@ -183,7 +183,7 @@ describe('Test the of the entrance api by id', () => {
 
     // Try to update the entrance with authentication
     await request(app)
-        .post('/api/pedway/entrance/node%2F1469254509')
+        .post('/api/pedway/entrance/node/1469254509')
         .set('Cookie', ['sessionId=1000'])
         .send(testEntrance1)
         .then((response) => {
@@ -191,7 +191,7 @@ describe('Test the of the entrance api by id', () => {
         });
 
     // Check if the entrance was updated
-    await request(app).get('/api/pedway/entrance/node%2F1469254509').then((response) => {
+    await request(app).get('/api/pedway/entrance/node/1469254509').then((response) => {
       expect(response.statusCode).toBe(200);
       expect(typeof response.body).toBe('object');
       const entrance = response.body;
@@ -208,14 +208,14 @@ describe('Test the of the entrance api by id', () => {
 
     // Try to update the entrance without authentication
     await request(app)
-        .post('/api/pedway/entrance/node%2F1469254509')
+        .post('/api/pedway/entrance/node/1469254509')
         .send(testEntrance1)
         .then((response) => {
           expect(response.statusCode).toBe(401);
         });
 
     // Check if the section was updated
-    await request(app).get('/api/pedway/entrance/node%2F1469254509').then((response) => {
+    await request(app).get('/api/pedway/entrance/node/1469254509').then((response) => {
       expect(response.statusCode).toBe(200);
       expect(typeof response.body).toBe('object');
       const entrance = response.body;
