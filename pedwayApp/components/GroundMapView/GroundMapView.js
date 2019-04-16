@@ -341,8 +341,11 @@ export default class GroundMapView extends React.Component {
   recalculatePath(newLongitude, newLatitude) {
     let destination = this.state.navigateTo;
     this.props.clearNavigationData();
-    this.getGeometry([newLatitude, newLongitude],
-        [destination.getCoordinate().getLatitude(), destination.getCoordinate().getLongitude()]);
+    try {
+      this.getGeometry([newLatitude, newLongitude],
+          [destination.getCoordinate().getLatitude(), destination.getCoordinate().getLongitude()]);
+    } catch {
+    }
   }
 
   componentWillReceiveProps(nextProps) {
