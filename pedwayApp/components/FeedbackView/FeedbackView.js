@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import {ToastAndroid, Picker, Text} from 'react-native';
+import {ToastAndroid, Picker, Text, TextInput} from 'react-native';
 import Dialog, {DialogContent, SlideAnimation, DialogTitle, DialogFooter, DialogButton} from 'react-native-popup-dialog';
+import {Keyboard} from 'react-native';
 
 const AZURE_API = 'https://pedway.azurewebsites.net/api';
 
@@ -14,6 +15,7 @@ export default class FeedbackView extends React.Component {
       dialogVisibility: false,
       nodeID: '',
       selectedValue: '',
+      note: '',
     };
     this.showDialog = this.showDialog.bind(this);
     this.submitFeedback = this.submitFeedback.bind(this);
@@ -24,17 +26,19 @@ export default class FeedbackView extends React.Component {
       dialogVisibility: true,
       nodeID: nodeID,
       selectedValue: '',
+      note: '',
     });
   }
 
   submitFeedback() {
+    Keyboard.dismiss();
     this.setState({
       dialogVisibility: false,
     });
     axios.post(AZURE_API + '/feedback',
         {
           'entranceId': this.state.nodeID,
-          'message': 'Feedback Submitted via PedwayApp',
+          'message': this.state.note,
           'reported_status': this.state.selectedValue,
           'type': 'feedback',
         }
@@ -66,6 +70,7 @@ export default class FeedbackView extends React.Component {
                 this.setState({
                   dialogVisibility: false,
                 });
+                Keyboard.dismiss();
               }}
             />
             <DialogButton
@@ -95,6 +100,13 @@ export default class FeedbackView extends React.Component {
             <Picker.Item label='Closing' value='closing'/>
             <Picker.Item label='Dirty' value='dirty'/>
           </Picker>
+          <TextInput
+            onChangeText={(input) => {
+              this.setState({note: input});
+            }}
+            value={this.state.note}
+            placeholder={'optional description'}
+          />
         </DialogContent>
       </Dialog>);
   }
