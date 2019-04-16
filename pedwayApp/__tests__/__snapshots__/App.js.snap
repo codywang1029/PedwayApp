@@ -280,6 +280,18 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
         pinColor="green"
         title="Wow Bao"
       />
+      <Marker
+        coordinate={
+          Object {
+            "latitude": 41.88386,
+            "longitude": -87.631685,
+          }
+        }
+        description="Hours Open: Mon - Fri 7:00am - 6:00pm"
+        onPress={[Function]}
+        pinColor="green"
+        title="Starbucks"
+      />
     </View>
     <Marker
       coordinate={
@@ -890,6 +902,18 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                           onPress={[Function]}
                           pinColor="green"
                           title="Wow Bao"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.88386,
+                              "longitude": -87.631685,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 7:00am - 6:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Starbucks"
                         />
                       </View>
                       <Marker
@@ -1748,6 +1772,18 @@ exports[`Check if our MainView renders correctly 1`] = `
                           pinColor="green"
                           title="Wow Bao"
                         />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.88386,
+                              "longitude": -87.631685,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 7:00am - 6:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Starbucks"
+                        />
                       </View>
                       <Marker
                         coordinate={
@@ -2604,6 +2640,18 @@ exports[`Check if our main app renders correctly 1`] = `
                           onPress={[Function]}
                           pinColor="green"
                           title="Wow Bao"
+                        />
+                        <Marker
+                          coordinate={
+                            Object {
+                              "latitude": 41.88386,
+                              "longitude": -87.631685,
+                            }
+                          }
+                          description="Hours Open: Mon - Fri 7:00am - 6:00pm"
+                          onPress={[Function]}
+                          pinColor="green"
+                          title="Starbucks"
                         />
                       </View>
                       <Marker
