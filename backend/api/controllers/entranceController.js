@@ -43,7 +43,7 @@ exports.create = function(req, res) {
  */
 exports.getById = function(req, res) {
   PedwayEntrance.findOne(
-      {'id':  "node/"+req.params.entranceId},
+      {'id': 'node/'+req.params.entranceId},
       function(err, entrance) {
         if (err) {
           res.status(400).send(err);
@@ -62,7 +62,7 @@ exports.getById = function(req, res) {
 exports.update = function(req, res) {
   auth(req, roles.ADMIN).then(() => {
     PedwayEntrance.findOneAndUpdate(
-        {'id' : "node/"+req.params.entranceId}, req.body,
+        {'id': 'node/'+req.params.entranceId}, req.body,
         {new: true}, function(err, entrance) {
           if (err) {
             res.status(400).send(err);
