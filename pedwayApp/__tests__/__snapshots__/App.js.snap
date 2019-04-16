@@ -300,7 +300,6 @@ exports[`Check if our GroundMapView renders correctly 1`] = `
           "longitude": -87.623977,
         }
       }
-      pinColor="#1198ff"
       style={
         Object {
           "zIndex": 10,
@@ -761,7 +760,6 @@ exports[`Check if our HomeScreen renders correctly 1`] = `
                             "longitude": -87.623977,
                           }
                         }
-                        pinColor="#1198ff"
                         style={
                           Object {
                             "zIndex": 10,
@@ -1468,7 +1466,6 @@ exports[`Check if our MainView renders correctly 1`] = `
                             "longitude": -87.623977,
                           }
                         }
-                        pinColor="#1198ff"
                         style={
                           Object {
                             "zIndex": 10,
@@ -2175,7 +2172,6 @@ exports[`Check if our main app renders correctly 1`] = `
                             "longitude": -87.623977,
                           }
                         }
-                        pinColor="#1198ff"
                         style={
                           Object {
                             "zIndex": 10,
