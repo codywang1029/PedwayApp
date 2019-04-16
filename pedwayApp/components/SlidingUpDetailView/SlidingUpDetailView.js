@@ -29,6 +29,18 @@ export default class SlidingUpDetailView extends Component {
     this.navigateButtonOnPress = this.navigateButtonOnPress.bind(this);
     this.setNavigate = this.setNavigate.bind(this);
     this.feedbackButtonOnPress = this.feedbackButtonOnPress.bind(this);
+    this.setIsOpen = this.setIsOpen.bind(this);
+  }
+
+  setIsOpen(status) {
+    this.setState({
+      open: status,
+    });
+    if (status) {
+      this.openView();
+    } else {
+      this.closeView();
+    }
   }
 
   updateState(inputProps) {
@@ -37,18 +49,6 @@ export default class SlidingUpDetailView extends Component {
         entrance: inputProps.entrance,
         isEntrance: inputProps.isEntrance,
       });
-    }
-    if (inputProps.open === true) {
-      this.setState({
-        open: true,
-      });
-      this.openView();
-    }
-    if (inputProps.open === false) {
-      this.setState({
-        open: false,
-      });
-      this.closeView();
     }
   }
 

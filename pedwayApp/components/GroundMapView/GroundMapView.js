@@ -426,6 +426,17 @@ export default class GroundMapView extends React.Component {
             navigateDataRequested: true,
             navigateList: retSection,
           });
+          try {
+            let estimateSecond = json.data.routes[0].summary.duration;
+            let estimateMinute = Math.ceil(estimateSecond/60);
+            let warningString = '';
+            if (estimateMinute > 60) {
+              warningString = ' You are too far away from your destination, are you sure to take this path?';
+            }
+            ToastAndroid.showWithGravityAndOffset('Estimate Time: ' + String(estimateMinute) + 'min' + warningString,
+                ToastAndroid.LONG, ToastAndroid.BOTTOM, 0, 350);
+          } catch (e) {
+          }
         })
         .catch(this.networkErrorHandler);
   }
@@ -603,7 +614,7 @@ export default class GroundMapView extends React.Component {
                     // we need to end navigation
                     this.props.endNavigateCallback();
                   }
-                  if (this.state.dialogTitle === 'Network Error') {
+                  if (this.state.dialogTitle === 'Network Error' || this.state.dialogTitle === 'Unable to Route') {
                     this.props.endNavigateCallback();
                   }
                 }}
@@ -686,7 +697,6 @@ export default class GroundMapView extends React.Component {
             }}
             style={{zIndex: 10}}
             title={'You'}
-            pinColor={'#1198ff'}
           >
             <Image source={circle} style={{width: 25, height: 25}} />
           </MapView.Marker>
@@ -698,7 +708,7 @@ export default class GroundMapView extends React.Component {
               longitude: this.state.navigateTo.getCoordinate().getLongitude(),
             }}
             style={{zIndex: 10}}
-            pinColor={'#009e4c'}
+            pinColor={'#dc143c'}
           />
           }
           {this.state.underground && this.state.mapReady?
