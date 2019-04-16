@@ -72,33 +72,31 @@ class HomeScreen extends React.Component {
 
   render() {
     const {navigate} = this.props.navigation;
-    const MenuComponent = (
-      <View style={{flex: 1, backgroundColor: '#a9a9a9', paddingTop: 50, alignItems: 'center'}}>
-        <Icon style={{fontSize: 85}}
-          name = 'home'
-        />
-        <TouchableOpacity
-          style={styles.sideButton}
-          onPress={() => navigate('FoodDirectory')}>
-          <Text style={styles.item}>
-            <Icon name="info-circle" style={styles.item}/>
-              Directory
-          </Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.sideButton}
-          onPress={() => navigate('StaticMap')}>
-          <Text style={styles.item}>
-            <Icon name="map" style={styles.item}/>
-              Map
-          </Text>
-        </TouchableOpacity>
-      </View>
-    );
 
     return (
       <SideMenu
-        menu={MenuComponent}
+        menu={(this.state.sideMenuIsOpen)?(
+            <View style={{flex: 1, backgroundColor: '#a9a9a9', paddingTop: 50, alignItems: 'center'}}>
+              <Icon style={{fontSize: 85}} name = 'home'/>
+              <TouchableOpacity
+                style={styles.sideButton}
+                onPress={() => navigate('FoodDirectory')}>
+                <Text style={styles.item}>
+                  <Icon name="info-circle" style={styles.item}/>
+                  Directory
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={styles.sideButton}
+                onPress={() => navigate('StaticMap')}>
+                <Text style={styles.item}>
+                  <Icon name="map" style={styles.item}/>
+                  Map
+                </Text>
+              </TouchableOpacity>
+            </View>
+          ):
+          null}
         disableGestures={this.state.sideMenuDisableGesture}
         isOpen={this.state.sideMenuIsOpen}
         onChange={(openStatus) => {
@@ -144,6 +142,7 @@ class MainView extends React.Component {
     this.endNavigateCallback = this.endNavigateCallback.bind(this);
     this.setUnderground = this.setUnderground.bind(this);
     this.mapViewNetworkErrorHandler = this.mapViewNetworkErrorHandler.bind(this);
+    this.displayFeedbackWindow = this.displayFeedbackWindow.bind(this);
   }
 
   updateNavigationDataCallback(inputData) {
@@ -199,6 +198,12 @@ class MainView extends React.Component {
     this.map.setMapInFocus(input);
   }
 
+  displayFeedbackWindow(idx) {
+    if (this.map !== undefined && this.map !== null) {
+      this.map.displayFeedbackWindow(idx);
+    }
+  }
+
   clearNavigationData() {
     this.setState({navigationDataRequested: false});
   }
@@ -234,7 +239,6 @@ class MainView extends React.Component {
   render() {
     return (
       <View style={styles.fillView}>
-
         <GroundMapView
           selectedMarkerCallback={(input, isEntrance) => {
             this.updateSlidingDetailView(input, isEntrance);
@@ -255,6 +259,7 @@ class MainView extends React.Component {
           entrance={this.state.selectedEntrance}
           isEntrance={this.state.isEntrance}
           toggleNavigate={this.toggleNavigateCallback}
+          displayFeedbackWindow={this.displayFeedbackWindow}
           ref={(slidingUpView) => {
             this.slidingUpView = slidingUpView;
           }}

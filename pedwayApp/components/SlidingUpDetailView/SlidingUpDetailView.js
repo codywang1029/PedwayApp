@@ -28,6 +28,7 @@ export default class SlidingUpDetailView extends Component {
     this.closeView = this.closeView.bind(this);
     this.navigateButtonOnPress = this.navigateButtonOnPress.bind(this);
     this.setNavigate = this.setNavigate.bind(this);
+    this.feedbackButtonOnPress = this.feedbackButtonOnPress.bind(this);
   }
 
   updateState(inputProps) {
@@ -72,6 +73,16 @@ export default class SlidingUpDetailView extends Component {
     this.setState({
       navigate: !this.state.navigate,
     });
+  }
+
+  feedbackButtonOnPress() {
+    // remove Entrance # string
+    let entranceIndexString = this.state.entrance.getName().slice(10);
+    try {
+      let entranceIndex = parseInt(entranceIndexString);
+      this.props.displayFeedbackWindow(entranceIndex);
+    } catch {
+    }
   }
 
   setNavigate(state) {
@@ -128,6 +139,23 @@ export default class SlidingUpDetailView extends Component {
                   {this.state.entrance.getCoordinate().getLatitude() + ', '
                   + this.state.entrance.getCoordinate().getLongitude()}
                 </Text>
+                {
+                  this.state.isEntrance?
+                    <View style={styles.routeButtonContainer}>
+                      <TouchableOpacity
+                        style={styles.feedbackBackgroundContainer}
+                        onPress={() => {
+                          this.feedbackButtonOnPress();
+                        }}
+                      >
+                        <Icon
+                          style={styles.feedbackButton}
+                          name={'error-outline'}
+                        />
+                      </TouchableOpacity>
+                    </View>:
+                    null
+                }
               </View>
             </View>
           </View>

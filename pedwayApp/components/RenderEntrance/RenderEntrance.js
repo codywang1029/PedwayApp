@@ -63,6 +63,7 @@ export default class RenderEntrance extends Component {
           onPress={()=>{
             this.props.callbackFunc(this.state.pedwayEntrances[idx], true);
           }}
+          tracksViewChanges={false}
         >
           <Image source={entrance} style={{width: 30, height: 30}} />
         </MapView.Marker>
