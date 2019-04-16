@@ -56,7 +56,7 @@ function signOut() {
 */
 function updateEntrance(e) {
   $.ajax({
-    url: "/api/pedway/entrance/" + encodeURIComponent($("#entranceId").val()),
+    url: "/api/pedway/entrance/" + $("#entranceId").val(),
     type: "POST",
     data: {
       status: $("#status").val()
