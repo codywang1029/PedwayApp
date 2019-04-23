@@ -11,6 +11,10 @@ import PedwayAttraction from '../../model/PedwayAttraction';
 /**
  * renders a view Component that displays pedway info and user action when
  * mapMarker is clicked
+ * Allow user to view the name and coordinate of the spot, display a button for user to navigate to
+ * if this marker is a pedway entrance, we also need to show the open/close status and also display a feedback button
+ * if this marker is a pedway entrance, a navigation buttonis also displayed. If navigation is false this button
+ * will be start navigation button. Vice versa this button will be end navigation button.
  */
 
 export default class SlidingUpDetailView extends Component {
@@ -32,6 +36,10 @@ export default class SlidingUpDetailView extends Component {
     this.setIsOpen = this.setIsOpen.bind(this);
   }
 
+  /**
+   * set the open/close status of this sliding up view
+   * @param status
+   */
   setIsOpen(status) {
     this.setState({
       open: status,
@@ -68,6 +76,9 @@ export default class SlidingUpDetailView extends Component {
     this.updateState(nextProps);
   }
 
+  /**
+   * communicate with app component when start/cancel navigation button is pressed
+   */
   navigateButtonOnPress() {
     this.props.toggleNavigate(this.state.entrance, !this.state.navigate);
     this.setState({
@@ -75,6 +86,9 @@ export default class SlidingUpDetailView extends Component {
     });
   }
 
+  /**
+   * onPress listener for the feedback button
+   */
   feedbackButtonOnPress() {
     // remove Entrance # string
     let entranceIndexString = this.state.entrance.getName().slice(10);
@@ -85,6 +99,11 @@ export default class SlidingUpDetailView extends Component {
     }
   }
 
+  /**
+   * set this.state.navigation
+   * if state === false, also close the sliding up view
+   * @param state
+   */
   setNavigate(state) {
     this.setState({
       navigate: state,
@@ -174,6 +193,10 @@ export default class SlidingUpDetailView extends Component {
   }
 }
 
+
+/**
+ * separate component for the status label displaying the current status of the pedway entrance
+ */
 class StatusLabel extends Component {
   render() {
     if (this.props.text === 'open') {

@@ -8,11 +8,13 @@ import {
 } from 'react-native';
 import React, {Component} from 'react';
 import axios from 'axios';
-import {ORS_API_KEY} from 'react-native-dotenv';
 
 const AZURE_API = 'https://pedway.azurewebsites.net';
 
-
+/**
+ * renders a search bar that allow user to search location within the Chicago city via the auto completion poi endpoint
+ * in our backend
+ */
 export default class SearchBar extends React.Component {
   constructor(props) {
     super(props);
@@ -27,6 +29,10 @@ export default class SearchBar extends React.Component {
     this.searchBarEdit = this.searchBarEdit.bind(this);
   }
 
+  /**
+   * onSubmit callback, request the autocomplete endpoint with the query string user has entered
+   * the endpoint return a list of features that represents all the search results
+   */
   searchBarOnSubmit() {
     this.setState({
       showTextInput: false,
@@ -58,7 +64,10 @@ export default class SearchBar extends React.Component {
     }
   }
 
-
+  /**
+   * onEdit listener for the textField, update the queryText state
+   * @param textInput
+   */
   searchBarEdit(textInput) {
     this.setState({
       showTextInput: true,

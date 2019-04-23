@@ -24,6 +24,12 @@ let vectorIconDisplayList = [
 ];
 
 let isProgrammaticallyUpdatingIndex = false;
+/**
+ * Swiper view based component that displays a list of navigation instructions
+ * User can swipe to view the instructions
+ * If user is centered on himself/herself(in focus mode), while user is walking, this swiper would swipe automatically
+ * to display the most up-to-date instruction
+ */
 
 export default class NavigationSwipeView extends React.Component {
   constructor(props) {
@@ -38,7 +44,6 @@ export default class NavigationSwipeView extends React.Component {
     this.onIndexChanged = this.onIndexChanged.bind(this);
     this.updateSwiperViewIndex = this.updateSwiperViewIndex.bind(this);
     this.onMomentumScrollEnd = this.onMomentumScrollEnd.bind(this);
-    this.findOntoString = this.findOntoString.bind(this);
   }
 
   componentDidMount() {
@@ -63,7 +68,7 @@ export default class NavigationSwipeView extends React.Component {
       currentIndex: 0,
     });
 
-
+    // set the highlight segment for the path in groundmap to the initial segment
     try {
       let route = inputProps.navigationData['data']['routes'][0];
       let wayPoint = route['segments'][0]['steps'][0]['way_points'];
@@ -103,22 +108,11 @@ export default class NavigationSwipeView extends React.Component {
     }
   }
 
-  findOntoString(instruction) {
-    let ontoIndex = instruction.indexOf('onto');
-    let roadString = '';
-    if (ontoIndex === -1) {
-      let onIndex = instruction.indexOf('on');
-      if (onIndex !== -1) {
-        roadString = instruction.slice(onIndex + 3);
-      } else {
-        return;
-      }
-    } else {
-      roadString = instruction.slice(ontoIndex + 5);
-    }
-    this.props.setUnderground((roadString === 'Pedway'));
-  }
-
+  /**
+   * listener that is called when the scroll animation ended
+   * we use the global isProgrammaticallyUpdatingIndex is check if this is due to a user swipe or not
+   * if it is due to a user swipe, to need to set the focus mode of the groundmapView to false
+   */
   onMomentumScrollEnd() {
     // if user is scrolling it, we need to unlock the mapView to let it not in focus
     if (!isProgrammaticallyUpdatingIndex) {
