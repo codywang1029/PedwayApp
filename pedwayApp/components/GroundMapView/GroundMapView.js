@@ -10,7 +10,6 @@ import MapStyle from './mapStyleDark';
 import RenderEntrance from '../RenderEntrance/RenderEntrance';
 import RenderLocation from '../RenderLocation/RenderLocation';
 import RenderAttraction from '../RenderAttractions/RenderAttractions';
-import MapCallout from 'react-native-maps/lib/components/MapCallout';
 import circle from '../../media/pedwayEntranceMarker.png';
 import axios from 'axios';
 import RoundButton from '../RoundButton/RoundButton';

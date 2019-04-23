@@ -8,7 +8,6 @@ import {
 } from 'react-native';
 import React, {Component} from 'react';
 import axios from 'axios';
-import {ORS_API_KEY} from 'react-native-dotenv';
 
 const AZURE_API = 'https://pedway.azurewebsites.net';
 
