@@ -6,7 +6,10 @@ import {Keyboard} from 'react-native';
 
 const AZURE_API = 'https://pedway.azurewebsites.net/api';
 
-
+/**
+ * display a dialog allowing user the enter the current status of the pedway entrance and provide written feedbacks
+ * the user can choose to submit this form via the feedback api
+ */
 export default class FeedbackView extends React.Component {
   constructor() {
     super();
@@ -21,6 +24,10 @@ export default class FeedbackView extends React.Component {
     this.submitFeedback = this.submitFeedback.bind(this);
   }
 
+  /**
+   * dispaly a feedback for an entrance with nodeID in the database
+   * @param nodeID
+   */
   showDialog(nodeID) {
     this.setState({
       dialogVisibility: true,
@@ -30,6 +37,10 @@ export default class FeedbackView extends React.Component {
     });
   }
 
+  /**
+   * submit this form via axios call to the backend endpoints
+   * also display a toast with the submission status via toast
+   */
   submitFeedback() {
     Keyboard.dismiss();
     this.setState({
@@ -84,6 +95,7 @@ export default class FeedbackView extends React.Component {
         }}
       >
         <DialogContent>
+
           <Text>Submit feedback for this entrance's status:</Text>
           <Picker
             onValueChange={(val, idx) => {
