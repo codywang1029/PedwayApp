@@ -5,4 +5,5 @@ module.exports = {
     'default',
     'jest-junit',
   ],
+  preset: 'jest-puppeteer',
 };
