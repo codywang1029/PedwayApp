@@ -1,24 +1,22 @@
 # How to run the backend server
 ### Prerequisites
-Must have npm installed  
-Inside this directory(in the git repo) run the following bash commands  
+Must have npm installed
+Inside this directory(in the git repo) run the following bash commands
 ```bash
 npm install --save-dev nodemon
 npm install express --save
 npm install
 ```
-You must also have a mongodb instance running  
-I recommended using a docker image, but feel free to use your own solution  
+You must also have a mongodb instance running
+I recommended using a docker image, but feel free to use your own solution
 This is what I did:
 ```bash
 # Create a mongodb image
 docker pull mongo
 docker run --name pedmongo --restart=always -d -p 27017:27017 mongo mongod
 
-# connect through local mongo client
+# connect through local mongo client to check if the server is up
 mongo
-
-# Now you are connected to the mongodb image
 ```
 
 ### Environment Variable Configuration
@@ -47,7 +45,7 @@ MONGODB_HOST=...
 DEFAULT_ADMIN_EMAIL=
 
 # Openroutingservice.org API key
-ORS_API_KEY=... 
+ORS_API_KEY=...
 ```
 
 ### How to actually run the server
