@@ -44,41 +44,6 @@ exports.readFeedback = function(req, res) {
 };
 
 /**
-* @description reads all feedback entries correlated
-*         with a specific entranceId
-* @param {request} req is the request received
-* @param {res} res is the response object for making responses
-*/
-exports.readFeedbackByEntranceId = function(req, res) {
-  auth(req, roles.ADMIN).then((userId)=>{
-    Feedback.find({entranceId: req.params.entranceId}, function(err, feedback) {
-      if (err) {
-        res.send(err);
-      } else {
-        res.json(feedback);
-      }
-    });
-  });
-};
-
-/**
-* @description reads all feedback entries of a specific type
-* @param {request} req is the request received
-* @param {res} res is the response object for making responses
-*/
-exports.readFeedbackByType = function(req, res) {
-  auth(req, roles.ADMIN).then((userId)=>{
-    Feedback.find({type: req.params.type}, function(err, feedback) {
-      if (err) {
-        res.send(err);
-      } else {
-        res.json(feedback);
-      }
-    });
-  });
-};
-
-/**
 * @description update a specific feedback entry
 * @param {request} req is the request received
 * @param {res} res is the response object for making responses
