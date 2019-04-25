@@ -205,8 +205,11 @@ export default class GroundMapView extends React.Component {
           }, {enableHighAccuracy: true, distanceFilter: 1});
       this.requestEntranceData();
     } else {
-      ToastAndroid.showWithGravityAndOffset('Please grant location permission for this app',
-          ToastAndroid.LONG, ToastAndroid.BOTTOM, 0, 40);
+      this.setState({dialogTitle: 'GPS Error',
+        dialogVisibility: true,
+        dialogContent: 'You should grant permission access for this app',
+        dialogButtonText: 'Dismiss',
+      });
     }
   }
 
