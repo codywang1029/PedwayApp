@@ -10,7 +10,6 @@ import MapStyle from './mapStyleDark';
 import RenderEntrance from '../RenderEntrance/RenderEntrance';
 import RenderLocation from '../RenderLocation/RenderLocation';
 import RenderAttraction from '../RenderAttractions/RenderAttractions';
-import MapCallout from 'react-native-maps/lib/components/MapCallout';
 import circle from '../../media/pedwayEntranceMarker.png';
 import axios from 'axios';
 import RoundButton from '../RoundButton/RoundButton';
@@ -181,7 +180,7 @@ export default class GroundMapView extends React.Component {
       if (this.feedbackView !== null) {
         this.feedbackView.showDialog(nodeID);
       }
-    } catch {
+    } catch (e) {
     }
   }
 
@@ -310,14 +309,22 @@ export default class GroundMapView extends React.Component {
     return [segmentList[closestSegmentIdx], closestSegmentIdx];
   }
 
-
+  /**
+   * pass in the next idx the user is about to enter, check if the user is about to enter the pedway or not
+   * @param idx
+   */
   updateMapMode(idx) {
     let route = this.state.navigateJSON['data']['routes'][0];
     let nextInstruction = route['segments'][0]['steps'][idx]['instruction'];
-    this.findOntoString(nextInstruction, idx);
+    this.findOntoString(nextInstruction);
   }
 
-  findOntoString(instruction, idx) {
+  /**
+   * parse the 'onto someRoad' in the instruction, if 'someRoad' === 'pedway', we need to show the suggestion toast
+   * suggesting the user to use the underground mode
+   * @param instruction
+   */
+  findOntoString(instruction) {
     let ontoIndex = instruction.indexOf('onto');
     let roadString = '';
     if (ontoIndex === -1) {
@@ -336,14 +343,42 @@ export default class GroundMapView extends React.Component {
     }
   }
 
+  /**
+   * suggest user to take the pedway
+   */
   showSuggestionToast() {
     ToastAndroid.showWithGravityAndOffset('Switch to underground mode to view the Pedway', ToastAndroid.LONG, ToastAndroid.BOTTOM, 0, 350);
   }
 
+  /**
+   * tell app component which entrance/attraction the user have selected
+   * also make api request to the backend to get the updated status of the entrance
+   * if there is a status change, we need to update our data stored in the app
+   * @param inputEntrance   data of the entrance/attration
+   * @param isEntrance  whether the selected marker is entrance or not
+   */
   forwardSelectedEntrance(inputEntrance, isEntrance) {
     Keyboard.dismiss();
     if (this.props.selectedMarkerCallback !== undefined) {
       this.props.selectedMarkerCallback(inputEntrance, isEntrance);
+    }
+    //
+    if (isEntrance) {
+      let entranceIndexString = inputEntrance.getName().slice(10);
+      try {
+        let entranceIndex = parseInt(entranceIndexString);
+        let nodeID = this.state.pedwayData.data[entranceIndex].id;
+        // now we can make the api call and update our states
+        axios.get(AZURE_API + '/pedway/entrance/' + nodeID)
+            .then( (res) => {
+              let newStatus = res.data.status;
+              this.state.pedwayData.data[entranceIndex].status = newStatus;
+              inputEntrance.setStatus(newStatus);
+              this.props.selectedMarkerCallback(inputEntrance, isEntrance);
+            })
+            .catch((e) => {});
+      } catch (e) {
+      }
     }
   }
 
@@ -359,7 +394,7 @@ export default class GroundMapView extends React.Component {
     try {
       this.getGeometry([newLatitude, newLongitude],
           [destination.getCoordinate().getLatitude(), destination.getCoordinate().getLongitude()]);
-    } catch {
+    } catch (e) {
     }
   }
 
@@ -371,6 +406,11 @@ export default class GroundMapView extends React.Component {
     this.setState({underground: nextProps.underground});
   }
 
+  /**
+   * update the highlight segment of the line shown during routing to the start and end index
+   * @param highlightSegmentStart
+   * @param highlightSegmentEnd
+   */
   updateHighlightSegment(highlightSegmentStart, highlightSegmentEnd) {
     if (this.state.navigate === true) {
       this.setState({
@@ -380,6 +420,14 @@ export default class GroundMapView extends React.Component {
     }
   }
 
+  /**
+   * helper function for app component to call
+   * also pass in the initial highlight segment start end index
+   * @param navigate bool, whether map should start naviagte
+   * @param navigateTo  where is the point user want navigate to
+   * @param highlightSegmentStart
+   * @param highlightSegmentEnd
+   */
   updateNavigationState(navigate, navigateTo, highlightSegmentStart, highlightSegmentEnd) {
     this.setState({
       navigateTo: navigateTo,

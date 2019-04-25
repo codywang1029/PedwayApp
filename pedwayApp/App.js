@@ -69,6 +69,10 @@ class HomeScreen extends React.Component {
     this.setState({hideHamburgerButton: inputStatus});
   }
 
+  /**
+   * renders a sidemenu and the mainView in the SideMenu component
+   * @returns {*}
+   */
   render() {
     const {navigate} = this.props.navigation;
 
@@ -130,7 +134,7 @@ class MainView extends React.Component {
       isEntrance: true,
     };
     this.toggleUndergroundMap = this.toggleUndergroundMap.bind(this);
-    this.toggleNavigateCallback = this.toggleNavigateCallback.bind(this);
+    this.startNavigateCallback = this.startNavigateCallback.bind(this);
     this.setSearchData = this.setSearchData.bind(this);
     this.updateNavigationDataCallback = this.updateNavigationDataCallback.bind(this);
     this.updateSlidingDetailView = this.updateSlidingDetailView.bind(this);
@@ -144,6 +148,10 @@ class MainView extends React.Component {
     this.displayFeedbackWindow = this.displayFeedbackWindow.bind(this);
   }
 
+  /**
+   * callBack for mapView to use to update the state related to whether the user is routing or not
+   * @param inputData
+   */
   updateNavigationDataCallback(inputData) {
     this.setState({
       navigationData: inputData,
@@ -163,6 +171,11 @@ class MainView extends React.Component {
     });
   }
 
+  /**
+   * callback for the mapView to use to pass in new entrance/attraction to the sliding up view
+   * @param inputEntrance object of the entrance/attraction
+   * @param isEntrance whether it is an entrance or not
+   */
   updateSlidingDetailView(inputEntrance, isEntrance) {
     this.setState({
       selectedEntrance: inputEntrance,
@@ -175,6 +188,11 @@ class MainView extends React.Component {
     this.setState({underground: state});
   }
 
+  /**
+   * callback to update the start and end segment of the highlight route in the mapview
+   * @param start
+   * @param end
+   */
   updateSegmentStartEndCallback(start, end) {
     if (this.map !== null) {
       this.map.updateHighlightSegment(start, end);
@@ -188,12 +206,21 @@ class MainView extends React.Component {
     }
   }
 
+  /**
+   * callback for the mapView to use to update the swiperView's index to the user's most recent location while
+   * in focus mode
+   * @param idx
+   */
   updateSwiperViewIndex(idx) {
     if (this.swiperView !== null) {
       this.swiperView.updateSwiperViewIndex(idx);
     }
   }
 
+  /**
+   * set whether map should be in focus mode or not
+   * @param input
+   */
   setMapInFocus(input) {
     this.map.setMapInFocus(input);
   }
@@ -208,7 +235,13 @@ class MainView extends React.Component {
     this.setState({navigationDataRequested: false});
   }
 
-  toggleNavigateCallback(inputEntrance, inputStatus) {
+  /**
+   * start navigation to the inputedEntrance with the inputStatus
+   * also hide the searchBar and display the swiperView
+   * @param inputEntrance
+   * @param inputStatus
+   */
+  startNavigateCallback(inputEntrance, inputStatus) {
     // use setState to clear the existing navigation data
     this.setState({
       navigateGround: inputStatus,
@@ -223,6 +256,9 @@ class MainView extends React.Component {
     }
   }
 
+  /**
+   * end navigation, clear related data, hide swiperView and display searchBar
+   */
   endNavigateCallback() {
     this.props.shouldHideHamburgerButton(false);
     this.setState({
@@ -257,7 +293,7 @@ class MainView extends React.Component {
         <SlidingUpDetailView
           entrance={this.state.selectedEntrance}
           isEntrance={this.state.isEntrance}
-          toggleNavigate={this.toggleNavigateCallback}
+          startNavigate={this.startNavigateCallback}
           displayFeedbackWindow={this.displayFeedbackWindow}
           ref={(slidingUpView) => {
             this.slidingUpView = slidingUpView;
@@ -291,7 +327,9 @@ class MainView extends React.Component {
   }
 }
 
-
+/**
+ * display the navigator for the PDFMap and pedway Directory
+ */
 const MainNavigator = createStackNavigator({
   Home: {
     screen: HomeScreen,

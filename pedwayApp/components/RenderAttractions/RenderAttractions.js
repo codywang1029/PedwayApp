@@ -1,11 +1,7 @@
 import React, {Component} from 'react';
 import PedwayCoordinate from '../../model/PedwayCoordinate';
 import PedwayAttraction from '../../model/PedwayAttraction';
-import MarkerImage from '../../media/pedwayEntranceMarker.png';
-import MapView, {
-  Polyline,
-  Marker, Callout,
-} from 'react-native-maps';
+import MapView from 'react-native-maps';
 import {Text, View} from '../GroundMapView/GroundMapView';
 
 /**
@@ -36,7 +32,7 @@ export default class RenderAttractions extends Component {
       } catch (e) {
         return false;
       }
-    }).reduce((acc, item, idx) => {
+    }).reduce((acc, item) => {
       const thisLongitude = item['geometry']['coordinates'][0];
       const thisLatitude = item['geometry']['coordinates'][1];
       return acc.concat(
@@ -65,7 +61,10 @@ export default class RenderAttractions extends Component {
     this.forceUpdate();
   }
 
-  /* Render all obtained attractions on the map with a green pin marker */
+  /**
+   * Render all obtained attractions on the map with a green pin marker
+   * @returns {*[]}
+   */
   render() {
     const retMarkerList = this.state.pedwayAttractions.map((input, idx) => {
       return (

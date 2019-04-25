@@ -8,6 +8,7 @@ $ npm install -g react-native-cli
 ```
 - Set the sdk.dir in /pedwayApp/android/local.properties to the Android sdk's directory on your own machine
 - Add an Android configuration in WebStorm and run it, or execute:
+- Grant location permission for this app in Setting -> Location Services -> App-level-permission-> Chicago Pedway
 ```console
 $ react-native run-android
 ```
