@@ -180,7 +180,7 @@ export default class GroundMapView extends React.Component {
       if (this.feedbackView !== null) {
         this.feedbackView.showDialog(nodeID);
       }
-    } catch {
+    } catch (e) {
     }
   }
 
@@ -377,7 +377,7 @@ export default class GroundMapView extends React.Component {
               this.props.selectedMarkerCallback(inputEntrance, isEntrance);
             })
             .catch((e) => {});
-      } catch {
+      } catch (e) {
       }
     }
   }
@@ -394,7 +394,7 @@ export default class GroundMapView extends React.Component {
     try {
       this.getGeometry([newLatitude, newLongitude],
           [destination.getCoordinate().getLatitude(), destination.getCoordinate().getLongitude()]);
-    } catch {
+    } catch (e) {
     }
   }
 

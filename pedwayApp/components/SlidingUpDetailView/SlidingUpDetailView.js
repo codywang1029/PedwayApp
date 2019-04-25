@@ -1,11 +1,8 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import styles from './styles';
-import RoundButton from '../RoundButton/RoundButton';
 import SlidingUpPanel from 'rn-sliding-up-panel';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import PedwayEntrance from '../../model/PedwayEntrance';
-import PedwayAttraction from '../../model/PedwayAttraction';
 
 
 /**
@@ -51,6 +48,10 @@ export default class SlidingUpDetailView extends Component {
     }
   }
 
+  /**
+   * update what entrance/attraction shown in this view from the object we got from the inputProps
+   * @param inputProps
+   */
   updateState(inputProps) {
     if (inputProps.entrance !== undefined && inputProps.entrance !== null) {
       this.setState({
@@ -80,7 +81,7 @@ export default class SlidingUpDetailView extends Component {
    * communicate with app component when start/cancel navigation button is pressed
    */
   navigateButtonOnPress() {
-    this.props.toggleNavigate(this.state.entrance, !this.state.navigate);
+    this.props.startNavigate(this.state.entrance, !this.state.navigate);
     this.setState({
       navigate: !this.state.navigate,
     });

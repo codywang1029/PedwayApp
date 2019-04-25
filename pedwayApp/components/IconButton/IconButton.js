@@ -3,7 +3,9 @@ import styles from './styles';
 import {TouchableOpacity, View} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-
+/**
+ * renders an Icon with an onClicklistener, icon and size can be customized by passing in props
+ */
 export default class IconButton extends React.Component {
   render() {
     return (

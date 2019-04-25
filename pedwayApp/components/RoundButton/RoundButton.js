@@ -3,7 +3,9 @@ import styles from './styles';
 import {TouchableOpacity, View} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-
+/**
+ * renders an round button with an onClicklistener and icon, icon and size can be customized by passing in props
+ */
 export default class RoundButton extends React.Component {
   render() {
     return (

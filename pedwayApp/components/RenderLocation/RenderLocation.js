@@ -1,11 +1,7 @@
 import React, {Component} from 'react';
 import PedwayCoordinate from '../../model/PedwayCoordinate';
-import MarkerImage from '../../media/pedwayEntranceMarker.png';
 import PedwayEntrance from '../../model/PedwayEntrance';
-import MapView, {
-  Polyline,
-  Marker,
-} from 'react-native-maps';
+import MapView from 'react-native-maps';
 
 /**
  * The current pedway sections are hard coded place holders
@@ -20,6 +16,12 @@ export default class RenderLocation extends Component {
     this.parseJSONtoModel = this.parseJSONtoModel.bind(this);
   }
 
+  /**
+   * parses the representation of a list of locations fetched from the point of interest api
+   * into a list of locations
+   * the coordinate and status will be set according to the inputJSON
+   * @param inputJSON
+   */
   parseJSONtoModel(inputJSON) {
     const locations = inputJSON.filter((item) => {
       try {
@@ -60,6 +62,12 @@ export default class RenderLocation extends Component {
     this.forceUpdate();
   }
 
+  /**
+   * renders the location list parsed from the inputJSON into a list of markers on the map
+   * onclickListener is setup for the markers so that the user can click on a marker and bring up
+   * the corresponding slingupview
+   * @returns {*[]}
+   */
   render() {
     const retMarkerList = this.state.pedwayLocations.map((input, idx) => {
       return (
