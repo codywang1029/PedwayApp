@@ -1,9 +1,9 @@
 const request = require('supertest');
 const mongoose = require('mongoose');
 
-let app;
-let SectionSchema;
-let setTestSession;
+const {app, disconnect} = require('../src/app');
+const SectionSchema = mongoose.model('section');
+const {setTestSession} = require('../api/controllers/authController');
 
 /**
  * Generates sample section data for use in the tests
@@ -66,12 +66,6 @@ function createTestSections() {
 let {testSection1, testSection2, testSection3} = createTestSections();
 
 beforeAll(async () => {
-  process.env['APP_DEPLOYMENT_MODE'] = 'testing';
-  process.env['MONGODB_HOST'] = global.__MONGODB_HOST__;
-  ({app, disconnect} = require('../src/app'));
-  SectionSchema = mongoose.model('section');
-
-  ({setTestSession} = require('../api/controllers/authController'));
   setTestSession('1000');
 });
 

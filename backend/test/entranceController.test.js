@@ -1,9 +1,9 @@
 const request = require('supertest');
 const mongoose = require('mongoose');
 
-let app;
-let EntranceSchema;
-let setTestSession;
+const {app, disconnect} = require('../src/app');
+const EntranceSchema = mongoose.model('entrance');
+const {setTestSession} = require('../api/controllers/authController');
 
 /**
  * Generates sample entrance data for use in the tests
@@ -32,12 +32,6 @@ function createTestEntrances() {
 let {testEntrance1, testEntrance2, testEntrance3} = createTestEntrances();
 
 beforeAll(async () => {
-  process.env['APP_DEPLOYMENT_MODE'] = 'testing';
-  process.env['MONGODB_HOST'] = global.__MONGODB_HOST__;
-  ({app, disconnect} = require('../src/app'));
-  EntranceSchema = mongoose.model('entrance');
-
-  ({setTestSession} = require('../api/controllers/authController'));
   setTestSession('1000');
 });
 
