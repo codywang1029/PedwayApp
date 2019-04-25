@@ -73,9 +73,7 @@ export default class NavigationSwipeView extends React.Component {
       let route = inputProps.navigationData['data']['routes'][0];
       let wayPoint = route['segments'][0]['steps'][0]['way_points'];
       this.props.updateSegmentStartEndCallback(wayPoint[0], wayPoint[1]);
-    } catch (e) {
-      console.log(e);
-    }
+    } catch (e) {}
   }
 
   /**

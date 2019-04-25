@@ -196,6 +196,7 @@ export default class SlidingUpDetailView extends Component {
 
 /**
  * separate component for the status label displaying the current status of the pedway entrance
+ * if the status of the pedway is not requested yet, we need to render a blank rounded rectangle for placeholder
  */
 class StatusLabel extends Component {
   render() {
@@ -219,7 +220,7 @@ class StatusLabel extends Component {
       return (
         <View style={[styles.statusLabelContainer, styles.statusLabelGrey]}>
           <Text style={styles.statusLabelText}>
-            Undefined
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </Text>
         </View>
       );

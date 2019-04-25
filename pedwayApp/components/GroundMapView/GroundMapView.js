@@ -352,6 +352,8 @@ export default class GroundMapView extends React.Component {
 
   /**
    * tell app component which entrance/attraction the user have selected
+   * also make api request to the backend to get the updated status of the entrance
+   * if there is a status change, we need to update our data stored in the app
    * @param inputEntrance   data of the entrance/attration
    * @param isEntrance  whether the selected marker is entrance or not
    */
@@ -359,6 +361,24 @@ export default class GroundMapView extends React.Component {
     Keyboard.dismiss();
     if (this.props.selectedMarkerCallback !== undefined) {
       this.props.selectedMarkerCallback(inputEntrance, isEntrance);
+    }
+    //
+    if (isEntrance) {
+      let entranceIndexString = inputEntrance.getName().slice(10);
+      try {
+        let entranceIndex = parseInt(entranceIndexString);
+        let nodeID = this.state.pedwayData.data[entranceIndex].id;
+        // now we can make the api call and update our states
+        axios.get(AZURE_API + '/pedway/entrance/' + nodeID)
+            .then( (res) => {
+              let newStatus = res.data.status;
+              this.state.pedwayData.data[entranceIndex].status = newStatus;
+              inputEntrance.setStatus(newStatus);
+              this.props.selectedMarkerCallback(inputEntrance, isEntrance);
+            })
+            .catch((e) => {});
+      } catch {
+      }
     }
   }
 
