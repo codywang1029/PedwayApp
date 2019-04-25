@@ -8,8 +8,6 @@ let setTestSession;
 const TESTING_PORT = 3001;
 
 beforeAll(async () => {
-  process.env['APP_DEPLOYMENT_MODE'] = 'testing';
-  process.env['MONGODB_HOST'] = global.__MONGODB_HOST__;
   process.env['PORT'] = TESTING_PORT;
   server = require('../src/server');
   EntranceSchema = require('../api/models/entranceModel');
