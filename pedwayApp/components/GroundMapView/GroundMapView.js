@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styles from './styles';
-import {Image, Platform, StyleSheet, Text, View, TouchableOpacity, ToastAndroid, Picker} from 'react-native';
+import {Image, Platform, StyleSheet, Text, View, TouchableOpacity, ToastAndroid, Picker, PermissionsAndroid} from 'react-native';
 import MapView, {
   Polyline,
 } from 'react-native-maps';
@@ -31,6 +31,8 @@ const INITIAL_LONGITUDE = -87.623977;
 const INITIAL_DELTA = 0.007;
 const RECENTER_DELTA = 0.005;
 const MAXIMUM_OFFSET_DISTANCE = 0.1;
+
+let LOCATION_SERVICE_AVAILABLE = false;
 
 
 let isUserInitiatedRegionChange = false;
@@ -186,19 +188,26 @@ export default class GroundMapView extends React.Component {
 
   /**
    * watch user's real time location and update the map accordingly.
+   * also check if have location permission or not, if no permission, toast no permission
    */
-  componentDidMount() {
-    let id = navigator.geolocation.watchPosition(
-        (position) => {
-          this.positionDidUpdateCallback(position, id);
-        }, (error)=>{
-          this.setState({dialogTitle: 'GPS Error',
-            dialogVisibility: true,
-            dialogContent: 'Oops, we lose you on the map. Please enable GPS access to the app. If you are underground, the GPS service may be unstable.',
-            dialogButtonText: 'Dismiss',
-          });
-        }, {enableHighAccuracy: true, distanceFilter: 1});
-    this.requestEntranceData();
+  async componentDidMount() {
+    LOCATION_SERVICE_AVAILABLE = await PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION);
+    if (LOCATION_SERVICE_AVAILABLE) {
+      let id = navigator.geolocation.watchPosition(
+          (position) => {
+            this.positionDidUpdateCallback(position, id);
+          }, (error)=>{
+            this.setState({dialogTitle: 'GPS Error',
+              dialogVisibility: true,
+              dialogContent: 'Oops, we lose you on the map. Please enable GPS access to the app. If you are underground, the GPS service may be unstable.',
+              dialogButtonText: 'Dismiss',
+            });
+          }, {enableHighAccuracy: true, distanceFilter: 1});
+      this.requestEntranceData();
+    } else {
+      ToastAndroid.showWithGravityAndOffset('Please grant location permission for this app',
+          ToastAndroid.LONG, ToastAndroid.BOTTOM, 0, 40);
+    }
   }
 
   /**
