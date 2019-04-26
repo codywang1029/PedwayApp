@@ -1,21 +1,15 @@
 import React, {Component} from 'react';
 import PedwaySection from '../../model/PedwaySection';
 import PedwayCoordinate from '../../model/PedwayCoordinate';
-import MapView, {
-  Polyline,
-} from 'react-native-maps';
+import MapView from 'react-native-maps';
 
 /**
- * The current pedway sections are hard coded place holders
- * In the future we are gonna to get those values from the API
+ * Parse the GeoJSON representation of list of lineString and multiLineStrings into a list of polyline
+ * that we can display on the map
  * */
 export default class RenderPedway extends Component {
   constructor(props) {
     super(props);
-    let section1 = new PedwaySection([new PedwayCoordinate(40.143, -88.231),
-      new PedwayCoordinate(40.0953, -88.255462), new PedwayCoordinate(40.068305, -88.205)]);
-    let section2 = new PedwaySection([new PedwayCoordinate(40.116300, -88.2737),
-      new PedwayCoordinate(40.116329, -88.224462)]);
     this.state = {
       pedwaySections: [],
       strokeColor: '#FFEF8C',
@@ -28,6 +22,11 @@ export default class RenderPedway extends Component {
     this.parseMultiLineJSON = this.parseMultiLineJSON.bind(this);
   }
 
+  /**
+   * parse lineString in GeoJSON format into a pedway section
+   * @param inputJSON The lineString we got
+   * @returns {*}
+   */
   parseLineJSON(inputJSON) {
     try {
       const retVal = [];
@@ -40,6 +39,11 @@ export default class RenderPedway extends Component {
     }
   }
 
+  /**
+   * parse multiLineString in GeoJSON format in to a list of pedway sections
+   * @param inputJSON The multiLineString we got
+   * @returns {*}
+   */
   parseMultiLineJSON(inputJSON) {
     try {
       const retVal = [];
@@ -56,6 +60,10 @@ export default class RenderPedway extends Component {
     }
   }
 
+  /**
+   * parse a list of lineString and multiLineString into a list of path (a list of pedway sections)
+   * @param inputJSON
+   */
   parseJSONtoModel(inputJSON) {
     const paths = inputJSON['features'].filter((item) => {
       try {
@@ -112,11 +120,15 @@ export default class RenderPedway extends Component {
     }
   }
 
+  /**
+   * use the list of path we got from, display a list of Polyline on the map representing the pedway
+   * @returns {*[]}
+   */
   render() {
     return (
       this.state.pedwaySections.map((path, idx) => {
         return (
-          <Polyline
+          <MapView.Polyline
             key={idx}
             coordinates={path.getJSONList()}
             strokeColor={this.state.strokeColor}

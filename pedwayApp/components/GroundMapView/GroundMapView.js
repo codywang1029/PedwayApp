@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styles from './styles';
-import {Image, Platform, StyleSheet, Text, View, TouchableOpacity, ToastAndroid, Picker} from 'react-native';
+import {Image, Platform, StyleSheet, Text, View, TouchableOpacity, ToastAndroid, Picker, PermissionsAndroid} from 'react-native';
 import MapView, {
   Polyline,
 } from 'react-native-maps';
@@ -10,7 +10,6 @@ import MapStyle from './mapStyleDark';
 import RenderEntrance from '../RenderEntrance/RenderEntrance';
 import RenderLocation from '../RenderLocation/RenderLocation';
 import RenderAttraction from '../RenderAttractions/RenderAttractions';
-import MapCallout from 'react-native-maps/lib/components/MapCallout';
 import circle from '../../media/pedwayEntranceMarker.png';
 import axios from 'axios';
 import RoundButton from '../RoundButton/RoundButton';
@@ -32,6 +31,8 @@ const INITIAL_LONGITUDE = -87.623977;
 const INITIAL_DELTA = 0.007;
 const RECENTER_DELTA = 0.005;
 const MAXIMUM_OFFSET_DISTANCE = 0.1;
+
+let LOCATION_SERVICE_AVAILABLE = false;
 
 
 let isUserInitiatedRegionChange = false;
@@ -181,25 +182,35 @@ export default class GroundMapView extends React.Component {
       if (this.feedbackView !== null) {
         this.feedbackView.showDialog(nodeID);
       }
-    } catch {
+    } catch (e) {
     }
   }
 
   /**
    * watch user's real time location and update the map accordingly.
+   * also check if have location permission or not, if no permission, toast no permission
    */
-  componentDidMount() {
-    let id = navigator.geolocation.watchPosition(
-        (position) => {
-          this.positionDidUpdateCallback(position, id);
-        }, (error)=>{
-          this.setState({dialogTitle: 'GPS Error',
-            dialogVisibility: true,
-            dialogContent: 'Oops, we lose you on the map. Please enable GPS access to the app. If you are underground, the GPS service may be unstable.',
-            dialogButtonText: 'Dismiss',
-          });
-        }, {enableHighAccuracy: true, distanceFilter: 1});
-    this.requestEntranceData();
+  async componentDidMount() {
+    LOCATION_SERVICE_AVAILABLE = await PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION);
+    if (LOCATION_SERVICE_AVAILABLE) {
+      let id = navigator.geolocation.watchPosition(
+          (position) => {
+            this.positionDidUpdateCallback(position, id);
+          }, (error)=>{
+            this.setState({dialogTitle: 'GPS Error',
+              dialogVisibility: true,
+              dialogContent: 'Oops, we lose you on the map. Please enable GPS access to the app. If you are underground, the GPS service may be unstable.',
+              dialogButtonText: 'Dismiss',
+            });
+          }, {enableHighAccuracy: true, distanceFilter: 1});
+      this.requestEntranceData();
+    } else {
+      this.setState({dialogTitle: 'GPS Error',
+        dialogVisibility: true,
+        dialogContent: 'You should grant permission access for this app',
+        dialogButtonText: 'Dismiss',
+      });
+    }
   }
 
   /**
@@ -310,14 +321,22 @@ export default class GroundMapView extends React.Component {
     return [segmentList[closestSegmentIdx], closestSegmentIdx];
   }
 
-
+  /**
+   * pass in the next idx the user is about to enter, check if the user is about to enter the pedway or not
+   * @param idx
+   */
   updateMapMode(idx) {
     let route = this.state.navigateJSON['data']['routes'][0];
     let nextInstruction = route['segments'][0]['steps'][idx]['instruction'];
-    this.findOntoString(nextInstruction, idx);
+    this.findOntoString(nextInstruction);
   }
 
-  findOntoString(instruction, idx) {
+  /**
+   * parse the 'onto someRoad' in the instruction, if 'someRoad' === 'pedway', we need to show the suggestion toast
+   * suggesting the user to use the underground mode
+   * @param instruction
+   */
+  findOntoString(instruction) {
     let ontoIndex = instruction.indexOf('onto');
     let roadString = '';
     if (ontoIndex === -1) {
@@ -336,14 +355,42 @@ export default class GroundMapView extends React.Component {
     }
   }
 
+  /**
+   * suggest user to take the pedway
+   */
   showSuggestionToast() {
     ToastAndroid.showWithGravityAndOffset('Switch to underground mode to view the Pedway', ToastAndroid.LONG, ToastAndroid.BOTTOM, 0, 350);
   }
 
+  /**
+   * tell app component which entrance/attraction the user have selected
+   * also make api request to the backend to get the updated status of the entrance
+   * if there is a status change, we need to update our data stored in the app
+   * @param inputEntrance   data of the entrance/attration
+   * @param isEntrance  whether the selected marker is entrance or not
+   */
   forwardSelectedEntrance(inputEntrance, isEntrance) {
     Keyboard.dismiss();
     if (this.props.selectedMarkerCallback !== undefined) {
       this.props.selectedMarkerCallback(inputEntrance, isEntrance);
+    }
+    //
+    if (isEntrance) {
+      let entranceIndexString = inputEntrance.getName().slice(10);
+      try {
+        let entranceIndex = parseInt(entranceIndexString);
+        let nodeID = this.state.pedwayData.data[entranceIndex].id;
+        // now we can make the api call and update our states
+        axios.get(AZURE_API + '/pedway/entrance/' + nodeID)
+            .then( (res) => {
+              let newStatus = res.data.status;
+              this.state.pedwayData.data[entranceIndex].status = newStatus;
+              inputEntrance.setStatus(newStatus);
+              this.props.selectedMarkerCallback(inputEntrance, isEntrance);
+            })
+            .catch((e) => {});
+      } catch (e) {
+      }
     }
   }
 
@@ -359,7 +406,7 @@ export default class GroundMapView extends React.Component {
     try {
       this.getGeometry([newLatitude, newLongitude],
           [destination.getCoordinate().getLatitude(), destination.getCoordinate().getLongitude()]);
-    } catch {
+    } catch (e) {
     }
   }
 
@@ -371,6 +418,11 @@ export default class GroundMapView extends React.Component {
     this.setState({underground: nextProps.underground});
   }
 
+  /**
+   * update the highlight segment of the line shown during routing to the start and end index
+   * @param highlightSegmentStart
+   * @param highlightSegmentEnd
+   */
   updateHighlightSegment(highlightSegmentStart, highlightSegmentEnd) {
     if (this.state.navigate === true) {
       this.setState({
@@ -380,6 +432,14 @@ export default class GroundMapView extends React.Component {
     }
   }
 
+  /**
+   * helper function for app component to call
+   * also pass in the initial highlight segment start end index
+   * @param navigate bool, whether map should start naviagte
+   * @param navigateTo  where is the point user want navigate to
+   * @param highlightSegmentStart
+   * @param highlightSegmentEnd
+   */
   updateNavigationState(navigate, navigateTo, highlightSegmentStart, highlightSegmentEnd) {
     this.setState({
       navigateTo: navigateTo,

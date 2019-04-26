@@ -16,7 +16,8 @@ class MongooseEnvironment extends PuppeteerEnvironment {
   async setup() {
     await super.setup();
     mongoServer = new MongoMemoryServer();
-    this.global.__MONGODB_HOST__ = await mongoServer.getConnectionString();
+    this.global.process.env['APP_DEPLOYMENT_MODE'] = 'testing';
+    this.global.process.env['MONGODB_HOST'] = await mongoServer.getConnectionString();
   }
 
   /**

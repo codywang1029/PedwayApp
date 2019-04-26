@@ -4,17 +4,11 @@ expect.extend({toMatchImageSnapshot});
 const mongoose = require('mongoose');
 const turf = require('@turf/turf');
 
-let app;
-let EntranceSchema;
-let setTestSession;
+const {app, disconnect} = require('../src/app');
+const EntranceSchema = mongoose.model('entrance');
+const {setTestSession} = require('../api/controllers/authController');
 
 beforeAll(async () => {
-  process.env['APP_DEPLOYMENT_MODE'] = 'testing';
-  process.env['MONGODB_HOST'] = global.__MONGODB_HOST__;
-  ({app, disconnect} = require('../src/app'));
-  EntranceSchema = mongoose.model('entrance');
-
-  ({setTestSession} = require('../api/controllers/authController'));
   setTestSession('1000');
 });
 
