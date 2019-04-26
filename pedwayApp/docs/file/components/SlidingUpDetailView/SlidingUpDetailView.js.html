@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">components/SlidingUpDetailView/SlidingUpDetailView.js | ReactNativeTest</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-App">App</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#directory">Directory</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Directory/Directory.js~Directory.html">Directory</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#feedbackview">FeedbackView</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/FeedbackView/FeedbackView.js~FeedbackView.html">FeedbackView</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#groundmapview">GroundMapView</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/GroundMapView/GroundMapView.js~GroundMapView.html">GroundMapView</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#iconbutton">IconButton</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/IconButton/IconButton.js~IconButton.html">IconButton</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-styles">styles</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#navigationswipeview">NavigationSwipeView</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/NavigationSwipeView/NavigationSwipeView.js~NavigationSwipeView.html">NavigationSwipeView</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-styles">styles</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#pdfmap">PDFMap</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/PDFMap/PDFMap.js~PDFMap.html">PDFMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#renderattractions">RenderAttractions</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/RenderAttractions/RenderAttractions.js~RenderAttractions.html">RenderAttractions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#renderentrance">RenderEntrance</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/RenderEntrance/RenderEntrance.js~RenderEntrance.html">RenderEntrance</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#renderlocation">RenderLocation</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/RenderLocation/RenderLocation.js~RenderLocation.html">RenderLocation</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#renderpedway">RenderPedway</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/RenderPedway/RenderPedway.js~RenderPedway.html">RenderPedway</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#roundbutton">RoundButton</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/RoundButton/RoundButton.js~RoundButton.html">RoundButton</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-styles">styles</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#searchbar">SearchBar</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/SearchBar/SearchBar.js~SearchBar.html">SearchBar</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#slidingupdetailview">SlidingUpDetailView</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/SlidingUpDetailView/SlidingUpDetailView.js~SlidingUpDetailView.html">SlidingUpDetailView</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#model">model</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/model/PedwayAttraction.js~PedwayAttraction.html">PedwayAttraction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/model/PedwayCoordinate.js~PedwayCoordinate.html">PedwayCoordinate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/model/PedwayEntrance.js~PedwayEntrance.html">PedwayEntrance</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/model/PedwaySection.js~PedwaySection.html">PedwaySection</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">components/SlidingUpDetailView/SlidingUpDetailView.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import React, {Component} from &apos;react&apos;;
+import {Platform, StyleSheet, Text, View, TouchableOpacity} from &apos;react-native&apos;;
+import styles from &apos;./styles&apos;;
+import SlidingUpPanel from &apos;rn-sliding-up-panel&apos;;
+import Icon from &apos;react-native-vector-icons/MaterialIcons&apos;;
+
+
+/**
+ * renders a view Component that displays pedway info and user action when
+ * mapMarker is clicked
+ * Allow user to view the name and coordinate of the spot, display a button for user to navigate to
+ * if this marker is a pedway entrance, we also need to show the open/close status and also display a feedback button
+ * if this marker is a pedway entrance, a navigation buttonis also displayed. If navigation is false this button
+ * will be start navigation button. Vice versa this button will be end navigation button.
+ */
+
+export default class SlidingUpDetailView extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false,
+      entrance: null,
+      navigateFunctor: null,
+      navigate: false,
+      isEntrance: true,
+    };
+    this.updateState = this.updateState.bind(this);
+    this.openView = this.openView.bind(this);
+    this.closeView = this.closeView.bind(this);
+    this.navigateButtonOnPress = this.navigateButtonOnPress.bind(this);
+    this.setNavigate = this.setNavigate.bind(this);
+    this.feedbackButtonOnPress = this.feedbackButtonOnPress.bind(this);
+    this.setIsOpen = this.setIsOpen.bind(this);
+  }
+
+  /**
+   * set the open/close status of this sliding up view
+   * @param status
+   */
+  setIsOpen(status) {
+    this.setState({
+      open: status,
+    });
+    if (status) {
+      this.openView();
+    } else {
+      this.closeView();
+    }
+  }
+
+  /**
+   * update what entrance/attraction shown in this view from the object we got from the inputProps
+   * @param inputProps
+   */
+  updateState(inputProps) {
+    if (inputProps.entrance !== undefined &amp;&amp; inputProps.entrance !== null) {
+      this.setState({
+        entrance: inputProps.entrance,
+        isEntrance: inputProps.isEntrance,
+      });
+    }
+  }
+
+  openView() {
+    this.detailView.show();
+  }
+
+  closeView() {
+    this.detailView.hide();
+  }
+
+  componentDidMount() {
+    this.updateState(this.props);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.updateState(nextProps);
+  }
+
+  /**
+   * communicate with app component when start/cancel navigation button is pressed
+   */
+  navigateButtonOnPress() {
+    this.props.startNavigate(this.state.entrance, !this.state.navigate);
+    this.setState({
+      navigate: !this.state.navigate,
+    });
+  }
+
+  /**
+   * onPress listener for the feedback button
+   */
+  feedbackButtonOnPress() {
+    // remove Entrance # string
+    let entranceIndexString = this.state.entrance.getName().slice(10);
+    try {
+      let entranceIndex = parseInt(entranceIndexString);
+      this.props.displayFeedbackWindow(entranceIndex);
+    } catch (e) {
+    }
+  }
+
+  /**
+   * set this.state.navigation
+   * if state === false, also close the sliding up view
+   * @param state
+   */
+  setNavigate(state) {
+    this.setState({
+      navigate: state,
+      open: state,
+
+    });
+    if (!state) {
+      this.closeView();
+    }
+  }
+
+  render() {
+    if (this.state.entrance !== undefined &amp;&amp; this.state.entrance !== null) {
+      return (
+        &lt;SlidingUpPanel
+          draggableRange={{top: 150, bottom: 0}}
+          showBackdrop={false}
+          ref={(thisView) =&gt; {
+            this.detailView = thisView;
+          }}
+        &gt;
+          &lt;View style={styles.aboveFlexContainer}&gt;
+            &lt;Text
+              style={styles.entranceLabel}
+              numberOfLines={1}
+            &gt;
+              {this.state.entrance.getName()}
+            &lt;/Text&gt;
+            &lt;View style={styles.routeButtonContainer}&gt;
+              &lt;TouchableOpacity
+                style={styles.routeBackgroundContainer}
+                onPress={() =&gt; {
+                  this.navigateButtonOnPress();
+                }}
+              &gt;
+                &lt;Icon
+                  style={styles.routeButton}
+                  name={this.state.navigate?&apos;rotate-left&apos;:&apos;directions-walk&apos;}
+                /&gt;
+              &lt;/TouchableOpacity&gt;
+            &lt;/View&gt;
+          &lt;/View&gt;
+          &lt;View style={styles.backgroundView}&gt;
+            &lt;View style={styles.belowFlexContainer}&gt;
+              &lt;View style={styles.belowFlex}&gt;
+                {!this.state.isEntrance?
+                null:
+                &lt;StatusLabel
+                  text={this.state.entrance.getStatus()}/&gt;
+                }
+                &lt;Text style={styles.coordinateText}&gt;
+                  {this.state.entrance.getCoordinate().getLatitude() + &apos;, &apos;
+                  + this.state.entrance.getCoordinate().getLongitude()}
+                &lt;/Text&gt;
+                {
+                  this.state.isEntrance?
+                    &lt;View style={styles.routeButtonContainer}&gt;
+                      &lt;TouchableOpacity
+                        style={styles.feedbackBackgroundContainer}
+                        onPress={() =&gt; {
+                          this.feedbackButtonOnPress();
+                        }}
+                      &gt;
+                        &lt;Icon
+                          style={styles.feedbackButton}
+                          name={&apos;error-outline&apos;}
+                        /&gt;
+                      &lt;/TouchableOpacity&gt;
+                    &lt;/View&gt;:
+                    null
+                }
+              &lt;/View&gt;
+            &lt;/View&gt;
+          &lt;/View&gt;
+        &lt;/SlidingUpPanel&gt;
+      );
+    } else {
+      return (
+        &lt;SlidingUpPanel
+          draggableRange={{top: 150, bottom: 0}}
+          showBackdrop={false}
+          ref={(thisView) =&gt; {
+            this.detailView = thisView;
+          }}/&gt;
+      );
+    }
+  }
+}
+
+
+/**
+ * separate component for the status label displaying the current status of the pedway entrance
+ * if the status of the pedway is not requested yet, we need to render a blank rounded rectangle for placeholder
+ */
+class StatusLabel extends Component {
+  render() {
+    if (this.props.text === &apos;open&apos;) {
+      return (
+        &lt;View style={[styles.statusLabelContainer, styles.statusLabelGreen]}&gt;
+          &lt;Text style={styles.statusLabelText}&gt;
+            Open
+          &lt;/Text&gt;
+        &lt;/View&gt;
+      );
+    } else if (this.props.text === &apos;closed&apos;) {
+      return (
+        &lt;View style={[styles.statusLabelContainer, styles.statusLabelRed]}&gt;
+          &lt;Text style={styles.statusLabelText}&gt;
+            Closed
+          &lt;/Text&gt;
+        &lt;/View&gt;
+      );
+    } else {
+      return (
+        &lt;View style={[styles.statusLabelContainer, styles.statusLabelGrey]}&gt;
+          &lt;Text style={styles.statusLabelText}&gt;
+            &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+          &lt;/Text&gt;
+        &lt;/View&gt;
+      );
+    }
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

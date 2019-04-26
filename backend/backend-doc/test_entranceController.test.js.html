@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: test/entranceController.test.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: test/entranceController.test.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const request = require('supertest');
+const mongoose = require('mongoose');
+
+let app;
+let EntranceSchema;
+let setTestSession;
+
+/**
+ * Generates sample entrance data for use in the tests
+ * @return {Object}
+ */
+function createTestEntrances() {
+  return {
+    testEntrance1: {
+      'type': 'Feature',
+      'geometry': {'type': 'Point', 'coordinates': [-87.6306729, 41.8862637]},
+      'id': 'node/1469254509',
+    },
+    testEntrance2: {
+      'type': 'Feature',
+      'geometry': {'type': 'Point', 'coordinates': [-87.6308302, 41.8859675]},
+      'id': 'node/1469254512',
+    },
+    testEntrance3: {
+      'type': 'Feature',
+      'geometry': {'type': 'Point', 'coordinates': [-87.6306746, 41.8863129]},
+      'id': 'node/1469254519',
+    },
+  };
+}
+
+let {testEntrance1, testEntrance2, testEntrance3} = createTestEntrances();
+
+beforeAll(async () => {
+  process.env['APP_DEPLOYMENT_MODE'] = 'testing';
+  process.env['MONGODB_HOST'] = global.__MONGODB_HOST__;
+  ({app, disconnect} = require('../src/app'));
+  EntranceSchema = mongoose.model('entrance');
+
+  ({setTestSession} = require('../api/controllers/authController'));
+  setTestSession('1000');
+});
+
+beforeEach(async () => {
+  ({testEntrance1, testEntrance2, testEntrance3} = createTestEntrances());
+  await EntranceSchema.deleteMany({}).exec();
+});
+
+afterAll(async () => {
+  disconnect();
+});
+
+describe('Test the root of the entrance api', () => {
+  test('Getting all entrances should return an empty array', async () => {
+    await request(app).get('/api/pedway/entrance').then((response) => {
+      expect(response.statusCode).toBe(200);
+      expect(Array.isArray(response.body)).toBe(true);
+      expect(response.body.length).toBe(0);
+    });
+  });
+
+  test('Adding an entrance without authentication should fail', async () => {
+    await request(app)
+        .post('/api/pedway/entrance')
+        .send(testEntrance1)
+        .then((response) => {
+          expect(response.statusCode).toBe(401);
+        });
+  });
+
+  test('Getting all entrances after adding a single one', async () => {
+    testEntrance1.status = 'closed';
+
+    // Add a test entrance
+    await request(app)
+        .post('/api/pedway/entrance')
+        .set('Cookie', ['sessionId=1000'])
+        .send(testEntrance1)
+        .then((response) => {
+          expect(response.statusCode).toBe(200);
+          expect(typeof response.body).toBe('object');
+          const entrance = response.body;
+          expect(entrance.id).toBe(testEntrance1.id);
+          expect(entrance.status).toBe('closed');
+        });
+
+    // Retrieve all entrances, which should be the one we just added
+    await request(app).get('/api/pedway/entrance').then((response) => {
+      expect(response.statusCode).toBe(200);
+      expect(Array.isArray(response.body)).toBe(true);
+      expect(response.body.length).toBe(1);
+
+      const entrance = response.body[0];
+
+      expect(entrance.id).toBe(testEntrance1.id);
+      expect(entrance.status).toBe('closed');
+    });
+  });
+
+  test.each([
+    {entrances: [testEntrance1]},
+    {entrances: [testEntrance1, testEntrance2]},
+    {entrances: [testEntrance1, testEntrance2, testEntrance3]},
+  ])('Check additions: %p', async (args) => {
+    // Add each entrance
+    for (let i = 0; i &lt; args.entrances.length; i++) {
+      await request(app)
+          .post('/api/pedway/entrance')
+          .set('Cookie', ['sessionId=1000'])
+          .send(args.entrances[i]);
+    }
+
+    // Check that we return the correct number of entrances
+    await request(app).get('/api/pedway/entrance').then((response) => {
+      expect(response.statusCode).toBe(200);
+      expect(Array.isArray(response.body)).toBe(true);
+      expect(response.body.length).toBe(args.entrances.length);
+    });
+  });
+
+  test('Check for default status of open', async () => {
+    await request(app)
+        .post('/api/pedway/entrance')
+        .set('Cookie', ['sessionId=1000'])
+        .send(testEntrance1)
+        .then((response) => {
+          expect(response.body.status).toBe('open');
+        });
+  });
+
+  test('Uniqueness of id enforced', async () => {
+    // Try to create the first test entrance
+    await request(app)
+        .post('/api/pedway/entrance')
+        .set('Cookie', ['sessionId=1000'])
+        .send(testEntrance1);
+
+    // Try to create the first test entrance again
+    await request(app)
+        .post('/api/pedway/entrance')
+        .set('Cookie', ['sessionId=1000'])
+        .send(testEntrance1);
+
+    // Ensure there is only one test entrance total
+    await request(app).get('/api/pedway/entrance').then((response) => {
+      expect(response.statusCode).toBe(200);
+      expect(Array.isArray(response.body)).toBe(true);
+      expect(response.body.length).toBe(1);
+    });
+  });
+});
+
+describe('Test the of the entrance api by id', () => {
+  beforeEach(async () => {
+    await request(app)
+        .post('/api/pedway/entrance')
+        .set('Cookie', ['sessionId=1000'])
+        .send(testEntrance1);
+  });
+
+  test('Getting an entrance', async () => {
+    await request(app).get('/api/pedway/entrance/node/1469254509').then((response) => {
+      expect(response.statusCode).toBe(200);
+      expect(typeof response.body).toBe('object');
+      const entrance = response.body;
+
+      expect(entrance.id).toBe(testEntrance1.id);
+      expect(entrance.status).toBe('open');
+    });
+  });
+
+  test('Getting an entrance that doesn\'t exist', async () => {
+    await request(app).get('/api/pedway/entrance/node/test').then((response) => {
+      expect(response.statusCode).toBe(200);
+      expect(typeof response.body).toBe('object');
+      expect(response.body).toBe(null);
+    });
+  });
+
+  test('Updating an entrance', async () => {
+    // Modify the first test entrance
+    testEntrance1.status = 'closed';
+
+    // Try to update the entrance with authentication
+    await request(app)
+        .post('/api/pedway/entrance/node/1469254509')
+        .set('Cookie', ['sessionId=1000'])
+        .send(testEntrance1)
+        .then((response) => {
+          expect(response.statusCode).toBe(200);
+        });
+
+    // Check if the entrance was updated
+    await request(app).get('/api/pedway/entrance/node/1469254509').then((response) => {
+      expect(response.statusCode).toBe(200);
+      expect(typeof response.body).toBe('object');
+      const entrance = response.body;
+
+      expect(entrance.id).toBe(testEntrance1.id);
+      expect(entrance.status).toBe('closed');
+    });
+  });
+
+
+  test('Updating an entrance without admin rights should fail', async () => {
+    // Modify the first test entrance
+    testEntrance1.status = 'closed';
+
+    // Try to update the entrance without authentication
+    await request(app)
+        .post('/api/pedway/entrance/node/1469254509')
+        .send(testEntrance1)
+        .then((response) => {
+          expect(response.statusCode).toBe(401);
+        });
+
+    // Check if the section was updated
+    await request(app).get('/api/pedway/entrance/node/1469254509').then((response) => {
+      expect(response.statusCode).toBe(200);
+      expect(typeof response.body).toBe('object');
+      const entrance = response.body;
+
+      expect(entrance.id).toBe(testEntrance1.id);
+      expect(entrance.status).not.toBe('closed');
+    });
+  });
+});
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-app.html">app</a></li></ul><h3>Classes</h3><ul><li><a href="MongooseEnvironment.html">MongooseEnvironment</a></li></ul><h3>Global</h3><ul><li><a href="global.html#auth">auth</a></li><li><a href="global.html#create">create</a></li><li><a href="global.html#createFeedback">createFeedback</a></li><li><a href="global.html#createTestEntrances">createTestEntrances</a></li><li><a href="global.html#createTestSections">createTestSections</a></li><li><a href="global.html#deleteAll">deleteAll</a></li><li><a href="global.html#deleteFeedback">deleteFeedback</a></li><li><a href="global.html#directions">directions</a></li><li><a href="global.html#generateKey">generateKey</a></li><li><a href="global.html#geocode">geocode</a></li><li><a href="global.html#getAll">getAll</a></li><li><a href="global.html#getById">getById</a></li><li><a href="global.html#getClosedEntrancePolygons">getClosedEntrancePolygons</a></li><li><a href="global.html#getSession">getSession</a></li><li><a href="global.html#invalidateSession">invalidateSession</a></li><li><a href="global.html#listFeedback">listFeedback</a></li><li><a href="global.html#listSessions">listSessions</a></li><li><a href="global.html#login">login</a></li><li><a href="global.html#logout">logout</a></li><li><a href="global.html#mapsurfer">mapsurfer</a></li><li><a href="global.html#pois">pois</a></li><li><a href="global.html#readFeedback">readFeedback</a></li><li><a href="global.html#readFeedbackByEntranceId">readFeedbackByEntranceId</a></li><li><a href="global.html#readFeedbackByType">readFeedbackByType</a></li><li><a href="global.html#setTestSession">setTestSession</a></li><li><a href="global.html#update">update</a></li><li><a href="global.html#updateFeedback">updateFeedback</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Apr 25 2019 15:10:13 GMT-0500 (Central Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+{
+  "coverage": "51.02%",
+  "expectCount": 196,
+  "actualCount": 100,
+  "files": {
+    "components/App.js": {
+      "expectCount": 29,
+      "actualCount": 11,
+      "undocumentLines": [
+        43,
+        45,
+        59,
+        64,
+        68,
+        126,
+        128,
+        162,
+        168,
+        187,
+        203,
+        228,
+        234,
+        275,
+        283,
+        299,
+        320,
+        344
+      ]
+    },
+    "components/Directory/Directory.js": {
+      "expectCount": 2,
+      "actualCount": 1,
+      "undocumentLines": [
+        10
+      ]
+    },
+    "components/FeedbackView/FeedbackView.js": {
+      "expectCount": 7,
+      "actualCount": 3,
+      "undocumentLines": [
+        7,
+        14,
+        16,
+        67
+      ]
+    },
+    "components/GroundMapView/GroundMapView.js": {
+      "expectCount": 42,
+      "actualCount": 23,
+      "undocumentLines": [
+        27,
+        29,
+        30,
+        31,
+        32,
+        33,
+        35,
+        38,
+        39,
+        40,
+        42,
+        53,
+        55,
+        124,
+        130,
+        413,
+        638,
+        657,
+        698
+      ]
+    },
+    "components/IconButton/IconButton.js": {
+      "expectCount": 2,
+      "actualCount": 1,
+      "undocumentLines": [
+        10
+      ]
+    },
+    "components/IconButton/styles.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        3
+      ]
+    },
+    "components/NavigationSwipeView/NavigationSwipeView.js": {
+      "expectCount": 13,
+      "actualCount": 4,
+      "undocumentLines": [
+        9,
+        26,
+        35,
+        37,
+        49,
+        53,
+        63,
+        122,
+        170
+      ]
+    },
+    "components/NavigationSwipeView/styles.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        3
+      ]
+    },
+    "components/PDFMap/PDFMap.js": {
+      "expectCount": 2,
+      "actualCount": 1,
+      "undocumentLines": [
+        11
+      ]
+    },
+    "components/RenderAttractions/RenderAttractions.js": {
+      "expectCount": 7,
+      "actualCount": 3,
+      "undocumentLines": [
+        11,
+        13,
+        51,
+        57
+      ]
+    },
+    "components/RenderEntrance/RenderEntrance.js": {
+      "expectCount": 7,
+      "actualCount": 3,
+      "undocumentLines": [
+        12,
+        14,
+        46,
+        52
+      ]
+    },
+    "components/RenderLocation/RenderLocation.js": {
+      "expectCount": 7,
+      "actualCount": 3,
+      "undocumentLines": [
+        11,
+        13,
+        52,
+        58
+      ]
+    },
+    "components/RenderPedway/RenderPedway.js": {
+      "expectCount": 9,
+      "actualCount": 5,
+      "undocumentLines": [
+        11,
+        13,
+        96,
+        117
+      ]
+    },
+    "components/RoundButton/RoundButton.js": {
+      "expectCount": 2,
+      "actualCount": 1,
+      "undocumentLines": [
+        10
+      ]
+    },
+    "components/RoundButton/styles.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        4
+      ]
+    },
+    "components/SearchBar/SearchBar.js": {
+      "expectCount": 7,
+      "actualCount": 3,
+      "undocumentLines": [
+        12,
+        19,
+        22,
+        78
+      ]
+    },
+    "components/SlidingUpDetailView/SlidingUpDetailView.js": {
+      "expectCount": 16,
+      "actualCount": 7,
+      "undocumentLines": [
+        18,
+        20,
+        64,
+        68,
+        72,
+        76,
+        119,
+        126,
+        203
+      ]
+    },
+    "components/model/PedwayAttraction.js": {
+      "expectCount": 12,
+      "actualCount": 9,
+      "undocumentLines": [
+        11,
+        12,
+        13
+      ]
+    },
+    "components/model/PedwayCoordinate.js": {
+      "expectCount": 8,
+      "actualCount": 6,
+      "undocumentLines": [
+        12,
+        13
+      ]
+    },
+    "components/model/PedwayEntrance.js": {
+      "expectCount": 15,
+      "actualCount": 11,
+      "undocumentLines": [
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    "components/model/PedwaySection.js": {
+      "expectCount": 6,
+      "actualCount": 5,
+      "undocumentLines": [
+        11
+      ]
+    }
+  }
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">components/NavigationSwipeView/NavigationSwipeView.js | ReactNativeTest</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-App">App</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#directory">Directory</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/Directory/Directory.js~Directory.html">Directory</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#feedbackview">FeedbackView</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/FeedbackView/FeedbackView.js~FeedbackView.html">FeedbackView</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#groundmapview">GroundMapView</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/GroundMapView/GroundMapView.js~GroundMapView.html">GroundMapView</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#iconbutton">IconButton</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/IconButton/IconButton.js~IconButton.html">IconButton</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-styles">styles</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#navigationswipeview">NavigationSwipeView</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/NavigationSwipeView/NavigationSwipeView.js~NavigationSwipeView.html">NavigationSwipeView</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-styles">styles</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#pdfmap">PDFMap</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/PDFMap/PDFMap.js~PDFMap.html">PDFMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#renderattractions">RenderAttractions</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/RenderAttractions/RenderAttractions.js~RenderAttractions.html">RenderAttractions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#renderentrance">RenderEntrance</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/RenderEntrance/RenderEntrance.js~RenderEntrance.html">RenderEntrance</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#renderlocation">RenderLocation</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/RenderLocation/RenderLocation.js~RenderLocation.html">RenderLocation</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#renderpedway">RenderPedway</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/RenderPedway/RenderPedway.js~RenderPedway.html">RenderPedway</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#roundbutton">RoundButton</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/RoundButton/RoundButton.js~RoundButton.html">RoundButton</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-styles">styles</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#searchbar">SearchBar</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/SearchBar/SearchBar.js~SearchBar.html">SearchBar</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#slidingupdetailview">SlidingUpDetailView</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/SlidingUpDetailView/SlidingUpDetailView.js~SlidingUpDetailView.html">SlidingUpDetailView</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#model">model</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/model/PedwayAttraction.js~PedwayAttraction.html">PedwayAttraction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/model/PedwayCoordinate.js~PedwayCoordinate.html">PedwayCoordinate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/model/PedwayEntrance.js~PedwayEntrance.html">PedwayEntrance</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/components/model/PedwaySection.js~PedwaySection.html">PedwaySection</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">components/NavigationSwipeView/NavigationSwipeView.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import React, {Component} from &apos;react&apos;;
+import styles from &apos;./styles&apos;;
+import {TouchableOpacity, View, ActivityIndicator, Text} from &apos;react-native&apos;;
+import Icon from &apos;react-native-vector-icons/FontAwesome&apos;;
+import Swiper from &apos;react-native-swiper&apos;;
+
+// map of way types to icon names
+// for more information checkout https://github.com/GIScience/openrouteservice-docs/blob/master/README.md
+let vectorIconDisplayList = [
+  &apos;long-arrow-left&apos;,
+  &apos;long-arrow-right&apos;,
+  &apos;long-arrow-left&apos;,
+  &apos;long-arrow-right&apos;,
+  &apos;long-arrow-left&apos;,
+  &apos;long-arrow-right&apos;,
+  &apos;long-arrow-up&apos;,
+  &apos;long-arrow-up&apos;,
+  &apos;long-arrow-up&apos;,
+  &apos;long-arrow-down&apos;,
+  &apos;flag&apos;,
+  &apos;home&apos;,
+  &apos;long-arrow-left&apos;,
+  &apos;long-arrow-right&apos;,
+];
+
+let isProgrammaticallyUpdatingIndex = false;
+/**
+ * Swiper view based component that displays a list of navigation instructions
+ * User can swipe to view the instructions
+ * If user is centered on himself/herself(in focus mode), while user is walking, this swiper would swipe automatically
+ * to display the most up-to-date instruction
+ */
+
+export default class NavigationSwipeView extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      navigationData: [],
+      currentIndex: 0,
+      dataRequested: false,
+      previousIndex: 0,
+    };
+    this.updateState = this.updateState.bind(this);
+    this.onIndexChanged = this.onIndexChanged.bind(this);
+    this.updateSwiperViewIndex = this.updateSwiperViewIndex.bind(this);
+    this.onMomentumScrollEnd = this.onMomentumScrollEnd.bind(this);
+  }
+
+  componentDidMount() {
+    this.updateState(this.props);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      // previousIndex: this.state.currentIndex,
+    }, () =&gt; {
+      if (nextProps.navigationData !== this.state.navigationData) {
+        this.updateState(nextProps);
+      }
+    });
+  }
+
+  updateState(inputProps) {
+    this.updateSwiperViewIndex(0);
+    this.setState({
+      navigationData: inputProps.navigationData,
+      dataRequested: inputProps.navigationDataRequested,
+      currentIndex: 0,
+    });
+
+    // set the highlight segment for the path in groundmap to the initial segment
+    try {
+      let route = inputProps.navigationData[&apos;data&apos;][&apos;routes&apos;][0];
+      let wayPoint = route[&apos;segments&apos;][0][&apos;steps&apos;][0][&apos;way_points&apos;];
+      this.props.updateSegmentStartEndCallback(wayPoint[0], wayPoint[1]);
+    } catch (e) {}
+  }
+
+  /**
+   * Takes in a 0 indexed index variable, and update the swiper view&apos;s index to that variable
+   * @param idx
+   */
+  updateSwiperViewIndex(idx) {
+    if (this.state.dataRequested) {
+      isProgrammaticallyUpdatingIndex = true;
+      this.swiper.scrollBy(idx - this.state.currentIndex + this.state.previousIndex, true);
+    }
+  }
+
+  /**
+   * callBack function that is triggered whenever the swiper view&apos;s index changes
+   * this function also calls the corresponding function to update the highlighted segment on the mapView
+   * @param inputIndex
+   */
+  onIndexChanged(inputIndex) {
+    let acutalIndex = inputIndex + this.state.previousIndex;
+    try {
+      this.setState({
+        currentIndex: acutalIndex,
+      });
+
+      let route = this.state.navigationData[&apos;data&apos;][&apos;routes&apos;][0];
+      let wayPoint = route[&apos;segments&apos;][0][&apos;steps&apos;][acutalIndex][&apos;way_points&apos;];
+      this.props.updateSegmentStartEndCallback(wayPoint[0], wayPoint[1]);
+    } catch (e) {
+    }
+  }
+
+  /**
+   * listener that is called when the scroll animation ended
+   * we use the global isProgrammaticallyUpdatingIndex is check if this is due to a user swipe or not
+   * if it is due to a user swipe, to need to set the focus mode of the groundmapView to false
+   */
+  onMomentumScrollEnd() {
+    // if user is scrolling it, we need to unlock the mapView to let it not in focus
+    if (!isProgrammaticallyUpdatingIndex) {
+      this.props.setMapInFocus(false);
+    }
+    isProgrammaticallyUpdatingIndex = false;
+  }
+
+  render() {
+    if (this.state.dataRequested === false) {
+      return (
+        &lt;View style={styles.outerContainer}&gt;
+          &lt;View style={styles.innerContainer}&gt;
+            &lt;ActivityIndicator
+              size=&apos;large&apos;
+              color=&apos;#fff&apos;
+              animating={true}
+              style={styles.activityIndicator}
+            /&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+      );
+    } else {
+      // right now using the first route
+      let navigationData = [];
+      try {
+        navigationData = this.state.navigationData[&apos;data&apos;][&apos;routes&apos;][0][&apos;segments&apos;][0][&apos;steps&apos;];
+      } catch (e) {
+      }
+      let swiperViewData = navigationData.map((item, idx)=&gt;{
+        return (
+          &lt;View style={styles.rowFlexContainer} key={idx}&gt;
+            &lt;View style={styles.iconOuterContainer}&gt;
+              &lt;View style={styles.iconInnerContainer}&gt;
+                &lt;Icon name={vectorIconDisplayList[item[&apos;type&apos;]]} style={styles.instructionIcon}/&gt;
+              &lt;/View&gt;
+            &lt;/View&gt;
+            &lt;View style={styles.colFlexContainer}&gt;
+              &lt;Text style={styles.instructionLabel} numberOfLines={3}&gt;{item[&apos;instruction&apos;]}&lt;/Text&gt;
+              &lt;Text style={styles.distanceLabel}&gt;{ + (idx + 1) + &apos;/&apos; +
+              this.state.navigationData[&apos;data&apos;][&apos;routes&apos;][0][&apos;segments&apos;][0][&apos;steps&apos;].length +
+              &apos;  &apos; + item[&apos;distance&apos;] + &apos;m&apos;}&lt;/Text&gt;
+            &lt;/View&gt;
+          &lt;/View&gt;
+        );
+      });
+      return (
+        &lt;View style={styles.outerContainer}&gt;
+          &lt;View style={styles.innerContainer}&gt;
+            &lt;Swiper
+              loop={false}
+              showsButton={true}
+              showsPagination={false}
+              onIndexChanged={this.onIndexChanged}
+              onMomentumScrollEnd={this.onMomentumScrollEnd}
+              ref={(swiper) =&gt; {
+                this.swiper = swiper;
+              }}&gt;
+              { swiperViewData }
+            &lt;/Swiper&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+      );
+    }
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
