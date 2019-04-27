@@ -31,6 +31,7 @@ const INITIAL_LONGITUDE = -87.623977;
 const INITIAL_DELTA = 0.007;
 const RECENTER_DELTA = 0.005;
 const MAXIMUM_OFFSET_DISTANCE = 0.1;
+const PIN_COLOR = '#dc143c';
 
 let LOCATION_SERVICE_AVAILABLE = false;
 
@@ -768,7 +769,7 @@ export default class GroundMapView extends React.Component {
               longitude: this.state.navigateTo.getCoordinate().getLongitude(),
             }}
             style={{zIndex: 10}}
-            pinColor={'#dc143c'}
+            pinColor={PIN_COLOR}
           />
           }
           {this.state.underground && this.state.mapReady?
