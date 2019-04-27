@@ -3,7 +3,7 @@ This project aims to create a mobile app and backend for a complete pedway navig
 
 ### Frontend mobile app
 A react native app that currently is supported for android devices
-[set up instructions](pedwayApp/readme.md)
+[set up instructions](pedwayApp/README.md)
 
 
 ### backend service
