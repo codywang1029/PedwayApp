@@ -35,8 +35,6 @@ const PIN_COLOR = '#dc143c';
 
 let LOCATION_SERVICE_AVAILABLE = false;
 
-let LOCATION_SERVICE_AVAILABLE = false;
-
 
 let isUserInitiatedRegionChange = false;
 let appInitiated = false;
