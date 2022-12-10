@@ -30,7 +30,7 @@
     "cookie-parser": "^1.4.4",
     "dotenv": "^6.2.0",
     "es6-dynamic-template": "^1.0.5",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "google-auth-library": "^3.1.0",
     "mongoose": "^5.4.11",
     "mongoose-geojson-schema": "^2.1.3",
